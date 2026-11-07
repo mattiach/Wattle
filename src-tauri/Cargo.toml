@@ -39,18 +39,18 @@ tokio = { version = "1", features = ["macros", "time"] }
 # can say which rows will thrash. Every default feature is off - disks,
 # networks, processes, users and components are none of Wattle's business, and
 # a journal that reads the process table is not one anybody should trust.
-sysinfo = { version = "0.39", default-features = false, features = ["system"] }
+sysinfo = { version = "0.40", default-features = false, features = ["system"] }
 # The seal on a letter to your future self. An AEAD and not a hand-rolled
 # composition: the authentication tag is what binds the unlock date to the
 # ciphertext, so editing that date in the database file destroys the letter
 # rather than opening it. XChaCha20-Poly1305 for its 24-byte nonce, which can
 # be drawn at random with no birthday-bound concern - nonce reuse is the
 # mistake this codebase is least equipped to notice.
-chacha20poly1305 = "0.10"
+chacha20poly1305 = "0.11"
 # The OS CSPRNG, for the one key and the one nonce a letter is sealed with.
 # Already in the lock file transitively; declared because guessing at randomness
 # is the other way to get this wrong.
-getrandom = "0.2"
+getrandom = "0.4"
 # Clears a decrypted letter out of memory when it goes out of scope. Best
 # effort, and said as such: a language with moving values cannot promise more.
 zeroize = "1"
