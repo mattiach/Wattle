@@ -1,0 +1,661 @@
+{
+  "ai": "AI Assistant",
+  "aiActionDescription": {
+    "fixGrammar": "Corrects spelling, grammar, and punctuation without changing the meaning.",
+    "improveClarity": "Makes the text clearer and easier to read while keeping all content unchanged.",
+    "makeShorter": "Shortens the text while keeping all essential concepts and information."
+  },
+  "aiActive": "Active",
+  "aiActiveModel": "Active model",
+  "aiDesc08b": "The lightest option. Runs on modest hardware; ideal for quick grammar corrections, though not always precise.",
+  "aiDesc27b": "Workstation-grade. Requires considerable disk space and memory; ideal for greater precision in suggestions.",
+  "aiDesc2b": "Small and fast, with better grammar than 0.8B.",
+  "aiDesc4b": "The best balance between quality and resource requirements.",
+  "aiDesc9b": "Superior quality; requires a capable machine.",
+  "aiDescription": "Disabled. It is not uninstalled from the device, though.",
+  "aiDiscard": "Discard",
+  "aiError": {
+    "badSelection": "This selection cannot be rewritten. It may be empty or longer than a single passage.",
+    "cancelled": "Interrupted. Nothing was changed.",
+    "daemon": "Ollama could not complete the operation.",
+    "disabled": "The AI assistant is disabled. You can enable it in the settings.",
+    "empty": "The model did not return anything. Try again, making sure a model is selected.",
+    "modelGone": "That model is no longer installed. Choose another one in the settings.",
+    "noModel": "You have not chosen a model yet. Select one on the settings page.",
+    "noPassage": "The model did not return a rewritten passage.",
+    "reasoned": "The model received the request but did not return any text. A shorter passage is usually enough to resolve this error.",
+    "timeout": "The model took too long and was stopped. A shorter passage is usually enough to resolve this error.",
+    "tooLong": "The model was stopped because the content may be too long. Nothing was changed.",
+    "unknown": "Something went wrong.",
+    "unreachable": "Ollama is not responding. Make sure it is running on your computer before trying again.",
+    "unreadable": "The model's response does not appear to be readable."
+  },
+  "aiHint": "AI models run locally on your computer through Ollama. No data is ever sent outside your device. Privacy is one of Wattle's founding principles and what sets it apart: your data always stays on your computer.",
+  "aiInsertBelow": "Insert below",
+  "aiInstall": "Install",
+  "aiInstalling": "Downloading… {{percent}}%",
+  "aiMayNotFit": "At the limit for this computer",
+  "aiMayNotFitHint": "This model requires more memory than this machine has available. It may be slow or fail to start altogether. Installation can still be performed even though it is not recommended.",
+  "aiModels": "Models",
+  "aiModelsDescription": "Installed and available models. Nothing is downloaded until you ask for it.",
+  "aiNoModel": "No model selected",
+  "aiNoModelChosenHint": "The AI assistant is active, but no model is active yet. Choose one above to start using AI features.",
+  "aiNoModelsYet": "No model is installed yet. Choose one below: nothing is downloaded until you ask for it.",
+  "aiOnDescription": "A model running on this device. Nothing is sent elsewhere, to respect your privacy.",
+  "aiPreparing": "Getting the assistant ready on this computer…",
+  "aiRecommended": "Recommended",
+  "aiRecommendedHint": "Best match for this computer's memory.",
+  "aiRemove": "Remove",
+  "aiRemoveConfirm": "{{name}} will be deleted from this computer. Do you want to continue?",
+  "aiReplace": "Replace",
+  "aiRewrite": "Rewrite with AI assistant",
+  "aiRewriting": "Thinking…",
+  "aiSection": "AI Settings",
+  "aiSectionDescription": "Optional, local, and off until you turn it on.",
+  "aiUnmanaged": "External to Wattle",
+  "aiUnmanagedDescription": "Installed outside Wattle. You can remove it from here, but it is not offered as an active model.",
+  "aiUseTitle": "Use this",
+  "alignCenter": "Align center",
+  "alignLeft": "Align left",
+  "alignRight": "Align right",
+  "allEntries": "All pages",
+  "allSparks": "All sparks",
+  "allSparksIntro": "Every spark you have captured, shown from the most recent. They are intentionally short and untitled: a spark is a note for yourself, a thought caught in the moment, with no rules except your own.",
+  "appName": "Wattle",
+  "appearanceSection": "Appearance",
+  "aroundThisTime": "Around this time",
+  "backToComponents": "Components",
+  "backToTop": "Back to top",
+  "backup": "Backup",
+  "backupAction": "Export…",
+  "backupDescription": "Save a copy of your pages, attachments, and settings.",
+  "backupError": "Backup failed. Try again.",
+  "backupFolderAction": "Choose…",
+  "backupFolderHint": "This is where backup .wattle files are written, with the day's file name. It is not where your journal is kept. Previous backups are never included in a new one.",
+  "backupFolderUnset": "Not set yet: the save dialog starts wherever Windows last left it.",
+  "backupHint": "Wattle asks where to save the file each time. Database, attachments, and settings in a single .wattle file. Ollama models are not included and can be easily installed directly from Wattle.",
+  "backupSuccess": "Backup saved.",
+  "bold": "Bold",
+  "calendar": "Calendar",
+  "calendarBoth": "Both",
+  "calendarEntriesOnly": "Pages",
+  "calendarIntro": "Where your writing falls throughout the year. A fuller day is a day when you wrote more; select one to read it again.",
+  "calendarSparksOnly": "Sparks",
+  "cancel": "Cancel",
+  "code": "Code",
+  "codeLanguage": "Code language",
+  "codeLanguagePlain": "Plain text",
+  "components": {
+    "askConfirmation": "Ask for confirmation",
+    "cardBody": "A simple surface: thin border, card background, nothing else.",
+    "cardTitle": "Card",
+    "dialogBody": "A dialog in a portal, with the background and close button provided by this project.",
+    "dialogTitle": "Dialog title",
+    "disabled": "Disabled",
+    "hoverMe": "Hover over me",
+    "openDialog": "Open dialog",
+    "openPopover": "Open popover",
+    "pageDescription": "One or two sentences about what the screen is for, below the way back, the title, and what the screen puts on the right.",
+    "pageSubtitle": "A subtitle",
+    "pageTitle": "A page title",
+    "popoverBody": "Anchored to its trigger and closed by anything else: this is where both the date field and a letter's deadline open.",
+    "popoverTitle": "A popover",
+    "sampleEntryBody": "Left early enough to walk there, and the fog was still hanging over the field behind the houses.",
+    "sampleEntryHit": "fog",
+    "sampleEntryOpening": "Left early enough to walk there, and the",
+    "sampleEntryTitle": "The long way to the station",
+    "sampleSpark": "Whatever it is, it is not urgent. Sleep on it.",
+    "sizes": "Sizes",
+    "startTour": "Start tour",
+    "states": "States",
+    "subtitle": "The pieces that make up the interface, with their variants and states. Primitives first; then the few functional components used across enough screens to be worth seeing on their own. Everything here uses mock data.",
+    "title": "Components",
+    "tooltipBody": "An explanation, one step behind the control it belongs to.",
+    "tourBody": "The page darkens, the highlighted element stays lit, and the card follows it. Every guided tour in Wattle is this, one step at a time.",
+    "tourTitle": "This is a tour step",
+    "variants": "Variants",
+    "withIcon": "With an icon"
+  },
+  "continue": "Continue",
+  "dailySparks": "Sparks",
+  "dark": "Dark",
+  "dataSection": "Data",
+  "dataSectionDescription": "Your journal, in and out of Wattle.",
+  "delete": "Delete",
+  "deleteEntry": "Delete page",
+  "deleteEntryConfirm": "This page moves to the trash. You can restore it from Settings until it is removed for good.",
+  "deleteSpark": "Delete spark",
+  "deleteSparkConfirm": "This spark moves to the trash. You can restore it from Settings until it is removed for good.",
+  "dismiss": "Set aside",
+  "downloadAttachment": "Save a copy…",
+  "downloadHtml": "Download HTML",
+  "edit": "Edit",
+  "editorScale": "Text size",
+  "editorScaleDefault": "Default",
+  "editorScaleDescription": "How large your writing is set in the editor.",
+  "editorScaleHint": "Only the writing changes size - the rest of the application stays as it is.",
+  "editorScaleLarge": "Large",
+  "editorScaleLargest": "Largest",
+  "editorScaleSmall": "Small",
+  "emptyBody": "Every page stays on this device. Start today, even with a single line.",
+  "emptySparksBody": "A spark is a line caught in the moment. The field above is where one starts.",
+  "emptySparksTitle": "Nothing captured yet.",
+  "emptyTitle": "Your journal starts with a page.",
+  "entryContentPlaceholder": "Write something, or press / for commands…",
+  "entryCount_one": "{{count}} page",
+  "entryCount_other": "{{count}} pages",
+  "entryDate": "Page date",
+  "entryLock": "Open pages as read-only",
+  "entryLockDescription": "A page that already contains something opens locked. One click is all it takes to unlock it.",
+  "entryLockHint": "A new page starts empty and will never be locked until you finish it. This option only applies to journal pages that already exist.",
+  "entryNotFound": "This page no longer exists.",
+  "entryTitlePlaceholder": "Untitled",
+  "export": "Export",
+  "exportAction": "Export…",
+  "exportDescription": "The entire journal as an HTML archive that opens without a network connection.",
+  "exportEmpty": "There is nothing to export yet: the journal has no pages in it.",
+  "exportEntry": "Export page",
+  "exportError": "Export failed. Your journal was not changed.",
+  "exportSuccess": "Exported to {{path}}.",
+  "fixGrammar": "Fix grammar",
+  "greetingAfternoon": "Good afternoon.",
+  "greetingAfternoonNamed": "Good afternoon, {{name}}.",
+  "greetingEvening": "Good evening.",
+  "greetingEveningNamed": "Good evening, {{name}}.",
+  "greetingMorning": "Good morning.",
+  "greetingMorningNamed": "Good morning, {{name}}.",
+  "heading1": "Heading 1",
+  "heading2": "Heading 2",
+  "improveClarity": "Improve clarity",
+  "italic": "Italic",
+  "journalFolder": "Journal folder",
+  "journalFolderAction": "Move…",
+  "journalFolderConfirm": "Choose a folder and Wattle will move your journal into it - the database and every attachment together. Wattle reopens once the move is done. If it cannot be moved, your journal stays exactly where it is.",
+  "journalFolderError": "The journal could not be moved. It is still where it was, and nothing was changed.",
+  "journalFolderHint": "This is where the journal itself is kept: wattle.db and your attachments. It is not where backup .wattle files are saved.",
+  "language": "Language",
+  "languageDescription": "Interface language.",
+  "languageHint": "Only changes the interface. It does not touch a word of what you have written.",
+  "layoutWidth": "Wattle page width",
+  "layoutWidthCompact": "Narrow",
+  "layoutWidthDefault": "Balanced",
+  "layoutWidthDescription": "How wide all of Wattle's pages are.",
+  "layoutWidthHint": "Set the width of Wattle's pages yourself. Every computer and every monitor can be different, so we leave the ideal value up to you.",
+  "layoutWidthWide": "Wide",
+  "letterArrivedHeading": "Arrived",
+  "letterArrivedTitle": "A letter from your past self has arrived",
+  "letterComposeDescription": "Something you will not be able to read until a day you choose. Once sealed, it cannot be opened, edited, or deleted. Choose carefully.",
+  "letterComposeTitle": "A letter to yourself",
+  "letterContentPlaceholder": "Choose what to write before sealing your letter.",
+  "letterContinueDraft": "Continue the letter",
+  "letterDraftHeading": "In progress",
+  "letterDraftRow_one": "A letter started - {{count}} word so far",
+  "letterDraftRow_other": "A letter started - {{count}} words so far",
+  "letterError": {
+    "badDate": "That is not a date for which this letter can be sealed.",
+    "corrupt": "This letter cannot be opened. Its seal no longer matches how it was closed: this happens when the opening date, encrypted text, or key is modified in the journal file after sealing.",
+    "empty": "There is nothing written to seal yet.",
+    "futureEnvelope": "This letter was sealed by a newer version of Wattle. Update Wattle to open it.",
+    "noKey": "This letter's key is gone. The only way forward is to restore a backup made before it disappeared.",
+    "notFound": "This letter does not exist.",
+    "notYet": "This letter has not opened yet. Come back later.",
+    "sealed": "This letter is sealed and it is not time to open it yet. Come back later.",
+    "tooFar": "A letter can wait at most fifty years.",
+    "tooSoon": "A letter must wait at least seven days.",
+    "unknown": "Something went wrong."
+  },
+  "letterExport": "Download this letter",
+  "letterFooterDates": "Written on {{written}} · opened on {{opened}}",
+  "letterFromYourself": "From your past self",
+  "letterHasArrived": "Its day has arrived",
+  "letterIn10Years": "10 years",
+  "letterIn1Month": "1 month",
+  "letterIn1Year": "1 year",
+  "letterIn2Years": "2 years",
+  "letterIn3Months": "3 months",
+  "letterIn3Years": "3 years",
+  "letterIn5Years": "5 years",
+  "letterIn6Months": "6 months",
+  "letterKeepEditing": "Keep writing",
+  "letterLength": "Length",
+  "letterNoDateYet": "Choose when it will open.",
+  "letterOpenIt": "Open it",
+  "letterOpenedHeading": "Opened",
+  "letterOpenedOn": "Opened on {{date}}",
+  "letterOpensOn": "Opens on",
+  "letterOpensOnDate": "Opens on {{date}}",
+  "letterPickDate": "Choose a date…",
+  "letterPromptChapter": "A new chapter",
+  "letterPromptFree": "Nothing in particular",
+  "letterPromptGoals": "Goals",
+  "letterPromptHard": "A difficult period",
+  "letterPromptOrdinary": "An ordinary day",
+  "letterPromptPerson": "Someone who matters",
+  "letterPromptRemember": "Something not to forget",
+  "letterResultLabel": "Letter",
+  "letterReviewAction": "Read again…",
+  "letterReviewBody": "Read it one last time. After this step, it is put away.",
+  "letterReviewTitle": "Read it one last time",
+  "letterSealAction": "Seal the letter",
+  "letterSealBody": "It will be encrypted and put away until {{date}}.",
+  "letterSealFailed": "The letter was not sealed. Nothing was changed.",
+  "letterSealHonesty": "Wattle encrypts the letter and keeps the key in the journal file, so the letter cannot be lost. It is a lock against yourself, not a secret from whoever has access to your computer - and a backup carries both halves with it.",
+  "letterSealTerms": "Until {{date}}, you will not be able to open, read, edit, delete, or change its date. Neither will Wattle. The only way to remove it is to clear the entire journal.",
+  "letterSealTitle": "Seal this letter?",
+  "letterSealing": "Sealing…",
+  "letterTypeDate": "Type the date to confirm",
+  "letterWaitingHeading": "Waiting",
+  "letterWaitingLine": "A letter to yourself opens on {{date}}.",
+  "letterWhereToStart": "Where to start",
+  "letterWillOpen": "It will open on {{date}}.",
+  "letterWordCount_one": "{{count}} word",
+  "letterWordCount_other": "{{count}} words",
+  "letterWrite": "Write a letter",
+  "letterWriteBack": "Reply",
+  "letterWritten": "Written",
+  "letterWrittenAndLength_one": "Written on {{date}} · {{count}} word",
+  "letterWrittenAndLength_other": "Written on {{date}} · {{count}} words",
+  "letterWrittenOn": "Written on {{date}}",
+  "letters": "Letters",
+  "lettersDescription": "Words you entrust to your future self. Choose a day and leave there whatever you want to remember, tell, or rediscover. Until then, the letter stays sealed and out of reach.",
+  "lettersEmptyBody": "A letter is something you write now and cannot read again until a day you choose.",
+  "lettersEmptyTitle": "No letters",
+  "light": "Light",
+  "link": "Link",
+  "listErrorBody": "Your pages are still on this device: Wattle could not read them. Try again and, if the problem persists, restore a backup.",
+  "listErrorTitle": "Unable to open the journal.",
+  "loadOlder": "Load older",
+  "loading": "Loading…",
+  "lockEntry": "Lock this page",
+  "makeShorter": "Make shorter",
+  "memoriesSection": "Memories",
+  "memoriesSectionDescription": "Two ways for what you have written to come back to you.",
+  "memoryAnother": "Find another",
+  "memoryAsk": "Find a memory worth reading again",
+  "memoryLooking": "Looking…",
+  "memoryNoneAlike": "Nothing else you have written is similar enough to this to be worth placing beside it.",
+  "memoryNoneLeft": "Nothing else is similar enough to be worth showing.",
+  "memoryTooRecent": "There is nothing far enough back yet. A memory must be at least two weeks older than your most recent writing, and your journal does not go back far enough yet.",
+  "memoryWorthRevisiting": "A memory worth reading again",
+  "month": "Month",
+  "name": "Name",
+  "nameDescription": "Between {{min}} and {{max}} characters.",
+  "nameHint": "Choose how you want to be called in Wattle, with your real name or an invented one. You can change it whenever you want.",
+  "namePlaceholder": "Your name",
+  "nameRequired": "Name is required: at least {{min}} characters.",
+  "nameTooShort": "At least {{min}} characters.",
+  "navigation": "Navigation",
+  "navigationBoth": "Both",
+  "navigationBottom": "Bottom",
+  "navigationDescription": "Where the main navigation is located.",
+  "navigationHeader": "Top",
+  "navigationHint": "Place the navigation wherever you prefer it.",
+  "newEntry": "New page",
+  "newProfile": "New profile",
+  "newProfileAction": "Exit",
+  "newProfileBackingUp": "Backing up…",
+  "newProfileBackupFolder": "The save dialog opens at {{folder}}.",
+  "newProfileBackupNow": "Back up now…",
+  "newProfileBackupSaved": "Backup saved.",
+  "newProfileConfirmAction": "Delete everything",
+  "newProfileConfirmBody": "Every page, every attachment, and your name will be permanently deleted and the setup will start over. This action cannot be undone.",
+  "newProfileConfirmTitle": "Clear this profile?",
+  "newProfileContinueAnyway": "Continue anyway",
+  "newProfileDescription": "Sign out, delete this profile, and start from scratch. Every page and every attachment will be deleted. You can still back up this profile before confirming.",
+  "newProfileError": "Unable to start over. Your journal was not changed.",
+  "newProfileHint": "There is only one journal on this device. This action clears it; it does not add a second one.",
+  "newProfileNoBackupBody": "Wattle has no record of a backup for this journal. Everything it contains is about to be deleted and, without a backup, there is no way to recover it.",
+  "newProfileNoBackupTitle": "No backup folder set",
+  "next": "Next",
+  "nextEntry": "next page",
+  "noResults": "No pages match the search.",
+  "noSparkResults": "No sparks match the search.",
+  "nudgeAnother": "Ask me something else",
+  "nudgeCue": "A prompt",
+  "nudgeDismiss": "Not now",
+  "nudgeOffer": "Don't know what to write?",
+  "nudgeThinking": "Thinking…",
+  "nudgeWrite": "Write about this",
+  "off": "Off",
+  "ollamaInstallFailed": "Ollama could not be installed. Wattle did not change anything on this device.",
+  "ollamaStartFailed": "Ollama did not start in time. It may still be starting up: try again in a moment.",
+  "on": "On",
+  "onThisDay": "On this day",
+  "onThisDayDescription": "The pages you wrote in previous years, on today's date, will appear on the home page.",
+  "onThisDayHint": "Choose whether you want to see again what you wrote on this same date in previous years. The reminder appears on the home page.",
+  "onboarding": {
+    "language": {
+      "title": "Welcome to Wattle.",
+      "body": "Select your language."
+    },
+    "start": {
+      "title": "Have you kept a journal with Wattle before?",
+      "body": "If you have a backup, everything in it will return to its place.",
+      "fresh": "Start a new journal",
+      "freshBody": "A blank first page, and three short questions before you open it.",
+      "returning": "I have a Wattle backup",
+      "returningBody": "Texts, attachments, and settings, exactly as you left them."
+    },
+    "returning": {
+      "eyebrow": "Welcome back",
+      "title": "Let's find your journal.",
+      "body": "Choose the .wattle backup file you saved. Everything it contains replaces this empty journal, and Wattle opens where you left off.",
+      "action": "Choose a backup…",
+      "confirmTitle": "Restore a backup?",
+      "confirm": "Choose the .wattle file you saved and Wattle will reopen with everything it contains: texts, attachments, and settings. This empty journal will be replaced."
+    },
+    "name": {
+      "title": "What should Wattle call you?",
+      "body": "Used for the greeting on the home screen. Two to twelve characters."
+    },
+    "backup": {
+      "title": "Where should backups be saved?",
+      "body": "A folder outside the journal, so a backup is somewhere else when you need it."
+    },
+    "theme": {
+      "title": "Light or dark?",
+      "body": "You can change it whenever you want in the settings."
+    }
+  },
+  "onboardingFinish": "Start writing",
+  "onboardingStep": "Step {{step}} of {{total}}",
+  "pageOf": "{{page}} of {{total}}",
+  "palette": "Theme",
+  "paletteDescription": "Sets the colors, typefaces, and visual style of Wattle.",
+  "paletteHint": "Changes the look of the whole app: background, text, interface details, corners, and typefaces. It does not change anything you have written.",
+  "paletteName": {
+    "clay": "Clay",
+    "crimson": "Crimson",
+    "sage": "Sage",
+    "umber": "Umber",
+    "wattle": "Wattle",
+    "olive": "Olive",
+    "forest": "Forest",
+    "candy": "Candy"
+  },
+  "pastSparks": "Previous sparks",
+  "previous": "Previous",
+  "previousEntry": "previous page",
+  "primaryNav": "Main",
+  "profileSection": "Profile",
+  "removeAttachment": "Remove attachment",
+  "replayTours": "Guided tours",
+  "replayToursAction": "Reset",
+  "replayToursDescription": "Show all welcome tours again. Useful for rediscovering all of Wattle's features.",
+  "replayToursHint": "Marks all tours as unseen and takes you to the home screen to show you the first one.",
+  "reset": "Reset preferences",
+  "resetAction": "Reset",
+  "resetConfirm": "Appearance, page width, memories, and page locking return to their initial settings. The journal, your name, and AI assistant settings are not touched. Do you want to continue?",
+  "resetDescription": "Return to the initial values. Your name and AI assistant settings remain as they are.",
+  "resetHint": "Preferences only. Pages, sparks, and letters remain exactly where they are.",
+  "resetSection": "Reset",
+  "resizeImage": "Resize image",
+  "resizeVideo": "Resize video",
+  "restore": "Restore",
+  "restoreAction": "Restore…",
+  "restoreConfirm": "Every page, attachment, and setting on this device will be replaced by the backup you choose now. This action cannot be undone.",
+  "restoreDescription": "Replaces everything on this device with a backup.",
+  "restoreError": "Restore failed. Your data was not touched.",
+  "restoreHint": "Replaces everything on this device with the backup. This cannot be undone.",
+  "restoring": "Restoring…",
+  "retry": "Try again",
+  "save": "Save",
+  "saveError": "Not saved",
+  "saveThought": "Save thought",
+  "saved": "Saved",
+  "saving": "Saving…",
+  "search": "Search pages",
+  "searchDisabledHint": "No items found; add an item before you can enable search.",
+  "searchPlaceholder": "Search pages…",
+  "searchResultCount_one": "{{count}} result",
+  "searchResultCount_other": "{{count}} results",
+  "searchSparks": "Search sparks",
+  "searchSparksDisabledHint": "There is nothing to search yet: write a spark above and search will become active.",
+  "searchSparksPlaceholder": "Search sparks…",
+  "settings": "Settings",
+  "settingsSubtitle": "Everything you find here is saved on this device.",
+  "slash": {
+    "bulletList": {
+      "description": "A simple bulleted list",
+      "title": "Bulleted list"
+    },
+    "code": {
+      "description": "Insert a code snippet",
+      "title": "Code block"
+    },
+    "divider": {
+      "description": "Visually separate sections",
+      "title": "Divider"
+    },
+    "file": {
+      "description": "Attach any file",
+      "title": "File"
+    },
+    "heading1": {
+      "description": "Large section heading",
+      "title": "Heading 1"
+    },
+    "heading2": {
+      "description": "Medium section heading",
+      "title": "Heading 2"
+    },
+    "heading3": {
+      "description": "Small section heading",
+      "title": "Heading 3"
+    },
+    "image": {
+      "description": "Attach an image",
+      "title": "Image"
+    },
+    "orderedList": {
+      "description": "A numbered list",
+      "title": "Numbered list"
+    },
+    "quote": {
+      "description": "Highlight a passage",
+      "title": "Quote"
+    },
+    "taskList": {
+      "description": "Keep track of things to do",
+      "title": "Checklist"
+    },
+    "text": {
+      "description": "Plain text",
+      "title": "Text"
+    },
+    "video": {
+      "description": "Attach a video",
+      "title": "Video"
+    }
+  },
+  "slashCategory": {
+    "basic": "Basic",
+    "blocks": "Blocks",
+    "lists": "Lists",
+    "media": "Media"
+  },
+  "slashNoResults": "No results.",
+  "sparkCharsLeft_one": "{{count}} character left",
+  "sparkCharsLeft_other": "{{count}} characters left",
+  "sparkCount_one": "{{count}} spark",
+  "sparkCount_other": "{{count}} sparks",
+  "sparkDate": "Day this spark is archived under",
+  "sparkEchoDescription": "An earlier spark returns on its own, at most one per day.",
+  "sparkEchoHint": "A spark at least 30 days old, the same one for the whole day, then the next one tomorrow.",
+  "sparkEchoLead": "You left yourself this thought",
+  "sparkEchoSetting": "Spark echoes",
+  "sparkEmpty": "This spark is empty.",
+  "sparkOpenAsEntry": "Open as page",
+  "sparkPlaceholder": "Capture a passing thought…",
+  "sparkResultLabel": "Spark",
+  "sparkRichBadge": "Written with formatting",
+  "sparkRichBody": "This spark contains formatting or attachments, from before sparks became plain text. Nothing has been changed: it opens in the full editor, where everything continues to work.",
+  "sparkSaveHint": "Ctrl + Enter to save",
+  "sparkTruncated_one": "The most recent one is shown.",
+  "sparkTruncated_other": "The {{count}} most recent are shown.",
+  "sparksEyebrow": "Clarity of the moment",
+  "sparksIntro": "A line or two, caught before they get away. Nothing here needs a title, and nothing needs to become something else.",
+  "strikethrough": "Strikethrough",
+  "suggestTitle": "Suggest a title",
+  "theme": "Light or dark",
+  "themeDescription": "Every theme exists in both; this is the one you are reading in.",
+  "themeHint": "The theme applies to the whole app, and your choice is remembered the next time you open it.",
+  "tourClose": "Close tour",
+  "tourDone": "Done",
+  "tourStep": "{{current}} of {{total}}",
+  "tours": {
+    "ai": {
+      "switch": {
+        "title": "Off until you turn it on",
+        "body": "The AI assistant is optional and starts off. It improves and personalises the experience inside Wattle, always with respect for your privacy. The data is processed on your computer and will never leave it."
+      },
+      "runtime": {
+        "title": "What the models run on",
+        "body": "The models run through Ollama. Wattle can install it and start it from here, if you let it."
+      },
+      "models": {
+        "title": "The models you keep",
+        "body": "Download the model best suited to your computer. Try one at a time, so you can tell which one fits your hardware best."
+      }
+    },
+    "home": {
+      "write": {
+        "title": "Start with today",
+        "body": "This is how a new page begins. One click opens a blank page with today's date: even a single line deserves a place here."
+      },
+      "search": {
+        "title": "Find what you wrote",
+        "body": "Every word on every page is searchable, and the result shows the matching passage. It stays disabled until there is something to search."
+      },
+      "timeline": {
+        "title": "Everything you have written",
+        "body": "Your pages, from the most recent and grouped by month. Open one to continue, or scroll to load more."
+      },
+      "nav": {
+        "title": "Everything else",
+        "body": "The calendar, sparks, letters to yourself, and settings all live in this bar. It follows you from screen to screen, and the one you are on is the only one that carries its own name."
+      }
+    },
+    "calendar": {
+      "grid": {
+        "title": "Your journal by date",
+        "body": "The days you wrote are marked. Choose one to read it again, or to write on a day that has already passed."
+      },
+      "view": {
+        "title": "A month, or a whole year",
+        "body": "Switch between the two. It is in the yearly view that a habit becomes visible."
+      },
+      "kinds": {
+        "title": "pages, sparks, or both",
+        "body": "Two types of writing share this grid, distinguished by the color of their marks. Show one at a time when you are looking for something specific."
+      }
+    },
+    "sparks": {
+      "capture": {
+        "title": "Capture a thought",
+        "body": "A spark is a line caught in the moment. No title, no page. Write it and press Ctrl+Enter, or use the button."
+      },
+      "archive": {
+        "title": "All the sparks you have kept",
+        "body": "Here you will find the latest ones. From here you can open them all, month by month - and write a new one from there too."
+      },
+      "recent": {
+        "title": "What a spark can become",
+        "body": "Each one opens on its own page, where you can edit it, delete it, or turn it into a proper page if it has grown in the meantime."
+      }
+    },
+    "entry": {
+      "title": {
+        "title": "Give it a name, or leave it as it is",
+        "body": "The title is optional and saves automatically as you write. Press Enter to move directly to the page below."
+      },
+      "editor": {
+        "title": "Type \"/\" for everything else",
+        "body": "Write here as you would on paper. Typing \"/\" opens the pop-up menu with everything the page can contain: headings, lists, quotes, images, videos, and files. Select text to format it. There is nothing to save: it is written as you go."
+      },
+      "actions": {
+        "title": "Page commands",
+        "body": "Go to the previous or next page, lock it against accidental edits, export it as HTML, or delete it."
+      }
+    },
+    "settings": {
+      "appearance": {
+        "title": "Make it yours",
+        "body": "Theme, accent color, language, and page width."
+      },
+      "data": {
+        "title": "Your journal is yours",
+        "body": "Back it up, export it as HTML, or restore it from a backup. Everything stays on this device."
+      },
+      "reset": {
+        "title": "Go back",
+        "body": "Return preferences to their original state, replay these tours, or start a completely new journal."
+      },
+      "profile": {
+        "title": "Your name, and nothing else",
+        "body": "It greets you on the home screen and never leaves this device. Wattle asks nothing else of you: no account, no email, no sign-in."
+      }
+    },
+    "letters": {
+      "what": {
+        "title": "A letter to yourself",
+        "body": "It is not a page: a letter is written now and remains sealed until a day you choose. Until then it cannot be read, edited, or unsealed - not even by you."
+      },
+      "write": {
+        "title": "Write one",
+        "body": "One draft at a time, kept here until you seal it. Sealing asks for the day it will open, and there is no going back."
+      },
+      "waiting": {
+        "title": "While it waits",
+        "body": "A sealed letter shows only the day it opens and how long it is. No countdown, no preview: it will simply be here when the time comes."
+      }
+    },
+    "letterCompose": {
+      "directions": {
+        "title": "Where to start",
+        "body": "Choose a direction and you will be given a question to write toward. The question is not saved and never becomes part of the letter: it is simply something to look at while you write."
+      },
+      "seal": {
+        "title": "When it will open",
+        "body": "Choose how far away that day is, then read it one last time. Sealing is final: from that moment, the letter is unreadable until the chosen date."
+      }
+    },
+    "letterRead": {
+      "opened": {
+        "title": "It has arrived",
+        "body": "The day you chose has arrived and the letter can be read!"
+      },
+      "keep": {
+        "title": "Yours, forever",
+        "body": "Read it as many times as you want. It cannot be edited once sealed, and it cannot be deleted."
+      }
+    }
+  },
+  "trash": "Trash",
+  "trashAction": "Open trash…",
+  "trashDescription": "Pages you delete wait here before they are gone for good.",
+  "trashEmptyAction": "Empty trash",
+  "trashEmptyConfirm": "Every page waiting in the trash will be permanently deleted, attachments included. This action cannot be undone.",
+  "trashEmptyTitle": "Empty the trash?",
+  "trashError": "The trash could not be read.",
+  "trashHint": "A restored page comes back with its date, its attachments and its place in the journal.",
+  "trashIntro": "A deleted page waits here for {{days}} days, and is then removed for good.",
+  "trashNothing": "Nothing has been deleted.",
+  "trashPurge": "Delete for good",
+  "trashPurgeConfirm": "This page and everything attached to it will be permanently deleted. This action cannot be undone.",
+  "trashRestore": "Restore",
+  "trashRow": "Written {{written}} · will be removed on {{removed}}",
+  "underline": "Underline",
+  "unlockEntry": "Unlock this page",
+  "untitled": "Untitled",
+  "writeOnThisDay": "Write on this day",
+  "writingSection": "Writing",
+  "writingSectionDescription": "How a page behaves when you open it.",
+  "year": "Year",
+  "yearsAgo_one": "A year ago",
+  "yearsAgo_other": "{{count}} years ago",
+  "memoryPrevious": "Previous memory",
+  "memoryNext": "Next memory",
+  "letterAiUnavailableTitle": "AI suggestions are unavailable",
+  "letterAiUnavailableBody": "The directions above always work. To also get a question to start from, turn on the AI assistant and choose a model in Settings - it runs on this computer, and nothing leaves it."
+}

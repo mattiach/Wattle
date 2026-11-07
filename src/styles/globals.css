@@ -1,0 +1,626 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/literata";
+/* Every palette there is, and the families they ask for: one generated file,
+   written by `scripts/generate-themes.js` from whatever sits in `themes/`.
+   Adding a theme is a file in that folder and a run of `pnpm generate:themes`,
+   so this line never changes.
+
+   Up here because an `@import` may only sit at the top of a stylesheet, which
+   is exactly why the blocks inside those files are written to outweigh what
+   follows rather than to come after it. The default palette is not among them:
+   it is the `:root` and `.dark` blocks below. */
+@import "./themes/index.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Indirected, exactly as the reading widths further down are, and for the
+     same reason: `inline` bakes the value into the utility, so a family named
+     here could never be moved at runtime. Named here, chosen in `:root`, and
+     replaced by whichever palette is in force. */
+  --font-sans: var(--sans);
+  --font-serif: var(--serif);
+  --font-mono: var(--mono);
+  --font-heading: var(--serif);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --color-wattle: var(--wattle);
+  --color-hairline: var(--hairline);
+  /* Role tokens. `wattle` is the journal's own accent; these two exist so the
+     machine and the past never borrow it. */
+  --color-assist: var(--assist);
+  --color-memory: var(--memory);
+  --color-memory-surface: var(--memory-surface);
+  --color-wattle-ink: var(--wattle-ink);
+  --color-assist-ink: var(--assist-ink);
+  --color-faint: var(--faint);
+  --color-placeholder: var(--placeholder);
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.5);
+  --radius-2xl: calc(var(--radius) * 2);
+  --radius-3xl: calc(var(--radius) * 3);
+  --text-display: 2.5rem;
+  --text-display--line-height: 1.1;
+  --text-display--letter-spacing: -0.02em;
+  --text-title: 2rem;
+  --text-title--line-height: 1.2;
+  --text-title--letter-spacing: -0.02em;
+  --text-eyebrow: 0.6875rem;
+  --text-eyebrow--line-height: 1rem;
+  --text-eyebrow--letter-spacing: 0.08em;
+  /* The three sizes everything below a title is set in. They replace the
+     ad-hoc `text-[0.9375rem]` / `text-[1.05rem]` values that had drifted
+     apart across screens. */
+  --text-body: var(--reading-size);
+  --text-body--line-height: var(--reading-leading);
+  --text-body-sm: 0.9375rem;
+  --text-body-sm--line-height: 1.6;
+  --text-meta: 0.8125rem;
+  --text-meta--line-height: 1.45;
+  /* Indirected through a variable rather than written as a measurement: with
+     `@theme inline` a literal would be baked into every utility, and the width
+     has to stay changeable at runtime. */
+  --spacing-reading: var(--width-reading);
+  --spacing-column: var(--width-column);
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  /* Three elevations by role, so a hover, a popover and the floating bar stop
+     inventing their own one-off shadows. */
+  --shadow-raise: 0 1px 2px oklch(0 0 0 / 0.05);
+  --shadow-float: 0 8px 30px oklch(0 0 0 / 0.12);
+  --shadow-bar:
+    0 1px 2px oklch(0 0 0 / 0.04), 0 10px 36px -8px oklch(0 0 0 / 0.18);
+}
+
+/* Warm "paper & ink" palette: a quiet neutral base with a single wattle
+   accent used only for focus, active nav and the saved indicator.
+
+   **The paper is paper, not white.** It used to sit at 0.982 with the card at
+   1.0 - a difference of under two per cent, which on a bright screen is no
+   difference at all. Every raised surface in the application depends on that
+   gap: a card, a popover, and above all the floating bar, which is a pale
+   translucent surface and had nothing to be pale *against*. In dark mode the
+   same design worked because the gap there was real. So the ground moved down
+   and the raised surfaces moved up, and the separations everything is built on
+   exist in both themes now instead of one. */
+:root {
+  --background: oklch(0.967 0.005 85);
+  --foreground: oklch(0.235 0.008 65);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.235 0.008 65);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.235 0.008 65);
+  --primary: oklch(0.28 0.011 65);
+  --primary-foreground: oklch(0.985 0.003 85);
+  --secondary: oklch(0.932 0.007 85);
+  --secondary-foreground: oklch(0.3 0.01 65);
+  --muted: oklch(0.94 0.006 85);
+  --muted-foreground: oklch(0.522 0.012 68);
+  --accent: oklch(0.918 0.009 82);
+  --accent-foreground: oklch(0.28 0.011 65);
+  --destructive: oklch(0.55 0.19 25);
+  /* Ink at a low alpha, as before, but enough of it to be seen on paper this
+     bright. At 10% a hairline between two cards was a rumour. */
+  --border: oklch(0.235 0.008 65 / 15%);
+  --hairline: oklch(0.235 0.008 65 / 10%);
+  --input: oklch(0.235 0.008 65 / 17%);
+  --ring: oklch(0.63 0.11 78);
+  --wattle: oklch(0.68 0.13 82);
+  /* Cool and low-chroma, deliberately not the accent: an AI surface must never
+     look like the journal's own. */
+  --assist: oklch(0.52 0.06 250);
+  /* Resurfaced writing recedes through size, weight and surface - never
+     through contrast. Its lightness matches `--muted-foreground`, which
+     already passes AA here, so recession costs no legibility. */
+  --memory: oklch(0.522 0.012 68);
+  --memory-surface: oklch(0.235 0.008 65 / 4%);
+  /* Code, in the same voice as everything else. A highlight.js theme would
+     arrive with its own palette and ignore all of this, so the grammar's
+     classes are mapped onto six low-chroma hues instead - near the charts in
+     saturation, nowhere near a terminal. A comment recedes rather than
+     colours: it is the one token that is meant to be skipped. */
+  --code-keyword: oklch(0.5 0.11 300);
+  --code-string: oklch(0.5 0.09 145);
+  --code-number: oklch(0.55 0.12 40);
+  --code-function: oklch(0.5 0.1 250);
+  --code-type: oklch(0.5 0.09 195);
+  --code-punctuation: oklch(0.5 0.012 68);
+  --chart-1: oklch(0.68 0.13 82);
+  --chart-2: oklch(0.6 0.1 120);
+  --chart-3: oklch(0.55 0.09 220);
+  --chart-4: oklch(0.5 0.11 300);
+  --chart-5: oklch(0.6 0.14 30);
+  --radius: 0.75rem;
+
+  /* The default typography, which a whole theme is free to replace. Serif is
+     what you wrote and sans is the application talking - the one distinction no
+     theme may collapse, which is why every one of them names two families. */
+  --sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --serif: "Literata Variable", ui-serif, Georgia, serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --sidebar: oklch(0.97 0.005 85);
+  --sidebar-foreground: oklch(0.235 0.008 65);
+  --sidebar-primary: oklch(0.28 0.011 65);
+  --sidebar-primary-foreground: oklch(0.985 0.003 85);
+  --sidebar-accent: oklch(0.936 0.008 82);
+  --sidebar-accent-foreground: oklch(0.28 0.011 65);
+  --sidebar-border: oklch(0.235 0.008 65 / 10%);
+  --sidebar-ring: oklch(0.63 0.11 78);
+}
+
+.dark {
+  --background: oklch(0.185 0.005 70);
+  --foreground: oklch(0.925 0.006 85);
+  --card: oklch(0.222 0.006 70);
+  --card-foreground: oklch(0.925 0.006 85);
+  --popover: oklch(0.235 0.006 70);
+  --popover-foreground: oklch(0.925 0.006 85);
+  --primary: oklch(0.925 0.006 85);
+  --primary-foreground: oklch(0.205 0.006 70);
+  --secondary: oklch(0.27 0.007 70);
+  --secondary-foreground: oklch(0.925 0.006 85);
+  --muted: oklch(0.26 0.006 70);
+  --muted-foreground: oklch(0.68 0.011 78);
+  --accent: oklch(0.295 0.008 72);
+  --accent-foreground: oklch(0.945 0.006 85);
+  --destructive: oklch(0.68 0.17 25);
+  --border: oklch(0.93 0.006 85 / 11%);
+  --hairline: oklch(0.93 0.006 85 / 8%);
+  --input: oklch(0.93 0.006 85 / 14%);
+  --ring: oklch(0.72 0.11 80);
+  --wattle: oklch(0.78 0.13 84);
+  /* Kept below the foreground (0.925) on purpose: at night the assistant must
+     not be the brightest thing on the page. */
+  --assist: oklch(0.74 0.06 250);
+  --memory: oklch(0.68 0.008 78);
+  --memory-surface: oklch(0.93 0.006 85 / 4%);
+  /* Lighter and a shade less saturated than by day: on a dark surface the same
+     chroma reads as neon, which is the look this palette exists to avoid. */
+  --code-keyword: oklch(0.76 0.1 300);
+  --code-string: oklch(0.76 0.09 145);
+  --code-number: oklch(0.78 0.1 45);
+  --code-function: oklch(0.76 0.09 250);
+  --code-type: oklch(0.76 0.08 195);
+  --code-punctuation: oklch(0.7 0.012 78);
+  --sidebar: oklch(0.205 0.006 70);
+  --sidebar-foreground: oklch(0.925 0.006 85);
+  --sidebar-primary: oklch(0.925 0.006 85);
+  --sidebar-primary-foreground: oklch(0.205 0.006 70);
+  --sidebar-accent: oklch(0.295 0.008 72);
+  --sidebar-accent-foreground: oklch(0.945 0.006 85);
+  --sidebar-border: oklch(0.93 0.006 85 / 11%);
+  --sidebar-ring: oklch(0.72 0.11 80);
+}
+
+/* ── Text contrast ───────────────────────────────────────────────────────
+   Derived from whichever palette is in force, so every theme gets them.
+
+   `--faint` and `--placeholder` replace `text-muted-foreground/NN`. On paper,
+   a muted colour at 50-70% alpha fell to 2-3:1 and stopped being readable; by
+   day the muted ink is already as quiet as text can be, so only the night
+   keeps the fade.
+
+   `--wattle-ink` and `--assist-ink` are the accents when they are *text*. A
+   theme's accent is its button colour, and a pale one (Candy, the default's
+   0.68) is fine as a fill and illegible as a letter. Capped at 0.5 lightness
+   by day, which holds 4.5:1 on every light ground we ship. */
+:root {
+  --faint: var(--muted-foreground);
+  --placeholder: color-mix(in oklab, var(--muted-foreground) 85%, transparent);
+  --wattle-ink: oklch(from var(--wattle) min(l, 0.5) c h);
+  --assist-ink: oklch(from var(--assist) min(l, 0.5) c h);
+}
+
+.dark {
+  --faint: color-mix(in oklab, var(--muted-foreground) 70%, transparent);
+  --placeholder: color-mix(in oklab, var(--muted-foreground) 50%, transparent);
+  --wattle-ink: var(--wattle);
+  --assist-ink: var(--assist);
+}
+
+/* ── Appearance ───────────────────────────────────────────────────────────
+   Everything a reader can change about how Wattle looks is a data attribute on
+   <html>, written by `AppearanceProvider` and interpreted here. The provider
+   knows nothing about colours or measurements and this file knows nothing
+   about React, so adding a font family, a density or a second accent later is
+   one more attribute and one more block - never a new mechanism.
+
+   The stored value is a *name*. What "wide" or "moss" means lives here, which
+   is why tuning either is a change to CSS rather than a migration of
+   everyone's settings. */
+
+/* Reading and scanning widths. `reading` is for anything meant to be read,
+   `column` for anything meant to be scanned; both move together so the two
+   never cross over. */
+:root {
+  --width-reading: 42rem;
+  --width-column: 48rem;
+}
+
+:root[data-wattle-width="compact"] {
+  --width-reading: 36rem;
+  --width-column: 41rem;
+}
+
+:root[data-wattle-width="wide"] {
+  --width-reading: 50rem;
+  --width-column: 58rem;
+}
+
+/* How large the writing itself is set, independently of everything else on
+   screen. A multiplier rather than a size: the editor's scale is built on
+   `--reading-size`, so this moves the writing without moving the application
+   around it - a screen that needs larger text is not asking for larger
+   buttons. Named values for the same reason the widths are named: the
+   stylesheet owns what each one means.
+
+   `--reading-size` rather than `--text-body` because the four are also drawn at
+   their real sizes by the control that picks between them, and a swatch reading
+   a measurement out of `@theme` would be reading a literal Tailwind has already
+   baked into every utility. The size is declared here and `--text-body` points
+   at it, so there is still exactly one number. */
+:root {
+  --reading-size: 1.09375rem;
+  --reading-leading: 1.75;
+  --editor-scale-small: 0.9;
+  --editor-scale-default: 1;
+  --editor-scale-large: 1.15;
+  --editor-scale-largest: 1.35;
+  --wattle-editor-scale: var(--editor-scale-default);
+}
+
+:root[data-wattle-editor-scale="small"] {
+  --wattle-editor-scale: var(--editor-scale-small);
+}
+
+:root[data-wattle-editor-scale="large"] {
+  --wattle-editor-scale: var(--editor-scale-large);
+}
+
+:root[data-wattle-editor-scale="largest"] {
+  --wattle-editor-scale: var(--editor-scale-largest);
+}
+
+/* The default palette, restated.
+
+   Every other palette is a file of its own, imported at the top; this one is
+   the `:root` and `.dark` blocks above, which is why it has nothing to declare
+   - except that a swatch in Settings previewing it from inside a page wearing
+   another theme has to show *these* colours rather than the ones around it. So
+   the four a swatch draws are said again here, and only those.
+
+   Not `:root`-prefixed for that same reason: the attribute normally sits on
+   <html>, but any element carrying it gets the variables, which is what lets a
+   preview be painted by the very rule the application uses instead of by a copy
+   of the colour that can drift from it. The `:root` selector beside it is what
+   outweighs the blocks above when the attribute is on <html>. */
+:root[data-wattle-palette="wattle"],
+[data-wattle-palette="wattle"] {
+  --background: oklch(0.967 0.005 85);
+  --card: oklch(1 0 0);
+  --foreground: oklch(0.235 0.008 65);
+  --wattle: oklch(0.68 0.13 82);
+}
+
+:root[data-wattle-palette="wattle"].dark,
+.dark [data-wattle-palette="wattle"] {
+  --background: oklch(0.185 0.005 70);
+  --card: oklch(0.222 0.006 70);
+  --foreground: oklch(0.925 0.006 85);
+  --wattle: oklch(0.78 0.13 84);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    /* Chrome is not text. Labels, navigation, settings rows and list previews
+       cannot be edited, so they should not be selectable either - a drag over
+       the interface should never leave half a button highlighted. */
+    @apply select-none bg-background text-foreground antialiased;
+  }
+  /* What a person actually writes, and can therefore select and copy. */
+  input,
+  textarea,
+  [contenteditable="true"],
+  .ProseMirror {
+    @apply select-text;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  html {
+    scrollbar-gutter: stable;
+    @apply font-sans;
+  }
+
+  /* Every scrollbar, not only the page's.
+     `scrollbar-width` does not inherit, so pinning it to `html` left the page
+     itself thin and every scrolling surface *inside* it - a menu, a select, a
+     calendar's year list - wearing the platform's full-width bar. Inside a
+     popover a few hundred pixels wide that bar is enormous, and it was the one
+     piece of chrome in the application still drawn by the operating system.
+     `select` is named explicitly because a native listbox is not a descendant
+     of anything in the document. */
+  *,
+  select {
+    scrollbar-color: var(--input) transparent;
+    scrollbar-width: thin;
+  }
+  ::selection {
+    @apply bg-wattle/25;
+  }
+}
+
+@utility eyebrow {
+  @apply font-medium text-eyebrow text-muted-foreground uppercase;
+}
+
+/* The floating layer: the bottom navigation and the back-to-top control.
+   One definition rather than the same eleven classes copied into both, so the
+   two go on reading as one layer over the page.
+
+   **The border is ink in light and light in dark.** It used to be `white/15`
+   in both, which on a pale page is a white line on a white surface - the bar
+   had no edge at all, and with the ground and the surface a couple of per cent
+   apart it had no fill either. Dark mode never showed the problem because a
+   white edge on a dark surface is exactly right there. */
+@utility glass-bar {
+  @apply border border-border bg-popover/80 shadow-bar backdrop-blur-lg backdrop-saturate-150;
+  @apply dark:border-white/10 dark:bg-popover/50;
+}
+
+/* One letter of writing, drawn at the size it is offering. The control that
+   picks the reading size shows the sizes rather than naming them, and it shows
+   them by being set in the same face and the same measurement the editor is -
+   so the difference on the tile is the difference on the page, not an
+   impression of it. `--editor-scale-sample` is set per tile. */
+@utility editor-scale-sample {
+  font-size: calc(var(--reading-size) * var(--editor-scale-sample, 1));
+  @apply font-serif leading-none;
+}
+
+/* The Spark identity marker: a rail down the leading edge. It is what makes a
+   spark recognisable at a glance in a search result, a calendar day list or
+   the archive, without a badge and without a second accent colour. */
+@utility spark-rail {
+  @apply border-wattle/45 border-l-2;
+}
+
+/* Editor surface: a reading-first typographic scale. Block spacing is
+   expressed as margins between siblings so ProseMirror keeps the rhythm
+   while nodes are inserted and removed.
+
+   Set in Literata, not in the interface font. Serif is what you wrote; sans is
+   the application talking - which is the whole of what separates an entry from
+   a suggestion on screen. */
+.ProseMirror {
+  /* **Not `text-body`**, and that is the whole of why the reading size works.
+     `@apply` emits its declarations *after* the rule's own, whichever order
+     they are written in - so a `text-body` here put a constant `font-size`
+     last, at the same specificity, and the reader's choice did nothing at all.
+     The two properties it was here for are written out instead, off the same
+     two variables the token itself is built from: still one number each, and
+     nothing that can quietly win against them. */
+  font-size: calc(var(--reading-size) * var(--wattle-editor-scale, 1));
+  line-height: var(--reading-leading);
+  letter-spacing: 0.003em;
+  @apply font-serif text-foreground outline-none;
+
+  /* Headings stay visually connected to the content that follows them. */
+  > h1 + *,
+  > h2 + *,
+  > h3 + * {
+    @apply mt-[0.4em];
+  }
+
+  h1 {
+    @apply mt-[1.2em] font-heading font-semibold text-[1.6em]/[1.25] tracking-[-0.02em];
+  }
+
+  h2 {
+    @apply mt-[1em] font-heading font-semibold text-[1.257em]/[1.3] tracking-[-0.015em];
+  }
+
+  h3 {
+    @apply mt-[0.85em] font-semibold text-[1.029em]/[1.4];
+  }
+
+  > :first-child {
+    @apply mt-0;
+  }
+
+  ul,
+  ol {
+    @apply pl-[1.35em];
+  }
+
+  ul {
+    @apply list-disc marker:text-faint;
+  }
+
+  ol {
+    @apply list-decimal marker:text-faint marker:text-[0.9em];
+  }
+
+  li {
+    @apply pl-[0.15em];
+
+    + li {
+      @apply mt-[0.35em];
+    }
+
+    > p {
+      @apply mt-0;
+    }
+  }
+
+  blockquote {
+    @apply my-[1.15em] border-wattle/45 border-l-2 pl-[1.25em] font-serif text-[0.96em]/[1.7] text-muted-foreground italic;
+  }
+
+  pre {
+    @apply my-[1.1em] overflow-x-auto rounded-lg border border-hairline bg-muted px-4 py-3.5 font-mono text-[0.8em]/[1.6];
+  }
+
+  code {
+    @apply rounded-[0.3rem] bg-muted px-[0.35em] py-[0.15em] font-mono text-[0.875em] text-foreground;
+  }
+
+  pre code {
+    @apply bg-transparent p-0 text-[1em];
+  }
+
+  /* The grammar's classes, mapped onto the palette above. Grouped rather than
+     enumerated: highlight.js emits several dozen class names and they fall
+     into six kinds, so six rules cover every language in `code-languages.ts`
+     and every language added later. Anything unmapped simply inherits the
+     block's own colour, which is a legible outcome rather than a missing one. */
+  .hljs-comment,
+  .hljs-quote {
+    @apply text-muted-foreground italic;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-literal,
+  .hljs-section,
+  .hljs-doctag,
+  .hljs-name {
+    color: var(--code-keyword);
+  }
+
+  .hljs-string,
+  .hljs-regexp,
+  .hljs-addition,
+  .hljs-attribute,
+  .hljs-meta .hljs-string {
+    color: var(--code-string);
+  }
+
+  .hljs-number,
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-link,
+  .hljs-meta,
+  .hljs-deletion {
+    color: var(--code-number);
+  }
+
+  .hljs-title,
+  .hljs-title.function_,
+  .hljs-built_in {
+    color: var(--code-function);
+  }
+
+  .hljs-type,
+  .hljs-class .hljs-title,
+  .hljs-title.class_,
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-attr,
+  .hljs-selector-attr,
+  .hljs-selector-class,
+  .hljs-selector-id {
+    color: var(--code-type);
+  }
+
+  .hljs-punctuation,
+  .hljs-operator,
+  .hljs-params,
+  .hljs-tag {
+    color: var(--code-punctuation);
+  }
+
+  .hljs-emphasis {
+    @apply italic;
+  }
+
+  .hljs-strong {
+    @apply font-semibold;
+  }
+
+  hr {
+    @apply my-[2em] border-hairline border-t;
+  }
+
+  a {
+    @apply text-foreground underline decoration-wattle/60 decoration-2 underline-offset-[3px] hover:decoration-wattle;
+  }
+
+  ul[data-type="taskList"] {
+    @apply list-none pl-0;
+
+    li {
+      @apply flex items-start gap-2.5;
+
+      > label {
+        @apply mt-[0.36em] flex items-center;
+      }
+
+      > div {
+        @apply min-w-0 flex-1;
+      }
+
+      input[type="checkbox"] {
+        @apply size-[1.05em] cursor-pointer appearance-none rounded-[0.3rem] border border-input bg-transparent transition-all;
+
+        &:checked {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 8.5l3 3 6-6'/%3E%3C/svg%3E");
+          background-size: 100%;
+          @apply border-wattle bg-wattle;
+        }
+      }
+
+      &[data-checked="true"] > div {
+        @apply text-muted-foreground line-through decoration-muted-foreground/40;
+      }
+    }
+  }
+
+  p.is-editor-empty:first-child::before {
+    content: attr(data-placeholder);
+    @apply pointer-events-none float-left h-0 text-placeholder;
+  }
+
+  .ProseMirror-gapcursor::after {
+    @apply border-t-foreground;
+  }
+}

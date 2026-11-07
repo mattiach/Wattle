@@ -1,0 +1,290 @@
+/* Wattle export stylesheet.
+   Self-contained by requirement: every font is a file in this folder, there is
+   no script, and nothing here reaches the network. The palette is the app's own
+   warm paper and ink, and it follows the reader's light or dark preference
+   because an archive is read on someone else's machine. */
+
+@font-face {
+  font-family: "Literata Export";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url(fonts/literata-latin-wght-normal.woff2) format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Literata Export";
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url(fonts/literata-latin-wght-italic.woff2) format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Literata Export";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url(fonts/literata-latin-ext-wght-normal.woff2)
+    format("woff2-variations");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Literata Export";
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url(fonts/literata-latin-ext-wght-italic.woff2)
+    format("woff2-variations");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  --background: oklch(0.982 0.004 85);
+  --foreground: oklch(0.235 0.008 65);
+  --muted: oklch(0.955 0.005 85);
+  --muted-foreground: oklch(0.545 0.012 68);
+  --hairline: oklch(0.235 0.008 65 / 7%);
+  --border: oklch(0.235 0.008 65 / 10%);
+  --wattle: oklch(0.68 0.13 82);
+  --serif: "Literata Export", ui-serif, Georgia, "Times New Roman", serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --reading: 42rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: oklch(0.185 0.005 70);
+    --foreground: oklch(0.925 0.006 85);
+    --muted: oklch(0.26 0.006 70);
+    --muted-foreground: oklch(0.68 0.011 78);
+    --hairline: oklch(0.93 0.006 85 / 8%);
+    --border: oklch(0.93 0.006 85 / 11%);
+    --wattle: oklch(0.78 0.13 84);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 3.5rem 1.5rem 6rem;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.75;
+  color: var(--foreground);
+  background: var(--background);
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  max-width: var(--reading);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  margin: 0 0 1.5rem;
+  font-size: 2.25rem;
+}
+
+h2 {
+  margin: 2.25rem 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 1.5rem 0 0.35rem;
+  font-size: 1.1875rem;
+}
+
+p,
+ul,
+ol,
+pre {
+  margin: 0 0 1.1em;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: color-mix(in oklch, var(--wattle) 60%, transparent);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-color: var(--wattle);
+}
+
+blockquote {
+  padding-left: 1.25em;
+  margin: 1.15em 0;
+  font-style: italic;
+  color: var(--muted-foreground);
+  border-left: 2px solid color-mix(in oklch, var(--wattle) 45%, transparent);
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  padding-left: 1.35em;
+}
+
+li + li {
+  margin-top: 0.35em;
+}
+
+li > ul,
+li > ol {
+  margin: 0.35em 0 0;
+}
+
+pre {
+  padding: 0.875rem 1rem;
+  overflow-x: auto;
+  background: var(--muted);
+  border: 1px solid var(--hairline);
+  border-radius: 0.5rem;
+}
+
+code {
+  padding: 0.15em 0.35em;
+  font-family: var(--mono);
+  font-size: 0.875em;
+  background: var(--muted);
+  border-radius: 0.3rem;
+}
+
+pre code {
+  padding: 0;
+  font-size: 1em;
+  background: none;
+}
+
+hr {
+  margin: 2em 0;
+  border: 0;
+  border-top: 1px solid var(--hairline);
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.figure {
+  margin: 1.5em 0;
+}
+
+/* Task items keep their checkbox so a checklist still reads as one. */
+ul.tasks {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul.tasks li {
+  display: flex;
+  gap: 0.6em;
+  align-items: baseline;
+}
+
+ul.tasks li.done {
+  color: var(--muted-foreground);
+  text-decoration: line-through;
+}
+
+/* The date and kind above an entry, and the way back above that. */
+.meta {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.kind {
+  padding: 0.1em 0.5em;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.back {
+  margin-bottom: 2.5rem;
+  font-size: 0.875rem;
+}
+
+.pager {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  margin-top: 4rem;
+  font-size: 0.9375rem;
+  border-top: 1px solid var(--hairline);
+}
+
+/* Only one of the two exists at the ends of the journal, and it should still
+   sit on its own side. */
+.pager .next:only-child {
+  margin-left: auto;
+}
+
+.index ul.entries {
+  padding-left: 0;
+  list-style: none;
+}
+
+.index ul.entries li {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.index ul.entries time {
+  flex-shrink: 0;
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-foreground);
+}

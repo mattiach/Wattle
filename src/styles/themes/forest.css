@@ -1,0 +1,158 @@
+/* Forest - generated from forest.css by scripts/generate-themes.js.
+   Regenerate rather than edit: the export is the source.
+
+   Two blocks, both complete. The dark one repeats every token the light one
+   declares, and it must: a token it left out would keep the light value.
+
+   Two selectors each, on purpose. The `:root` one is what dresses the
+   application: it has to outweigh the `:root` and `.dark` blocks in
+   `globals.css`, which a bare attribute would only do by coming later in the
+   file - and an `@import` may only sit at the top of one. The bare one is what
+   lets a swatch in Settings carry the attribute and paint itself with this very
+   rule instead of with a copy of the colour that can drift from it. */
+:root[data-wattle-palette="forest"],
+[data-wattle-palette="forest"] {
+  --background: oklch(0.9109 0.0159 160.5971);
+  --foreground: oklch(0.2198 0.0298 168.5546);
+  --card: oklch(0.9653 0.0075 151.8892);
+  --card-foreground: oklch(0.2198 0.0298 168.5546);
+  --popover: oklch(0.9911 0 0);
+  --popover-foreground: oklch(0 0 0);
+  --primary: oklch(47.245% 0.07246 159.662);
+  --primary-foreground: oklch(0.9653 0.0075 151.8892);
+  --secondary: oklch(0.9062 0.0374 156.3966);
+  --secondary-foreground: oklch(0.3227 0.0469 161.8255);
+  --muted: oklch(0.9062 0.0374 156.3966);
+  --muted-foreground: oklch(0.4317 0.0634 159.8314);
+  --accent: oklch(69.704% 0.07842 161.375);
+  --accent-foreground: oklch(43.283% 0.03478 171.273);
+  --destructive: oklch(0.5294 0.1137 29.7292);
+  --destructive-foreground: oklch(0.9653 0.0075 151.8892);
+  --border: oklch(0.796 0.0195 157.8081);
+  --input: oklch(0.797 0.0117 153.664);
+  --ring: oklch(0.4317 0.0634 159.8314);
+  --chart-1: oklch(0.4317 0.0634 159.8314);
+  --chart-2: #e18c65;
+  --chart-3: oklch(0.5929 0.067 152.7399);
+  --chart-4: oklch(0.3227 0.0469 161.8255);
+  --chart-5: oklch(0.678 0.0829 54.5315);
+  --sidebar: oklch(0.9109 0.0159 160.5971);
+  --sidebar-foreground: oklch(0.2198 0.0298 168.5546);
+  --sidebar-primary: oklch(0.4317 0.0634 159.8314);
+  --sidebar-primary-foreground: #f0f5f1;
+  --sidebar-accent: oklch(0.9062 0.0374 156.3966);
+  --sidebar-accent-foreground: oklch(0.2198 0.0298 168.5546);
+  --sidebar-border: oklch(0.78 0.0319 158.8747);
+  --sidebar-ring: oklch(0.4317 0.0634 159.8314);
+  --sans: Outfit, ui-sans-serif, sans-serif, system-ui;
+  --serif: Merriweather, ui-serif, serif;
+  --mono: Fira Code, ui-monospace, monospace;
+  --radius: 1.4rem;
+  --shadow-x: 2px;
+  --shadow-y: 2px;
+  --shadow-blur: 8.5px;
+  --shadow-spread: -3.5px;
+  --shadow-opacity: 0.43;
+  --shadow-color: #000000;
+  --shadow-2xs: 2px 2px 8.5px -3.5px hsl(0 0% 0% / 0.21);
+  --shadow-xs: 2px 2px 8.5px -3.5px hsl(0 0% 0% / 0.21);
+  --shadow-sm:
+    2px 2px 8.5px -3.5px hsl(0 0% 0% / 0.43),
+    2px 1px 2px -4.5px hsl(0 0% 0% / 0.43);
+  --shadow:
+    2px 2px 8.5px -3.5px hsl(0 0% 0% / 0.43),
+    2px 1px 2px -4.5px hsl(0 0% 0% / 0.43);
+  --shadow-md:
+    2px 2px 8.5px -3.5px hsl(0 0% 0% / 0.43),
+    2px 2px 4px -4.5px hsl(0 0% 0% / 0.43);
+  --shadow-lg:
+    2px 2px 8.5px -3.5px hsl(0 0% 0% / 0.43),
+    2px 4px 6px -4.5px hsl(0 0% 0% / 0.43);
+  --shadow-xl:
+    2px 2px 8.5px -3.5px hsl(0 0% 0% / 0.43),
+    2px 8px 10px -4.5px hsl(0 0% 0% / 0.43);
+  --shadow-2xl: 2px 2px 8.5px -3.5px hsl(0 0% 0% / 1.07);
+  --tracking-normal: 0em;
+
+  /* What this application adds on top of shadcn's set, in the palette's own
+     terms: a hairline is the faintest border it has, and the surface a memory
+     is laid on is its quietest one. */
+  --wattle: var(--primary);
+  --assist: oklch(from var(--primary) l c calc(h + 150));
+  --memory: var(--muted-foreground);
+  --hairline: var(--border);
+  --memory-surface: var(--muted);
+}
+
+:root[data-wattle-palette="forest"].dark,
+.dark [data-wattle-palette="forest"] {
+  --background: oklch(0.205 0.032 169.9631);
+  --foreground: oklch(0.945 0.012 151.8892);
+  --card: oklch(0.255 0.036 163.9344);
+  --card-foreground: oklch(0.945 0.012 151.8892);
+  --popover: oklch(0.295 0.043 163.496);
+  --popover-foreground: oklch(0.955 0.01 151.8892);
+  --primary: oklch(0.7495 0.0905 154.2893);
+  --primary-foreground: oklch(0.205 0.032 169.9631);
+  --secondary: oklch(0.285 0.043 163.496);
+  --secondary-foreground: oklch(0.9 0.018 160.5971);
+  --muted: oklch(0.275 0.038 163.9344);
+  --muted-foreground: oklch(0.74 0.035 158.8747);
+  --accent: oklch(0.68 0.0825 55.7643);
+  --accent-foreground: oklch(0.205 0.032 169.9631);
+  --destructive: oklch(0.5449 0.1181 29.4149);
+  --destructive-foreground: oklch(0.9653 0.0075 151.8892);
+  --border: oklch(0.385 0.045 163.496);
+  --input: oklch(0.315 0.042 163.496);
+  --ring: oklch(0.7493 0.0914 153.6919);
+  --chart-1: oklch(0.7495 0.0905 154.2893);
+  --chart-2: oklch(0.68 0.0825 55.7643);
+  --chart-3: oklch(0.517 0.063 154.7513);
+  --chart-4: oklch(0.78 0.0319 158.8747);
+  --chart-5: oklch(0.5465 0.0868 46.9317);
+  --sidebar: oklch(0.185 0.034 169.9631);
+  --sidebar-foreground: oklch(0.945 0.012 151.8892);
+  --sidebar-primary: oklch(0.7493 0.0914 153.6919);
+  --sidebar-primary-foreground: oklch(0.185 0.034 169.9631);
+  --sidebar-accent: oklch(0.255 0.036 163.9344);
+  --sidebar-accent-foreground: oklch(0.945 0.012 151.8892);
+  --sidebar-border: oklch(0.355 0.043 163.496);
+  --sidebar-ring: oklch(0.7495 0.0905 154.2893);
+  --sans: Outfit, ui-sans-serif, sans-serif, system-ui;
+  --serif: Merriweather, ui-serif, serif;
+  --mono: Fira Code, ui-monospace, monospace;
+  --radius: 1.4rem;
+  --shadow-x: 2px;
+  --shadow-y: 2px;
+  --shadow-blur: 8.5px;
+  --shadow-spread: -3.5px;
+  --shadow-opacity: 0.43;
+  --shadow-color: #07150f;
+  --shadow-2xs: 2px 2px 8.5px -3.5px hsl(159 47.6190% 5% / 0.32);
+  --shadow-xs: 2px 2px 8.5px -3.5px hsl(159 47.6190% 5% / 0.32);
+  --shadow-sm:
+    2px 2px 8.5px -3.5px hsl(159 47.6190% 5% / 0.52),
+    2px 1px 2px -4.5px hsl(159 47.6190% 5% / 0.52);
+  --shadow:
+    2px 2px 8.5px -3.5px hsl(159 47.6190% 5% / 0.52),
+    2px 1px 2px -4.5px hsl(159 47.6190% 5% / 0.52);
+  --shadow-md:
+    2px 2px 8.5px -3.5px hsl(159 47.6190% 5% / 0.52),
+    2px 2px 4px -4.5px hsl(159 47.6190% 5% / 0.52);
+  --shadow-lg:
+    2px 2px 8.5px -3.5px hsl(159 47.6190% 5% / 0.52),
+    2px 4px 6px -4.5px hsl(159 47.6190% 5% / 0.52);
+  --shadow-xl:
+    2px 2px 8.5px -3.5px hsl(159 47.6190% 5% / 0.52),
+    2px 8px 10px -4.5px hsl(159 47.6190% 5% / 0.52);
+  --shadow-2xl: 2px 2px 8.5px -3.5px hsl(159 47.6190% 5% / 1.1);
+
+  /* What this application adds on top of shadcn's set, in the palette's own
+     terms: a hairline is the faintest border it has, and the surface a memory
+     is laid on is its quietest one. */
+  --wattle: var(--primary);
+  --assist: oklch(from var(--primary) l c calc(h + 150));
+  --memory: var(--muted-foreground);
+  --hairline: var(--border);
+  --memory-surface: var(--muted);
+}

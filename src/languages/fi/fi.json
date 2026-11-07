@@ -1,0 +1,661 @@
+{
+  "ai": "Tekoälyavustaja",
+  "aiActionDescription": {
+    "fixGrammar": "Korjaa oikeinkirjoituksen, kieliopin ja välimerkit merkitystä muuttamatta.",
+    "improveClarity": "Tekee tekstistä selkeämmän ja helpommin luettavan, mutta jättää kaiken sisällön ennalleen.",
+    "makeShorter": "Lyhentää tekstiä säilyttäen kaikki olennaiset ajatukset ja tiedot."
+  },
+  "aiActive": "Käytössä",
+  "aiActiveModel": "Käytössä oleva malli",
+  "aiDesc08b": "Kevein vaihtoehto. Toimii vaatimattomallakin laitteistolla; sopii nopeisiin kielioppikorjauksiin, vaikkei aina osu oikeaan.",
+  "aiDesc27b": "Työasematason malli. Vaatii runsaasti levytilaa ja muistia; sopii tarkempiin ehdotuksiin.",
+  "aiDesc2b": "Pieni ja nopea, kielioppi parempi kuin 0.8B:llä.",
+  "aiDesc4b": "Paras tasapaino laadun ja vaadittujen resurssien välillä.",
+  "aiDesc9b": "Parempi laatu; vaatii tehokkaan koneen.",
+  "aiDescription": "Pois käytöstä. Sitä ei kuitenkaan poisteta laitteelta.",
+  "aiDiscard": "Hylkää",
+  "aiError": {
+    "badSelection": "Tätä valintaa ei voi kirjoittaa uudelleen. Se voi olla tyhjä tai pidempi kuin yksi kappale.",
+    "cancelled": "Keskeytetty. Mitään ei muutettu.",
+    "daemon": "Ollama ei saanut toimintoa päätökseen.",
+    "disabled": "Tekoälyavustaja on pois käytöstä. Voit ottaa sen käyttöön asetuksista.",
+    "empty": "Malli ei palauttanut mitään. Yritä uudelleen ja varmista, että malli on valittuna.",
+    "modelGone": "Tuota mallia ei ole enää asennettuna. Valitse toinen asetuksista.",
+    "noModel": "Et ole vielä valinnut mallia. Valitse yksi asetussivulta.",
+    "noPassage": "Malli ei palauttanut uudelleen kirjoitettua kappaletta.",
+    "reasoned": "Malli sai pyynnön mutta ei palauttanut tekstiä. Lyhyempi kappale riittää yleensä ratkaisemaan tämän virheen.",
+    "timeout": "Mallilta kesti liian kauan ja se pysäytettiin. Lyhyempi kappale riittää yleensä ratkaisemaan tämän virheen.",
+    "tooLong": "Malli pysäytettiin, sisältö saattaa olla liian pitkä. Mitään ei muutettu.",
+    "unknown": "Jokin meni pieleen.",
+    "unreachable": "Ollama ei vastaa. Tarkista, että se on käynnissä tietokoneellasi, ennen kuin yrität uudelleen.",
+    "unreadable": "Mallin vastaus ei näytä luettavalta."
+  },
+  "aiHint": "Tekoälymallit toimivat paikallisesti tietokoneellasi Ollaman kautta. Mitään tietoja ei lähetetä laitteesi ulkopuolelle. Yksityisyys on yksi Wattlen perusperiaatteista ja se, mikä erottaa sen muista: tietosi pysyvät aina omalla tietokoneellasi.",
+  "aiInsertBelow": "Lisää alapuolelle",
+  "aiInstall": "Asenna",
+  "aiInstalling": "Ladataan… {{percent}} %",
+  "aiMayNotFit": "Tämän koneen rajoilla",
+  "aiMayNotFitHint": "Tämä malli vaatii enemmän muistia kuin tässä koneessa on käytettävissä. Se voi olla hidas tai olla käynnistymättä lainkaan. Asentaa voi silti, vaikkei sitä suositella.",
+  "aiModels": "Mallit",
+  "aiModelsDescription": "Asennetut ja saatavilla olevat mallit. Mitään ei ladata ennen kuin pyydät.",
+  "aiNoModel": "Mallia ei ole valittu",
+  "aiNoModelChosenHint": "Tekoälyavustaja on käytössä, mutta mallia ei vielä ole. Valitse yksi ylhäältä, niin pääset käyttämään tekoälyominaisuuksia.",
+  "aiNoModelsYet": "Yhtään mallia ei ole vielä asennettu. Valitse jokin alta: mitään ei ladata, ennen kuin pyydät sitä.",
+  "aiOnDescription": "Malli, joka toimii tällä laitteella. Mitään ei lähetetä muualle, yksityisyytesi kunnioittamiseksi.",
+  "aiPreparing": "Valmistellaan avustajaa tällä tietokoneella…",
+  "aiRecommended": "Suositeltu",
+  "aiRecommendedHint": "Paras vaihtoehto tämän tietokoneen muistille.",
+  "aiRemove": "Poista",
+  "aiRemoveConfirm": "{{name}} poistetaan tältä tietokoneelta. Haluatko jatkaa?",
+  "aiReplace": "Korvaa",
+  "aiRewrite": "Kirjoita uudelleen tekoälyavustajalla",
+  "aiRewriting": "Ajattelee…",
+  "aiSection": "Tekoälyasetukset",
+  "aiSectionDescription": "Vapaaehtoinen, paikallinen ja pois päältä, kunnes kytket sen päälle.",
+  "aiUnmanaged": "Wattlen ulkopuolinen",
+  "aiUnmanagedDescription": "Asennettu Wattlen ulkopuolella. Voit poistaa sen täältä, mutta sitä ei tarjota käytettäväksi malliksi.",
+  "aiUseTitle": "Käytä tätä",
+  "alignCenter": "Keskitä",
+  "alignLeft": "Tasaa vasemmalle",
+  "alignRight": "Tasaa oikealle",
+  "allEntries": "Kaikki sivut",
+  "allSparks": "Kaikki kipinät",
+  "allSparksIntro": "Jokainen kipinä, jonka olet napannut talteen, uusimmasta alkaen. Ne pysyvät lyhyinä ja otsikottomina tarkoituksella: kipinä on muistiinpano itsellesi, hetkessä kiinni saatu ajatus, ilman muita sääntöjä kuin omasi.",
+  "appName": "Wattle",
+  "appearanceSection": "Ulkoasu",
+  "aroundThisTime": "Tähän aikaan",
+  "backToComponents": "Komponentit",
+  "backToTop": "Takaisin ylös",
+  "backup": "Varmuuskopio",
+  "backupAction": "Vie…",
+  "backupDescription": "Tallenna kopio sivuistasi, liitteistäsi ja asetuksistasi.",
+  "backupError": "Varmuuskopiointi epäonnistui. Yritä uudelleen.",
+  "backupFolderAction": "Valitse…",
+  "backupFolderHint": "Tähän kansioon kirjoitetaan varmuuskopioiden .wattle-tiedostot, päivän tiedostonimellä. Päiväkirjasi ei ole täällä. Aiempia varmuuskopioita ei koskaan sisällytetä uuteen.",
+  "backupFolderUnset": "Ei vielä asetettu: tallennusikkuna avautuu sinne, mihin Windows sen viimeksi jätti.",
+  "backupHint": "Wattle kysyy joka kerta, mihin tiedosto tallennetaan. Tietokanta, liitteet ja asetukset yhdessä .wattle-tiedostossa. Ollaman malleja ei sisällytetä, ja ne on helppo asentaa suoraan Wattlesta.",
+  "backupSuccess": "Varmuuskopio tallennettu.",
+  "bold": "Lihavointi",
+  "calendar": "Kalenteri",
+  "calendarBoth": "Molemmat",
+  "calendarEntriesOnly": "Sivut",
+  "calendarSparksOnly": "Kipinät",
+  "calendarIntro": "Mihin kirjoittamisesi vuoden mittaan osuu. Täydempi päivä on päivä, jona kirjoitit enemmän; valitse yksi lukeaksesi sen uudelleen.",
+  "cancel": "Peruuta",
+  "code": "Koodi",
+  "codeLanguage": "Koodin kieli",
+  "codeLanguagePlain": "Pelkkä teksti",
+  "components": {
+    "askConfirmation": "Pyydä vahvistus",
+    "cardBody": "Yksinkertainen pinta: ohut reuna, kortin tausta, ei muuta.",
+    "cardTitle": "Kortti",
+    "dialogBody": "Valintaikkuna portaalissa, taustalla ja sulkupainikkeella jotka tämä projekti tarjoaa.",
+    "dialogTitle": "Valintaikkunan otsikko",
+    "disabled": "Ei käytössä",
+    "hoverMe": "Vie osoitin tähän",
+    "openDialog": "Avaa valintaikkuna",
+    "openPopover": "Avaa ponnahdus",
+    "pageDescription": "Lause tai kaksi siitä, mihin näkymä on tarkoitettu, paluureitin, otsikon ja oikealle sijoitetun sisällön alapuolella.",
+    "pageSubtitle": "Alaotsikko",
+    "pageTitle": "Sivun otsikko",
+    "popoverBody": "Ankkuroitu laukaisijaansa ja suljettavissa kaikella muulla: täällä avautuvat sekä päivämääräkenttä että kirjeen määräpäivä.",
+    "popoverTitle": "Ponnahdus",
+    "sampleEntryBody": "Lähdin tarpeeksi ajoissa kävelläkseni, ja sumu makasi yhä talojen takaisen pellon yllä.",
+    "sampleEntryHit": "sumu",
+    "sampleEntryOpening": "Lähdin tarpeeksi ajoissa kävelläkseni, ja",
+    "sampleEntryTitle": "Pitkä tie asemalle",
+    "sampleSpark": "Oli se mitä tahansa, se ei ole kiireellinen. Nuku yön yli.",
+    "sizes": "Koot",
+    "startTour": "Aloita kierros",
+    "states": "Tilat",
+    "subtitle": "Käyttöliittymän osat variaatioineen ja tiloineen. Ensin perusosat; sitten ne harvat toiminnalliset komponentit, jotka esiintyvät riittävän monella näytöllä ansaitakseen tulla nähdyiksi erikseen. Kaikki täällä käyttää esimerkkitietoja.",
+    "title": "Komponentit",
+    "tooltipBody": "Selitys, askeleen verran sen elementin takana johon se kuuluu.",
+    "tourBody": "Sivu tummenee, korostettu elementti jää valaistuksi, ja kortti seuraa sitä. Jokainen Wattlen opastettu kierros on juuri tätä, askel kerrallaan.",
+    "tourTitle": "Tämä on kierroksen askel",
+    "variants": "Variaatiot",
+    "withIcon": "Kuvakkeen kanssa"
+  },
+  "continue": "Jatka",
+  "dailySparks": "Kipinät",
+  "dark": "Tumma",
+  "dataSection": "Tiedot",
+  "dataSectionDescription": "Päiväkirjasi, Wattlen sisällä ja ulkopuolella.",
+  "delete": "Poista",
+  "deleteEntry": "Poista sivu",
+  "deleteEntryConfirm": "Tämä sivu siirtyy roskakoriin. Voit palauttaa sen asetuksista siihen asti, kunnes se poistetaan lopullisesti.",
+  "deleteSpark": "Poista kipinä",
+  "deleteSparkConfirm": "Tämä kipinä siirtyy roskakoriin. Voit palauttaa sen asetuksista siihen asti, kunnes se poistetaan lopullisesti.",
+  "dismiss": "Siirrä sivuun",
+  "downloadAttachment": "Tallenna kopio…",
+  "downloadHtml": "Lataa HTML",
+  "edit": "Muokkaa",
+  "editorScale": "Tekstin koko",
+  "editorScaleDefault": "Oletus",
+  "editorScaleDescription": "Kuinka suurena kirjoituksesi näkyy editorissa.",
+  "editorScaleHint": "Vain kirjoitus muuttaa kokoaan - muu sovellus pysyy ennallaan.",
+  "editorScaleLarge": "Suuri",
+  "editorScaleLargest": "Suurin",
+  "editorScaleSmall": "Pieni",
+  "emptyBody": "Jokainen sivu pysyy tällä laitteella. Aloita tänään, vaikka yhdellä rivillä.",
+  "emptySparksBody": "Kipinä on hetkessä kiinni saatu rivi. Yllä oleva kenttä on se, mistä yksi alkaa.",
+  "emptySparksTitle": "Mitään ei ole vielä napattu talteen.",
+  "emptyTitle": "Päiväkirjasi alkaa yhdestä sivusta.",
+  "entryContentPlaceholder": "Kirjoita jotain, tai paina / saadaksesi komennot…",
+  "entryCount_one": "{{count}} sivu",
+  "entryCount_other": "{{count}} sivua",
+  "entryDate": "Sivun päivämäärä",
+  "entryLock": "Avaa sivut vain luettaviksi",
+  "entryLockDescription": "Sivu, jolla on jo jotain, avautuu lukittuna. Yksi napsautus riittää sen avaamiseen.",
+  "entryLockHint": "Uusi sivu alkaa tyhjänä eikä se ole koskaan lukittu ennen kuin viimeistelet sen. Tämä asetus koskee vain jo olemassa olevia päiväkirjasivuja.",
+  "entryNotFound": "Tätä sivua ei ole enää olemassa.",
+  "entryTitlePlaceholder": "Nimetön",
+  "export": "Vienti",
+  "exportAction": "Vie…",
+  "exportDescription": "Koko päiväkirja HTML-arkistona, joka aukeaa ilman verkkoyhteyttä.",
+  "exportEmpty": "Vietävää ei vielä ole: päiväkirjassa ei ole yhtään sivua.",
+  "exportEntry": "Vie sivu",
+  "exportError": "Vienti epäonnistui. Päiväkirjaasi ei muutettu.",
+  "exportSuccess": "Viety kohteeseen {{path}}.",
+  "fixGrammar": "Korjaa kielioppi",
+  "greetingAfternoon": "Hyvää iltapäivää.",
+  "greetingAfternoonNamed": "Hyvää iltapäivää, {{name}}.",
+  "greetingEvening": "Hyvää iltaa.",
+  "greetingEveningNamed": "Hyvää iltaa, {{name}}.",
+  "greetingMorning": "Hyvää huomenta.",
+  "greetingMorningNamed": "Hyvää huomenta, {{name}}.",
+  "heading1": "Otsikko 1",
+  "heading2": "Otsikko 2",
+  "improveClarity": "Paranna selkeyttä",
+  "italic": "Kursivointi",
+  "journalFolder": "Päiväkirjan kansio",
+  "journalFolderAction": "Siirrä…",
+  "journalFolderConfirm": "Valitse kansio, niin Wattle siirtää päiväkirjasi sinne - tietokannan ja kaikki liitteet yhdessä. Wattle avautuu uudelleen, kun siirto on valmis. Jos siirto ei onnistu, päiväkirjasi jää täsmälleen sinne, missä se on.",
+  "journalFolderError": "Päiväkirjaa ei voitu siirtää. Se on yhä siellä, missä olikin, eikä mitään muutettu.",
+  "journalFolderHint": "Täällä on itse päiväkirja: wattle.db ja liitteesi. Tämä ei ole kansio, johon varmuuskopioiden .wattle-tiedostot tallennetaan.",
+  "language": "Kieli",
+  "languageDescription": "Käyttöliittymän kieli.",
+  "languageHint": "Muuttaa vain käyttöliittymän. Se ei koske sanaakaan siitä, mitä olet kirjoittanut.",
+  "layoutWidth": "Wattlen sivujen leveys",
+  "layoutWidthCompact": "Kapea",
+  "layoutWidthDefault": "Tasapainoinen",
+  "layoutWidthDescription": "Kuinka leveitä kaikki Wattlen sivut ovat.",
+  "layoutWidthHint": "Säädä Wattlen sivujen leveys itse. Jokainen tietokone ja jokainen näyttö voi olla erilainen, joten ihanteellisen arvon saat valita sinä.",
+  "layoutWidthWide": "Leveä",
+  "letterArrivedHeading": "Saapuneet",
+  "letterArrivedTitle": "Kirje menneeltä itseltäsi on saapunut",
+  "letterComposeDescription": "Jotain, mitä et voi lukea ennen valitsemaasi päivää. Sinetöityä kirjettä ei voi avata, muokata eikä poistaa. Valitse harkiten.",
+  "letterComposeTitle": "Kirje sinulle",
+  "letterContentPlaceholder": "Päätä mitä kirjoitat, ennen kuin sinetöit kirjeesi.",
+  "letterContinueDraft": "Jatka kirjettä",
+  "letterDraftHeading": "Kesken",
+  "letterDraftRow_one": "Aloitettu kirje - {{count}} sana toistaiseksi",
+  "letterDraftRow_other": "Aloitettu kirje - {{count}} sanaa toistaiseksi",
+  "letterError": {
+    "badDate": "Tuo ei ole päivämäärä, jolle tämän kirjeen voi sinetöidä.",
+    "corrupt": "Tätä kirjettä ei voi avata. Sen sinetti ei enää vastaa sitä, miten se suljettiin: näin käy, kun avauspäivää, salattua tekstiä tai avainta muutetaan päiväkirjatiedostossa sinetöinnin jälkeen.",
+    "empty": "Sinetöitävää ei ole vielä kirjoitettu.",
+    "futureEnvelope": "Tämä kirje on sinetöity Wattlen uudemmalla versiolla. Päivitä Wattle avataksesi sen.",
+    "noKey": "Tämän kirjeen avain on kadonnut. Ainoa tie eteenpäin on palauttaa varmuuskopio, joka on tehty ennen sen katoamista.",
+    "notFound": "Tätä kirjettä ei ole olemassa.",
+    "notYet": "Tämä kirje ei ole vielä auennut. Palaa myöhemmin.",
+    "sealed": "Tämä kirje on sinetöity eikä sen avaamisen aika ole vielä tullut. Palaa myöhemmin.",
+    "tooFar": "Kirje voi odottaa enintään viisikymmentä vuotta.",
+    "tooSoon": "Kirjeen on odotettava vähintään seitsemän päivää.",
+    "unknown": "Jokin meni pieleen."
+  },
+  "letterExport": "Lataa tämä kirje",
+  "letterFooterDates": "Kirjoitettu {{written}} · avattu {{opened}}",
+  "letterFromYourself": "Silloiselta itseltäsi",
+  "letterHasArrived": "Sen päivä on koittanut",
+  "letterIn10Years": "10 vuotta",
+  "letterIn1Month": "1 kuukausi",
+  "letterIn1Year": "1 vuosi",
+  "letterIn2Years": "2 vuotta",
+  "letterIn3Months": "3 kuukautta",
+  "letterIn3Years": "3 vuotta",
+  "letterIn5Years": "5 vuotta",
+  "letterIn6Months": "6 kuukautta",
+  "letterKeepEditing": "Jatka kirjoittamista",
+  "letterLength": "Pituus",
+  "letterNoDateYet": "Valitse, milloin se aukeaa.",
+  "letterOpenIt": "Avaa se",
+  "letterOpenedHeading": "Luetut",
+  "letterOpenedOn": "Avattu {{date}}",
+  "letterOpensOn": "Aukeaa",
+  "letterOpensOnDate": "Aukeaa {{date}}",
+  "letterPickDate": "Valitse päivämäärä…",
+  "letterPromptChapter": "Uusi luku",
+  "letterPromptFree": "Ei mitään erityistä",
+  "letterPromptGoals": "Tavoitteet",
+  "letterPromptHard": "Vaikea kausi",
+  "letterPromptOrdinary": "Aivan tavallinen päivä",
+  "letterPromptPerson": "Joku jolla on merkitystä",
+  "letterPromptRemember": "Jottei unohtuisi",
+  "letterResultLabel": "Kirje",
+  "letterReviewAction": "Lue vielä kerran…",
+  "letterReviewBody": "Lue se viimeisen kerran. Tämän vaiheen jälkeen se pannaan talteen.",
+  "letterReviewTitle": "Lue se viimeisen kerran",
+  "letterSealAction": "Sinetöi kirje",
+  "letterSealBody": "Se salataan ja pannaan talteen {{date}} asti.",
+  "letterSealFailed": "Kirjettä ei sinetöity. Mikään ei muuttunut.",
+  "letterSealHonesty": "Wattle salaa kirjeen ja säilyttää avaimen päiväkirjatiedostossa, jotta kirje ei voi kadota. Se on lukko sinua itseäsi vastaan, ei salaisuus siltä, jolla on pääsy koneellesi - ja varmuuskopio kantaa mukanaan molemmat puolikkaat.",
+  "letterSealTerms": "Ennen {{date}} et voi avata, lukea, muokata tai poistaa sitä etkä muuttaa sen päivämäärää. Ei voi Wattlekaan. Ainoa tapa päästä siitä eroon on tyhjentää koko päiväkirja.",
+  "letterSealTitle": "Sinetöidäänkö tämä kirje?",
+  "letterSealing": "Sinetöidään…",
+  "letterTypeDate": "Kirjoita päivämäärä vahvistaaksesi",
+  "letterWaitingHeading": "Odottaa",
+  "letterWaitingLine": "Kirje sinulle aukeaa {{date}}.",
+  "letterWhereToStart": "Mistä aloittaa",
+  "letterWillOpen": "Se aukeaa {{date}}.",
+  "letterWordCount_one": "{{count}} sana",
+  "letterWordCount_other": "{{count}} sanaa",
+  "letterWrite": "Kirjoita kirje",
+  "letterWriteBack": "Vastaa",
+  "letterWritten": "Kirjoitettu",
+  "letterWrittenAndLength_one": "Kirjoitettu {{date}} · {{count}} sana",
+  "letterWrittenAndLength_other": "Kirjoitettu {{date}} · {{count}} sanaa",
+  "letterWrittenOn": "Kirjoitettu {{date}}",
+  "letters": "Kirjeet",
+  "lettersDescription": "Sanoja, jotka uskot tulevalle itsellesi. Valitse päivä ja jätä sinne se, minkä haluat muistaa, kertoa tai löytää uudelleen. Siihen asti kirje pysyy sinetöitynä eikä sitä pääse avaamaan.",
+  "lettersEmptyBody": "Kirje on jotain, minkä kirjoitat nyt ja minkä voit lukea uudelleen vasta valitsemanasi päivänä.",
+  "lettersEmptyTitle": "Ei kirjeitä",
+  "light": "Vaalea",
+  "link": "Linkki",
+  "listErrorBody": "Sivusi ovat yhä tällä laitteella: Wattle ei vain saanut niitä luettua. Yritä uudelleen ja palauta varmuuskopio, jos ongelma jatkuu.",
+  "listErrorTitle": "Päiväkirjaa ei voitu avata.",
+  "loadOlder": "Lataa vanhempia",
+  "loading": "Ladataan…",
+  "lockEntry": "Lukitse tämä sivu",
+  "makeShorter": "Lyhennä",
+  "memoriesSection": "Muistot",
+  "memoriesSectionDescription": "Kaksi tapaa, joilla kirjoittamasi palaa luoksesi.",
+  "memoryAnother": "Etsi toinen",
+  "memoryAsk": "Etsi muisto, joka kannattaa lukea uudelleen",
+  "memoryLooking": "Etsitään…",
+  "memoryNoneAlike": "Mikään muu kirjoittamasi ei muistuta tätä tarpeeksi asettuakseen sen viereen.",
+  "memoryNoneLeft": "Mikään muu ei muistuta tarpeeksi ollakseen näyttämisen arvoinen.",
+  "memoryTooRecent": "Mikään ei ole vielä tarpeeksi kaukana. Muiston on oltava vähintään kaksi viikkoa vanhempi kuin viimeisin kirjoittamasi, eikä päiväkirjasi ulotu vielä niin kauas.",
+  "memoryWorthRevisiting": "Muisto, joka kannattaa lukea uudelleen",
+  "month": "Kuukausi",
+  "name": "Nimi",
+  "nameDescription": "{{min}}-{{max}} merkkiä.",
+  "nameHint": "Valitse, miksi haluat itseäsi kutsuttavan Wattlessa: oikealla nimelläsi vai keksityllä. Voit vaihtaa sen milloin haluat.",
+  "namePlaceholder": "Nimesi",
+  "nameRequired": "Nimi on pakollinen: vähintään {{min}} merkkiä.",
+  "nameTooShort": "Vähintään {{min}} merkkiä.",
+  "navigation": "Navigointi",
+  "navigationBoth": "Molemmat",
+  "navigationBottom": "Alhaalla",
+  "navigationDescription": "Missä päänavigointi sijaitsee.",
+  "navigationHeader": "Ylhäällä",
+  "navigationHint": "Sijoita navigointi sinne, missä pidät sitä mieluiten.",
+  "newEntry": "Uusi sivu",
+  "newProfile": "Uusi profiili",
+  "newProfileAction": "Poistu",
+  "newProfileBackingUp": "Varmuuskopioidaan…",
+  "newProfileBackupFolder": "Tallennusikkuna avautuu kansioon {{folder}}.",
+  "newProfileBackupNow": "Varmuuskopioi nyt…",
+  "newProfileBackupSaved": "Varmuuskopio tallennettu.",
+  "newProfileConfirmAction": "Poista kaikki",
+  "newProfileConfirmBody": "Jokainen sivu, jokainen liite ja nimesi poistetaan lopullisesti, ja käyttöönotto alkaa alusta. Toimintoa ei voi perua.",
+  "newProfileConfirmTitle": "Tyhjennetäänkö tämä profiili?",
+  "newProfileContinueAnyway": "Jatka silti",
+  "newProfileDescription": "Kirjaudu ulos, poista tämä profiili ja aloita alusta. Jokainen sivu ja jokainen liite poistetaan. Voit vielä varmuuskopioida tämän profiilin ennen vahvistamista.",
+  "newProfileError": "Alusta aloittaminen ei onnistunut. Päiväkirjaasi ei muutettu.",
+  "newProfileHint": "Tällä laitteella on vain yksi päiväkirja. Tämä toiminto tyhjentää sen; se ei lisää toista.",
+  "newProfileNoBackupBody": "Wattle ei tiedä yhdestäkään tämän päiväkirjan varmuuskopiosta. Kaikki sen sisältö on poistumassa, eikä ilman varmuuskopiota ole mitään keinoa saada sitä takaisin.",
+  "newProfileNoBackupTitle": "Varmuuskopiokansiota ei ole asetettu",
+  "next": "Seuraava",
+  "nextEntry": "seuraava sivu",
+  "noResults": "Yksikään sivu ei vastaa hakua.",
+  "noSparkResults": "Yksikään kipinä ei vastaa hakua.",
+  "nudgeAnother": "Kysy minulta jotain muuta",
+  "nudgeCue": "Virike",
+  "nudgeDismiss": "Ei nyt",
+  "nudgeOffer": "Etkö tiedä mitä kirjoittaisit?",
+  "nudgeThinking": "Mietin…",
+  "nudgeWrite": "Kirjoita tästä",
+  "off": "Pois",
+  "ollamaInstallFailed": "Ollamaa ei voitu asentaa. Wattle ei muuttanut mitään tällä laitteella.",
+  "ollamaStartFailed": "Ollama ei käynnistynyt ajoissa. Se voi olla vielä käynnistymässä: yritä hetken päästä uudelleen.",
+  "on": "Päällä",
+  "onThisDay": "Tänä päivänä",
+  "onThisDayDescription": "Aiempina vuosina samana päivänä kirjoittamasi sivut näkyvät etusivulla.",
+  "onThisDayHint": "Valitse, haluatko nähdä uudelleen sen, mitä kirjoitit samana päivänä aiempina vuosina. Muistutus näkyy etusivulla.",
+  "onboarding": {
+    "language": {
+      "title": "Tervetuloa Wattleen.",
+      "body": "Valitse ensin kielesi."
+    },
+    "start": {
+      "title": "Oletko pitänyt päiväkirjaa Wattlella aiemmin?",
+      "body": "Jos sinulla on varmuuskopio, kaikki siinä oleva palaa paikoilleen.",
+      "fresh": "Aloita uusi päiväkirja",
+      "freshBody": "Tyhjä ensimmäinen sivu ja kolme lyhyttä kysymystä ennen kuin avaat sen.",
+      "returning": "Minulla on Wattle-varmuuskopio",
+      "returningBody": "Tekstit, liitteet ja asetukset, täsmälleen sellaisina kuin jätit ne."
+    },
+    "returning": {
+      "eyebrow": "Tervetuloa takaisin",
+      "title": "Etsitään päiväkirjasi.",
+      "body": "Valitse tallentamasi .wattle-tiedosto. Kaikki sen sisältö korvaa tämän tyhjän päiväkirjan, ja Wattle avautuu siitä mihin jäit.",
+      "action": "Valitse varmuuskopio…",
+      "confirmTitle": "Palautetaanko varmuuskopio?",
+      "confirm": "Valitse tallentamasi .wattle-tiedosto, niin Wattle avautuu uudelleen kaikkine sen sisältöineen: tekstit, liitteet ja asetukset. Tämä tyhjä päiväkirja korvataan."
+    },
+    "name": {
+      "title": "Miksi Wattle kutsuu sinua?",
+      "body": "Käytetään aloitusnäytön tervehdyksessä. Kahdesta kahteentoista merkkiä."
+    },
+    "backup": {
+      "title": "Minne varmuuskopiot tallennetaan?",
+      "body": "Kansio päiväkirjan ulkopuolella, jotta varmuuskopio on muualla silloin kun tarvitset sitä."
+    },
+    "theme": {
+      "title": "Vaalea vai tumma?",
+      "body": "Voit vaihtaa sen milloin haluat asetuksista."
+    }
+  },
+  "onboardingFinish": "Ala kirjoittaa",
+  "onboardingStep": "Vaihe {{step}} / {{total}}",
+  "pageOf": "{{page}} / {{total}}",
+  "palette": "Teema",
+  "paletteDescription": "Määrittää Wattlen värit, kirjasimet ja visuaalisen tyylin.",
+  "paletteHint": "Muuttaa koko sovelluksen ulkoasun: taustan, tekstin, käyttöliittymän yksityiskohdat, kulmat ja kirjasimet. Se ei muuta mitään kirjoittamaasi.",
+  "paletteName": {
+    "clay": "Savi",
+    "crimson": "Karmiini",
+    "sage": "Salvia",
+    "umber": "Umbra",
+    "wattle": "Wattle",
+    "olive": "Oliivi",
+    "forest": "Metsä",
+    "candy": "Karkki"
+  },
+  "pastSparks": "Aiemmat kipinät",
+  "previous": "Edellinen",
+  "previousEntry": "edellinen sivu",
+  "primaryNav": "Pää",
+  "profileSection": "Profiili",
+  "removeAttachment": "Poista liite",
+  "replayTours": "Opastetut kierrokset",
+  "replayToursAction": "Palauta",
+  "replayToursDescription": "Näyttää kaikki tervetulokierrokset uudelleen. Kätevä tapa löytää kaikki Wattlen ominaisuudet uudestaan.",
+  "replayToursHint": "Merkitsee kaikki kierrokset näkemättömiksi ja vie sinut aloitusnäyttöön näyttääkseen ensimmäisen.",
+  "reset": "Palauta asetukset",
+  "resetAction": "Palauta",
+  "resetConfirm": "Ulkoasu, sivujen leveys, muistot ja sivujen lukitus palaavat alkuperäisiin arvoihinsa. Päiväkirjaan, nimeesi ja tekoälyavustajan asetuksiin ei kosketa. Haluatko jatkaa?",
+  "resetDescription": "Palaa alkuperäisiin arvoihin. Nimesi ja tekoälyavustajan asetukset pysyvät ennallaan.",
+  "resetHint": "Vain asetukset. Sivut, kipinät ja kirjeet pysyvät täsmälleen paikoillaan.",
+  "resetSection": "Palautus",
+  "resizeImage": "Muuta kuvan kokoa",
+  "resizeVideo": "Muuta videon kokoa",
+  "restore": "Palautus",
+  "restoreAction": "Palauta…",
+  "restoreConfirm": "Jokainen tämän laitteen sivu, liite ja asetus korvataan nyt valitsemallasi varmuuskopiolla. Toimintoa ei voi perua.",
+  "restoreDescription": "Korvaa kaiken tällä laitteella varmuuskopiolla.",
+  "restoreError": "Palautus epäonnistui. Tietoihisi ei koskettu.",
+  "restoreHint": "Korvaa kaiken tällä laitteella varmuuskopiolla. Tätä ei voi perua.",
+  "restoring": "Palautetaan…",
+  "retry": "Yritä uudelleen",
+  "save": "Tallenna",
+  "saveError": "Ei tallennettu",
+  "saveThought": "Tallenna ajatus",
+  "saved": "Tallennettu",
+  "saving": "Tallennetaan…",
+  "search": "Hae sivuista",
+  "searchDisabledHint": "Mitään ei löytynyt; lisää jotain ennen kuin haun voi ottaa käyttöön.",
+  "searchPlaceholder": "Hae sivuista…",
+  "searchResultCount_one": "{{count}} osuma",
+  "searchResultCount_other": "{{count}} osumaa",
+  "searchSparks": "Hae kipinöistä",
+  "searchSparksDisabledHint": "Haettavaa ei ole vielä: kirjoita kipinä ylhäälle, niin haku aktivoituu.",
+  "searchSparksPlaceholder": "Hae kipinöistä…",
+  "settings": "Asetukset",
+  "settingsSubtitle": "Kaikki mitä täältä löydät, on tallennettu tälle laitteelle.",
+  "slash": {
+    "bulletList": {
+      "description": "Yksinkertainen luettelo",
+      "title": "Luettelo"
+    },
+    "code": {
+      "description": "Lisää koodinpätkä",
+      "title": "Koodilohko"
+    },
+    "divider": {
+      "description": "Erota osiot näkyvästi",
+      "title": "Erotin"
+    },
+    "file": {
+      "description": "Liitä mikä tahansa tiedosto",
+      "title": "Tiedosto"
+    },
+    "heading1": {
+      "description": "Suuri osion otsikko",
+      "title": "Otsikko 1"
+    },
+    "heading2": {
+      "description": "Keskikokoinen osion otsikko",
+      "title": "Otsikko 2"
+    },
+    "heading3": {
+      "description": "Pieni osion otsikko",
+      "title": "Otsikko 3"
+    },
+    "image": {
+      "description": "Liitä kuva",
+      "title": "Kuva"
+    },
+    "orderedList": {
+      "description": "Numeroitu luettelo",
+      "title": "Numeroitu luettelo"
+    },
+    "quote": {
+      "description": "Nosta kohta esiin",
+      "title": "Lainaus"
+    },
+    "taskList": {
+      "description": "Pidä kirjaa tehtävistä",
+      "title": "Tehtävälista"
+    },
+    "text": {
+      "description": "Pelkkä teksti",
+      "title": "Teksti"
+    },
+    "video": {
+      "description": "Liitä video",
+      "title": "Video"
+    }
+  },
+  "slashCategory": {
+    "basic": "Perus",
+    "blocks": "Lohkot",
+    "lists": "Luettelot",
+    "media": "Media"
+  },
+  "slashNoResults": "Ei tuloksia.",
+  "sparkCharsLeft_one": "{{count}} merkki jäljellä",
+  "sparkCharsLeft_other": "{{count}} merkkiä jäljellä",
+  "sparkCount_one": "{{count}} kipinä",
+  "sparkCount_other": "{{count}} kipinää",
+  "sparkDate": "Päivä, jonka alle tämä kipinä arkistoidaan",
+  "sparkEchoDescription": "Aiempi kipinä palaa itsestään, enintään yksi päivässä.",
+  "sparkEchoHint": "Vähintään 30 päivää vanha kipinä, sama koko päivän, ja huomenna seuraava.",
+  "sparkEchoLead": "Olit jättänyt itsellesi tämän ajatuksen",
+  "sparkEchoSetting": "Kipinöiden kaiku",
+  "sparkEmpty": "Tämä kipinä on tyhjä.",
+  "sparkOpenAsEntry": "Avaa sivuna",
+  "sparkPlaceholder": "Nappaa ohikiitävä ajatus…",
+  "sparkResultLabel": "Kipinä",
+  "sparkRichBadge": "Kirjoitettu muotoiluineen",
+  "sparkRichBody": "Tämä kipinä sisältää muotoilua tai liitteitä ajalta ennen kuin kipinöistä tuli pelkkää tekstiä. Mitään ei ole muutettu: se avautuu täydessä editorissa, jossa kaikki toimii edelleen.",
+  "sparkSaveHint": "Ctrl + Enter tallentaa",
+  "sparkTruncated_one": "Näytetään uusin.",
+  "sparkTruncated_other": "Näytetään {{count}} uusinta.",
+  "sparksEyebrow": "Hetken kirkkaus",
+  "sparksIntro": "Rivi tai kaksi, napattuna ennen kuin ne karkaavat. Täällä mikään ei kaipaa otsikkoa, eikä minkään tarvitse tulla joksikin muuksi.",
+  "strikethrough": "Yliviivaus",
+  "suggestTitle": "Ehdota otsikkoa",
+  "theme": "Vaalea vai tumma",
+  "themeDescription": "Jokainen teema on olemassa molempina: tämä on se, jossa parhaillaan luet.",
+  "themeHint": "Teema koskee koko sovellusta, ja valintasi muistetaan seuraavaan avauskertaan.",
+  "tourClose": "Sulje kierros",
+  "tourDone": "Valmis",
+  "tourStep": "{{current}} / {{total}}",
+  "tours": {
+    "ai": {
+      "switch": {
+        "title": "Pois päältä, kunnes kytket sen",
+        "body": "Tekoälyavustaja on valinnainen ja aluksi pois päältä. Se parantaa ja yksilöi Wattlen käyttökokemusta aina yksityisyyttäsi kunnioittaen. Tiedot käsitellään omalla tietokoneellasi eivätkä ne poistu siitä koskaan."
+      },
+      "runtime": {
+        "title": "Millä mallit toimivat",
+        "body": "Mallit toimivat Ollaman kautta. Wattle voi asentaa ja käynnistää sen täältä, jos annat luvan."
+      },
+      "models": {
+        "title": "Mallit, jotka pidät",
+        "body": "Lataa tietokoneellesi parhaiten sopiva malli. Kokeile yhtä kerrallaan, niin huomaat mikä sopii laitteistollesi parhaiten."
+      }
+    },
+    "home": {
+      "write": {
+        "title": "Aloita tästä päivästä",
+        "body": "Näin uusi sivu alkaa. Yksi napsautus avaa tyhjän sivun tämän päivän päiväyksellä: yksikin rivi ansaitsee paikkansa täällä."
+      },
+      "search": {
+        "title": "Löydä se mitä kirjoitit",
+        "body": "Jokainen sana jokaisella sivulla on haettavissa, ja tulos näyttää osuvan kohdan. Haku pysyy pois käytöstä niin kauan kuin haettavaa ei ole."
+      },
+      "timeline": {
+        "title": "Kaikki mitä olet kirjoittanut",
+        "body": "Sivusi uusimmasta alkaen ja kuukausittain ryhmiteltyinä. Avaa yksi jatkaaksesi, tai vieritä ladataksesi lisää."
+      },
+      "nav": {
+        "title": "Kaikki muu",
+        "body": "Kalenteri, kipinät, kirjeet itsellesi ja asetukset asuvat kaikki tässä palkissa. Se seuraa sinua näkymästä toiseen, ja vain se, jossa olet, kantaa omaa nimeään."
+      }
+    },
+    "calendar": {
+      "grid": {
+        "title": "Päiväkirjasi päivämäärän mukaan",
+        "body": "Päivät, joina kirjoitit, on merkitty. Valitse yksi lukeaksesi sen uudelleen, tai kirjoittaaksesi jo menneelle päivälle."
+      },
+      "view": {
+        "title": "Kuukausi, tai koko vuosi",
+        "body": "Vaihda näiden kahden välillä. Vasta vuosinäkymässä tottumus tulee näkyviin."
+      },
+      "kinds": {
+        "title": "sivut, kipinät, tai molemmat",
+        "body": "Kaksi kirjoittamisen tapaa jakaa tämän ruudukon, erotettuina merkkiensä värillä. Näytä yksi kerrallaan, kun etsit jotain tiettyä."
+      }
+    },
+    "sparks": {
+      "capture": {
+        "title": "Nappaa ajatus",
+        "body": "Kipinä on hetkessä kiinni saatu rivi. Ei otsikkoa, ei sivua. Kirjoita se ja paina Ctrl+Enter, tai käytä painiketta."
+      },
+      "archive": {
+        "title": "Kaikki tallettamasi kipinät",
+        "body": "Täältä löydät uusimmat. Täältä voit avata ne kaikki, kuukausi kerrallaan - ja kirjoittaa sieltä myös uuden."
+      },
+      "recent": {
+        "title": "Mitä kipinästä voi tulla",
+        "body": "Jokainen avautuu omalle sivulleen, jossa voit muokata sitä, poistaa sen, tai tehdä siitä kunnon sivun, jos se on sillä välin kasvanut."
+      }
+    },
+    "entry": {
+      "title": {
+        "title": "Anna sille nimi, tai jätä se sellaisekseen",
+        "body": "Otsikko on vapaaehtoinen ja tallentuu itsestään kirjoittaessasi. Paina Enter siirtyäksesi suoraan alla olevalle sivulle."
+      },
+      "editor": {
+        "title": "Kirjoita \"/\" kaikkea muuta varten",
+        "body": "Kirjoita tähän niin kuin kirjoittaisit paperille. \"/\" avaa valikon kaikella, mitä sivu voi sisältää: otsikot, luettelot, lainaukset, kuvat, videot ja tiedostot. Valitse tekstiä muotoillaksesi sitä. Tallennettavaa ei ole: se kirjoittuu sitä mukaa."
+      },
+      "actions": {
+        "title": "Sivun komennot",
+        "body": "Siirry edelliselle tai seuraavalle sivulle, lukitse se vahingossa tehtyjen muutosten varalta, vie se HTML:nä, tai poista se."
+      }
+    },
+    "settings": {
+      "appearance": {
+        "title": "Tee siitä omasi",
+        "body": "Teema, korostusväri, kieli ja sivujen leveys."
+      },
+      "data": {
+        "title": "Päiväkirjasi on sinun",
+        "body": "Varmuuskopioi se, vie se HTML:nä, tai palauta se varmuuskopiosta. Kaikki pysyy tällä laitteella."
+      },
+      "reset": {
+        "title": "Palaa takaisin",
+        "body": "Palauta asetukset alkuperäiseen tilaansa, katso nämä kierrokset uudelleen, tai aloita kokonaan uusi päiväkirja."
+      },
+      "profile": {
+        "title": "Nimesi, eikä mitään muuta",
+        "body": "Se tervehtii sinua aloitusnäytöllä eikä koskaan poistu tältä laitteelta. Wattle ei pyydä sinulta muuta: ei tiliä, ei sähköpostia, ei kirjautumista."
+      }
+    },
+    "letters": {
+      "what": {
+        "title": "Kirje itsellesi",
+        "body": "Se ei ole sivu: kirje kirjoitetaan nyt ja pysyy sinetöitynä valitsemaasi päivään asti. Siihen asti sitä ei voi lukea, muokata eikä avata - et edes sinä."
+      },
+      "write": {
+        "title": "Kirjoita sellainen",
+        "body": "Yksi luonnos kerrallaan, säilössä täällä kunnes sinetöit sen. Sinetöinti kysyy päivän, jona se aukeaa, eikä paluuta ole."
+      },
+      "waiting": {
+        "title": "Sillä välin kun se odottaa",
+        "body": "Sinetöity kirje näyttää vain päivän, jona se aukeaa, ja kuinka pitkä se on. Ei laskuria, ei esikatselua: se on yksinkertaisesti täällä, kun hetki koittaa."
+      }
+    },
+    "letterCompose": {
+      "directions": {
+        "title": "Mistä aloittaa",
+        "body": "Valitse suunta, niin saat kysymyksen, jota kohti kirjoittaa. Kysymystä ei tallenneta eikä siitä koskaan tule osa kirjettä: se on vain jotain, mitä katsoa kirjoittaessasi."
+      },
+      "seal": {
+        "title": "Milloin se aukeaa",
+        "body": "Valitse, kuinka kaukana tuo päivä on, ja lue se sitten viimeisen kerran. Sinetöinti on lopullinen: siitä hetkestä kirje on lukukelvoton valittuun päivään asti."
+      }
+    },
+    "letterRead": {
+      "opened": {
+        "title": "Se on saapunut",
+        "body": "Valitsemasi päivä on tullut ja kirjeen voi lukea!"
+      },
+      "keep": {
+        "title": "Sinun, ikuisesti",
+        "body": "Lue se niin monta kertaa kuin haluat. Sitä ei voi muokata sinetöinnin jälkeen, eikä sitä voi poistaa."
+      }
+    }
+  },
+  "trash": "Roskakori",
+  "trashAction": "Avaa roskakori…",
+  "trashDescription": "Poistamasi sivut odottavat täällä ennen kuin ne katoavat lopullisesti.",
+  "trashEmptyAction": "Tyhjennä roskakori",
+  "trashEmptyConfirm": "Kaikki roskakorissa odottavat sivut poistetaan pysyvästi liitteineen. Toimintoa ei voi perua.",
+  "trashEmptyTitle": "Tyhjennetäänkö roskakori?",
+  "trashError": "Roskakoria ei voitu lukea.",
+  "trashHint": "Palautettu sivu palaa päivämääränsä, liitteidensä ja paikkansa kanssa.",
+  "trashIntro": "Poistettu sivu odottaa täällä {{days}} päivää ja poistetaan sitten lopullisesti.",
+  "trashNothing": "Mitään ei ole poistettu.",
+  "trashPurge": "Poista lopullisesti",
+  "trashPurgeConfirm": "Tämä sivu ja kaikki siihen liitetty poistetaan pysyvästi. Toimintoa ei voi perua.",
+  "trashRestore": "Palauta",
+  "trashRow": "Kirjoitettu {{written}} · poistetaan {{removed}}",
+  "underline": "Alleviivaus",
+  "unlockEntry": "Avaa tämän sivun lukitus",
+  "untitled": "Nimetön",
+  "writeOnThisDay": "Kirjoita tänä päivänä",
+  "writingSection": "Kirjoittaminen",
+  "writingSectionDescription": "Miten sivu käyttäytyy, kun avaat sen.",
+  "year": "Vuosi",
+  "yearsAgo_one": "Vuosi sitten",
+  "yearsAgo_other": "{{count}} vuotta sitten",
+  "memoryPrevious": "Edellinen muisto",
+  "memoryNext": "Seuraava muisto",
+  "letterAiUnavailableTitle": "Tekoälyehdotukset eivät ole käytettävissä",
+  "letterAiUnavailableBody": "Yllä olevat suunnat toimivat aina. Jos haluat myös kysymyksen, josta aloittaa, kytke tekoälyavustaja päälle ja valitse malli asetuksista - se pyörii tällä koneella, eikä mikään lähde siitä pois."
+}

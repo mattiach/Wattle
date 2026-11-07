@@ -1,0 +1,80 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "wattle",
+  "version": "1.0.5",
+  "identifier": "com.Wattle.wattle",
+  "build": {
+    "beforeDevCommand": "pnpm vite",
+    "devUrl": "http://localhost:3000",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Wattle",
+        "width": 1024,
+        "height": 640,
+        "minHeight": 500,
+        "minWidth": 800,
+        "center": true,
+        "maximized": true,
+        "theme": "Light",
+        "browserExtensionsEnabled": false,
+        "fullscreen": false,
+        "zoomHotkeysEnabled": true,
+        "focus": true,
+        "alwaysOnTop": false,
+        "maximizable": true,
+        "resizable": true,
+        "preventOverflow": true,
+        "shadow": true,
+        "closable": true,
+        "decorations": true,
+        "devtools": false,
+        "contentProtected": false
+      }
+    ],
+    "security": {
+      "csp": {
+        "default-src": "'self'",
+        "script-src": "'self'",
+        "style-src": "'self' 'unsafe-inline'",
+        "img-src": "'self' asset: http://asset.localhost data:",
+        "media-src": "'self' asset: http://asset.localhost",
+        "font-src": "'self'",
+        "connect-src": "ipc: http://ipc.localhost",
+        "object-src": "'none'",
+        "frame-src": "'none'",
+        "worker-src": "'none'",
+        "base-uri": "'none'",
+        "form-action": "'none'",
+        "frame-ancestors": "'none'"
+      },
+      "assetProtocol": {
+        "enable": true,
+        "scope": ["$DOCUMENT/Wattle/attachments/**"]
+      }
+    }
+  },
+  "bundle": {
+    "license": "MIT",
+    "licenseFile": "LICENSE.txt",
+    "copyright": "Mattia (mattiach)",
+    "active": true,
+    "resources": {
+      "../THIRD-PARTY-NOTICES.txt": "THIRD-PARTY-NOTICES.txt",
+      "LICENSE.txt": "LICENSE.txt"
+    },
+    "targets": ["msi", "nsis"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "allowDowngrades": false
+    }
+  }
+}

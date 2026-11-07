@@ -1,0 +1,661 @@
+{
+  "ai": "Yapay zekâ asistanı",
+  "aiActionDescription": {
+    "fixGrammar": "Yazım, dilbilgisi ve noktalamayı anlamı değiştirmeden düzeltir.",
+    "improveClarity": "Metni daha anlaşılır ve okunaklı kılar, içeriğin tamamını olduğu gibi bırakır.",
+    "makeShorter": "Metni kısaltır, bütün temel düşünceleri ve bilgileri koruyarak."
+  },
+  "aiActive": "Etkin",
+  "aiActiveModel": "Etkin model",
+  "aiDesc08b": "En hafif seçenek. Mütevazı donanımda çalışır; hızlı dilbilgisi düzeltmeleri için ideal, gerçi her zaman isabetli değil.",
+  "aiDesc27b": "İş istasyonu sınıfı. Hatırı sayılır disk ve bellek ister; önerilerde daha yüksek isabet için ideal.",
+  "aiDesc2b": "Küçük ve hızlı, dilbilgisi 0.8B'den iyi.",
+  "aiDesc4b": "Nitelik ile istediği kaynaklar arasındaki en iyi denge.",
+  "aiDesc9b": "Daha yüksek nitelik; güçlü bir makine ister.",
+  "aiDescription": "Kapalı. Yine de cihazdan kaldırılmış değil.",
+  "aiDiscard": "Vazgeç",
+  "aiError": {
+    "badSelection": "Bu seçim yeniden yazılamaz. Boş olabilir ya da tek bir bölümden uzun olabilir.",
+    "cancelled": "Yarıda kesildi. Hiçbir şey değişmedi.",
+    "daemon": "Ollama işlemi tamamlayamadı.",
+    "disabled": "Yapay zekâ asistanı kapalı. Ayarlardan açabilirsin.",
+    "empty": "Model hiçbir şey döndürmedi. Bir modelin seçili olduğundan emin olarak yeniden dene.",
+    "modelGone": "O model artık kurulu değil. Ayarlardan başka birini seç.",
+    "noModel": "Henüz bir model seçmedin. Ayarlar sayfasından birini seç.",
+    "noPassage": "Model yeniden yazılmış bir bölüm döndürmedi.",
+    "reasoned": "Model isteği aldı ama metin döndürmedi. Daha kısa bir bölüm bu hatayı çözmeye genelde yeter.",
+    "timeout": "Model çok uzun sürdü ve durduruldu. Daha kısa bir bölüm bu hatayı çözmeye genelde yeter.",
+    "tooLong": "Model durduruldu, içerik fazla uzun olabilir. Hiçbir şey değişmedi.",
+    "unknown": "Bir şeyler ters gitti.",
+    "unreachable": "Ollama yanıt vermiyor. Yeniden denemeden önce bilgisayarında çalıştığını doğrula.",
+    "unreadable": "Modelin yanıtı okunabilir görünmüyor."
+  },
+  "aiHint": "Yapay zekâ modelleri Ollama üzerinden, bilgisayarında yerel olarak çalışır. Cihazının dışına hiçbir veri aktarılmaz. Gizlilik, Wattle'ın temel ilkelerinden biri ve onu farklı kılan şey: verilerin her zaman kendi bilgisayarında kalır.",
+  "aiInsertBelow": "Altına ekle",
+  "aiInstall": "Kur",
+  "aiInstalling": "İndiriliyor… %{{percent}}",
+  "aiMayNotFit": "Bu bilgisayarın sınırında",
+  "aiMayNotFitHint": "Bu model, bu makinede olandan daha çok bellek ister. Yavaş olabilir, hatta hiç başlamayabilir. Önerilmese de yine de kurulabilir.",
+  "aiModels": "Modeller",
+  "aiModelsDescription": "Kurulu ve kullanılabilir modeller. Sen istemeden hiçbir şey indirilmez.",
+  "aiNoModel": "Model seçilmedi",
+  "aiNoModelChosenHint": "Yapay zekâ asistanı etkin, ama henüz hiçbir model değil. Yapay zekâ özelliklerini kullanmaya başlamak için yukarıdan birini seç.",
+  "aiNoModelsYet": "Henüz hiçbir model yüklenmedi. Aşağıdan birini seçin: siz istemeden hiçbir şey indirilmez.",
+  "aiOnDescription": "Bu cihazda çalışan bir model. Gizliliğine saygı gereği hiçbir şey başka yere gönderilmez.",
+  "aiPreparing": "Asistan bu bilgisayarda hazırlanıyor…",
+  "aiRecommended": "Önerilen",
+  "aiRecommendedHint": "Bu bilgisayarın belleği için en iyi seçenek.",
+  "aiRemove": "Kaldır",
+  "aiRemoveConfirm": "{{name}} bu bilgisayardan silinecek. Devam etmek istiyor musunuz?",
+  "aiReplace": "Değiştir",
+  "aiRewrite": "Yapay zekâ asistanıyla yeniden yaz",
+  "aiRewriting": "Düşünüyor…",
+  "aiSection": "Yapay zekâ ayarları",
+  "aiSectionDescription": "İsteğe bağlı, yerel, ve sen açana dek kapalı.",
+  "aiUnmanaged": "Wattle dışı",
+  "aiUnmanagedDescription": "Wattle dışında kurulmuş. Buradan kaldırabilirsin ama etkin model olarak sunulmaz.",
+  "aiUseTitle": "Bunu kullan",
+  "alignCenter": "Ortala",
+  "alignLeft": "Sola hizala",
+  "alignRight": "Sağa hizala",
+  "allEntries": "Bütün sayfalar",
+  "allSparks": "Bütün kıvılcımlar",
+  "allSparksIntro": "Yakaladığın her kıvılcım, en yenisinden başlayarak. Bilerek kısa ve başlıksız kalıyorlar: bir kıvılcım kendine bıraktığın nottur, o anda yakalanmış bir düşünce, seninkilerden başka kuralı yok.",
+  "appName": "Wattle",
+  "appearanceSection": "Görünüm",
+  "aroundThisTime": "Bu sıralarda",
+  "backToComponents": "Bileşenler",
+  "backToTop": "Başa dön",
+  "backup": "Yedek",
+  "backupAction": "Dışa aktar…",
+  "backupDescription": "Sayfalarının, eklerinin ve ayarlarının bir kopyasını kaydet.",
+  "backupError": "Yedekleme başarısız oldu. Yeniden dene.",
+  "backupFolderAction": "Seç…",
+  "backupFolderHint": "Yedek .wattle dosyaları bu klasöre yazılır, günün dosya adıyla. Günlüğünüz burada durmaz. Önceki yedekler yenisinin içine asla girmez.",
+  "backupFolderUnset": "Henüz belirlenmedi: kaydetme penceresi Windows'un en son bıraktığı yerde açılır.",
+  "backupHint": "Wattle her seferinde dosyanın nereye kaydedileceğini sorar. Veritabanı, ekler ve ayarlar tek bir .wattle dosyası içinde. Ollama modelleri dahil değildir ve doğrudan Wattle'dan kolayca kurulur.",
+  "backupSuccess": "Yedek kaydedildi.",
+  "bold": "Kalın",
+  "calendar": "Takvim",
+  "calendarBoth": "İkisi de",
+  "calendarEntriesOnly": "Sayfalar",
+  "calendarSparksOnly": "Kıvılcımlar",
+  "calendarIntro": "Yazın yıl boyunca nereye düşüyor. Daha dolu bir gün, daha çok yazdığın gündür; yeniden okumak için birini seç.",
+  "cancel": "İptal",
+  "code": "Kod",
+  "codeLanguage": "Kodun dili",
+  "codeLanguagePlain": "Düz metin",
+  "components": {
+    "askConfirmation": "Onay iste",
+    "cardBody": "Yalın bir yüzey: ince kenarlık, kart arka planı, başka bir şey yok.",
+    "cardTitle": "Kart",
+    "dialogBody": "Bir portal içinde iletişim kutusu, arka planı ve kapatma düğmesi bu projeden.",
+    "dialogTitle": "İletişim kutusunun başlığı",
+    "disabled": "Devre dışı",
+    "hoverMe": "Üzerime gel",
+    "openDialog": "İletişim kutusunu aç",
+    "openPopover": "Popover'ı aç",
+    "pageDescription": "Ekranın ne işe yaradığına dair bir iki cümle; geri dönüş yolunun, başlığın ve ekranın sağa koyduğunun altında.",
+    "pageSubtitle": "Bir alt başlık",
+    "pageTitle": "Bir sayfa başlığı",
+    "popoverBody": "Kendisini açan öğeye tutturulmuş ve başka her şeyle kapanır: tarih alanı da bir mektubun süresi de burada açılır.",
+    "popoverTitle": "Bir popover",
+    "sampleEntryBody": "Yürüyerek gidebilecek kadar erken çıktım, ve sis hâlâ evlerin arkasındaki tarlanın üstünde asılıydı.",
+    "sampleEntryHit": "sis",
+    "sampleEntryOpening": "Yürüyerek gidebilecek kadar erken çıktım, ve",
+    "sampleEntryTitle": "İstasyona giden uzun yol",
+    "sampleSpark": "Her ne ise, acelesi yok. Üstüne bir gece uyu.",
+    "sizes": "Boyutlar",
+    "startTour": "Tanıtımı başlat",
+    "states": "Durumlar",
+    "subtitle": "Arayüzü oluşturan parçalar, çeşitleri ve durumlarıyla. Önce temel öğeler; sonra yeterince ekranda görünüp ayrıca gösterilmeyi hak eden birkaç işlevsel bileşen. Buradaki her şey örnek veriyle çalışıyor.",
+    "title": "Bileşenler",
+    "tooltipBody": "Ait olduğu denetimin bir adım gerisinde duran bir açıklama.",
+    "tourBody": "Sayfa kararır, öne çıkarılan öğe aydınlık kalır, ve kart onu izler. Wattle'daki her rehberli tanıtım bundan ibaret, adım adım.",
+    "tourTitle": "Bu bir tanıtım adımı",
+    "variants": "Çeşitler",
+    "withIcon": "Simgeli"
+  },
+  "continue": "Devam",
+  "dailySparks": "Kıvılcımlar",
+  "dark": "Koyu",
+  "dataSection": "Veri",
+  "dataSectionDescription": "Günlüğün, Wattle'ın içinde ve dışında.",
+  "delete": "Sil",
+  "deleteEntry": "Sayfayı sil",
+  "deleteEntryConfirm": "Bu sayfa çöp kutusuna gider. Kalıcı olarak kaldırılana kadar Ayarlar'dan geri getirebilirsin.",
+  "deleteSpark": "Kıvılcımı sil",
+  "deleteSparkConfirm": "Bu kıvılcım çöp kutusuna gider. Kalıcı olarak kaldırılana kadar Ayarlar'dan geri getirebilirsin.",
+  "dismiss": "Bir kenara koy",
+  "downloadAttachment": "Bir kopya kaydet…",
+  "downloadHtml": "HTML indir",
+  "edit": "Düzenle",
+  "editorScale": "Metin boyutu",
+  "editorScaleDefault": "Varsayılan",
+  "editorScaleDescription": "Yazdıklarının düzenleyicide ne kadar büyük göründüğü.",
+  "editorScaleHint": "Yalnızca yazdıkların boyut değiştirir - uygulamanın geri kalanı olduğu gibi kalır.",
+  "editorScaleLarge": "Büyük",
+  "editorScaleLargest": "En büyük",
+  "editorScaleSmall": "Küçük",
+  "emptyBody": "Her sayfa bu cihazda kalır. Bugün başla, tek bir satırla bile.",
+  "emptySparksBody": "Kıvılcım, o anda yakalanmış bir satırdır. Yukarıdaki alan, bir tanesinin başladığı yerdir.",
+  "emptySparksTitle": "Henüz hiçbir şey yakalanmadı.",
+  "emptyTitle": "Günlüğün bir sayfayla başlar.",
+  "entryContentPlaceholder": "Bir şeyler yaz, ya da komutlar için / tuşuna bas…",
+  "entryCount_one": "{{count}} sayfa",
+  "entryCount_other": "{{count}} sayfa",
+  "entryDate": "Sayfanın tarihi",
+  "entryLock": "Sayfaları salt okunur aç",
+  "entryLockDescription": "İçinde bir şey olan bir sayfa kilitli açılır. Kilidini açmak için bir tıklama yeter.",
+  "entryLockHint": "Yeni bir sayfa boş başlar ve sen onu tamamlayana kadar asla kilitlenmez. Bu seçenek yalnızca hâlihazırda var olan günlük sayfaları için geçerlidir.",
+  "entryNotFound": "Bu sayfa artık yok.",
+  "entryTitlePlaceholder": "Başlıksız",
+  "export": "Dışa aktarma",
+  "exportAction": "Dışa aktar…",
+  "exportDescription": "Günlüğün tamamı, ağ bağlantısı olmadan açılan bir HTML arşivi olarak.",
+  "exportEmpty": "Henüz dışa aktarılacak bir şey yok: günlükte hiç sayfa yok.",
+  "exportEntry": "Sayfayı dışa aktar",
+  "exportError": "Dışa aktarma başarısız oldu. Günlüğün değişmedi.",
+  "exportSuccess": "{{path}} konumuna aktarıldı.",
+  "fixGrammar": "Dilbilgisini düzelt",
+  "greetingAfternoon": "İyi günler.",
+  "greetingAfternoonNamed": "İyi günler, {{name}}.",
+  "greetingEvening": "İyi akşamlar.",
+  "greetingEveningNamed": "İyi akşamlar, {{name}}.",
+  "greetingMorning": "Günaydın.",
+  "greetingMorningNamed": "Günaydın, {{name}}.",
+  "heading1": "Başlık 1",
+  "heading2": "Başlık 2",
+  "improveClarity": "Anlaşılırlığı artır",
+  "italic": "İtalik",
+  "journalFolder": "Günlük klasörü",
+  "journalFolderAction": "Taşı…",
+  "journalFolderConfirm": "Bir klasör seçin, Wattle günlüğünüzü oraya taşısın - veritabanı ve bütün ekler birlikte. Taşıma bitince Wattle yeniden açılır. Taşınamazsa günlüğünüz tam olduğu yerde kalır.",
+  "journalFolderError": "Günlük taşınamadı. Hâlâ olduğu yerde ve hiçbir şey değişmedi.",
+  "journalFolderHint": "Günlüğün kendisi burada durur: wattle.db ve ekleriniz. Yedek .wattle dosyalarının kaydedildiği klasör bu değildir.",
+  "language": "Dil",
+  "languageDescription": "Arayüzün dili.",
+  "languageHint": "Yalnızca arayüzü değiştirir. Yazdıklarının tek bir kelimesine dokunmaz.",
+  "layoutWidth": "Wattle sayfalarının genişliği",
+  "layoutWidthCompact": "Dar",
+  "layoutWidthDefault": "Dengeli",
+  "layoutWidthDescription": "Wattle'ın bütün sayfalarının ne kadar geniş olduğu.",
+  "layoutWidthHint": "Wattle sayfalarının genişliğini kendine göre ayarla. Her bilgisayarın ve her ekranın farklı olabileceğini biliyoruz, bu yüzden ideal değeri seçmeyi sana bırakıyoruz.",
+  "layoutWidthWide": "Geniş",
+  "letterArrivedHeading": "Ulaştı",
+  "letterArrivedTitle": "Geçmişteki kendinden bir mektup geldi",
+  "letterComposeDescription": "Seçeceğin bir güne kadar okuyamayacağın bir şey. Bir kez mühürlendi mi açılamaz, düzenlenemez, silinemez. Dikkatle seç.",
+  "letterComposeTitle": "Kendine bir mektup",
+  "letterContentPlaceholder": "Mektubunu mühürlemeden önce ne yazacağına karar ver.",
+  "letterContinueDraft": "Mektuba devam et",
+  "letterDraftHeading": "Sürüyor",
+  "letterDraftRow_one": "Başlanmış bir mektup - şimdiye dek {{count}} kelime",
+  "letterDraftRow_other": "Başlanmış bir mektup - şimdiye dek {{count}} kelime",
+  "letterError": {
+    "badDate": "Bu mektubun mühürlenebileceği bir tarih değil.",
+    "corrupt": "Bu mektup açılamıyor. Mührü artık kapatıldığı hâle uymuyor: bu, açılış tarihi, şifreli metin ya da anahtar mühürlemeden sonra günlük dosyasında değiştirildiğinde olur.",
+    "empty": "Henüz mühürlenecek bir şey yazılmadı.",
+    "futureEnvelope": "Bu mektup Wattle'ın daha yeni bir sürümüyle mühürlenmiş. Açmak için Wattle'ı güncelle.",
+    "noKey": "Bu mektubun anahtarı kayboldu. Tek yol, kaybolmadan önce alınmış bir yedeği geri yüklemek.",
+    "notFound": "Bu mektup yok.",
+    "notYet": "Bu mektup henüz açılmadı. Daha sonra uğra.",
+    "sealed": "Bu mektup mühürlü ve açılma vakti henüz gelmedi. Daha sonra uğra.",
+    "tooFar": "Bir mektup en fazla elli yıl bekleyebilir.",
+    "tooSoon": "Bir mektup en az yedi gün beklemeli.",
+    "unknown": "Bir şeyler ters gitti."
+  },
+  "letterExport": "Bu mektubu indir",
+  "letterFooterDates": "{{written}} tarihinde yazıldı · {{opened}} tarihinde açıldı",
+  "letterFromYourself": "O zamanki kendinden",
+  "letterHasArrived": "Günü geldi",
+  "letterIn10Years": "10 yıl",
+  "letterIn1Month": "1 ay",
+  "letterIn1Year": "1 yıl",
+  "letterIn2Years": "2 yıl",
+  "letterIn3Months": "3 ay",
+  "letterIn3Years": "3 yıl",
+  "letterIn5Years": "5 yıl",
+  "letterIn6Months": "6 ay",
+  "letterKeepEditing": "Yazmayı sürdür",
+  "letterLength": "Uzunluk",
+  "letterNoDateYet": "Ne zaman açılacağını seç.",
+  "letterOpenIt": "Aç",
+  "letterOpenedHeading": "Okunanlar",
+  "letterOpenedOn": "{{date}} tarihinde açıldı",
+  "letterOpensOn": "Açılış tarihi",
+  "letterOpensOnDate": "{{date}} tarihinde açılır",
+  "letterPickDate": "Bir tarih seç…",
+  "letterPromptChapter": "Yeni bir bölüm",
+  "letterPromptFree": "Özel bir şey değil",
+  "letterPromptGoals": "Hedefler",
+  "letterPromptHard": "Zor bir dönem",
+  "letterPromptOrdinary": "Sıradan bir gün",
+  "letterPromptPerson": "Önemi olan biri",
+  "letterPromptRemember": "Unutulmaması gereken",
+  "letterResultLabel": "Mektup",
+  "letterReviewAction": "Bir daha oku…",
+  "letterReviewBody": "Son bir kez oku. Bu adımdan sonra kaldırılır.",
+  "letterReviewTitle": "Son bir kez oku",
+  "letterSealAction": "Mektubu mühürle",
+  "letterSealBody": "Şifrelenip {{date}} tarihine kadar kaldırılacak.",
+  "letterSealFailed": "Mektup mühürlenmedi. Hiçbir şey değişmedi.",
+  "letterSealHonesty": "Wattle mektubu şifreler ve anahtarı günlük dosyasında tutar, böylece mektup kaybolamaz. Bu, kendine karşı bir kilittir; bilgisayarına erişebilen birinden saklanan bir sır değil - ve bir yedek iki yarıyı da birlikte taşır.",
+  "letterSealTerms": "{{date}} tarihine kadar onu ne açabilir, ne okuyabilir, ne düzenleyebilir, ne silebilir, ne de tarihini değiştirebilirsin. Wattle de yapamaz. Ondan kurtulmanın tek yolu günlüğün tamamını boşaltmaktır.",
+  "letterSealTitle": "Bu mektup mühürlensin mi?",
+  "letterSealing": "Mühürleniyor…",
+  "letterTypeDate": "Onaylamak için tarihi yaz",
+  "letterWaitingHeading": "Bekliyor",
+  "letterWaitingLine": "Sana bir mektup {{date}} tarihinde açılıyor.",
+  "letterWhereToStart": "Nereden başlamalı",
+  "letterWillOpen": "{{date}} tarihinde açılacak.",
+  "letterWordCount_one": "{{count}} kelime",
+  "letterWordCount_other": "{{count}} kelime",
+  "letterWrite": "Bir mektup yaz",
+  "letterWriteBack": "Yanıtla",
+  "letterWritten": "Yazıldı",
+  "letterWrittenAndLength_one": "{{date}} tarihinde yazıldı · {{count}} kelime",
+  "letterWrittenAndLength_other": "{{date}} tarihinde yazıldı · {{count}} kelime",
+  "letterWrittenOn": "{{date}} tarihinde yazıldı",
+  "letters": "Mektuplar",
+  "lettersDescription": "Gelecekteki kendine emanet ettiğin sözler. Bir gün seç ve hatırlamak, anlatmak ya da yeniden keşfetmek istediğin şeyi oraya bırak. O güne kadar mektup mühürlü ve erişilemez kalır.",
+  "lettersEmptyBody": "Mektup, şimdi yazdığın ve seçeceğin bir güne kadar yeniden okuyamayacağın şeydir.",
+  "lettersEmptyTitle": "Mektup yok",
+  "light": "Açık",
+  "link": "Bağlantı",
+  "listErrorBody": "Sayfaların hâlâ bu cihazda: Wattle onları okuyamadı, o kadar. Yeniden dene ve sorun sürerse bir yedeği geri yükle.",
+  "listErrorTitle": "Günlük açılamadı.",
+  "loadOlder": "Öncekileri yükle",
+  "loading": "Yükleniyor…",
+  "lockEntry": "Bu sayfayı kilitle",
+  "makeShorter": "Kısalt",
+  "memoriesSection": "Anılar",
+  "memoriesSectionDescription": "Yazdıklarının sana geri dönmesinin iki yolu.",
+  "memoryAnother": "Bir başkasını ara",
+  "memoryAsk": "Yeniden okunmaya değer bir anı ara",
+  "memoryLooking": "Aranıyor…",
+  "memoryNoneAlike": "Yazdıklarından başka hiçbir şey buna, yanına konacak kadar benzemiyor.",
+  "memoryNoneLeft": "Başka hiçbir şey gösterilmeye değecek kadar benzemiyor.",
+  "memoryTooRecent": "Henüz yeterince geride bir şey yok. Bir anının, en son yazdığından en az iki hafta daha eski olması gerekir, ve günlüğün henüz o kadar geriye gitmiyor.",
+  "memoryWorthRevisiting": "Yeniden okunmaya değer bir anı",
+  "month": "Ay",
+  "name": "İsim",
+  "nameDescription": "{{min}} ile {{max}} karakter arası.",
+  "nameHint": "Wattle'da nasıl anılmak istediğini seç: gerçek adınla ya da uydurma bir adla. İstediğin zaman değiştirebilirsin.",
+  "namePlaceholder": "Adın",
+  "nameRequired": "İsim zorunlu: en az {{min}} karakter.",
+  "nameTooShort": "En az {{min}} karakter.",
+  "navigation": "Gezinme",
+  "navigationBoth": "İkisi de",
+  "navigationBottom": "Altta",
+  "navigationDescription": "Ana gezinmenin nerede durduğu.",
+  "navigationHeader": "Üstte",
+  "navigationHint": "Gezinmeyi tercihine göre konumlandır.",
+  "newEntry": "Yeni sayfa",
+  "newProfile": "Yeni profil",
+  "newProfileAction": "Çık",
+  "newProfileBackingUp": "Yedekleniyor…",
+  "newProfileBackupFolder": "Kaydetme penceresi {{folder}} konumunda açılır.",
+  "newProfileBackupNow": "Şimdi yedekle…",
+  "newProfileBackupSaved": "Yedek kaydedildi.",
+  "newProfileConfirmAction": "Hepsini sil",
+  "newProfileConfirmBody": "Her sayfa, her ek ve adın kalıcı olarak silinecek ve kurulum baştan başlayacak. Bu işlem geri alınamaz.",
+  "newProfileConfirmTitle": "Bu profil boşaltılsın mı?",
+  "newProfileContinueAnyway": "Yine de devam et",
+  "newProfileDescription": "Çıkış yap, bu profili sil ve sıfırdan başla. Her sayfa ve her ek silinecek. Onaylamadan önce bu profilin yedeğini yine de alabilirsin.",
+  "newProfileError": "Baştan başlanamadı. Günlüğün değişmedi.",
+  "newProfileHint": "Bu cihazda tek bir günlük var. Bu işlem onu boşaltır; ikincisini eklemez.",
+  "newProfileNoBackupBody": "Wattle bu günlüğe ait bir yedek bilmiyor. İçindeki her şey silinmek üzere ve yedek olmadan geri getirmenin bir yolu olmayacak.",
+  "newProfileNoBackupTitle": "Yedek klasörü belirlenmemiş",
+  "next": "Sonraki",
+  "nextEntry": "sonraki sayfa",
+  "noResults": "Aramayla eşleşen sayfa yok.",
+  "noSparkResults": "Aramayla eşleşen kıvılcım yok.",
+  "nudgeAnother": "Bana başka bir şey sor",
+  "nudgeCue": "Bir kıvılcım sorusu",
+  "nudgeDismiss": "Şimdi değil",
+  "nudgeOffer": "Ne yazacağını bilmiyor musun?",
+  "nudgeThinking": "Düşünüyorum…",
+  "nudgeWrite": "Bunun üzerine yaz",
+  "off": "Kapalı",
+  "ollamaInstallFailed": "Ollama kurulamadı. Wattle bu cihazda hiçbir şeyi değiştirmedi.",
+  "ollamaStartFailed": "Ollama zamanında başlamadı. Hâlâ açılıyor olabilir: birazdan yeniden dene.",
+  "on": "Açık",
+  "onThisDay": "Bugün",
+  "onThisDayDescription": "Önceki yıllarda, bugünün tarihinde yazdığın sayfalar ana sayfada görünür.",
+  "onThisDayHint": "Önceki yıllarda aynı tarihte yazdıklarını yeniden görmek isteyip istemediğini seç. Hatırlatma ana sayfada görünür.",
+  "onboarding": {
+    "language": {
+      "title": "Wattle'a hoş geldin.",
+      "body": "Önce dilini seç."
+    },
+    "start": {
+      "title": "Daha önce Wattle ile günlük tuttun mu?",
+      "body": "Bir yedeğin varsa, içindeki her şey yerine geri döner.",
+      "fresh": "Yeni bir günlüğe başla",
+      "freshBody": "Boş bir ilk sayfa, ve onu açmadan önce üç kısa soru.",
+      "returning": "Bir Wattle yedeğim var",
+      "returningBody": "Metinler, ekler ve ayarlar, bıraktığın gibi."
+    },
+    "returning": {
+      "eyebrow": "Tekrar hoş geldin",
+      "title": "Günlüğünü bulalım.",
+      "body": "Kaydettiğin .wattle dosyasını seç. İçindeki her şey bu boş günlüğün yerine geçer, ve Wattle bıraktığın yerden açılır.",
+      "action": "Bir yedek seç…",
+      "confirmTitle": "Bir yedek geri yüklensin mi?",
+      "confirm": "Kaydettiğin .wattle dosyasını seç, Wattle içindeki her şeyle yeniden açılsın: metinler, ekler ve ayarlar. Bu boş günlük değiştirilecek."
+    },
+    "name": {
+      "title": "Wattle sana nasıl seslensin?",
+      "body": "Ana ekrandaki selamlama için kullanılır. İki ile on iki karakter arası."
+    },
+    "backup": {
+      "title": "Yedekler nereye kaydedilsin?",
+      "body": "Günlüğün dışında bir klasör, ki ihtiyacın olduğunda bir yedek başka bir yerde dursun."
+    },
+    "theme": {
+      "title": "Açık mı koyu mu?",
+      "body": "İstediğin zaman ayarlardan değiştirebilirsin."
+    }
+  },
+  "onboardingFinish": "Yazmaya başla",
+  "onboardingStep": "Adım {{step}} / {{total}}",
+  "pageOf": "{{page}} / {{total}}",
+  "palette": "Tema",
+  "paletteDescription": "Wattle'ın renklerini, yazı tiplerini ve görsel stilini belirler.",
+  "paletteHint": "Uygulamanın tamamının görünümünü değiştirir: arka plan, metin, arayüz ayrıntıları, köşeler ve yazı tipleri. Yazdıklarının hiçbirini değiştirmez.",
+  "paletteName": {
+    "clay": "Kil",
+    "crimson": "Kızıl",
+    "sage": "Adaçayı",
+    "umber": "Koyu toprak",
+    "wattle": "Wattle",
+    "olive": "Zeytin",
+    "forest": "Orman",
+    "candy": "Şeker"
+  },
+  "pastSparks": "Önceki kıvılcımlar",
+  "previous": "Önceki",
+  "previousEntry": "önceki sayfa",
+  "primaryNav": "Ana",
+  "profileSection": "Profil",
+  "removeAttachment": "Eki kaldır",
+  "replayTours": "Rehberli tanıtımlar",
+  "replayToursAction": "Sıfırla",
+  "replayToursDescription": "Bütün karşılama tanıtımlarını yeniden gösterir. Wattle'ın yaptığı her şeyi yeniden keşfetmek için kullanışlı.",
+  "replayToursHint": "Bütün tanıtımları görülmemiş olarak işaretler ve ilkini göstermek için seni ana ekrana götürür.",
+  "reset": "Tercihleri sıfırla",
+  "resetAction": "Sıfırla",
+  "resetConfirm": "Görünüm, sayfa genişliği, anılar ve sayfa kilidi başlangıç değerlerine döner. Günlüğe, adına ve yapay zekâ asistanı ayarlarına dokunulmaz. Devam etmek istiyor musun?",
+  "resetDescription": "Başlangıç değerlerine dön. Adın ve yapay zekâ asistanı ayarların olduğu gibi kalır.",
+  "resetHint": "Yalnızca tercihler. Sayfalar, kıvılcımlar ve mektuplar tam olarak oldukları yerde kalır.",
+  "resetSection": "Sıfırlama",
+  "resizeImage": "Görseli yeniden boyutlandır",
+  "resizeVideo": "Videoyu yeniden boyutlandır",
+  "restore": "Geri yükleme",
+  "restoreAction": "Geri yükle…",
+  "restoreConfirm": "Bu cihazdaki her sayfa, ek ve ayar, şimdi seçeceğin yedekle değiştirilecek. Bu işlem geri alınamaz.",
+  "restoreDescription": "Bu cihazdaki her şeyi bir yedekle değiştirir.",
+  "restoreError": "Geri yükleme başarısız oldu. Verilerine dokunulmadı.",
+  "restoreHint": "Bu cihazdaki her şeyi yedekle değiştirir. Bu geri alınamaz.",
+  "restoring": "Geri yükleniyor…",
+  "retry": "Yeniden dene",
+  "save": "Kaydet",
+  "saveError": "Kaydedilmedi",
+  "saveThought": "Düşünceyi kaydet",
+  "saved": "Kaydedildi",
+  "saving": "Kaydediliyor…",
+  "search": "Sayfalarda ara",
+  "searchDisabledHint": "Hiçbir şey bulunamadı; arama açılabilsin diye önce bir şey ekle.",
+  "searchPlaceholder": "Sayfalarda ara…",
+  "searchResultCount_one": "{{count}} sonuç",
+  "searchResultCount_other": "{{count}} sonuç",
+  "searchSparks": "Kıvılcımlarda ara",
+  "searchSparksDisabledHint": "Henüz aranacak bir şey yok: yukarıya bir kıvılcım yaz, arama etkinleşsin.",
+  "searchSparksPlaceholder": "Kıvılcımlarda ara…",
+  "settings": "Ayarlar",
+  "settingsSubtitle": "Burada bulduğun her şey bu cihazda kayıtlı.",
+  "slash": {
+    "bulletList": {
+      "description": "Yalın bir madde listesi",
+      "title": "Madde listesi"
+    },
+    "code": {
+      "description": "Bir kod parçası ekle",
+      "title": "Kod bloğu"
+    },
+    "divider": {
+      "description": "Bölümleri görsel olarak ayır",
+      "title": "Ayırıcı"
+    },
+    "file": {
+      "description": "Herhangi bir dosya ekle",
+      "title": "Dosya"
+    },
+    "heading1": {
+      "description": "Büyük bölüm başlığı",
+      "title": "Başlık 1"
+    },
+    "heading2": {
+      "description": "Orta bölüm başlığı",
+      "title": "Başlık 2"
+    },
+    "heading3": {
+      "description": "Küçük bölüm başlığı",
+      "title": "Başlık 3"
+    },
+    "image": {
+      "description": "Bir görsel ekle",
+      "title": "Görsel"
+    },
+    "orderedList": {
+      "description": "Numaralı bir liste",
+      "title": "Numaralı liste"
+    },
+    "quote": {
+      "description": "Bir bölümü öne çıkar",
+      "title": "Alıntı"
+    },
+    "taskList": {
+      "description": "Yapılacakları takip et",
+      "title": "Yapılacaklar listesi"
+    },
+    "text": {
+      "description": "Düz metin",
+      "title": "Metin"
+    },
+    "video": {
+      "description": "Bir video ekle",
+      "title": "Video"
+    }
+  },
+  "slashCategory": {
+    "basic": "Temel",
+    "blocks": "Bloklar",
+    "lists": "Listeler",
+    "media": "Ortam"
+  },
+  "slashNoResults": "Sonuç yok.",
+  "sparkCharsLeft_one": "{{count}} karakter kaldı",
+  "sparkCharsLeft_other": "{{count}} karakter kaldı",
+  "sparkCount_one": "{{count}} kıvılcım",
+  "sparkCount_other": "{{count}} kıvılcım",
+  "sparkDate": "Bu kıvılcımın altına konduğu gün",
+  "sparkEchoDescription": "Daha önceki bir kıvılcım kendiliğinden geri döner, günde en fazla bir tane.",
+  "sparkEchoHint": "En az 30 günlük bir kıvılcım, gün boyu aynısı, yarın da bir sonraki.",
+  "sparkEchoLead": "Bu düşünceyi kendine bırakmıştın",
+  "sparkEchoSetting": "Kıvılcımların yankısı",
+  "sparkEmpty": "Bu kıvılcım boş.",
+  "sparkOpenAsEntry": "Sayfa olarak aç",
+  "sparkPlaceholder": "Gelip geçen bir düşünceyi yakala…",
+  "sparkResultLabel": "Kıvılcım",
+  "sparkRichBadge": "Biçimlendirmeyle yazılmış",
+  "sparkRichBody": "Bu kıvılcım, kıvılcımlar düz metne dönmeden önceki zamandan kalma biçimlendirme ya da ekler içeriyor. Hiçbir şey değiştirilmedi: her şeyin çalışmayı sürdürdüğü tam düzenleyicide açılır.",
+  "sparkSaveHint": "Kaydetmek için Ctrl + Enter",
+  "sparkTruncated_one": "En yenisi gösteriliyor.",
+  "sparkTruncated_other": "En yeni {{count}} tanesi gösteriliyor.",
+  "sparksEyebrow": "Anın berraklığı",
+  "sparksIntro": "Bir iki satır, kaçmadan yakalanmış. Burada hiçbir şeyin başlığa ihtiyacı yok, ve hiçbir şeyin başka bir şeye dönüşmesi gerekmiyor.",
+  "strikethrough": "Üstü çizili",
+  "suggestTitle": "Bir başlık öner",
+  "theme": "Açık ya da koyu",
+  "themeDescription": "Her tema ikisinde de var: bu, şu anda okuduğun.",
+  "themeHint": "Tema uygulamanın tamamına uygulanır ve seçimin bir sonraki açılışta hatırlanır.",
+  "tourClose": "Tanıtımı kapat",
+  "tourDone": "Tamam",
+  "tourStep": "{{current}} / {{total}}",
+  "tours": {
+    "ai": {
+      "switch": {
+        "title": "Sen açana dek kapalı",
+        "body": "Yapay zekâ asistanı isteğe bağlıdır ve başlangıçta kapalıdır. Wattle içindeki deneyimi geliştirir ve kişiselleştirir, hep gizliliğine saygı göstererek. Veriler kendi bilgisayarında işlenir ve oradan asla çıkmaz."
+      },
+      "runtime": {
+        "title": "Modeller neyin üzerinde çalışır",
+        "body": "Modeller Ollama üzerinden çalışır. İzin verirsen Wattle onu buradan kurup başlatabilir."
+      },
+      "models": {
+        "title": "Sakladığın modeller",
+        "body": "Bilgisayarına en uygun modeli indir. Donanımına hangisinin daha iyi oturduğunu anlamak için birer birer dene."
+      }
+    },
+    "home": {
+      "write": {
+        "title": "Bugünle başla",
+        "body": "Yeni bir sayfa böyle başlar. Bir tıklama, bugünün tarihiyle boş bir sayfa açar: burada tek bir satır bile yer hak eder."
+      },
+      "search": {
+        "title": "Yazdığını bul",
+        "body": "Her sayfadaki her kelime aranabilir, ve sonuç eşleşen bölümü gösterir. Aranacak bir şey olmadıkça kapalı kalır."
+      },
+      "timeline": {
+        "title": "Yazdığın her şey",
+        "body": "Sayfaların, en yenisinden başlayarak ve aya göre gruplanmış. Devam etmek için birini aç, ya da daha fazlasını yüklemek için kaydır."
+      },
+      "nav": {
+        "title": "Geri kalan her şey",
+        "body": "Takvim, kıvılcımlar, kendine yazdığın mektuplar ve ayarların hepsi bu çubukta yaşar. Ekrandan ekrana seni izler, ve yalnızca üstünde bulunduğun kendi adını taşır."
+      }
+    },
+    "calendar": {
+      "grid": {
+        "title": "Günlüğün tarihe göre",
+        "body": "Yazdığın günler işaretli. Yeniden okumak için ya da geçmiş bir güne yazmak için birini seç."
+      },
+      "view": {
+        "title": "Bir ay, ya da bütün bir yıl",
+        "body": "İkisi arasında geç. Bir alışkanlık asıl yıllık görünümde görünür olur."
+      },
+      "kinds": {
+        "title": "sayfalar, kıvılcımlar, ya da ikisi",
+        "body": "İki tür yazı bu ızgarayı paylaşır, işaretlerinin rengiyle ayrılırlar. Belirli bir şey ararken birer birer göster."
+      }
+    },
+    "sparks": {
+      "capture": {
+        "title": "Bir düşünceyi yakala",
+        "body": "Kıvılcım, o anda yakalanmış bir satırdır. Başlık yok, sayfa yok. Yaz ve Ctrl+Enter'a bas, ya da düğmeyi kullan."
+      },
+      "archive": {
+        "title": "Sakladığın bütün kıvılcımlar",
+        "body": "Burada en sonuncuları bulacaksın. Buradan hepsini ay ay açabilirsin - ve oradan yenisini de yazabilirsin."
+      },
+      "recent": {
+        "title": "Bir kıvılcım neye dönüşebilir",
+        "body": "Her biri kendi sayfasında açılır; orada düzenleyebilir, silebilir, ya da bu arada büyüdüyse gerçek bir sayfaya çevirebilirsin."
+      }
+    },
+    "entry": {
+      "title": {
+        "title": "Ona bir ad ver, ya da olduğu gibi bırak",
+        "body": "Başlık isteğe bağlı ve sen yazarken kendiliğinden kaydedilir. Doğrudan alttaki sayfaya geçmek için Enter'a bas."
+      },
+      "editor": {
+        "title": "Geri kalan her şey için \"/\" yaz",
+        "body": "Buraya kâğıda yazar gibi yaz. \"/\" yazmak, sayfanın içerebileceği her şeyi taşıyan menüyü açar: başlıklar, listeler, alıntılar, görseller, videolar ve dosyalar. Biçimlendirmek için metni seç. Kaydedilecek bir şey yok: yazdıkça yazılır."
+      },
+      "actions": {
+        "title": "Sayfanın komutları",
+        "body": "Önceki ya da sonraki sayfaya git, kazara değişikliklere karşı kilitle, HTML olarak dışa aktar, ya da sil."
+      }
+    },
+    "settings": {
+      "appearance": {
+        "title": "Kendine göre yap",
+        "body": "Tema, vurgu rengi, dil ve sayfa genişliği."
+      },
+      "data": {
+        "title": "Günlüğün senin",
+        "body": "Yedekle, HTML olarak dışa aktar, ya da bir yedekten geri yükle. Her şey bu cihazda kalır."
+      },
+      "reset": {
+        "title": "Geri dön",
+        "body": "Tercihleri özgün hâline döndür, bu tanıtımları yeniden oynat, ya da bambaşka yeni bir günlüğe başla."
+      },
+      "profile": {
+        "title": "Adın, başka bir şey değil",
+        "body": "Ana ekranda seni selamlar ve bu cihazdan asla ayrılmaz. Wattle senden başka bir şey istemez: hesap yok, e-posta yok, oturum açma yok."
+      }
+    },
+    "letters": {
+      "what": {
+        "title": "Kendine bir mektup",
+        "body": "Bu bir sayfa değil: mektup şimdi yazılır ve seçtiğin bir güne kadar mühürlü kalır. O güne dek okunamaz, düzenlenemez, mührü açılamaz - senin tarafından bile."
+      },
+      "write": {
+        "title": "Bir tane yaz",
+        "body": "Bir seferde tek taslak, sen mühürleyene dek burada saklanır. Mühürleme, açılacağı günü sorar, ve ondan sonra geri dönüş yok."
+      },
+      "waiting": {
+        "title": "Beklerken",
+        "body": "Mühürlü bir mektup yalnızca açılacağı günü ve ne kadar uzun olduğunu gösterir. Geri sayım yok, önizleme yok: vakti geldiğinde yalnızca burada olacak."
+      }
+    },
+    "letterCompose": {
+      "directions": {
+        "title": "Nereden başlamalı",
+        "body": "Bir yön seç, sana doğru yazacağın bir soru verilsin. Soru kaydedilmez ve asla mektubun parçası olmaz: yazarken bakacağın bir şeyden ibarettir."
+      },
+      "seal": {
+        "title": "Ne zaman açılacak",
+        "body": "O günün ne kadar uzakta olduğunu seç, sonra son bir kez oku. Mühürleme kesindir: o andan itibaren mektup, seçilen tarihe kadar okunamaz."
+      }
+    },
+    "letterRead": {
+      "opened": {
+        "title": "Ulaştı",
+        "body": "Seçtiğin gün geldi ve mektup okunabilir!"
+      },
+      "keep": {
+        "title": "Senin, sonsuza dek",
+        "body": "İstediğin kadar oku. Bir kez mühürlendikten sonra düzenlenemez, ve silinemez de."
+      }
+    }
+  },
+  "trash": "Çöp kutusu",
+  "trashAction": "Çöp kutusunu aç…",
+  "trashDescription": "Sildiğin sayfalar, tamamen yok olmadan önce burada bekler.",
+  "trashEmptyAction": "Çöp kutusunu boşalt",
+  "trashEmptyConfirm": "Çöp kutusunda bekleyen bütün sayfalar, ekleriyle birlikte kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+  "trashEmptyTitle": "Çöp kutusu boşaltılsın mı?",
+  "trashError": "Çöp kutusu okunamadı.",
+  "trashHint": "Geri getirilen bir sayfa tarihi, ekleri ve günlükteki yeriyle birlikte döner.",
+  "trashIntro": "Silinen bir sayfa burada {{days}} gün bekler, sonra kalıcı olarak kaldırılır.",
+  "trashNothing": "Hiçbir şey silinmedi.",
+  "trashPurge": "Kalıcı olarak sil",
+  "trashPurgeConfirm": "Bu sayfa ve ona eklenmiş her şey kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+  "trashRestore": "Geri getir",
+  "trashRow": "Yazıldı: {{written}} · kaldırılacak: {{removed}}",
+  "underline": "Altı çizili",
+  "unlockEntry": "Bu sayfanın kilidini aç",
+  "untitled": "Başlıksız",
+  "writeOnThisDay": "Bu güne yaz",
+  "writingSection": "Yazma",
+  "writingSectionDescription": "Bir sayfayı açtığında nasıl davrandığı.",
+  "year": "Yıl",
+  "yearsAgo_one": "Bir yıl önce",
+  "yearsAgo_other": "{{count}} yıl önce",
+  "memoryPrevious": "Önceki anı",
+  "memoryNext": "Sonraki anı",
+  "letterAiUnavailableTitle": "Yapay zekâ önerileri kullanılamıyor",
+  "letterAiUnavailableBody": "Yukarıdaki yönler her zaman çalışır. Başlamak için bir soru da istiyorsan, yapay zekâ asistanını aç ve ayarlardan bir model seç - bu bilgisayarda çalışır, ve hiçbir şey dışarı çıkmaz."
+}

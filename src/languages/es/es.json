@@ -1,0 +1,661 @@
+{
+  "ai": "Asistente de IA",
+  "aiActionDescription": {
+    "fixGrammar": "Corrige la ortografía, la gramática y la puntuación sin cambiar el significado.",
+    "improveClarity": "Hace el texto más claro y fácil de leer, dejando intacto todo el contenido.",
+    "makeShorter": "Acorta el texto conservando todos los conceptos e informaciones esenciales."
+  },
+  "aiActive": "Activo",
+  "aiActiveModel": "Modelo activo",
+  "aiDesc08b": "La opción más ligera. Funciona en equipos modestos; ideal para correcciones gramaticales rápidas, aunque no siempre precisas.",
+  "aiDesc27b": "De estación de trabajo. Requiere bastante disco y memoria; ideal para una mayor precisión en las sugerencias.",
+  "aiDesc2b": "Pequeño y rápido, con mejor gramática que el de 0.8B.",
+  "aiDesc4b": "El mejor equilibrio entre calidad y recursos necesarios.",
+  "aiDesc9b": "Calidad superior; exige una máquina capaz.",
+  "aiDescription": "Desactivado. Aunque no se desinstala del dispositivo.",
+  "aiDiscard": "Descartar",
+  "aiError": {
+    "badSelection": "Esta selección no se puede reescribir. Puede estar vacía o ser más larga que un solo pasaje.",
+    "cancelled": "Interrumpido. No se ha cambiado nada.",
+    "daemon": "Ollama no ha podido completar la operación.",
+    "disabled": "El asistente de IA está desactivado. Puedes activarlo en los ajustes.",
+    "empty": "El modelo no ha devuelto nada. Inténtalo de nuevo y asegúrate de que haya un modelo seleccionado.",
+    "modelGone": "Ese modelo ya no está instalado. Elige otro en los ajustes.",
+    "noModel": "Todavía no has elegido un modelo. Selecciona uno en la página de ajustes.",
+    "noPassage": "El modelo no ha devuelto ningún pasaje reescrito.",
+    "reasoned": "El modelo ha recibido la petición pero no ha devuelto texto. Un pasaje más corto suele bastar para resolver este error.",
+    "timeout": "El modelo ha tardado demasiado y se ha detenido. Un pasaje más corto suele bastar para resolver este error.",
+    "tooLong": "El modelo se ha detenido, puede que el contenido sea demasiado largo. No se ha cambiado nada.",
+    "unknown": "Algo ha salido mal.",
+    "unreachable": "Ollama no responde. Comprueba que esté en marcha en tu ordenador antes de volver a intentarlo.",
+    "unreadable": "La respuesta del modelo no parece legible."
+  },
+  "aiHint": "Los modelos de IA se ejecutan localmente en tu ordenador a través de Ollama. Ningún dato sale de tu dispositivo. La privacidad es uno de los principios fundamentales de Wattle y lo que la distingue: tus datos siempre se quedan en tu ordenador.",
+  "aiInsertBelow": "Insertar debajo",
+  "aiInstall": "Instalar",
+  "aiInstalling": "Descargando… {{percent}} %",
+  "aiMayNotFit": "Al límite de este ordenador",
+  "aiMayNotFitHint": "Este modelo necesita más memoria de la que tiene esta máquina. Puede ir lento, o no arrancar siquiera. Aun así se puede instalar, aunque no sea recomendable.",
+  "aiModels": "Modelos",
+  "aiModelsDescription": "Modelos instalados y disponibles. No se descarga nada hasta que lo pidas.",
+  "aiNoModel": "Ningún modelo elegido",
+  "aiNoModelChosenHint": "El asistente de IA está activo, pero todavía ningún modelo lo está. Elige uno arriba para empezar a usar las funciones de IA.",
+  "aiNoModelsYet": "Todavía no hay ningún modelo instalado. Elige uno abajo: no se descarga nada hasta que lo pidas.",
+  "aiOnDescription": "Un modelo que se ejecuta en este dispositivo. No se envía nada a ninguna parte, por respeto a tu privacidad.",
+  "aiPreparing": "Preparando el asistente en este ordenador…",
+  "aiRecommended": "Recomendado",
+  "aiRecommendedHint": "La mejor opción para la memoria de este ordenador.",
+  "aiRemove": "Quitar",
+  "aiRemoveConfirm": "{{name}} se eliminará de este ordenador. ¿Quieres continuar?",
+  "aiReplace": "Sustituir",
+  "aiRewrite": "Reescribir con el asistente de IA",
+  "aiRewriting": "Pensando…",
+  "aiSection": "Ajustes de IA",
+  "aiSectionDescription": "Opcional, local y apagada hasta que la enciendas.",
+  "aiUnmanaged": "Ajena a Wattle",
+  "aiUnmanagedDescription": "Instalado fuera de Wattle. Puedes quitarlo desde aquí, pero no se ofrece como modelo activo.",
+  "aiUseTitle": "Usar este",
+  "alignCenter": "Centrar",
+  "alignLeft": "Alinear a la izquierda",
+  "alignRight": "Alinear a la derecha",
+  "allEntries": "Todas las páginas",
+  "allSparks": "Todas las chispas",
+  "allSparksIntro": "Cada chispa que has capturado, empezando por la más reciente. Son breves y sin título a propósito: una chispa es una nota para ti, un pensamiento cogido al vuelo, sin más reglas que las tuyas.",
+  "appName": "Wattle",
+  "appearanceSection": "Apariencia",
+  "aroundThisTime": "Por estas fechas",
+  "backToComponents": "Componentes",
+  "backToTop": "Volver arriba",
+  "backup": "Copia de seguridad",
+  "backupAction": "Exportar…",
+  "backupDescription": "Guarda una copia de tus páginas, adjuntos y ajustes.",
+  "backupError": "La copia de seguridad ha fallado. Inténtalo de nuevo.",
+  "backupFolderAction": "Elegir…",
+  "backupFolderHint": "Es la carpeta donde se escriben los archivos .wattle de las copias, con el nombre del archivo del día. No es donde está tu diario. Las copias anteriores nunca se incluyen en una nueva.",
+  "backupFolderUnset": "Aún sin definir: la ventana de guardado parte de donde Windows la dejó.",
+  "backupHint": "Wattle pregunta cada vez dónde guardar el archivo. Base de datos, adjuntos y ajustes en un solo archivo .wattle. Los modelos de Ollama no se incluyen y se instalan fácilmente desde Wattle.",
+  "backupSuccess": "Copia de seguridad guardada.",
+  "bold": "Negrita",
+  "calendar": "Calendario",
+  "calendarBoth": "Ambos",
+  "calendarEntriesOnly": "Páginas",
+  "calendarSparksOnly": "Chispas",
+  "calendarIntro": "Dónde cae tu escritura a lo largo del año. Un día más lleno es un día en que escribiste más; elige uno para volver a leerlo.",
+  "cancel": "Cancelar",
+  "code": "Código",
+  "codeLanguage": "Lenguaje del código",
+  "codeLanguagePlain": "Texto sin formato",
+  "components": {
+    "askConfirmation": "Pedir confirmación",
+    "cardBody": "Una superficie sencilla: borde fino, fondo de tarjeta, nada más.",
+    "cardTitle": "Tarjeta",
+    "dialogBody": "Un diálogo en un portal, con el fondo y el botón de cierre que aporta este proyecto.",
+    "dialogTitle": "Título del diálogo",
+    "disabled": "Desactivado",
+    "hoverMe": "Pasa por encima",
+    "openDialog": "Abrir diálogo",
+    "openPopover": "Abrir popover",
+    "pageDescription": "Una o dos frases sobre para qué sirve la pantalla, debajo del camino de vuelta, el título y lo que la pantalla pone a la derecha.",
+    "pageSubtitle": "Un subtítulo",
+    "pageTitle": "Un título de página",
+    "popoverBody": "Anclado a su disparador y cerrado por cualquier otra cosa: aquí es donde se abren tanto el campo de fecha como el plazo de una carta.",
+    "popoverTitle": "Un popover",
+    "sampleEntryBody": "Salí con tiempo de sobra para ir andando, y la niebla seguía posada sobre el campo de detrás de las casas.",
+    "sampleEntryHit": "niebla",
+    "sampleEntryOpening": "Salí con tiempo de sobra para ir andando, y la",
+    "sampleEntryTitle": "El camino largo hasta la estación",
+    "sampleSpark": "Sea lo que sea, no es urgente. Consúltalo con la almohada.",
+    "sizes": "Tamaños",
+    "startTour": "Empezar el recorrido",
+    "states": "Estados",
+    "subtitle": "Las piezas que componen la interfaz, con sus variantes y estados. Primero los elementos básicos; después los pocos componentes funcionales que aparecen en suficientes pantallas como para merecer verse aparte. Todo aquí usa datos de ejemplo.",
+    "title": "Componentes",
+    "tooltipBody": "Una explicación, un paso por detrás del control al que pertenece.",
+    "tourBody": "La página se oscurece, el elemento destacado permanece iluminado y la tarjeta lo sigue. Cada recorrido guiado de Wattle es esto, paso a paso.",
+    "tourTitle": "Esto es un paso del recorrido",
+    "variants": "Variantes",
+    "withIcon": "Con icono"
+  },
+  "continue": "Continuar",
+  "dailySparks": "Chispas",
+  "dark": "Oscuro",
+  "dataSection": "Datos",
+  "dataSectionDescription": "Tu diario, dentro y fuera de Wattle.",
+  "delete": "Eliminar",
+  "deleteEntry": "Eliminar página",
+  "deleteEntryConfirm": "Esta página pasa a la papelera. Puedes restaurarla desde los ajustes hasta que se elimine para siempre.",
+  "deleteSpark": "Eliminar chispa",
+  "deleteSparkConfirm": "Esta chispa pasa a la papelera. Puedes restaurarla desde los ajustes hasta que se elimine para siempre.",
+  "dismiss": "Dejar a un lado",
+  "downloadAttachment": "Guardar una copia…",
+  "downloadHtml": "Descargar HTML",
+  "edit": "Editar",
+  "editorScale": "Tamaño del texto",
+  "editorScaleDefault": "Predeterminado",
+  "editorScaleDescription": "Con qué tamaño se compone tu escritura en el editor.",
+  "editorScaleHint": "Solo cambia de tamaño lo escrito; el resto de la aplicación se queda igual.",
+  "editorScaleLarge": "Grande",
+  "editorScaleLargest": "Máximo",
+  "editorScaleSmall": "Pequeño",
+  "emptyBody": "Cada página se queda en este dispositivo. Empieza hoy, aunque sea con una sola línea.",
+  "emptySparksBody": "Una chispa es una línea cogida al vuelo. El campo de arriba es donde empieza una.",
+  "emptySparksTitle": "Aún no has capturado nada.",
+  "emptyTitle": "Tu diario empieza con una página.",
+  "entryContentPlaceholder": "Escribe algo, o pulsa / para los comandos…",
+  "entryCount_one": "{{count}} página",
+  "entryCount_other": "{{count}} páginas",
+  "entryDate": "Fecha de la página",
+  "entryLock": "Abrir las páginas en solo lectura",
+  "entryLockDescription": "Una página que ya contiene algo se abre bloqueada. Basta un clic para desbloquearla.",
+  "entryLockHint": "Una página nueva empieza vacía y nunca estará bloqueada hasta que la termines. Esta opción solo se aplica a las páginas del diario que ya existen.",
+  "entryNotFound": "Esta página ya no existe.",
+  "entryTitlePlaceholder": "Sin título",
+  "export": "Exportación",
+  "exportAction": "Exportar…",
+  "exportDescription": "El diario entero como un archivo HTML que se abre sin conexión.",
+  "exportEmpty": "Todavía no hay nada que exportar: el diario no tiene ninguna página.",
+  "exportEntry": "Exportar página",
+  "exportError": "La exportación ha fallado. Tu diario no se ha modificado.",
+  "exportSuccess": "Exportado a {{path}}.",
+  "fixGrammar": "Corregir la gramática",
+  "greetingAfternoon": "Buenas tardes.",
+  "greetingAfternoonNamed": "Buenas tardes, {{name}}.",
+  "greetingEvening": "Buenas noches.",
+  "greetingEveningNamed": "Buenas noches, {{name}}.",
+  "greetingMorning": "Buenos días.",
+  "greetingMorningNamed": "Buenos días, {{name}}.",
+  "heading1": "Título 1",
+  "heading2": "Título 2",
+  "improveClarity": "Mejorar la claridad",
+  "italic": "Cursiva",
+  "journalFolder": "Carpeta del diario",
+  "journalFolderAction": "Mover…",
+  "journalFolderConfirm": "Elige una carpeta y Wattle moverá allí tu diario: la base de datos y todos los adjuntos juntos. Wattle se vuelve a abrir cuando termina. Si no puede moverse, tu diario se queda exactamente donde está.",
+  "journalFolderError": "No se ha podido mover el diario. Sigue donde estaba y no se ha cambiado nada.",
+  "journalFolderHint": "Aquí está el diario en sí: wattle.db y tus adjuntos. No es la carpeta donde se guardan los archivos .wattle de las copias.",
+  "language": "Idioma",
+  "languageDescription": "Idioma de la interfaz.",
+  "languageHint": "Solo cambia la interfaz. No toca ni una palabra de lo que has escrito.",
+  "layoutWidth": "Anchura de las páginas de Wattle",
+  "layoutWidthCompact": "Estrecha",
+  "layoutWidthDefault": "Equilibrada",
+  "layoutWidthDescription": "Cuánto miden de ancho todas las páginas de Wattle.",
+  "layoutWidthHint": "Ajusta a tu gusto el ancho de las páginas de Wattle. Sabemos que cada ordenador y cada monitor pueden ser distintos, así que te dejamos elegir el valor ideal.",
+  "layoutWidthWide": "Ancha",
+  "letterArrivedHeading": "Llegadas",
+  "letterArrivedTitle": "Ha llegado una carta de ti mismo del pasado",
+  "letterComposeDescription": "Algo que no podrás leer hasta un día que elijas tú. Una vez sellada, no se puede abrir, editar ni eliminar. Elige con cuidado.",
+  "letterComposeTitle": "Una carta para ti",
+  "letterContentPlaceholder": "Decide qué escribir antes de sellar tu carta.",
+  "letterContinueDraft": "Continuar la carta",
+  "letterDraftHeading": "En curso",
+  "letterDraftRow_one": "Una carta empezada - {{count}} palabra hasta ahora",
+  "letterDraftRow_other": "Una carta empezada - {{count}} palabras hasta ahora",
+  "letterError": {
+    "badDate": "Esa no es una fecha para la que se pueda sellar esta carta.",
+    "corrupt": "Esta carta no se puede abrir. Su sello ya no coincide con la forma en que se cerró: esto ocurre cuando la fecha de apertura, el texto cifrado o la clave se modifican en el archivo del diario después de sellarla.",
+    "empty": "Todavía no hay nada escrito que sellar.",
+    "futureEnvelope": "Esta carta se selló con una versión más reciente de Wattle. Actualiza Wattle para abrirla.",
+    "noKey": "La clave de esta carta ha desaparecido. El único camino es restaurar una copia de seguridad hecha antes de que se perdiera.",
+    "notFound": "Esta carta no existe.",
+    "notYet": "Esta carta aún no se ha abierto. Vuelve más tarde.",
+    "sealed": "Esta carta está sellada y todavía no es momento de abrirla. Vuelve más tarde.",
+    "tooFar": "Una carta puede esperar como mucho cincuenta años.",
+    "tooSoon": "Una carta debe esperar al menos siete días.",
+    "unknown": "Algo ha salido mal."
+  },
+  "letterExport": "Descargar esta carta",
+  "letterFooterDates": "Escrita el {{written}} · abierta el {{opened}}",
+  "letterFromYourself": "De ti de entonces",
+  "letterHasArrived": "Ha llegado su día",
+  "letterIn10Years": "10 años",
+  "letterIn1Month": "1 mes",
+  "letterIn1Year": "1 año",
+  "letterIn2Years": "2 años",
+  "letterIn3Months": "3 meses",
+  "letterIn3Years": "3 años",
+  "letterIn5Years": "5 años",
+  "letterIn6Months": "6 meses",
+  "letterKeepEditing": "Seguir escribiendo",
+  "letterLength": "Longitud",
+  "letterNoDateYet": "Elige cuándo se abrirá.",
+  "letterOpenIt": "Ábrela",
+  "letterOpenedHeading": "Leídas",
+  "letterOpenedOn": "Abierta el {{date}}",
+  "letterOpensOn": "Se abre el",
+  "letterOpensOnDate": "Se abre el {{date}}",
+  "letterPickDate": "Elige una fecha…",
+  "letterPromptChapter": "Un nuevo capítulo",
+  "letterPromptFree": "Nada en particular",
+  "letterPromptGoals": "Objetivos",
+  "letterPromptHard": "Una época difícil",
+  "letterPromptOrdinary": "Un día cualquiera",
+  "letterPromptPerson": "Alguien que importa",
+  "letterPromptRemember": "Para no olvidar",
+  "letterResultLabel": "Carta",
+  "letterReviewAction": "Volver a leerla…",
+  "letterReviewBody": "Léela una última vez. Después de este paso, se guarda.",
+  "letterReviewTitle": "Léela una última vez",
+  "letterSealAction": "Sellar la carta",
+  "letterSealBody": "Se cifrará y se guardará hasta el {{date}}.",
+  "letterSealFailed": "La carta no se ha sellado. No ha cambiado nada.",
+  "letterSealHonesty": "Wattle cifra la carta y guarda la clave en el archivo del diario, de modo que la carta no se pueda perder. Es un candado contra ti mismo, no un secreto frente a quien tenga acceso a tu ordenador - y una copia de seguridad se lleva ambas mitades consigo.",
+  "letterSealTerms": "Hasta el {{date}} no podrás abrirla, leerla, editarla, eliminarla ni cambiar su fecha. Wattle tampoco. La única forma de quitarla es vaciar el diario entero.",
+  "letterSealTitle": "¿Sellar esta carta?",
+  "letterSealing": "Sellando…",
+  "letterTypeDate": "Escribe la fecha para confirmar",
+  "letterWaitingHeading": "En espera",
+  "letterWaitingLine": "Una carta para ti se abre el {{date}}.",
+  "letterWhereToStart": "Por dónde empezar",
+  "letterWillOpen": "Se abrirá el {{date}}.",
+  "letterWordCount_one": "{{count}} palabra",
+  "letterWordCount_other": "{{count}} palabras",
+  "letterWrite": "Escribir una carta",
+  "letterWriteBack": "Responder",
+  "letterWritten": "Escrita",
+  "letterWrittenAndLength_one": "Escrita el {{date}} · {{count}} palabra",
+  "letterWrittenAndLength_other": "Escrita el {{date}} · {{count}} palabras",
+  "letterWrittenOn": "Escrita el {{date}}",
+  "letters": "Cartas",
+  "lettersDescription": "Palabras que confías a tu yo del futuro. Elige un día y deja ahí lo que quieras recordar, contar o redescubrir. Hasta entonces, la carta permanecerá sellada e inaccesible.",
+  "lettersEmptyBody": "Una carta es algo que escribes ahora y que no podrás volver a leer hasta un día que elijas.",
+  "lettersEmptyTitle": "Ninguna carta",
+  "light": "Claro",
+  "link": "Enlace",
+  "listErrorBody": "Tus páginas siguen en este dispositivo: Wattle no ha podido leerlas. Inténtalo de nuevo y, si el problema persiste, restaura una copia de seguridad.",
+  "listErrorTitle": "No se puede abrir el diario.",
+  "loadOlder": "Cargar las anteriores",
+  "loading": "Cargando…",
+  "lockEntry": "Bloquear esta página",
+  "makeShorter": "Acortar",
+  "memoriesSection": "Recuerdos",
+  "memoriesSectionDescription": "Dos maneras de que lo que has escrito vuelva a ti.",
+  "memoryAnother": "Buscar otro",
+  "memoryAsk": "Buscar un recuerdo que merezca releerse",
+  "memoryLooking": "Buscando…",
+  "memoryNoneAlike": "Nada más de lo que has escrito se parece lo bastante a esto como para ponerlo al lado.",
+  "memoryNoneLeft": "Nada más se parece lo bastante como para merecer mostrarse.",
+  "memoryTooRecent": "Todavía no hay nada lo bastante lejano. Un recuerdo debe tener al menos dos semanas más que lo último que has escrito, y tu diario aún no llega tan atrás.",
+  "memoryWorthRevisiting": "Un recuerdo que merece releerse",
+  "month": "Mes",
+  "name": "Nombre",
+  "nameDescription": "Entre {{min}} y {{max}} caracteres.",
+  "nameHint": "Elige cómo quieres que te llamen en Wattle, con tu nombre real o con uno inventado. Podrás cambiarlo cuando quieras.",
+  "namePlaceholder": "Tu nombre",
+  "nameRequired": "El nombre es obligatorio: al menos {{min}} caracteres.",
+  "nameTooShort": "Al menos {{min}} caracteres.",
+  "navigation": "Navegación",
+  "navigationBoth": "Ambas",
+  "navigationBottom": "Inferior",
+  "navigationDescription": "Dónde se sitúa la navegación principal.",
+  "navigationHint": "Coloca la navegación donde tú prefieras.",
+  "navigationHeader": "Superior",
+  "newEntry": "Nueva página",
+  "newProfile": "Nuevo perfil",
+  "newProfileAction": "Salir",
+  "newProfileBackingUp": "Haciendo la copia…",
+  "newProfileBackupFolder": "La ventana de guardado se abre en {{folder}}.",
+  "newProfileBackupNow": "Hacer una copia ahora…",
+  "newProfileBackupSaved": "Copia de seguridad guardada.",
+  "newProfileConfirmAction": "Eliminarlo todo",
+  "newProfileConfirmBody": "Cada página, cada adjunto y tu nombre se eliminarán definitivamente y la configuración empezará de cero. Esta acción no se puede deshacer.",
+  "newProfileConfirmTitle": "¿Vaciar este perfil?",
+  "newProfileContinueAnyway": "Continuar de todos modos",
+  "newProfileDescription": "Sal, elimina este perfil y empieza de cero. Se eliminarán todas las páginas y todos los adjuntos. Aún puedes guardar una copia de este perfil antes de confirmar.",
+  "newProfileError": "No se ha podido empezar de cero. Tu diario no se ha modificado.",
+  "newProfileHint": "En este dispositivo hay un solo diario. Esta acción lo vacía; no añade un segundo.",
+  "newProfileNoBackupBody": "Wattle no tiene constancia de ninguna copia de seguridad de este diario. Todo lo que contiene está a punto de eliminarse y, sin copia, no habrá forma de recuperarlo.",
+  "newProfileNoBackupTitle": "Ninguna carpeta de copias definida",
+  "next": "Siguiente",
+  "nextEntry": "página siguiente",
+  "noResults": "Ninguna página coincide con la búsqueda.",
+  "noSparkResults": "Ninguna chispa coincide con la búsqueda.",
+  "nudgeAnother": "Pregúntame otra cosa",
+  "nudgeCue": "Una sugerencia",
+  "nudgeDismiss": "Ahora no",
+  "nudgeOffer": "¿No sabes qué escribir?",
+  "nudgeThinking": "Lo estoy pensando…",
+  "nudgeWrite": "Escribir sobre esto",
+  "off": "Desactivado",
+  "ollamaInstallFailed": "No se ha podido instalar Ollama. Wattle no ha cambiado nada en este dispositivo.",
+  "ollamaStartFailed": "Ollama no ha arrancado a tiempo. Puede que aún esté iniciándose: prueba dentro de un momento.",
+  "on": "Activado",
+  "onThisDay": "En este día",
+  "onThisDayDescription": "Las páginas que escribiste en años anteriores, en la misma fecha de hoy, aparecerán en la página principal.",
+  "onThisDayHint": "Elige si quieres volver a ver lo que escribiste en esta misma fecha en años anteriores. El recordatorio aparecerá en la página principal.",
+  "onboarding": {
+    "language": {
+      "title": "Te damos la bienvenida a Wattle.",
+      "body": "Primero, selecciona tu idioma"
+    },
+    "start": {
+      "title": "¿Has llevado ya un diario con Wattle?",
+      "body": "Si tienes una copia de seguridad, todo lo que hay en ella volverá a su sitio.",
+      "fresh": "Empezar un diario nuevo",
+      "freshBody": "Una primera página en blanco, y tres preguntas breves antes de abrirla.",
+      "returning": "Tengo una copia de Wattle",
+      "returningBody": "Textos, adjuntos y ajustes, exactamente como los dejaste."
+    },
+    "returning": {
+      "eyebrow": "Bienvenido de nuevo",
+      "title": "Vamos a encontrar tu diario.",
+      "body": "Elige el archivo .wattle que guardaste. Todo lo que contiene sustituye a este diario vacío, y Wattle se abre donde lo dejaste.",
+      "action": "Elegir una copia…",
+      "confirmTitle": "¿Restaurar una copia de seguridad?",
+      "confirm": "Elige el archivo .wattle que guardaste y Wattle volverá a abrirse con todo lo que contiene: textos, adjuntos y ajustes. Este diario vacío será sustituido."
+    },
+    "name": {
+      "title": "¿Cómo debería llamarte Wattle?",
+      "body": "Se usa para el saludo de la pantalla de inicio. De dos a doce caracteres."
+    },
+    "backup": {
+      "title": "¿Dónde deben guardarse las copias?",
+      "body": "Una carpeta fuera del diario, para que una copia esté en otro sitio cuando la necesites."
+    },
+    "theme": {
+      "title": "¿Claro u oscuro?",
+      "body": "Puedes cambiarlo cuando quieras en los ajustes."
+    }
+  },
+  "onboardingFinish": "Empezar a escribir",
+  "onboardingStep": "Paso {{step}} de {{total}}",
+  "pageOf": "{{page}} de {{total}}",
+  "palette": "Tema",
+  "paletteDescription": "Define los colores, las tipografías y el estilo visual de Wattle.",
+  "paletteHint": "Cambia el aspecto de toda la aplicación: fondo, texto, detalles de la interfaz, esquinas y tipografías. No modifica nada de lo que has escrito.",
+  "paletteName": {
+    "clay": "Arcilla",
+    "crimson": "Carmesí",
+    "sage": "Salvia",
+    "umber": "Umbría",
+    "wattle": "Wattle",
+    "olive": "Oliva",
+    "forest": "Bosque",
+    "candy": "Caramelo"
+  },
+  "pastSparks": "Chispas anteriores",
+  "previous": "Anterior",
+  "previousEntry": "página anterior",
+  "primaryNav": "Principal",
+  "profileSection": "Perfil",
+  "removeAttachment": "Quitar adjunto",
+  "replayTours": "Recorridos guiados",
+  "replayToursAction": "Restablecer",
+  "replayToursDescription": "Vuelve a mostrar todos los recorridos de bienvenida. Útil para redescubrir todo lo que hace Wattle.",
+  "replayToursHint": "Marca todos los recorridos como no vistos y te lleva a la pantalla de inicio para mostrarte el primero.",
+  "reset": "Restablecer las preferencias",
+  "resetAction": "Restablecer",
+  "resetConfirm": "La apariencia, la anchura de las páginas, los recuerdos y el bloqueo de páginas vuelven a sus valores iniciales. El diario, tu nombre y los ajustes del asistente de IA no se tocan. ¿Quieres continuar?",
+  "resetDescription": "Vuelve a los valores iniciales. Tu nombre y los ajustes del asistente de IA se quedan como están.",
+  "resetHint": "Solo las preferencias. Páginas, chispas y cartas se quedan exactamente donde están.",
+  "resetSection": "Restablecimiento",
+  "resizeImage": "Redimensionar imagen",
+  "resizeVideo": "Redimensionar vídeo",
+  "restore": "Restauración",
+  "restoreAction": "Restaurar…",
+  "restoreConfirm": "Cada página, adjunto y ajuste de este dispositivo se sustituirá por la copia de seguridad que elijas ahora. Esta acción no se puede deshacer.",
+  "restoreDescription": "Sustituye todo lo que hay en este dispositivo por una copia de seguridad.",
+  "restoreError": "La restauración ha fallado. Tus datos no se han tocado.",
+  "restoreHint": "Sustituye todo lo que hay en este dispositivo por la copia de seguridad. Esto no se puede deshacer.",
+  "restoring": "Restaurando…",
+  "retry": "Reintentar",
+  "save": "Guardar",
+  "saveError": "No guardado",
+  "saveThought": "Guardar el pensamiento",
+  "saved": "Guardado",
+  "saving": "Guardando…",
+  "search": "Buscar entre las páginas",
+  "searchDisabledHint": "No se ha encontrado nada; añade algo antes de poder activar la búsqueda.",
+  "searchPlaceholder": "Buscar entre las páginas…",
+  "searchResultCount_one": "{{count}} resultado",
+  "searchResultCount_other": "{{count}} resultados",
+  "searchSparks": "Buscar entre las chispas",
+  "searchSparksDisabledHint": "Todavía no hay nada que buscar: escribe una chispa arriba y la búsqueda se activará.",
+  "searchSparksPlaceholder": "Buscar entre las chispas…",
+  "settings": "Ajustes",
+  "settingsSubtitle": "Todo lo que encuentres aquí está guardado en este dispositivo.",
+  "slash": {
+    "bulletList": {
+      "description": "Una lista con viñetas sencilla",
+      "title": "Lista con viñetas"
+    },
+    "code": {
+      "description": "Insertar un fragmento de código",
+      "title": "Bloque de código"
+    },
+    "divider": {
+      "description": "Separar visualmente secciones",
+      "title": "Separador"
+    },
+    "file": {
+      "description": "Adjuntar cualquier archivo",
+      "title": "Archivo"
+    },
+    "heading1": {
+      "description": "Título de sección grande",
+      "title": "Título 1"
+    },
+    "heading2": {
+      "description": "Título de sección mediano",
+      "title": "Título 2"
+    },
+    "heading3": {
+      "description": "Título de sección pequeño",
+      "title": "Título 3"
+    },
+    "image": {
+      "description": "Adjuntar una imagen",
+      "title": "Imagen"
+    },
+    "orderedList": {
+      "description": "Una lista numerada",
+      "title": "Lista numerada"
+    },
+    "quote": {
+      "description": "Destacar un pasaje",
+      "title": "Cita"
+    },
+    "taskList": {
+      "description": "Llevar la cuenta de lo que hay que hacer",
+      "title": "Lista de tareas"
+    },
+    "text": {
+      "description": "Texto sin formato",
+      "title": "Texto"
+    },
+    "video": {
+      "description": "Adjuntar un vídeo",
+      "title": "Vídeo"
+    }
+  },
+  "slashCategory": {
+    "basic": "Básico",
+    "blocks": "Bloques",
+    "lists": "Listas",
+    "media": "Medios"
+  },
+  "slashNoResults": "Ningún resultado.",
+  "sparkCharsLeft_one": "Queda {{count}} carácter",
+  "sparkCharsLeft_other": "Quedan {{count}} caracteres",
+  "sparkCount_one": "{{count}} chispa",
+  "sparkCount_other": "{{count}} chispas",
+  "sparkDate": "Día bajo el que se archiva esta chispa",
+  "sparkEchoDescription": "Una chispa de antes vuelve por su cuenta, como mucho una al día.",
+  "sparkEchoHint": "Una chispa de hace al menos 30 días, la misma durante todo el día, y mañana la siguiente.",
+  "sparkEchoLead": "Te habías dejado este pensamiento",
+  "sparkEchoSetting": "Eco de las chispas",
+  "sparkEmpty": "Esta chispa está vacía.",
+  "sparkOpenAsEntry": "Abrir como página",
+  "sparkPlaceholder": "Captura un pensamiento de paso…",
+  "sparkResultLabel": "Chispa",
+  "sparkRichBadge": "Escrita con formato",
+  "sparkRichBody": "Esta chispa contiene formato o adjuntos, de antes de que las chispas pasaran a ser texto sin formato. No se ha cambiado nada: se abre en el editor completo, donde todo sigue funcionando.",
+  "sparkSaveHint": "Ctrl + Intro para guardar",
+  "sparkTruncated_one": "Se muestra la más reciente.",
+  "sparkTruncated_other": "Se muestran las {{count}} más recientes.",
+  "sparksEyebrow": "Claridad del momento",
+  "sparksIntro": "Una línea o dos, cogidas antes de que se escapen. Aquí nada necesita título, y nada tiene que convertirse en otra cosa.",
+  "strikethrough": "Tachado",
+  "suggestTitle": "Sugerir un título",
+  "theme": "Claro u oscuro",
+  "themeDescription": "Cada tema existe en ambos: este es aquel en el que estás leyendo.",
+  "themeHint": "El tema se aplica a toda la aplicación y tu elección se recordará la próxima vez que la abras.",
+  "tourClose": "Cerrar el recorrido",
+  "tourDone": "Hecho",
+  "tourStep": "{{current}} de {{total}}",
+  "tours": {
+    "ai": {
+      "switch": {
+        "title": "Apagado hasta que lo enciendas",
+        "body": "El asistente de IA es opcional y empieza apagado. Mejora y personaliza la experiencia dentro de Wattle, siempre respetando tu privacidad. Los datos se procesan en tu ordenador y nunca saldrán de él."
+      },
+      "runtime": {
+        "title": "En qué se ejecutan los modelos",
+        "body": "Los modelos se ejecutan a través de Ollama. Wattle puede instalarlo e iniciarlo desde aquí, si se lo permites."
+      },
+      "models": {
+        "title": "Los modelos que conservas",
+        "body": "Descarga el modelo que mejor se adapte a tu ordenador. Prueba uno cada vez, para ver cuál encaja mejor con tu hardware."
+      }
+    },
+    "home": {
+      "write": {
+        "title": "Empieza por hoy",
+        "body": "Así empieza una página nueva. Un clic abre una página en blanco con la fecha de hoy: hasta una sola línea merece un sitio aquí."
+      },
+      "search": {
+        "title": "Encuentra lo que escribiste",
+        "body": "Cada palabra de cada página se puede buscar, y el resultado muestra el pasaje que coincide. Sigue desactivada mientras no haya nada que buscar."
+      },
+      "timeline": {
+        "title": "Todo lo que has escrito",
+        "body": "Tus páginas, desde la más reciente y agrupadas por mes. Abre una para continuar, o desplázate para cargar más."
+      },
+      "nav": {
+        "title": "Todo lo demás",
+        "body": "El calendario, las chispas, las cartas para ti y los ajustes viven todos en esta barra. Te sigue de pantalla en pantalla, y la única que lleva su propio nombre es aquella en la que estás."
+      }
+    },
+    "calendar": {
+      "grid": {
+        "title": "Tu diario por fechas",
+        "body": "Los días en que escribiste están marcados. Elige uno para releerlo, o para escribir en un día que ya ha pasado."
+      },
+      "view": {
+        "title": "Un mes, o un año entero",
+        "body": "Cambia entre los dos. Es en la vista anual donde un hábito se hace visible."
+      },
+      "kinds": {
+        "title": "páginas, chispas o ambas",
+        "body": "Dos formas de escribir comparten esta cuadrícula, distinguidas por el color de sus marcas. Muestra una cada vez cuando busques algo concreto."
+      }
+    },
+    "sparks": {
+      "capture": {
+        "title": "Captura un pensamiento",
+        "body": "Una chispa es una línea cogida al vuelo. Sin título, sin página. Escríbela y pulsa Ctrl+Intro, o usa el botón."
+      },
+      "archive": {
+        "title": "Todas las chispas que has guardado",
+        "body": "Aquí encontrarás las últimas. Desde aquí puedes abrirlas todas, mes a mes - y escribir una nueva desde allí también."
+      },
+      "recent": {
+        "title": "En qué puede convertirse una chispa",
+        "body": "Cada una se abre en su propia página, donde puedes editarla, eliminarla o convertirla en una página como es debido si ha crecido entretanto."
+      }
+    },
+    "entry": {
+      "title": {
+        "title": "Dale un nombre, o déjala como está",
+        "body": "El título es opcional y se guarda solo mientras escribes. Pulsa Intro para pasar directamente a la página de abajo."
+      },
+      "editor": {
+        "title": "Escribe \"/\" para todo lo demás",
+        "body": "Escribe aquí como lo harías en papel. Al escribir \"/\" se abre el menú emergente con todo lo que la página puede contener: títulos, listas, citas, imágenes, vídeos y archivos. Selecciona texto para darle formato. No hay nada que guardar: se escribe sobre la marcha."
+      },
+      "actions": {
+        "title": "Comandos de la página",
+        "body": "Ve a la página anterior o siguiente, bloquéala contra cambios accidentales, expórtala como HTML, o elimínala."
+      }
+    },
+    "settings": {
+      "appearance": {
+        "title": "Hazla tuya",
+        "body": "Tema, color de acento, idioma y anchura de las páginas."
+      },
+      "data": {
+        "title": "Tu diario es tuyo",
+        "body": "Haz una copia, expórtalo como HTML, o restáuralo desde una copia. Todo se queda en este dispositivo."
+      },
+      "reset": {
+        "title": "Volver atrás",
+        "body": "Devuelve las preferencias a su estado original, repite estos recorridos, o empieza un diario completamente nuevo."
+      },
+      "profile": {
+        "title": "Tu nombre, y nada más",
+        "body": "Te saluda en la pantalla de inicio y no sale nunca de este dispositivo. Wattle no te pide nada más: ni cuenta, ni correo, ni inicio de sesión."
+      }
+    },
+    "letters": {
+      "what": {
+        "title": "Una carta para ti",
+        "body": "No es una página: una carta se escribe ahora y permanece sellada hasta un día que elijas. Hasta entonces no se puede leer, editar ni abrir - ni siquiera tú."
+      },
+      "write": {
+        "title": "Escribe una",
+        "body": "Un borrador cada vez, guardado aquí hasta que lo selles. Al sellar se pide el día en que se abrirá, y ya no hay vuelta atrás."
+      },
+      "waiting": {
+        "title": "Mientras espera",
+        "body": "Una carta sellada muestra solo el día en que se abre y lo larga que es. Sin cuenta atrás, sin vista previa: simplemente estará aquí cuando llegue el momento."
+      }
+    },
+    "letterCompose": {
+      "directions": {
+        "title": "Por dónde empezar",
+        "body": "Elige una dirección y se te dará una pregunta hacia la que escribir. La pregunta no se guarda y nunca pasa a formar parte de la carta: es solo algo a lo que mirar mientras escribes."
+      },
+      "seal": {
+        "title": "Cuándo se abrirá",
+        "body": "Elige a qué distancia está ese día, y después léela una última vez. Sellar es definitivo: desde ese momento, la carta es ilegible hasta la fecha elegida."
+      }
+    },
+    "letterRead": {
+      "opened": {
+        "title": "Ha llegado",
+        "body": "¡El día que elegiste ha llegado y la carta se puede leer!"
+      },
+      "keep": {
+        "title": "Tuya, para siempre",
+        "body": "Léela tantas veces como quieras. No se puede editar una vez sellada, y tampoco se puede eliminar."
+      }
+    }
+  },
+  "trash": "Papelera",
+  "trashAction": "Abrir la papelera…",
+  "trashDescription": "Las páginas que borras esperan aquí antes de desaparecer para siempre.",
+  "trashEmptyAction": "Vaciar la papelera",
+  "trashEmptyConfirm": "Todas las páginas que esperan en la papelera se borrarán definitivamente, adjuntos incluidos. Esta acción no se puede deshacer.",
+  "trashEmptyTitle": "¿Vaciar la papelera?",
+  "trashError": "No se ha podido leer la papelera.",
+  "trashHint": "Una página restaurada vuelve con su fecha, sus adjuntos y su lugar en el diario.",
+  "trashIntro": "Una página borrada espera aquí {{days}} días y después se elimina para siempre.",
+  "trashNothing": "No se ha borrado nada.",
+  "trashPurge": "Borrar para siempre",
+  "trashPurgeConfirm": "Esta página y todo lo adjunto a ella se borrarán definitivamente. Esta acción no se puede deshacer.",
+  "trashRestore": "Restaurar",
+  "trashRow": "Escrita el {{written}} · se eliminará el {{removed}}",
+  "underline": "Subrayado",
+  "unlockEntry": "Desbloquear esta página",
+  "untitled": "Sin título",
+  "writeOnThisDay": "Escribir en este día",
+  "writingSection": "Escritura",
+  "writingSectionDescription": "Cómo se comporta una página cuando la abres.",
+  "year": "Año",
+  "yearsAgo_one": "Hace un año",
+  "yearsAgo_other": "Hace {{count}} años",
+  "memoryPrevious": "Recuerdo anterior",
+  "memoryNext": "Recuerdo siguiente",
+  "letterAiUnavailableTitle": "Las sugerencias de IA no están disponibles",
+  "letterAiUnavailableBody": "Las direcciones de arriba funcionan siempre. Para tener además una pregunta desde la que empezar, activa el asistente de IA y elige un modelo en los ajustes - funciona en este ordenador, y nada sale de él."
+}

@@ -1,0 +1,4 @@
+# Its own pnpm root, separate from the app: the film has its own
+# dependencies and lockfile.
+allowBuilds:
+  esbuild: true

@@ -1,0 +1,146 @@
+/* Olive - generated from olive.css by scripts/generate-themes.js.
+   Regenerate rather than edit: the export is the source.
+
+   Two blocks, both complete. The dark one repeats every token the light one
+   declares, and it must: a token it left out would keep the light value.
+
+   Two selectors each, on purpose. The `:root` one is what dresses the
+   application: it has to outweigh the `:root` and `.dark` blocks in
+   `globals.css`, which a bare attribute would only do by coming later in the
+   file - and an `@import` may only sit at the top of one. The bare one is what
+   lets a swatch in Settings carry the attribute and paint itself with this very
+   rule instead of with a copy of the colour that can drift from it. */
+:root[data-wattle-palette="olive"],
+[data-wattle-palette="olive"] {
+  --background: oklch(1 0.01 40);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(0.99 0 120);
+  --card-foreground: oklch(0.345 0.05 120);
+  --popover: oklch(0.99 0 120);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.405 0.05 120);
+  --primary-foreground: oklch(0.985 0.05 120);
+  --secondary: oklch(0.94 0.05 120);
+  --secondary-foreground: oklch(0.405 0.05 120);
+  --muted: oklch(0.9 0.01 120);
+  --muted-foreground: oklch(0.5 0.01 120);
+  --accent: oklch(0.9 0.02 120);
+  --accent-foreground: oklch(0.205 0.02 120);
+  --destructive: oklch(0.477 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.922 0.01 120);
+  --input: oklch(0.822 0.01 120);
+  --ring: oklch(0.708 0.01 120);
+  --chart-1: oklch(0.81 0.1 120);
+  --chart-2: oklch(0.62 0.19 122);
+  --chart-3: oklch(0.55 0.22 124);
+  --chart-4: oklch(0.49 0.22 126);
+  --chart-5: oklch(0.42 0.18 128);
+  --sidebar: oklch(0.975 0.001 120);
+  --sidebar-foreground: oklch(0.245 0.001 120);
+  --sidebar-primary: oklch(0.405 0.05 120);
+  --sidebar-primary-foreground: oklch(0.985 0.05 120);
+  --sidebar-accent: oklch(0.9 0.02 120);
+  --sidebar-accent-foreground: oklch(0.205 0.02 120);
+  --sidebar-border: oklch(0.922 0.001 120);
+  --sidebar-ring: oklch(0.708 0.001 120);
+  --sans: Antic, ui-sans-serif, sans-serif, system-ui;
+  --serif: Alegreya, ui-serif, serif;
+  --mono: JetBrains Mono, ui-monospace, monospace;
+  --radius: 0.75rem;
+  --shadow-x: 0;
+  --shadow-y: 1px;
+  --shadow-blur: 3px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.1;
+  --shadow-color: oklch(0 0 0);
+  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow-md:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+  --shadow-lg:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+  --shadow-xl:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+  --tracking-normal: 0em;
+
+  /* What this application adds on top of shadcn's set, in the palette's own
+     terms: a hairline is the faintest border it has, and the surface a memory
+     is laid on is its quietest one. */
+  --wattle: var(--primary);
+  --assist: oklch(from var(--primary) l c calc(h + 150));
+  --memory: var(--muted-foreground);
+  --hairline: var(--border);
+  --memory-surface: var(--muted);
+}
+
+:root[data-wattle-palette="olive"].dark,
+.dark [data-wattle-palette="olive"] {
+  --background: oklch(0.165 0.01 120);
+  --foreground: oklch(0.99 0.01 120);
+  --card: oklch(0.155 0.02 120);
+  --card-foreground: oklch(0.99 0.02 120);
+  --popover: oklch(0.155 0.02 120);
+  --popover-foreground: oklch(0.99 0 120);
+  --primary: oklch(0.885 0.1 120);
+  --primary-foreground: oklch(0.205 0.02 120);
+  --secondary: oklch(0.405 0.05 120);
+  --secondary-foreground: oklch(0.94 0.05 120);
+  --muted: oklch(0.206 0.01 120);
+  --muted-foreground: oklch(0.7 0.01 120);
+  --accent: oklch(0.305 0.02 120);
+  --accent-foreground: oklch(0.9 0.02 120);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.307 0.01 120);
+  --input: oklch(0.265 0.01 120);
+  --ring: oklch(0.556 0.01 120);
+  --chart-1: oklch(0.81 0.1 120);
+  --chart-2: oklch(0.62 0.19 122);
+  --chart-3: oklch(0.55 0.22 124);
+  --chart-4: oklch(0.49 0.22 126);
+  --chart-5: oklch(0.42 0.18 128);
+  --sidebar: oklch(0.185 0.001 120);
+  --sidebar-foreground: oklch(0.975 0.001 120);
+  --sidebar-primary: oklch(0.985 0.05 120);
+  --sidebar-primary-foreground: oklch(0.405 0.05 120);
+  --sidebar-accent: oklch(0.305 0.02 120);
+  --sidebar-accent-foreground: oklch(0.9 0.02 120);
+  --sidebar-border: oklch(0.245 0.01 120);
+  --sidebar-ring: oklch(0.556 0.01 120);
+  --sans: Antic, ui-sans-serif, sans-serif, system-ui;
+  --serif: Alegreya, ui-serif, serif;
+  --mono: JetBrains Mono, ui-monospace, monospace;
+  --radius: 0.75rem;
+  --shadow-x: 0;
+  --shadow-y: 1px;
+  --shadow-blur: 3px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.1;
+  --shadow-color: oklch(0 0 0);
+  --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow-md:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+  --shadow-lg:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+  --shadow-xl:
+    0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+
+  /* What this application adds on top of shadcn's set, in the palette's own
+     terms: a hairline is the faintest border it has, and the surface a memory
+     is laid on is its quietest one. */
+  --wattle: var(--primary);
+  --assist: oklch(from var(--primary) l c calc(h + 150));
+  --memory: var(--muted-foreground);
+  --hairline: var(--border);
+  --memory-surface: var(--muted);
+}

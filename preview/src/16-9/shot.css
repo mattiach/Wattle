@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../../../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2")
+    format("woff2");
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: "Literata";
+  src: url("../../../node_modules/@fontsource-variable/literata/files/literata-latin-wght-normal.woff2")
+    format("woff2");
+  font-weight: 200 900;
+}
+
+/* Wattle light - the app's own tokens */
+:root {
+  --bg: oklch(0.967 0.005 85);
+  --fg: oklch(0.235 0.008 65);
+  --muted: oklch(0.522 0.012 68);
+  --accent: oklch(0.68 0.13 82);
+  --glow: oklch(0.68 0.13 82 / 0.13);
+  --edge: oklch(0.235 0.008 65 / 0.2);
+}
+/* Forest light */
+.forest {
+  --bg: oklch(0.9109 0.0159 160.5971);
+  --fg: oklch(0.2198 0.0298 168.5546);
+  --muted: oklch(0.4317 0.0634 159.8314);
+  --accent: oklch(0.47245 0.07246 159.662);
+  --glow: oklch(0.47245 0.07246 159.662 / 0.14);
+  --edge: oklch(0.2198 0.0298 168.5546 / 0.22);
+}
+/* The app's dark ground, with the green the Forest palette lights it with */
+.forest-dark {
+  --bg: oklch(0.19 0.008 160);
+  --fg: oklch(0.945 0.012 151.8892);
+  --muted: oklch(0.76 0.02 155);
+  --accent: oklch(0.72 0.09 158);
+  --glow: oklch(0.72 0.09 158 / 0.16);
+  --edge: oklch(0.945 0.012 151.8892 / 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 620px 1fr;
+  gap: 64px;
+  align-items: center;
+  width: 1920px;
+  height: 1080px;
+  padding: 96px 0 96px 108px;
+  overflow: hidden;
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--fg);
+  background:
+    radial-gradient(110% 80% at 82% 0%, var(--glow), transparent 60%),
+    color-mix(in oklch, var(--bg), var(--fg) 6%);
+}
+
+.mark {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+.mark img {
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--edge);
+  border-radius: 12px;
+}
+.mark span {
+  font-family: "Literata", serif;
+  font-size: 29px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  margin-bottom: 22px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  margin-bottom: 28px;
+  font-family: "Literata", serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.022em;
+}
+
+.sub {
+  max-width: 540px;
+  font-size: 23px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 42px;
+  list-style: none;
+}
+li {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 19px;
+  color: var(--muted);
+}
+li::before {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  content: "";
+  background: var(--accent);
+  border-radius: 99px;
+}
+
+.shot {
+  height: 888px;
+  margin-right: -1px;
+  overflow: hidden;
+  border: 1px solid var(--edge);
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+  box-shadow:
+    0 0 0 8px color-mix(in oklch, var(--fg) 6%, transparent),
+    0 40px 90px -30px oklch(0 0 0 / 0.42);
+}
+/* The window's own Windows title bar is cropped off the top, and the shot is
+   scaled by height so the app's content sits centred in the panel. */
+.shot img {
+  display: block;
+  width: auto;
+  height: 912px;
+  margin: -24px 0 0 -277px;
+}

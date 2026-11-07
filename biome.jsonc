@@ -1,0 +1,37 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["ultracite/biome/core", "ultracite/biome/react"],
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "off"
+      }
+    }
+  },
+  // Flag artwork is imported as a URL and drawn into an `<img>` that carries
+  // its own alt text, so the accessibility rules Biome applies to inline SVG
+  // markup have nothing to say about these files.
+  "files": {
+    "includes": ["!src/assets/*.svg"]
+  },
+  // `__DEV_TOOLS__` is baked in by `define` in vite.config.ts; there is no
+  // declaration for Biome to find, only the ambient one in vite-env.d.ts.
+  "javascript": {
+    "globals": ["__DEV_TOOLS__"]
+  },
+  "linter": {
+    "rules": {
+      "performance": {
+        "noBarrelFile": "off"
+      },
+      // Biome infers a ref's type from the `useRef` initialiser and does not
+      // model writes to `.current`, so every `if (someRef.current)` guard in
+      // the codebase is reported as always-truthy or always-falsy. All of them
+      // are wrong, and the rule has nothing else to say here: the alternative
+      // is a `biome-ignore` on each one and on every ref written afterwards.
+      "suspicious": {
+        "noUnnecessaryConditions": "off"
+      }
+    }
+  }
+}

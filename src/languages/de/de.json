@@ -1,0 +1,661 @@
+{
+  "ai": "KI-Assistent",
+  "aiActionDescription": {
+    "fixGrammar": "Korrigiert Rechtschreibung, Grammatik und Zeichensetzung, ohne den Sinn zu verändern.",
+    "improveClarity": "Macht den Text klarer und leichter lesbar und lässt dabei alle Inhalte unverändert.",
+    "makeShorter": "Kürzt den Text und behält alle wesentlichen Gedanken und Informationen bei."
+  },
+  "aiActive": "Aktiv",
+  "aiActiveModel": "Aktives Modell",
+  "aiDesc08b": "Die leichteste Option. Läuft auf bescheidener Hardware; ideal für schnelle Grammatikkorrekturen, wenn auch nicht immer präzise.",
+  "aiDesc27b": "Workstation-Klasse. Braucht viel Speicherplatz und Arbeitsspeicher; ideal für präzisere Vorschläge.",
+  "aiDesc2b": "Klein und schnell, mit besserer Grammatik als 0.8B.",
+  "aiDesc4b": "Das beste Gleichgewicht zwischen Qualität und Ressourcenbedarf.",
+  "aiDesc9b": "Höhere Qualität; verlangt eine leistungsfähige Maschine.",
+  "aiDescription": "Deaktiviert. Vom Gerät entfernt wird dabei aber nichts.",
+  "aiDiscard": "Verwerfen",
+  "aiError": {
+    "badSelection": "Diese Auswahl lässt sich nicht umschreiben. Sie ist womöglich leer oder länger als ein einzelner Abschnitt.",
+    "cancelled": "Abgebrochen. Es wurde nichts verändert.",
+    "daemon": "Ollama konnte den Vorgang nicht abschließen.",
+    "disabled": "Der KI-Assistent ist deaktiviert. Du kannst ihn in den Einstellungen aktivieren.",
+    "empty": "Das Modell hat nichts zurückgegeben. Versuche es erneut und stelle sicher, dass ein Modell ausgewählt ist.",
+    "modelGone": "Dieses Modell ist nicht mehr installiert. Wähle in den Einstellungen ein anderes.",
+    "noModel": "Du hast noch kein Modell gewählt. Wähle eines auf der Einstellungsseite.",
+    "noPassage": "Das Modell hat keinen umgeschriebenen Abschnitt zurückgegeben.",
+    "reasoned": "Das Modell hat die Anfrage erhalten, aber keinen Text zurückgegeben. Ein kürzerer Abschnitt genügt meist, um diesen Fehler zu beheben.",
+    "timeout": "Das Modell hat zu lange gebraucht und wurde gestoppt. Ein kürzerer Abschnitt genügt meist, um diesen Fehler zu beheben.",
+    "tooLong": "Das Modell wurde gestoppt, der Inhalt ist womöglich zu lang. Es wurde nichts verändert.",
+    "unknown": "Etwas ist schiefgelaufen.",
+    "unreachable": "Ollama antwortet nicht. Prüfe, ob es auf deinem Computer läuft, bevor du es erneut versuchst.",
+    "unreadable": "Die Antwort des Modells scheint nicht lesbar zu sein."
+  },
+  "aiHint": "Die KI-Modelle laufen lokal auf deinem Computer über Ollama. Es werden keine Daten außerhalb deines Geräts übertragen. Privatsphäre ist eines der Grundprinzipien von Wattle und das, was es auszeichnet: deine Daten bleiben immer auf deinem Computer.",
+  "aiInsertBelow": "Darunter einfügen",
+  "aiInstall": "Installieren",
+  "aiInstalling": "Wird geladen… {{percent}} %",
+  "aiMayNotFit": "An der Grenze dieses Computers",
+  "aiMayNotFitHint": "Dieses Modell braucht mehr Arbeitsspeicher, als diese Maschine zur Verfügung hat. Es könnte langsam sein oder gar nicht starten. Installieren lässt es sich trotzdem, auch wenn davon abzuraten ist.",
+  "aiModels": "Modelle",
+  "aiModelsDescription": "Installierte und verfügbare Modelle. Es wird nichts geladen, bevor du darum bittest.",
+  "aiNoModel": "Kein Modell gewählt",
+  "aiNoModelChosenHint": "Der KI-Assistent ist aktiv, aber noch kein Modell. Wähle oben eines, um die KI-Funktionen zu nutzen.",
+  "aiNoModelsYet": "Es ist noch kein Modell installiert. Wählen Sie unten eines aus: Es wird nichts heruntergeladen, bevor Sie es anfordern.",
+  "aiOnDescription": "Ein Modell, das auf diesem Gerät läuft. Deiner Privatsphäre zuliebe wird nichts nach außen geschickt.",
+  "aiPreparing": "Der Assistent wird auf diesem Computer vorbereitet…",
+  "aiRecommended": "Empfohlen",
+  "aiRecommendedHint": "Die beste Wahl für den Arbeitsspeicher dieses Computers.",
+  "aiRemove": "Entfernen",
+  "aiRemoveConfirm": "{{name}} wird von diesem Computer gelöscht. Möchten Sie fortfahren?",
+  "aiReplace": "Ersetzen",
+  "aiRewrite": "Mit dem KI-Assistenten umschreiben",
+  "aiRewriting": "Denkt nach…",
+  "aiSection": "KI-Einstellungen",
+  "aiSectionDescription": "Optional, lokal und aus, bis du sie einschaltest.",
+  "aiUnmanaged": "Außerhalb von Wattle",
+  "aiUnmanagedDescription": "Außerhalb von Wattle installiert. Du kannst es von hier entfernen, es wird aber nicht als aktives Modell angeboten.",
+  "aiUseTitle": "Dieses verwenden",
+  "alignCenter": "Zentriert ausrichten",
+  "alignLeft": "Linksbündig ausrichten",
+  "alignRight": "Rechtsbündig ausrichten",
+  "allEntries": "Alle Seiten",
+  "allSparks": "Alle Funken",
+  "allSparksIntro": "Jeder Funke, den du festgehalten hast, beginnend beim jüngsten. Sie bleiben absichtlich kurz und ohne Titel: ein Funke ist eine Notiz an dich selbst, ein Gedanke im Vorbeigehen, ohne andere Regeln als deine eigenen.",
+  "appName": "Wattle",
+  "appearanceSection": "Erscheinungsbild",
+  "aroundThisTime": "Um diese Zeit",
+  "backToComponents": "Komponenten",
+  "backToTop": "Nach oben",
+  "backup": "Sicherung",
+  "backupAction": "Exportieren…",
+  "backupDescription": "Sichere eine Kopie deiner Seiten, Anhänge und Einstellungen.",
+  "backupError": "Sicherung fehlgeschlagen. Versuche es erneut.",
+  "backupFolderAction": "Wählen…",
+  "backupFolderHint": "In diesen Ordner werden die .wattle-Sicherungsdateien geschrieben, mit dem Dateinamen des Tages. Hier liegt nicht dein Journal. Frühere Sicherungen landen nie in einer neuen.",
+  "backupFolderUnset": "Noch nicht festgelegt: das Speicherfenster beginnt dort, wo Windows es zuletzt gelassen hat.",
+  "backupHint": "Wattle fragt jedes Mal, wohin die Datei soll. Datenbank, Anhänge und Einstellungen in einer einzigen .wattle-Datei. Ollama-Modelle sind nicht enthalten und lassen sich bequem direkt aus Wattle installieren.",
+  "backupSuccess": "Sicherung gespeichert.",
+  "bold": "Fett",
+  "calendar": "Kalender",
+  "calendarBoth": "Beides",
+  "calendarEntriesOnly": "Seiten",
+  "calendarSparksOnly": "Funken",
+  "calendarIntro": "Wo dein Schreiben übers Jahr verteilt liegt. Ein vollerer Tag ist ein Tag, an dem du mehr geschrieben hast; wähle einen aus, um ihn wiederzulesen.",
+  "cancel": "Abbrechen",
+  "code": "Code",
+  "codeLanguage": "Sprache des Codes",
+  "codeLanguagePlain": "Einfacher Text",
+  "components": {
+    "askConfirmation": "Um Bestätigung bitten",
+    "cardBody": "Eine schlichte Fläche: dünner Rahmen, Kartenhintergrund, sonst nichts.",
+    "cardTitle": "Karte",
+    "dialogBody": "Ein Dialog in einem Portal, mit Hintergrund und Schließen-Schaltfläche aus diesem Projekt.",
+    "dialogTitle": "Titel des Dialogs",
+    "disabled": "Deaktiviert",
+    "hoverMe": "Fahre über mich",
+    "openDialog": "Dialog öffnen",
+    "openPopover": "Popover öffnen",
+    "pageDescription": "Ein oder zwei Sätze darüber, wozu die Ansicht da ist, unter dem Weg zurück, dem Titel und dem, was die Ansicht nach rechts setzt.",
+    "pageSubtitle": "Ein Untertitel",
+    "pageTitle": "Ein Seitentitel",
+    "popoverBody": "An seinem Auslöser verankert und von allem anderen geschlossen: hier öffnen sich sowohl das Datumsfeld als auch die Frist eines Briefs.",
+    "popoverTitle": "Ein Popover",
+    "sampleEntryBody": "Früh genug los, um zu Fuß zu gehen, und über dem Feld hinter den Häusern hing noch der Nebel.",
+    "sampleEntryHit": "Nebel",
+    "sampleEntryOpening": "Früh genug los, um zu Fuß zu gehen, und über dem Feld hinter den Häusern hing noch der",
+    "sampleEntryTitle": "Der lange Weg zum Bahnhof",
+    "sampleSpark": "Was es auch ist, dringend ist es nicht. Schlaf eine Nacht darüber.",
+    "sizes": "Größen",
+    "startTour": "Tour starten",
+    "states": "Zustände",
+    "subtitle": "Die Teile, aus denen die Oberfläche besteht, mit ihren Varianten und Zuständen. Zuerst die Grundbausteine; dann die wenigen funktionalen Komponenten, die auf genug Ansichten vorkommen, um für sich zu stehen. Alles hier arbeitet mit Beispieldaten.",
+    "title": "Komponenten",
+    "tooltipBody": "Eine Erklärung, einen Schritt hinter dem Bedienelement, zu dem sie gehört.",
+    "tourBody": "Die Seite verdunkelt sich, das hervorgehobene Element bleibt beleuchtet, und die Karte folgt ihm. Jede geführte Tour in Wattle ist genau das, Schritt für Schritt.",
+    "tourTitle": "Das ist ein Tourschritt",
+    "variants": "Varianten",
+    "withIcon": "Mit Symbol"
+  },
+  "continue": "Fortfahren",
+  "dailySparks": "Funken",
+  "dark": "Dunkel",
+  "dataSection": "Daten",
+  "dataSectionDescription": "Dein Tagebuch, innerhalb und außerhalb von Wattle.",
+  "delete": "Löschen",
+  "deleteEntry": "Seite löschen",
+  "deleteEntryConfirm": "Diese Seite wandert in den Papierkorb. Du kannst sie in den Einstellungen wiederherstellen, bis sie endgültig entfernt wird.",
+  "deleteSpark": "Funken löschen",
+  "deleteSparkConfirm": "Dieser Funke wandert in den Papierkorb. Du kannst ihn in den Einstellungen wiederherstellen, bis er endgültig entfernt wird.",
+  "dismiss": "Beiseitelegen",
+  "downloadAttachment": "Kopie sichern…",
+  "downloadHtml": "HTML herunterladen",
+  "edit": "Bearbeiten",
+  "editorScale": "Schriftgröße",
+  "editorScaleDefault": "Standard",
+  "editorScaleDescription": "Wie groß dein Schreiben im Editor gesetzt wird.",
+  "editorScaleHint": "Nur das Geschriebene ändert die Größe - der Rest der Anwendung bleibt, wie er ist.",
+  "editorScaleLarge": "Groß",
+  "editorScaleLargest": "Am größten",
+  "editorScaleSmall": "Klein",
+  "emptyBody": "Jede Seite bleibt auf diesem Gerät. Fang heute an, und sei es mit einer einzigen Zeile.",
+  "emptySparksBody": "Ein Funke ist eine Zeile im Vorbeigehen. Im Feld darüber beginnt einer.",
+  "emptySparksTitle": "Noch nichts festgehalten.",
+  "emptyTitle": "Dein Tagebuch beginnt mit einer Seite.",
+  "entryContentPlaceholder": "Schreib etwas, oder drücke / für Befehle…",
+  "entryCount_one": "{{count}} Seite",
+  "entryCount_other": "{{count}} Seiten",
+  "entryDate": "Datum der Seite",
+  "entryLock": "Seiten schreibgeschützt öffnen",
+  "entryLockDescription": "Eine Seite, auf der schon etwas steht, öffnet sich gesperrt. Ein Klick genügt, um sie zu entsperren.",
+  "entryLockHint": "Eine neue Seite beginnt leer und wird nie gesperrt, solange du sie nicht fertiggestellt hast. Diese Option gilt nur für bereits vorhandene Tagebuchseiten.",
+  "entryNotFound": "Diese Seite gibt es nicht mehr.",
+  "entryTitlePlaceholder": "Ohne Titel",
+  "export": "Export",
+  "exportAction": "Exportieren…",
+  "exportDescription": "Das gesamte Tagebuch als HTML-Archiv, das sich ohne Netzverbindung öffnen lässt.",
+  "exportEmpty": "Im Tagebuch steht noch keine Seite, die sich exportieren ließe.",
+  "exportEntry": "Seite exportieren",
+  "exportError": "Export fehlgeschlagen. An deinem Tagebuch wurde nichts verändert.",
+  "exportSuccess": "Nach {{path}} exportiert.",
+  "fixGrammar": "Grammatik korrigieren",
+  "greetingAfternoon": "Guten Tag.",
+  "greetingAfternoonNamed": "Guten Tag, {{name}}.",
+  "greetingEvening": "Guten Abend.",
+  "greetingEveningNamed": "Guten Abend, {{name}}.",
+  "greetingMorning": "Guten Morgen.",
+  "greetingMorningNamed": "Guten Morgen, {{name}}.",
+  "heading1": "Überschrift 1",
+  "heading2": "Überschrift 2",
+  "improveClarity": "Klarheit verbessern",
+  "italic": "Kursiv",
+  "journalFolder": "Journalordner",
+  "journalFolderAction": "Verschieben…",
+  "journalFolderConfirm": "Wähle einen Ordner, und Wattle verschiebt dein Journal dorthin - die Datenbank und alle Anhänge zusammen. Wattle öffnet sich neu, sobald das erledigt ist. Gelingt es nicht, bleibt dein Journal genau dort, wo es ist.",
+  "journalFolderError": "Das Journal konnte nicht verschoben werden. Es liegt weiterhin dort, wo es war, und nichts wurde verändert.",
+  "journalFolderHint": "Hier liegt das Journal selbst: wattle.db und deine Anhänge. Nicht der Ordner, in den .wattle-Sicherungsdateien geschrieben werden.",
+  "language": "Sprache",
+  "languageDescription": "Sprache der Oberfläche.",
+  "languageHint": "Ändert nur die Oberfläche. An dem, was du geschrieben hast, rührt sie kein Wort an.",
+  "layoutWidth": "Breite der Wattle-Seiten",
+  "layoutWidthCompact": "Schmal",
+  "layoutWidthDefault": "Ausgewogen",
+  "layoutWidthDescription": "Wie breit alle Seiten von Wattle sind.",
+  "layoutWidthHint": "Stelle die Breite der Wattle-Seiten selbst ein. Jeder Computer und jeder Bildschirm kann anders sein, deshalb überlassen wir dir die Wahl des idealen Werts.",
+  "layoutWidthWide": "Breit",
+  "letterArrivedHeading": "Angekommen",
+  "letterArrivedTitle": "Ein Brief von dir aus der Vergangenheit ist angekommen",
+  "letterComposeDescription": "Etwas, das du erst an einem Tag deiner Wahl lesen kannst. Einmal versiegelt, lässt es sich nicht mehr öffnen, ändern oder löschen. Wähle mit Bedacht.",
+  "letterComposeTitle": "Ein Brief an dich",
+  "letterContentPlaceholder": "Entscheide, was du schreiben willst, bevor du deinen Brief versiegelst.",
+  "letterContinueDraft": "Brief fortsetzen",
+  "letterDraftHeading": "In Arbeit",
+  "letterDraftRow_one": "Ein begonnener Brief - bisher {{count}} Wort",
+  "letterDraftRow_other": "Ein begonnener Brief - bisher {{count}} Wörter",
+  "letterError": {
+    "badDate": "Auf dieses Datum lässt sich dieser Brief nicht versiegeln.",
+    "corrupt": "Dieser Brief lässt sich nicht öffnen. Sein Siegel passt nicht mehr dazu, wie er geschlossen wurde: das geschieht, wenn Öffnungsdatum, verschlüsselter Text oder Schlüssel nach dem Versiegeln in der Tagebuchdatei verändert werden.",
+    "empty": "Es steht noch nichts da, was sich versiegeln ließe.",
+    "futureEnvelope": "Dieser Brief wurde mit einer neueren Version von Wattle versiegelt. Aktualisiere Wattle, um ihn zu öffnen.",
+    "noKey": "Der Schlüssel zu diesem Brief ist verschwunden. Der einzige Weg nach vorn ist eine Sicherung, die vor seinem Verschwinden angelegt wurde.",
+    "notFound": "Diesen Brief gibt es nicht.",
+    "notYet": "Dieser Brief hat sich noch nicht geöffnet. Komm später wieder.",
+    "sealed": "Dieser Brief ist versiegelt und seine Zeit ist noch nicht gekommen. Komm später wieder.",
+    "tooFar": "Ein Brief kann höchstens fünfzig Jahre warten.",
+    "tooSoon": "Ein Brief muss mindestens sieben Tage warten.",
+    "unknown": "Etwas ist schiefgelaufen."
+  },
+  "letterExport": "Diesen Brief herunterladen",
+  "letterFooterDates": "Geschrieben am {{written}} · geöffnet am {{opened}}",
+  "letterFromYourself": "Von dir aus jener Zeit",
+  "letterHasArrived": "Sein Tag ist gekommen",
+  "letterIn10Years": "10 Jahre",
+  "letterIn1Month": "1 Monat",
+  "letterIn1Year": "1 Jahr",
+  "letterIn2Years": "2 Jahre",
+  "letterIn3Months": "3 Monate",
+  "letterIn3Years": "3 Jahre",
+  "letterIn5Years": "5 Jahre",
+  "letterIn6Months": "6 Monate",
+  "letterKeepEditing": "Weiterschreiben",
+  "letterLength": "Länge",
+  "letterNoDateYet": "Wähle, wann er sich öffnet.",
+  "letterOpenIt": "Öffnen",
+  "letterOpenedHeading": "Gelesen",
+  "letterOpenedOn": "Geöffnet am {{date}}",
+  "letterOpensOn": "Öffnet sich am",
+  "letterOpensOnDate": "Öffnet sich am {{date}}",
+  "letterPickDate": "Datum wählen…",
+  "letterPromptChapter": "Ein neues Kapitel",
+  "letterPromptFree": "Nichts Bestimmtes",
+  "letterPromptGoals": "Ziele",
+  "letterPromptHard": "Eine schwere Zeit",
+  "letterPromptOrdinary": "Ein ganz gewöhnlicher Tag",
+  "letterPromptPerson": "Jemand, der zählt",
+  "letterPromptRemember": "Nicht zu vergessen",
+  "letterResultLabel": "Brief",
+  "letterReviewAction": "Noch einmal lesen…",
+  "letterReviewBody": "Lies ihn ein letztes Mal. Nach diesem Schritt wird er weggelegt.",
+  "letterReviewTitle": "Lies ihn ein letztes Mal",
+  "letterSealAction": "Brief versiegeln",
+  "letterSealBody": "Er wird verschlüsselt und bis zum {{date}} weggelegt.",
+  "letterSealFailed": "Der Brief wurde nicht versiegelt. Es hat sich nichts geändert.",
+  "letterSealHonesty": "Wattle verschlüsselt den Brief und bewahrt den Schlüssel in der Tagebuchdatei auf, damit der Brief nicht verloren gehen kann. Es ist ein Schloss gegen dich selbst, kein Geheimnis vor allen, die Zugang zu deinem Computer haben - und eine Sicherung trägt beide Hälften mit sich.",
+  "letterSealTerms": "Bis zum {{date}} kannst du ihn weder öffnen noch lesen, ändern, löschen oder sein Datum verschieben. Wattle ebenso wenig. Der einzige Weg, ihn loszuwerden, ist das gesamte Tagebuch zu leeren.",
+  "letterSealTitle": "Diesen Brief versiegeln?",
+  "letterSealing": "Wird versiegelt…",
+  "letterTypeDate": "Tippe das Datum zur Bestätigung",
+  "letterWaitingHeading": "Wartet",
+  "letterWaitingLine": "Ein Brief an dich öffnet sich am {{date}}.",
+  "letterWhereToStart": "Wo anfangen",
+  "letterWillOpen": "Er öffnet sich am {{date}}.",
+  "letterWordCount_one": "{{count}} Wort",
+  "letterWordCount_other": "{{count}} Wörter",
+  "letterWrite": "Einen Brief schreiben",
+  "letterWriteBack": "Antworten",
+  "letterWritten": "Geschrieben",
+  "letterWrittenAndLength_one": "Geschrieben am {{date}} · {{count}} Wort",
+  "letterWrittenAndLength_other": "Geschrieben am {{date}} · {{count}} Wörter",
+  "letterWrittenOn": "Geschrieben am {{date}}",
+  "letters": "Briefe",
+  "lettersDescription": "Worte, die du deinem künftigen Ich anvertraust. Wähle einen Tag und lege dort ab, woran du dich erinnern, was du erzählen oder wiederentdecken möchtest. Bis dahin bleibt der Brief versiegelt und unzugänglich.",
+  "lettersEmptyBody": "Ein Brief ist etwas, das du jetzt schreibst und erst an einem Tag deiner Wahl wieder lesen kannst.",
+  "lettersEmptyTitle": "Keine Briefe",
+  "light": "Hell",
+  "link": "Link",
+  "listErrorBody": "Deine Seiten liegen weiterhin auf diesem Gerät: Wattle konnte sie nur nicht lesen. Versuche es erneut und spiele, falls es dabei bleibt, eine Sicherung zurück.",
+  "listErrorTitle": "Das Tagebuch lässt sich nicht öffnen.",
+  "loadOlder": "Ältere laden",
+  "loading": "Wird geladen…",
+  "lockEntry": "Diese Seite sperren",
+  "makeShorter": "Kürzen",
+  "memoriesSection": "Erinnerungen",
+  "memoriesSectionDescription": "Zwei Wege, auf denen das Geschriebene zu dir zurückkommt.",
+  "memoryAnother": "Eine andere suchen",
+  "memoryAsk": "Eine Erinnerung suchen, die das Wiederlesen wert ist",
+  "memoryLooking": "Suche…",
+  "memoryNoneAlike": "Nichts anderes, was du geschrieben hast, ähnelt dem genug, um daneben zu stehen.",
+  "memoryNoneLeft": "Nichts anderes ähnelt genug, um es zu zeigen.",
+  "memoryTooRecent": "Es liegt noch nichts weit genug zurück. Eine Erinnerung muss mindestens zwei Wochen älter sein als dein jüngstes Geschriebenes, und so weit reicht dein Tagebuch noch nicht zurück.",
+  "memoryWorthRevisiting": "Eine Erinnerung, die das Wiederlesen wert ist",
+  "month": "Monat",
+  "name": "Name",
+  "nameDescription": "Zwischen {{min}} und {{max}} Zeichen.",
+  "nameHint": "Wähle, wie du in Wattle genannt werden möchtest: mit deinem echten Namen oder mit einem erfundenen. Du kannst ihn jederzeit ändern.",
+  "namePlaceholder": "Dein Name",
+  "nameRequired": "Der Name ist erforderlich: mindestens {{min}} Zeichen.",
+  "nameTooShort": "Mindestens {{min}} Zeichen.",
+  "navigation": "Navigation",
+  "navigationBoth": "Beide",
+  "navigationBottom": "Unten",
+  "navigationDescription": "Wo die Hauptnavigation sitzt.",
+  "navigationHeader": "Oben",
+  "navigationHint": "Platziere die Navigation dort, wo du sie am liebsten hast.",
+  "newEntry": "Neue Seite",
+  "newProfile": "Neues Profil",
+  "newProfileAction": "Verlassen",
+  "newProfileBackingUp": "Sicherung läuft…",
+  "newProfileBackupFolder": "Das Speicherfenster öffnet sich in {{folder}}.",
+  "newProfileBackupNow": "Jetzt sichern…",
+  "newProfileBackupSaved": "Sicherung gespeichert.",
+  "newProfileConfirmAction": "Alles löschen",
+  "newProfileConfirmBody": "Jede Seite, jeder Anhang und dein Name werden endgültig gelöscht, und die Einrichtung beginnt von vorn. Das lässt sich nicht rückgängig machen.",
+  "newProfileConfirmTitle": "Dieses Profil leeren?",
+  "newProfileContinueAnyway": "Trotzdem fortfahren",
+  "newProfileDescription": "Melde dich ab, lösche dieses Profil und fang von vorn an. Jede Seite und jeder Anhang werden gelöscht. Vor dem Bestätigen kannst du dieses Profil noch sichern.",
+  "newProfileError": "Neuanfang nicht möglich. An deinem Tagebuch wurde nichts verändert.",
+  "newProfileHint": "Auf diesem Gerät gibt es nur ein Tagebuch. Diese Aktion leert es; sie legt kein zweites an.",
+  "newProfileNoBackupBody": "Wattle weiß von keiner Sicherung dieses Tagebuchs. Alles darin steht kurz davor, gelöscht zu werden, und ohne Sicherung gibt es keinen Weg zurück.",
+  "newProfileNoBackupTitle": "Kein Sicherungsordner festgelegt",
+  "next": "Weiter",
+  "nextEntry": "nächste Seite",
+  "noResults": "Keine Seite passt zur Suche.",
+  "noSparkResults": "Kein Funke passt zur Suche.",
+  "nudgeAnother": "Frag mich etwas anderes",
+  "nudgeCue": "Eine Anregung",
+  "nudgeDismiss": "Nicht jetzt",
+  "nudgeOffer": "Du weißt nicht, was du schreiben sollst?",
+  "nudgeThinking": "Ich denke nach…",
+  "nudgeWrite": "Darüber schreiben",
+  "off": "Aus",
+  "ollamaInstallFailed": "Ollama konnte nicht installiert werden. Wattle hat auf diesem Gerät nichts verändert.",
+  "ollamaStartFailed": "Ollama ist nicht rechtzeitig gestartet. Womöglich fährt es noch hoch: versuche es gleich noch einmal.",
+  "on": "An",
+  "onThisDay": "An diesem Tag",
+  "onThisDayDescription": "Die Seiten, die du in früheren Jahren am heutigen Datum geschrieben hast, erscheinen auf der Startseite.",
+  "onThisDayHint": "Entscheide, ob du wiedersehen möchtest, was du an diesem Datum in früheren Jahren geschrieben hast. Die Erinnerung erscheint auf der Startseite.",
+  "onboarding": {
+    "language": {
+      "title": "Willkommen bei Wattle.",
+      "body": "Wählen Sie zunächst Ihre Sprache aus."
+    },
+    "start": {
+      "title": "Hast du schon einmal ein Tagebuch mit Wattle geführt?",
+      "body": "Wenn du eine Sicherung hast, kehrt alles darin an seinen Platz zurück.",
+      "fresh": "Ein neues Tagebuch beginnen",
+      "freshBody": "Eine leere erste Seite und drei kurze Fragen, bevor du sie aufschlägst.",
+      "returning": "Ich habe eine Wattle-Sicherung",
+      "returningBody": "Texte, Anhänge und Einstellungen, genau so, wie du sie verlassen hast."
+    },
+    "returning": {
+      "eyebrow": "Willkommen zurück",
+      "title": "Suchen wir dein Tagebuch.",
+      "body": "Wähle die .wattle-Datei, die du gesichert hast. Alles darin ersetzt dieses leere Tagebuch, und Wattle öffnet dort, wo du aufgehört hast.",
+      "action": "Eine Sicherung wählen…",
+      "confirmTitle": "Eine Sicherung zurückspielen?",
+      "confirm": "Wähle die .wattle-Datei, die du gesichert hast, und Wattle öffnet sich mit allem darin neu: Texte, Anhänge und Einstellungen. Dieses leere Tagebuch wird ersetzt."
+    },
+    "name": {
+      "title": "Wie soll Wattle dich nennen?",
+      "body": "Wird für die Begrüßung auf der Startseite verwendet. Zwei bis zwölf Zeichen."
+    },
+    "backup": {
+      "title": "Wo sollen Sicherungen gespeichert werden?",
+      "body": "Ein Ordner außerhalb des Tagebuchs, damit eine Sicherung anderswo liegt, wenn du sie brauchst."
+    },
+    "theme": {
+      "title": "Hell oder dunkel?",
+      "body": "Du kannst es jederzeit in den Einstellungen ändern."
+    }
+  },
+  "onboardingFinish": "Anfangen zu schreiben",
+  "onboardingStep": "Schritt {{step}} von {{total}}",
+  "pageOf": "{{page}} von {{total}}",
+  "palette": "Thema",
+  "paletteDescription": "Bestimmt die Farben, die Schriften und den visuellen Stil von Wattle.",
+  "paletteHint": "Ändert das Aussehen der ganzen App: Hintergrund, Text, Details der Oberfläche, Ecken und Schriften. An dem, was du geschrieben hast, ändert sich nichts.",
+  "paletteName": {
+    "clay": "Ton",
+    "crimson": "Karmin",
+    "sage": "Salbei",
+    "umber": "Umbra",
+    "wattle": "Wattle",
+    "olive": "Olive",
+    "forest": "Wald",
+    "candy": "Bonbon"
+  },
+  "pastSparks": "Frühere Funken",
+  "previous": "Zurück",
+  "previousEntry": "vorherige Seite",
+  "primaryNav": "Haupt",
+  "profileSection": "Profil",
+  "removeAttachment": "Anhang entfernen",
+  "replayTours": "Geführte Touren",
+  "replayToursAction": "Zurücksetzen",
+  "replayToursDescription": "Zeigt alle Willkommenstouren erneut. Nützlich, um alle Möglichkeiten von Wattle wiederzuentdecken.",
+  "replayToursHint": "Markiert alle Touren als ungesehen und bringt dich zur Startseite, um dir die erste zu zeigen.",
+  "reset": "Einstellungen zurücksetzen",
+  "resetAction": "Zurücksetzen",
+  "resetConfirm": "Erscheinungsbild, Seitenbreite, Erinnerungen und Seitensperre kehren zu ihren Anfangswerten zurück. Das Tagebuch, dein Name und die Einstellungen des KI-Assistenten bleiben unberührt. Möchtest du fortfahren?",
+  "resetDescription": "Zurück zu den Anfangswerten. Dein Name und die Einstellungen des KI-Assistenten bleiben, wie sie sind.",
+  "resetHint": "Nur die Einstellungen. Seiten, Funken und Briefe bleiben genau dort, wo sie sind.",
+  "resetSection": "Zurücksetzen",
+  "resizeImage": "Bildgröße ändern",
+  "resizeVideo": "Videogröße ändern",
+  "restore": "Wiederherstellen",
+  "restoreAction": "Wiederherstellen…",
+  "restoreConfirm": "Jede Seite, jeder Anhang und jede Einstellung auf diesem Gerät wird durch die Sicherung ersetzt, die du jetzt wählst. Das lässt sich nicht rückgängig machen.",
+  "restoreDescription": "Ersetzt alles auf diesem Gerät durch eine Sicherung.",
+  "restoreError": "Wiederherstellung fehlgeschlagen. Deine Daten wurden nicht angerührt.",
+  "restoreHint": "Ersetzt alles auf diesem Gerät durch die Sicherung. Das lässt sich nicht rückgängig machen.",
+  "restoring": "Wird wiederhergestellt…",
+  "retry": "Erneut versuchen",
+  "save": "Speichern",
+  "saveError": "Nicht gespeichert",
+  "saveThought": "Gedanken speichern",
+  "saved": "Gespeichert",
+  "saving": "Wird gespeichert…",
+  "search": "Seiten durchsuchen",
+  "searchDisabledHint": "Nichts gefunden; lege erst etwas an, damit die Suche etwas zu tun hat.",
+  "searchPlaceholder": "Seiten durchsuchen…",
+  "searchResultCount_one": "{{count}} Treffer",
+  "searchResultCount_other": "{{count}} Treffer",
+  "searchSparks": "Funken durchsuchen",
+  "searchSparksDisabledHint": "Es gibt noch nichts zu durchsuchen: schreib oben einen Funken, dann wird die Suche aktiv.",
+  "searchSparksPlaceholder": "Funken durchsuchen…",
+  "settings": "Einstellungen",
+  "settingsSubtitle": "Alles, was du hier findest, ist auf diesem Gerät gespeichert.",
+  "slash": {
+    "bulletList": {
+      "description": "Eine schlichte Aufzählung",
+      "title": "Aufzählung"
+    },
+    "code": {
+      "description": "Einen Codeausschnitt einfügen",
+      "title": "Codeblock"
+    },
+    "divider": {
+      "description": "Abschnitte sichtbar trennen",
+      "title": "Trennlinie"
+    },
+    "file": {
+      "description": "Eine beliebige Datei anhängen",
+      "title": "Datei"
+    },
+    "heading1": {
+      "description": "Große Abschnittsüberschrift",
+      "title": "Überschrift 1"
+    },
+    "heading2": {
+      "description": "Mittlere Abschnittsüberschrift",
+      "title": "Überschrift 2"
+    },
+    "heading3": {
+      "description": "Kleine Abschnittsüberschrift",
+      "title": "Überschrift 3"
+    },
+    "image": {
+      "description": "Ein Bild anhängen",
+      "title": "Bild"
+    },
+    "orderedList": {
+      "description": "Eine nummerierte Liste",
+      "title": "Nummerierte Liste"
+    },
+    "quote": {
+      "description": "Eine Passage hervorheben",
+      "title": "Zitat"
+    },
+    "taskList": {
+      "description": "Behalte im Blick, was zu tun ist",
+      "title": "Checkliste"
+    },
+    "text": {
+      "description": "Einfacher Text",
+      "title": "Text"
+    },
+    "video": {
+      "description": "Ein Video anhängen",
+      "title": "Video"
+    }
+  },
+  "slashCategory": {
+    "basic": "Grundlagen",
+    "blocks": "Blöcke",
+    "lists": "Listen",
+    "media": "Medien"
+  },
+  "slashNoResults": "Keine Treffer.",
+  "sparkCharsLeft_one": "Noch {{count}} Zeichen",
+  "sparkCharsLeft_other": "Noch {{count}} Zeichen",
+  "sparkCount_one": "{{count}} Funke",
+  "sparkCount_other": "{{count}} Funken",
+  "sparkDate": "Tag, unter dem dieser Funke abgelegt ist",
+  "sparkEchoDescription": "Ein früherer Funke kehrt von selbst zurück, höchstens einer pro Tag.",
+  "sparkEchoHint": "Ein Funke von vor mindestens 30 Tagen, den ganzen Tag derselbe, morgen dann der nächste.",
+  "sparkEchoLead": "Diesen Gedanken hattest du dir hinterlassen",
+  "sparkEchoSetting": "Echo der Funken",
+  "sparkEmpty": "Dieser Funke ist leer.",
+  "sparkOpenAsEntry": "Als Seite öffnen",
+  "sparkPlaceholder": "Halte einen flüchtigen Gedanken fest…",
+  "sparkResultLabel": "Funke",
+  "sparkRichBadge": "Mit Formatierung geschrieben",
+  "sparkRichBody": "Dieser Funke enthält Formatierung oder Anhänge, aus der Zeit, bevor Funken einfacher Text wurden. Es wurde nichts verändert: er öffnet sich im vollen Editor, wo weiterhin alles funktioniert.",
+  "sparkSaveHint": "Strg + Enter zum Speichern",
+  "sparkTruncated_one": "Der jüngste wird gezeigt.",
+  "sparkTruncated_other": "Die {{count}} jüngsten werden gezeigt.",
+  "sparksEyebrow": "Klarheit des Augenblicks",
+  "sparksIntro": "Eine Zeile oder zwei, aufgefangen, bevor sie davonlaufen. Nichts hier braucht einen Titel, und nichts muss etwas anderes werden.",
+  "strikethrough": "Durchgestrichen",
+  "suggestTitle": "Einen Titel vorschlagen",
+  "theme": "Hell oder dunkel",
+  "themeDescription": "Jedes Thema gibt es in beidem: das hier ist das, in dem du gerade liest.",
+  "themeHint": "Das Thema gilt für die ganze App, und deine Wahl wird bis zum nächsten Öffnen behalten.",
+  "tourClose": "Tour schließen",
+  "tourDone": "Fertig",
+  "tourStep": "{{current}} von {{total}}",
+  "tours": {
+    "ai": {
+      "switch": {
+        "title": "Aus, bis du sie einschaltest",
+        "body": "Die KI-Assistenz ist optional und anfangs ausgeschaltet. Sie verbessert und personalisiert das Erlebnis in Wattle, immer mit Rücksicht auf deine Privatsphäre. Die Daten werden auf deinem Computer verarbeitet und verlassen ihn nie."
+      },
+      "runtime": {
+        "title": "Worauf die Modelle laufen",
+        "body": "Die Modelle laufen über Ollama. Wattle kann es von hier aus installieren und starten, wenn du es zulässt."
+      },
+      "models": {
+        "title": "Die Modelle, die du behältst",
+        "body": "Lade das Modell herunter, das am besten zu deinem Computer passt. Probiere eins nach dem anderen aus, um zu erkennen, welches am besten zu deiner Hardware passt."
+      }
+    },
+    "home": {
+      "write": {
+        "title": "Fang mit heute an",
+        "body": "So beginnt eine neue Seite. Ein Klick öffnet eine leere Seite mit dem heutigen Datum: auch eine einzige Zeile verdient hier einen Platz."
+      },
+      "search": {
+        "title": "Finde, was du geschrieben hast",
+        "body": "Jedes Wort auf jeder Seite ist durchsuchbar, und das Ergebnis zeigt die passende Stelle. Die Suche bleibt deaktiviert, solange es nichts zu durchsuchen gibt."
+      },
+      "timeline": {
+        "title": "Alles, was du geschrieben hast",
+        "body": "Deine Seiten, beginnend beim jüngsten und nach Monaten gruppiert. Öffne eine, um weiterzuschreiben, oder scrolle, um mehr zu laden."
+      },
+      "nav": {
+        "title": "Alles andere",
+        "body": "Kalender, Funken, Briefe an dich selbst und Einstellungen liegen alle in dieser Leiste. Sie folgt dir von Ansicht zu Ansicht, und nur die, auf der du gerade bist, trägt ihren eigenen Namen."
+      }
+    },
+    "calendar": {
+      "grid": {
+        "title": "Dein Tagebuch nach Datum",
+        "body": "Die Tage, an denen du geschrieben hast, sind markiert. Wähle einen, um ihn wiederzulesen oder um an einem bereits vergangenen Tag zu schreiben."
+      },
+      "view": {
+        "title": "Ein Monat, oder ein ganzes Jahr",
+        "body": "Wechsle zwischen beiden. Erst in der Jahresansicht wird eine Gewohnheit sichtbar."
+      },
+      "kinds": {
+        "title": "Seiten, Funken oder beides",
+        "body": "Zwei Arten des Schreibens teilen sich dieses Raster, unterschieden durch die Farbe ihrer Zeichen. Zeige eine nach der anderen, wenn du etwas Bestimmtes suchst."
+      }
+    },
+    "sparks": {
+      "capture": {
+        "title": "Einen Gedanken festhalten",
+        "body": "Ein Funke ist eine Zeile im Vorbeigehen. Kein Titel, keine Seite. Schreib ihn und drücke Strg+Enter, oder nimm die Schaltfläche."
+      },
+      "archive": {
+        "title": "Alle Funken, die du behalten hast",
+        "body": "Hier findest du die jüngsten. Von hier aus kannst du sie alle öffnen, Monat für Monat - und von dort auch einen neuen schreiben."
+      },
+      "recent": {
+        "title": "Was aus einem Funken werden kann",
+        "body": "Jeder öffnet sich auf seiner eigenen Seite, wo du ihn bearbeiten, löschen oder zu einer richtigen Seite machen kannst, falls er inzwischen gewachsen ist."
+      }
+    },
+    "entry": {
+      "title": {
+        "title": "Gib ihr einen Namen, oder lass sie, wie sie ist",
+        "body": "Der Titel ist freiwillig und speichert sich beim Schreiben von selbst. Drücke Enter, um direkt zur Seite darunter zu springen."
+      },
+      "editor": {
+        "title": "Tippe \"/\" für alles Weitere",
+        "body": "Schreib hier wie auf Papier. Ein \"/\" öffnet das Menü mit allem, was die Seite enthalten kann: Überschriften, Listen, Zitate, Bilder, Videos und Dateien. Markiere Text, um ihn zu formatieren. Es gibt nichts zu speichern: es steht geschrieben, während du schreibst."
+      },
+      "actions": {
+        "title": "Befehle der Seite",
+        "body": "Geh zur vorherigen oder nächsten Seite, sperre sie gegen versehentliche Änderungen, exportiere sie als HTML, oder lösche sie."
+      }
+    },
+    "settings": {
+      "appearance": {
+        "title": "Mach es zu deinem",
+        "body": "Thema, Akzentfarbe, Sprache und Seitenbreite."
+      },
+      "data": {
+        "title": "Dein Tagebuch gehört dir",
+        "body": "Sichere es, exportiere es als HTML, oder spiele es aus einer Sicherung zurück. Alles bleibt auf diesem Gerät."
+      },
+      "reset": {
+        "title": "Zurückgehen",
+        "body": "Setze die Einstellungen auf ihren Ursprungszustand zurück, spiele diese Touren erneut ab, oder beginne ein völlig neues Tagebuch."
+      },
+      "profile": {
+        "title": "Dein Name, und sonst nichts",
+        "body": "Er begrüßt dich auf der Startseite und verlässt dieses Gerät nie. Wattle verlangt nichts weiter von dir: kein Konto, keine E-Mail, keine Anmeldung."
+      }
+    },
+    "letters": {
+      "what": {
+        "title": "Ein Brief an dich selbst",
+        "body": "Es ist keine Seite: ein Brief wird jetzt geschrieben und bleibt bis zu einem Tag deiner Wahl versiegelt. Bis dahin lässt er sich weder lesen noch ändern noch öffnen - nicht einmal von dir."
+      },
+      "write": {
+        "title": "Schreib einen",
+        "body": "Ein Entwurf zur Zeit, hier aufbewahrt, bis du ihn versiegelst. Beim Versiegeln wird nach dem Tag gefragt, an dem er sich öffnet, und danach gibt es kein Zurück."
+      },
+      "waiting": {
+        "title": "Während er wartet",
+        "body": "Ein versiegelter Brief zeigt nur den Tag, an dem er sich öffnet, und wie lang er ist. Kein Countdown, keine Vorschau: er wird einfach da sein, wenn es so weit ist."
+      }
+    },
+    "letterCompose": {
+      "directions": {
+        "title": "Wo anfangen",
+        "body": "Wähle eine Richtung und du bekommst eine Frage, auf die hin du schreiben kannst. Die Frage wird nicht gespeichert und wird nie Teil des Briefs: sie ist einfach etwas, worauf du beim Schreiben schaust."
+      },
+      "seal": {
+        "title": "Wann er sich öffnet",
+        "body": "Wähle, wie weit dieser Tag entfernt ist, und lies ihn dann ein letztes Mal. Das Versiegeln ist endgültig: von dem Moment an ist der Brief bis zum gewählten Datum unlesbar."
+      }
+    },
+    "letterRead": {
+      "opened": {
+        "title": "Er ist angekommen",
+        "body": "Der Tag, den du gewählt hast, ist da und der Brief kann gelesen werden!"
+      },
+      "keep": {
+        "title": "Deiner, für immer",
+        "body": "Lies ihn, so oft du willst. Einmal versiegelt lässt er sich nicht mehr ändern, und löschen lässt er sich auch nicht."
+      }
+    }
+  },
+  "trash": "Papierkorb",
+  "trashAction": "Papierkorb öffnen…",
+  "trashDescription": "Gelöschte Seiten warten hier, bevor sie endgültig verschwinden.",
+  "trashEmptyAction": "Papierkorb leeren",
+  "trashEmptyConfirm": "Alle Seiten im Papierkorb werden dauerhaft gelöscht, Anhänge eingeschlossen. Das lässt sich nicht rückgängig machen.",
+  "trashEmptyTitle": "Papierkorb leeren?",
+  "trashError": "Der Papierkorb konnte nicht gelesen werden.",
+  "trashHint": "Eine wiederhergestellte Seite kommt mit ihrem Datum, ihren Anhängen und ihrem Platz im Tagebuch zurück.",
+  "trashIntro": "Eine gelöschte Seite wartet hier {{days}} Tage und wird dann endgültig entfernt.",
+  "trashNothing": "Es wurde nichts gelöscht.",
+  "trashPurge": "Endgültig löschen",
+  "trashPurgeConfirm": "Diese Seite und alles, was ihr beiliegt, werden dauerhaft gelöscht. Das lässt sich nicht rückgängig machen.",
+  "trashRestore": "Wiederherstellen",
+  "trashRow": "Geschrieben am {{written}} · wird entfernt am {{removed}}",
+  "underline": "Unterstrichen",
+  "unlockEntry": "Diese Seite entsperren",
+  "untitled": "Ohne Titel",
+  "writeOnThisDay": "An diesem Tag schreiben",
+  "writingSection": "Schreiben",
+  "writingSectionDescription": "Wie sich eine Seite verhält, wenn du sie öffnest.",
+  "year": "Jahr",
+  "yearsAgo_one": "Vor einem Jahr",
+  "yearsAgo_other": "Vor {{count}} Jahren",
+  "memoryPrevious": "Vorherige Erinnerung",
+  "memoryNext": "Nächste Erinnerung",
+  "letterAiUnavailableTitle": "KI-Vorschläge sind nicht verfügbar",
+  "letterAiUnavailableBody": "Die Richtungen oben funktionieren immer. Für eine Frage als Anfang schalte den KI-Assistenten ein und wähle in den Einstellungen ein Modell - es läuft auf diesem Rechner, und nichts verlässt ihn."
+}

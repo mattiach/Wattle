@@ -1,0 +1,103 @@
+
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions: {}
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Validate release tag
+        id: tag
+        shell: pwsh
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          $identifier = '(0|[1-9][0-9]*|[0-9]*[A-Za-z-][0-9A-Za-z-]*)'
+          $pattern = "^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(?<prerelease>-$identifier(\.$identifier)*)?(\+[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*)?\z"
+          if ($env:RELEASE_TAG -cnotmatch $pattern) {
+            throw "Invalid SemVer release tag: $env:RELEASE_TAG"
+          }
+          $isPrerelease = if ($Matches['prerelease']) { 'true' } else { 'false' }
+          "is_prerelease=$isPrerelease" | Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8
+
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Validate tag matches package version
+        shell: pwsh
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          $packageVersion = (Get-Content -Raw -Path package.json | ConvertFrom-Json).version
+          if ([string]::IsNullOrWhiteSpace($packageVersion)) {
+            throw "package.json does not declare a version"
+          }
+          $expectedTag = "v$packageVersion"
+          if ($env:RELEASE_TAG -cne $expectedTag) {
+            throw "Release tag $env:RELEASE_TAG does not match package.json version $packageVersion (expected $expectedTag)"
+          }
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@b725eda525362e7cf34af9a7243cac1e3f01a7ec # stable
+        with:
+          toolchain: 1.97.1
+          targets: x86_64-pc-windows-msvc
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint and format check
+        run: pnpm check
+
+      - name: Check translations
+        run: pnpm check:translations
+
+      - name: Check version metadata
+        run: pnpm check:versions
+
+      - name: Check third-party notices
+        run: pnpm check:notices
+
+      - name: Rust tests
+        working-directory: src-tauri
+        run: cargo test
+
+      - name: Build frontend
+        run: pnpm build:web
+
+      - name: Build and publish release
+        uses: tauri-apps/tauri-action@1deb371b0cd8bd54025b384f1cd735e725c4060f # v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tagName: ${{ github.ref_name }}
+          releaseName: Wattle ${{ github.ref_name }}
+          releaseBody: "Download the installer below to install Wattle."
+          releaseDraft: false
+          prerelease: ${{ steps.tag.outputs.is_prerelease == 'true' }}
+          args: --target x86_64-pc-windows-msvc

@@ -1,0 +1,661 @@
+{
+  "ai": "MI-asszisztens",
+  "aiActionDescription": {
+    "fixGrammar": "Javítja a helyesírást, a nyelvtant és a központozást, a jelentés megváltoztatása nélkül.",
+    "improveClarity": "Világosabbá és könnyebben olvashatóvá teszi a szöveget, a tartalmat érintetlenül hagyva.",
+    "makeShorter": "Lerövidíti a szöveget, megtartva minden lényeges gondolatot és információt."
+  },
+  "aiActive": "Aktív",
+  "aiActiveModel": "Aktív modell",
+  "aiDesc08b": "A legkönnyebb választás. Szerény hardveren is elfut; gyors nyelvtani javításokhoz ideális, bár nem mindig pontos.",
+  "aiDesc27b": "Munkaállomás-kategória. Jelentős lemezt és memóriát igényel; pontosabb javaslatokhoz ideális.",
+  "aiDesc2b": "Kicsi és gyors, jobb nyelvtannal, mint a 0.8B.",
+  "aiDesc4b": "A legjobb egyensúly a minőség és az igényelt erőforrások között.",
+  "aiDesc9b": "Magasabb minőség; erős gépet kíván.",
+  "aiDescription": "Kikapcsolva. Az eszközről azonban nem törlődik.",
+  "aiDiscard": "Elvetés",
+  "aiError": {
+    "badSelection": "Ezt a kijelölést nem lehet újraírni. Lehet, hogy üres, vagy hosszabb egyetlen szakasznál.",
+    "cancelled": "Megszakítva. Semmi sem változott.",
+    "daemon": "Az Ollama nem tudta befejezni a műveletet.",
+    "disabled": "Az MI-asszisztens ki van kapcsolva. A beállításokban bekapcsolhatod.",
+    "empty": "A modell nem adott vissza semmit. Próbáld újra, és győződj meg róla, hogy ki van választva egy modell.",
+    "modelGone": "Az a modell már nincs telepítve. Válassz másikat a beállításokban.",
+    "noModel": "Még nem választottál modellt. Válassz egyet a beállítások oldalon.",
+    "noPassage": "A modell nem adott vissza újraírt szakaszt.",
+    "reasoned": "A modell megkapta a kérést, de nem adott vissza szöveget. Egy rövidebb szakasz általában elég a hiba megoldásához.",
+    "timeout": "A modell túl sokáig tartott, és leállt. Egy rövidebb szakasz általában elég a hiba megoldásához.",
+    "tooLong": "A modell leállt, a tartalom talán túl hosszú. Semmi sem változott.",
+    "unknown": "Valami félresiklott.",
+    "unreachable": "Az Ollama nem válaszol. Ellenőrizd, hogy fut-e a gépeden, mielőtt újra próbálkozol.",
+    "unreadable": "A modell válasza nem tűnik olvashatónak."
+  },
+  "aiHint": "Az AI-modellek helyben, a saját gépeden futnak az Ollamán keresztül. Semmilyen adat nem hagyja el az eszközödet. Az adatvédelem a Wattle egyik alapelve, és ez különbözteti meg a többitől: az adataid mindig a saját gépeden maradnak.",
+  "aiInsertBelow": "Beszúrás alá",
+  "aiInstall": "Telepítés",
+  "aiInstalling": "Letöltés… {{percent}} %",
+  "aiMayNotFit": "Ennek a gépnek a határán",
+  "aiMayNotFitHint": "Ez a modell több memóriát kér, mint amennyi ebben a gépben van. Lehet, hogy lassú lesz, vagy el sem indul. Telepíteni ettől még lehet, bár nem ajánlott.",
+  "aiModels": "Modellek",
+  "aiModelsDescription": "Telepített és elérhető modellek. Semmi sem töltődik le, amíg nem kéred.",
+  "aiNoModel": "Nincs kiválasztott modell",
+  "aiNoModelChosenHint": "Az MI-asszisztens aktív, de még egyetlen modell sem. Válassz egyet fentebb, és használhatod az MI-funkciókat.",
+  "aiNoModelsYet": "Még nincs telepítve egyetlen modell sem. Válasszon egyet alább: semmi sem töltődik le, amíg nem kéri.",
+  "aiOnDescription": "Egy modell, amely ezen az eszközön fut. A magánéleted tiszteletben tartása végett semmi sem kerül máshová.",
+  "aiPreparing": "Az asszisztens előkészítése ezen a számítógépen…",
+  "aiRecommended": "Ajánlott",
+  "aiRecommendedHint": "A legjobb választás ennek a számítógépnek a memóriájához.",
+  "aiRemove": "Eltávolítás",
+  "aiRemoveConfirm": "A(z) {{name}} törlődik erről a számítógépről. Folytatja?",
+  "aiReplace": "Csere",
+  "aiRewrite": "Újraírás az MI-asszisztenssel",
+  "aiRewriting": "Gondolkodik…",
+  "aiSection": "MI-beállítások",
+  "aiSectionDescription": "Választható, helyi, és kikapcsolva marad, amíg be nem kapcsolod.",
+  "aiUnmanaged": "A Wattle-ön kívüli",
+  "aiUnmanagedDescription": "A Wattle-ön kívül telepítve. Innen eltávolíthatod, de aktív modellként nem ajánlja fel.",
+  "aiUseTitle": "Ezt használom",
+  "alignCenter": "Középre igazítás",
+  "alignLeft": "Balra igazítás",
+  "alignRight": "Jobbra igazítás",
+  "allEntries": "Minden oldal",
+  "allSparks": "Minden szikra",
+  "allSparksIntro": "Minden szikra, amit elkaptál, a legfrissebbtől kezdve. Szándékosan rövidek és cím nélküliek: a szikra jegyzet önmagadnak, egy pillanatban elkapott gondolat, a sajátjaidon kívül minden szabály nélkül.",
+  "appName": "Wattle",
+  "appearanceSection": "Megjelenés",
+  "aroundThisTime": "Ez idő tájt",
+  "backToComponents": "Összetevők",
+  "backToTop": "Vissza a tetejére",
+  "backup": "Biztonsági mentés",
+  "backupAction": "Exportálás…",
+  "backupDescription": "Ments egy másolatot az oldalaidról, a mellékleteidről és a beállításaidról.",
+  "backupError": "A mentés nem sikerült. Próbáld újra.",
+  "backupFolderAction": "Kiválasztás…",
+  "backupFolderHint": "Ebbe a mappába íródnak a mentések .wattle-fájljai, a napi fájlnévvel. A naplód nem itt van. A korábbi mentések soha nem kerülnek bele egy újba.",
+  "backupFolderUnset": "Még nincs beállítva: a mentési ablak ott nyílik meg, ahol a Windows hagyta.",
+  "backupHint": "A Wattle minden alkalommal megkérdezi, hová kerüljön a fájl. Adatbázis, mellékletek és beállítások egyetlen .wattle-fájlban. Az Ollama modelljei nincsenek benne, és könnyen telepíthetők közvetlenül a Wattle-ből.",
+  "backupSuccess": "Biztonsági mentés elmentve.",
+  "bold": "Félkövér",
+  "calendar": "Naptár",
+  "calendarBoth": "Mindkettő",
+  "calendarEntriesOnly": "Oldalak",
+  "calendarSparksOnly": "Szikrák",
+  "calendarIntro": "Hová esik az írásod az év során. A teltebb nap olyan nap, amikor többet írtál; válassz egyet, hogy újraolvasd.",
+  "cancel": "Mégse",
+  "code": "Kód",
+  "codeLanguage": "A kód nyelve",
+  "codeLanguagePlain": "Egyszerű szöveg",
+  "components": {
+    "askConfirmation": "Kérjen megerősítést",
+    "cardBody": "Egyszerű felület: vékony keret, kártyaháttér, semmi más.",
+    "cardTitle": "Kártya",
+    "dialogBody": "Párbeszédablak egy portálban, a projekt által adott háttérrel és bezárógombbal.",
+    "dialogTitle": "A párbeszédablak címe",
+    "disabled": "Kikapcsolva",
+    "hoverMe": "Vidd fölém az egeret",
+    "openDialog": "Párbeszédablak megnyitása",
+    "openPopover": "Popover megnyitása",
+    "pageDescription": "Egy-két mondat arról, mire való a képernyő, a visszaút, a cím és a jobb oldalra tett tartalom alatt.",
+    "pageSubtitle": "Egy alcím",
+    "pageTitle": "Egy oldalcím",
+    "popoverBody": "A kiváltójához horgonyozva, és bármi más bezárja: itt nyílik meg a dátummező és egy levél határideje is.",
+    "popoverTitle": "Egy popover",
+    "sampleEntryBody": "Elég korán indultam, hogy gyalog mehessek, és a köd még ott ült a házak mögötti mező felett.",
+    "sampleEntryHit": "köd",
+    "sampleEntryOpening": "Elég korán indultam, hogy gyalog mehessek, és a",
+    "sampleEntryTitle": "A hosszú út az állomásig",
+    "sampleSpark": "Bármi is legyen, nem sürgős. Aludj rá egyet.",
+    "sizes": "Méretek",
+    "startTour": "Bemutató indítása",
+    "states": "Állapotok",
+    "subtitle": "A felületet alkotó darabok, változataikkal és állapotaikkal. Előbb az alapelemek; aztán az a néhány funkcionális összetevő, amely elég képernyőn előfordul ahhoz, hogy külön is megérje megnézni. Itt minden példaadatokkal dolgozik.",
+    "title": "Összetevők",
+    "tooltipBody": "Egy magyarázat, egy lépéssel amögött a vezérlő mögött, amelyhez tartozik.",
+    "tourBody": "Az oldal elsötétül, a kiemelt elem megvilágítva marad, a kártya pedig követi. A Wattle minden vezetett bemutatója ennyi, lépésről lépésre.",
+    "tourTitle": "Ez a bemutató egy lépése",
+    "variants": "Változatok",
+    "withIcon": "Ikonnal"
+  },
+  "continue": "Tovább",
+  "dailySparks": "Szikrák",
+  "dark": "Sötét",
+  "dataSection": "Adatok",
+  "dataSectionDescription": "A naplód, a Wattle-ön belül és kívül.",
+  "delete": "Törlés",
+  "deleteEntry": "Oldal törlése",
+  "deleteEntryConfirm": "Ez az oldal a kukába kerül. A Beállításokból visszaállíthatod, amíg véglegesen nem törlődik.",
+  "deleteSpark": "Szikra törlése",
+  "deleteSparkConfirm": "Ez a szikra a kukába kerül. A Beállításokból visszaállíthatod, amíg véglegesen nem törlődik.",
+  "dismiss": "Félreteszem",
+  "downloadAttachment": "Másolat mentése…",
+  "downloadHtml": "HTML letöltése",
+  "edit": "Szerkesztés",
+  "editorScale": "Szövegméret",
+  "editorScaleDefault": "Alapértelmezett",
+  "editorScaleDescription": "Mekkora betűvel jelenik meg az írásod a szerkesztőben.",
+  "editorScaleHint": "Csak az írás mérete változik - az alkalmazás többi része marad, ahogy van.",
+  "editorScaleLarge": "Nagy",
+  "editorScaleLargest": "Legnagyobb",
+  "editorScaleSmall": "Kicsi",
+  "emptyBody": "Minden oldal ezen az eszközön marad. Kezdd el ma, akár egyetlen sorral.",
+  "emptySparksBody": "A szikra egy pillanatban elkapott sor. A fenti mezőben kezdődik egy.",
+  "emptySparksTitle": "Még semmi sincs elkapva.",
+  "emptyTitle": "A naplód egy oldallal kezdődik.",
+  "entryContentPlaceholder": "Írj valamit, vagy nyomd meg a / gombot a parancsokért…",
+  "entryCount_one": "{{count}} oldal",
+  "entryCount_other": "{{count}} oldal",
+  "entryDate": "Az oldal dátuma",
+  "entryLock": "Oldalak megnyitása csak olvasásra",
+  "entryLockDescription": "Az az oldal, amelyen már van valami, zárolva nyílik meg. Egyetlen kattintás elég a feloldásához.",
+  "entryLockHint": "Egy új oldal üresen indul, és sosem lesz zárolva, amíg be nem fejezed. Ez a beállítás csak a már meglévő naplóoldalakra vonatkozik.",
+  "entryNotFound": "Ez az oldal már nem létezik.",
+  "entryTitlePlaceholder": "Cím nélkül",
+  "export": "Exportálás",
+  "exportAction": "Exportálás…",
+  "exportDescription": "A teljes napló HTML-archívumként, amely hálózat nélkül is megnyílik.",
+  "exportEmpty": "Még nincs mit exportálni: a naplóban nincs egyetlen oldal sem.",
+  "exportEntry": "Oldal exportálása",
+  "exportError": "Az exportálás nem sikerült. A naplód nem változott.",
+  "exportSuccess": "Exportálva ide: {{path}}.",
+  "fixGrammar": "Nyelvtan javítása",
+  "greetingAfternoon": "Jó napot.",
+  "greetingAfternoonNamed": "Jó napot, {{name}}.",
+  "greetingEvening": "Jó estét.",
+  "greetingEveningNamed": "Jó estét, {{name}}.",
+  "greetingMorning": "Jó reggelt.",
+  "greetingMorningNamed": "Jó reggelt, {{name}}.",
+  "heading1": "1. címsor",
+  "heading2": "2. címsor",
+  "improveClarity": "Világosság javítása",
+  "italic": "Dőlt",
+  "journalFolder": "A napló mappája",
+  "journalFolderAction": "Áthelyezés…",
+  "journalFolderConfirm": "Válassz egy mappát, és a Wattle oda helyezi át a naplódat - az adatbázist és minden mellékletet együtt. A Wattle újranyílik, amint az áthelyezés kész. Ha nem sikerül, a napló pontosan ott marad, ahol van.",
+  "journalFolderError": "A naplót nem sikerült áthelyezni. Ott van, ahol volt, és semmi nem változott.",
+  "journalFolderHint": "Itt van maga a napló: a wattle.db és a mellékleteid. Nem ez a mappa, ahová a mentések .wattle-fájljai kerülnek.",
+  "language": "Nyelv",
+  "languageDescription": "A felület nyelve.",
+  "languageHint": "Csak a felületet változtatja meg. Egyetlen szóhoz sem nyúl abból, amit írtál.",
+  "layoutWidth": "A Wattle oldalainak szélessége",
+  "layoutWidthCompact": "Keskeny",
+  "layoutWidthDefault": "Kiegyensúlyozott",
+  "layoutWidthDescription": "Mennyire szélesek a Wattle oldalai.",
+  "layoutWidthHint": "Állítsd be magad a Wattle oldalainak szélességét. Tudjuk, hogy minden számítógép és minden monitor más lehet, ezért rád bízzuk az ideális érték kiválasztását.",
+  "layoutWidthWide": "Széles",
+  "letterArrivedHeading": "Megérkezett",
+  "letterArrivedTitle": "Megérkezett egy levél a múltbeli önmagadtól",
+  "letterComposeDescription": "Valami, amit csak egy általad választott napon olvashatsz el. Lezárás után nem nyitható meg, nem szerkeszthető és nem törölhető. Válassz körültekintően.",
+  "letterComposeTitle": "Egy levél neked",
+  "letterContentPlaceholder": "Döntsd el, mit írsz, mielőtt lezárnád a leveled.",
+  "letterContinueDraft": "A levél folytatása",
+  "letterDraftHeading": "Folyamatban",
+  "letterDraftRow_one": "Egy megkezdett levél - eddig {{count}} szó",
+  "letterDraftRow_other": "Egy megkezdett levél - eddig {{count}} szó",
+  "letterError": {
+    "badDate": "Erre a dátumra nem zárható le ez a levél.",
+    "corrupt": "Ez a levél nem nyitható meg. A pecsétje már nem illik ahhoz, ahogyan lezárták: ez akkor történik, ha a nyitási dátumot, a titkosított szöveget vagy a kulcsot a lezárás után módosítják a naplófájlban.",
+    "empty": "Még nincs semmi leírva, amit le lehetne zárni.",
+    "futureEnvelope": "Ezt a levelet a Wattle egy újabb változata zárta le. Frissítsd a Wattle-t a megnyitásához.",
+    "noKey": "Ennek a levélnek a kulcsa eltűnt. Az egyetlen út előre egy olyan biztonsági mentés visszaállítása, amely az eltűnése előtt készült.",
+    "notFound": "Ez a levél nem létezik.",
+    "notYet": "Ez a levél még nem nyílt ki. Gyere vissza később.",
+    "sealed": "Ez a levél le van zárva, és még nem jött el az ideje. Gyere vissza később.",
+    "tooFar": "Egy levél legfeljebb ötven évet várhat.",
+    "tooSoon": "Egy levélnek legalább hét napot kell várnia.",
+    "unknown": "Valami félresiklott."
+  },
+  "letterExport": "A levél letöltése",
+  "letterFooterDates": "Írva: {{written}} · megnyitva: {{opened}}",
+  "letterFromYourself": "Az akkori önmagadtól",
+  "letterHasArrived": "Eljött a napja",
+  "letterIn10Years": "10 év",
+  "letterIn1Month": "1 hónap",
+  "letterIn1Year": "1 év",
+  "letterIn2Years": "2 év",
+  "letterIn3Months": "3 hónap",
+  "letterIn3Years": "3 év",
+  "letterIn5Years": "5 év",
+  "letterIn6Months": "6 hónap",
+  "letterKeepEditing": "Írom tovább",
+  "letterLength": "Hossz",
+  "letterNoDateYet": "Válaszd ki, mikor nyíljon ki.",
+  "letterOpenIt": "Nyisd ki",
+  "letterOpenedHeading": "Elolvasva",
+  "letterOpenedOn": "Megnyitva: {{date}}",
+  "letterOpensOn": "Kinyílik:",
+  "letterOpensOnDate": "Kinyílik: {{date}}",
+  "letterPickDate": "Válassz dátumot…",
+  "letterPromptChapter": "Egy új fejezet",
+  "letterPromptFree": "Semmi különös",
+  "letterPromptGoals": "Célok",
+  "letterPromptHard": "Egy nehéz időszak",
+  "letterPromptOrdinary": "Egy hétköznapi nap",
+  "letterPromptPerson": "Valaki, aki számít",
+  "letterPromptRemember": "Nehogy elfelejtsd",
+  "letterResultLabel": "Levél",
+  "letterReviewAction": "Olvasd el újra…",
+  "letterReviewBody": "Olvasd el még egyszer, utoljára. E lépés után elkerül.",
+  "letterReviewTitle": "Olvasd el még egyszer, utoljára",
+  "letterSealAction": "A levél lezárása",
+  "letterSealBody": "Titkosítva lesz, és félretéve {{date}}-ig.",
+  "letterSealFailed": "A levél nem lett lezárva. Semmi sem változott.",
+  "letterSealHonesty": "A Wattle titkosítja a levelet, és a kulcsot a naplófájlban tartja, hogy a levél ne veszhessen el. Ez zár önmagad ellen, nem titok az elől, akinek hozzáférése van a gépedhez - és egy biztonsági mentés mindkét felét magával viszi.",
+  "letterSealTerms": "{{date}}-ig nem tudod majd megnyitni, elolvasni, szerkeszteni, törölni, sem a dátumát megváltoztatni. A Wattle sem. Az egyetlen módja, hogy megszabadulj tőle, a teljes napló kiürítése.",
+  "letterSealTitle": "Lezárod ezt a levelet?",
+  "letterSealing": "Lezárás…",
+  "letterTypeDate": "Írd be a dátumot a megerősítéshez",
+  "letterWaitingHeading": "Várakozik",
+  "letterWaitingLine": "Egy neked szóló levél {{date}}-án nyílik ki.",
+  "letterWhereToStart": "Hol kezdd",
+  "letterWillOpen": "{{date}}-án nyílik ki.",
+  "letterWordCount_one": "{{count}} szó",
+  "letterWordCount_other": "{{count}} szó",
+  "letterWrite": "Írj egy levelet",
+  "letterWriteBack": "Válaszolj",
+  "letterWritten": "Megírva",
+  "letterWrittenAndLength_one": "Írva: {{date}} · {{count}} szó",
+  "letterWrittenAndLength_other": "Írva: {{date}} · {{count}} szó",
+  "letterWrittenOn": "Írva: {{date}}",
+  "letters": "Levelek",
+  "lettersDescription": "Szavak, amelyeket a jövőbeli önmagadra bízol. Válassz egy napot, és hagyd ott azt, amire emlékezni, amit elmesélni vagy újra felfedezni szeretnél. Addig a levél lepecsételve marad, és nem nyitható meg.",
+  "lettersEmptyBody": "A levél olyasmi, amit most írsz, és csak egy általad választott napon olvashatsz újra.",
+  "lettersEmptyTitle": "Nincs levél",
+  "light": "Világos",
+  "link": "Hivatkozás",
+  "listErrorBody": "Az oldalaid továbbra is ezen az eszközön vannak: a Wattle csak nem tudta beolvasni őket. Próbáld újra, és ha a gond megmarad, állíts vissza egy biztonsági mentést.",
+  "listErrorTitle": "A napló nem nyitható meg.",
+  "loadOlder": "Korábbiak betöltése",
+  "loading": "Betöltés…",
+  "lockEntry": "Az oldal zárolása",
+  "makeShorter": "Rövidítés",
+  "memoriesSection": "Emlékek",
+  "memoriesSectionDescription": "Két mód arra, hogy amit írtál, visszataláljon hozzád.",
+  "memoryAnother": "Keress másikat",
+  "memoryAsk": "Keress egy emléket, amit érdemes újraolvasni",
+  "memoryLooking": "Keresek…",
+  "memoryNoneAlike": "Semmi más abból, amit írtál, nem hasonlít eléggé erre ahhoz, hogy mellé kerüljön.",
+  "memoryNoneLeft": "Semmi más nem hasonlít eléggé ahhoz, hogy érdemes legyen megmutatni.",
+  "memoryTooRecent": "Még semmi sincs elég messze. Egy emléknek legalább két héttel korábbinak kell lennie a legutóbbi írásodnál, és a naplód még nem nyúlik vissza ennyire.",
+  "memoryWorthRevisiting": "Egy emlék, amit érdemes újraolvasni",
+  "month": "Hónap",
+  "name": "Név",
+  "nameDescription": "{{min}} és {{max}} karakter között.",
+  "nameHint": "Válaszd ki, hogyan szólítson a Wattle: az igazi neveden vagy egy kitalálton. Bármikor megváltoztathatod.",
+  "namePlaceholder": "A neved",
+  "nameRequired": "A név kötelező: legalább {{min}} karakter.",
+  "nameTooShort": "Legalább {{min}} karakter.",
+  "navigation": "Navigáció",
+  "navigationBoth": "Mindkettő",
+  "navigationBottom": "Alul",
+  "navigationDescription": "Hol helyezkedik el a fő navigáció.",
+  "navigationHeader": "Felül",
+  "navigationHint": "Helyezd a navigációt oda, ahol a legjobban esik.",
+  "newEntry": "Új oldal",
+  "newProfile": "Új profil",
+  "newProfileAction": "Kilépés",
+  "newProfileBackingUp": "Mentés folyamatban…",
+  "newProfileBackupFolder": "A mentési ablak itt nyílik meg: {{folder}}.",
+  "newProfileBackupNow": "Mentés most…",
+  "newProfileBackupSaved": "Biztonsági mentés elmentve.",
+  "newProfileConfirmAction": "Mindent törlök",
+  "newProfileConfirmBody": "Minden oldal, minden melléklet és a neved véglegesen törlődik, a beállítás pedig elölről kezdődik. A művelet nem vonható vissza.",
+  "newProfileConfirmTitle": "Kiüríted ezt a profilt?",
+  "newProfileContinueAnyway": "Mégis folytatom",
+  "newProfileDescription": "Lépj ki, töröld ezt a profilt, és kezdd elölről. Minden oldal és minden melléklet törlődik. A megerősítés előtt még menthetsz biztonsági másolatot erről a profilról.",
+  "newProfileError": "Nem sikerült elölről kezdeni. A naplód nem változott.",
+  "newProfileHint": "Ezen az eszközön csak egy napló van. Ez a művelet kiüríti; nem hoz létre másodikat.",
+  "newProfileNoBackupBody": "A Wattle nem tud egyetlen mentésről sem ehhez a naplóhoz. Minden, ami benne van, mindjárt törlődik, és mentés nélkül nem lesz mód visszaszerezni.",
+  "newProfileNoBackupTitle": "Nincs beállítva mentési mappa",
+  "next": "Következő",
+  "nextEntry": "következő oldal",
+  "noResults": "Egyetlen oldal sem felel meg a keresésnek.",
+  "noSparkResults": "Egyetlen szikra sem felel meg a keresésnek.",
+  "nudgeAnother": "Kérdezz mást",
+  "nudgeCue": "Egy indíték",
+  "nudgeDismiss": "Most nem",
+  "nudgeOffer": "Nem tudod, mit írj?",
+  "nudgeThinking": "Gondolkodom rajta…",
+  "nudgeWrite": "Erről írok",
+  "off": "Ki",
+  "ollamaInstallFailed": "Az Ollamát nem sikerült telepíteni. A Wattle semmit sem változtatott ezen az eszközön.",
+  "ollamaStartFailed": "Az Ollama nem indult el időben. Lehet, hogy még indul: próbáld újra egy pillanat múlva.",
+  "on": "Be",
+  "onThisDay": "Ezen a napon",
+  "onThisDayDescription": "A korábbi években, a mai dátumon írt oldalaid megjelennek a főoldalon.",
+  "onThisDayHint": "Válaszd ki, hogy szeretnéd-e újra látni, mit írtál ugyanezen a napon a korábbi években. Az emlékeztető a főoldalon jelenik meg.",
+  "onboarding": {
+    "language": {
+      "title": "Üdv a Wattle-ben.",
+      "body": "Αρχικά, επίλεξε τη γλώσσα σου."
+    },
+    "start": {
+      "title": "Vezettél már naplót a Wattle-lel?",
+      "body": "Ha van biztonsági mentésed, minden, ami benne van, visszakerül a helyére.",
+      "fresh": "Új napló kezdése",
+      "freshBody": "Egy üres első oldal, és három rövid kérdés, mielőtt kinyitod.",
+      "returning": "Van Wattle-mentésem",
+      "returningBody": "Szövegek, mellékletek és beállítások, pontosan úgy, ahogy hagytad őket."
+    },
+    "returning": {
+      "eyebrow": "Üdv újra",
+      "title": "Keressük meg a naplódat.",
+      "body": "Válaszd ki a .wattle-fájlt, amit elmentettél. Minden, ami benne van, felváltja ezt az üres naplót, és a Wattle ott nyílik meg, ahol abbahagytad.",
+      "action": "Válassz egy mentést…",
+      "confirmTitle": "Visszaállítasz egy mentést?",
+      "confirm": "Válaszd ki az elmentett .wattle-fájlt, és a Wattle mindennel újranyílik, ami benne van: szövegek, mellékletek és beállítások. Ez az üres napló felülíródik."
+    },
+    "name": {
+      "title": "Hogyan szólítson a Wattle?",
+      "body": "A kezdőképernyő köszöntéséhez használjuk. Kettőtől tizenkét karakterig."
+    },
+    "backup": {
+      "title": "Hová kerüljenek a mentések?",
+      "body": "Egy mappa a naplón kívül, hogy a mentés máshol legyen, amikor szükséged lesz rá."
+    },
+    "theme": {
+      "title": "Világos vagy sötét?",
+      "body": "Bármikor megváltoztathatod a beállításokban."
+    }
+  },
+  "onboardingFinish": "Kezdj írni",
+  "onboardingStep": "{{step}}. lépés a(z) {{total}}-ből",
+  "pageOf": "{{page}} / {{total}}",
+  "palette": "Téma",
+  "paletteDescription": "Meghatározza a Wattle színeit, betűtípusait és vizuális stílusát.",
+  "paletteHint": "Az egész alkalmazás megjelenését megváltoztatja: a hátteret, a szöveget, a felület részleteit, a sarkokat és a betűtípusokat. Semmit nem módosít abból, amit írtál.",
+  "paletteName": {
+    "clay": "Agyag",
+    "crimson": "Bíbor",
+    "sage": "Zsálya",
+    "umber": "Umbra",
+    "wattle": "Wattle",
+    "olive": "Olíva",
+    "forest": "Erdő",
+    "candy": "Cukorka"
+  },
+  "pastSparks": "Korábbi szikrák",
+  "previous": "Előző",
+  "previousEntry": "előző oldal",
+  "primaryNav": "Fő",
+  "profileSection": "Profil",
+  "removeAttachment": "Melléklet eltávolítása",
+  "replayTours": "Vezetett bemutatók",
+  "replayToursAction": "Visszaállítás",
+  "replayToursDescription": "Újra megmutatja az összes üdvözlő bemutatót. Hasznos, ha újra fel akarod fedezni, mi mindent tud a Wattle.",
+  "replayToursHint": "Az összes bemutatót nem látottra állítja, és a kezdőképernyőre visz, hogy megmutassa az elsőt.",
+  "reset": "Beállítások visszaállítása",
+  "resetAction": "Visszaállítás",
+  "resetConfirm": "A megjelenés, az oldalszélesség, az emlékek és az oldalzárolás visszatér a kezdeti értékekhez. A napló, a neved és az MI-asszisztens beállításai érintetlenek maradnak. Folytatod?",
+  "resetDescription": "Vissza a kezdeti értékekhez. A neved és az MI-asszisztens beállításai úgy maradnak, ahogy vannak.",
+  "resetHint": "Csak a beállítások. Az oldalak, a szikrák és a levelek pontosan ott maradnak, ahol vannak.",
+  "resetSection": "Visszaállítás",
+  "resizeImage": "Kép átméretezése",
+  "resizeVideo": "Videó átméretezése",
+  "restore": "Helyreállítás",
+  "restoreAction": "Helyreállítás…",
+  "restoreConfirm": "Ezen az eszközön minden oldal, melléklet és beállítás helyére a most kiválasztott biztonsági mentés kerül. A művelet nem vonható vissza.",
+  "restoreDescription": "Mindent lecserél ezen az eszközön egy biztonsági mentésre.",
+  "restoreError": "A helyreállítás nem sikerült. Az adataidhoz nem nyúltunk.",
+  "restoreHint": "Mindent lecserél ezen az eszközön a biztonsági mentésre. Ez nem vonható vissza.",
+  "restoring": "Helyreállítás…",
+  "retry": "Próbáld újra",
+  "save": "Mentés",
+  "saveError": "Nincs mentve",
+  "saveThought": "Gondolat mentése",
+  "saved": "Mentve",
+  "saving": "Mentés…",
+  "search": "Keresés az oldalak között",
+  "searchDisabledHint": "Nem találtunk semmit; adj hozzá valamit, mielőtt bekapcsolható lenne a keresés.",
+  "searchPlaceholder": "Keresés az oldalak között…",
+  "searchResultCount_one": "{{count}} találat",
+  "searchResultCount_other": "{{count}} találat",
+  "searchSparks": "Keresés a szikrák között",
+  "searchSparksDisabledHint": "Még nincs mit keresni: írj fentebb egy szikrát, és a keresés bekapcsol.",
+  "searchSparksPlaceholder": "Keresés a szikrák között…",
+  "settings": "Beállítások",
+  "settingsSubtitle": "Minden, amit itt találsz, ezen az eszközön van elmentve.",
+  "slash": {
+    "bulletList": {
+      "description": "Egyszerű felsorolás",
+      "title": "Felsorolás"
+    },
+    "code": {
+      "description": "Kódrészlet beszúrása",
+      "title": "Kódblokk"
+    },
+    "divider": {
+      "description": "Szakaszok látható elválasztása",
+      "title": "Elválasztó"
+    },
+    "file": {
+      "description": "Bármilyen fájl csatolása",
+      "title": "Fájl"
+    },
+    "heading1": {
+      "description": "Nagy szakaszcím",
+      "title": "1. címsor"
+    },
+    "heading2": {
+      "description": "Közepes szakaszcím",
+      "title": "2. címsor"
+    },
+    "heading3": {
+      "description": "Kis szakaszcím",
+      "title": "3. címsor"
+    },
+    "image": {
+      "description": "Kép csatolása",
+      "title": "Kép"
+    },
+    "orderedList": {
+      "description": "Számozott lista",
+      "title": "Számozott lista"
+    },
+    "quote": {
+      "description": "Egy részlet kiemelése",
+      "title": "Idézet"
+    },
+    "taskList": {
+      "description": "Tartsd számon a tennivalókat",
+      "title": "Feladatlista"
+    },
+    "text": {
+      "description": "Egyszerű szöveg",
+      "title": "Szöveg"
+    },
+    "video": {
+      "description": "Videó csatolása",
+      "title": "Videó"
+    }
+  },
+  "slashCategory": {
+    "basic": "Alap",
+    "blocks": "Blokkok",
+    "lists": "Listák",
+    "media": "Média"
+  },
+  "slashNoResults": "Nincs találat.",
+  "sparkCharsLeft_one": "{{count}} karakter maradt",
+  "sparkCharsLeft_other": "{{count}} karakter maradt",
+  "sparkCount_one": "{{count}} szikra",
+  "sparkCount_other": "{{count}} szikra",
+  "sparkDate": "A nap, amely alá ez a szikra kerül",
+  "sparkEchoDescription": "Egy korábbi szikra magától visszatér, naponta legfeljebb egy.",
+  "sparkEchoHint": "Legalább 30 napos szikra, egész nap ugyanaz, holnap pedig a következő.",
+  "sparkEchoLead": "Ezt a gondolatot hagytad magadnak",
+  "sparkEchoSetting": "A szikrák visszhangja",
+  "sparkEmpty": "Ez a szikra üres.",
+  "sparkOpenAsEntry": "Megnyitás oldalként",
+  "sparkPlaceholder": "Kapj el egy tovatűnő gondolatot…",
+  "sparkResultLabel": "Szikra",
+  "sparkRichBadge": "Formázással írva",
+  "sparkRichBody": "Ez a szikra formázást vagy mellékleteket tartalmaz, még abból az időből, amikor a szikrák nem egyszerű szövegek voltak. Semmi sem változott: a teljes szerkesztőben nyílik meg, ahol minden továbbra is működik.",
+  "sparkSaveHint": "Ctrl + Enter a mentéshez",
+  "sparkTruncated_one": "A legfrissebbet mutatjuk.",
+  "sparkTruncated_other": "A(z) {{count}} legfrissebbet mutatjuk.",
+  "sparksEyebrow": "A pillanat tisztasága",
+  "sparksIntro": "Egy-két sor, elkapva, mielőtt elszöknének. Itt semminek sem kell cím, és semminek sem kell mássá válnia.",
+  "strikethrough": "Áthúzott",
+  "suggestTitle": "Javasolj egy címet",
+  "theme": "Világos vagy sötét",
+  "themeDescription": "Minden téma létezik mindkettőben: ez az, amelyikben most olvasol.",
+  "themeHint": "A téma az egész alkalmazásra érvényes, és a választásod megmarad a következő megnyitásig.",
+  "tourClose": "Bemutató bezárása",
+  "tourDone": "Kész",
+  "tourStep": "{{current}} / {{total}}",
+  "tours": {
+    "ai": {
+      "switch": {
+        "title": "Kikapcsolva, amíg be nem kapcsolod",
+        "body": "Az AI-asszisztens választható, és alapból ki van kapcsolva. Javítja és személyre szabja a Wattle-ben szerzett élményt, mindig tiszteletben tartva a magánszférádat. Az adatok a saját gépeden dolgozódnak fel, és soha nem hagyják el azt."
+      },
+      "runtime": {
+        "title": "Min futnak a modellek",
+        "body": "A modellek az Ollamán keresztül futnak. A Wattle innen telepítheti és el is indíthatja, ha engeded."
+      },
+      "models": {
+        "title": "A modellek, amiket megtartasz",
+        "body": "Töltsd le a gépedhez legjobban illő modellt. Egyszerre egyet próbálj ki, így kiderül, melyik felel meg leginkább a hardverednek."
+      }
+    },
+    "home": {
+      "write": {
+        "title": "Kezdd a mai nappal",
+        "body": "Így kezdődik egy új oldal. Egy kattintás üres oldalt nyit a mai dátummal: itt egyetlen sor is helyet érdemel."
+      },
+      "search": {
+        "title": "Találd meg, amit írtál",
+        "body": "Minden oldal minden szava kereshető, és a találat megmutatja az illeszkedő részletet. Kikapcsolva marad, amíg nincs mit keresni."
+      },
+      "timeline": {
+        "title": "Minden, amit írtál",
+        "body": "Az oldalaid a legfrissebbtől kezdve, hónapok szerint csoportosítva. Nyiss meg egyet a folytatáshoz, vagy görgess továbbiak betöltéséhez."
+      },
+      "nav": {
+        "title": "Minden más",
+        "body": "A naptár, a szikrák, az önmagadnak írt levelek és a beállítások mind ebben a sávban laknak. Képernyőről képernyőre követ, és csak az viseli a saját nevét, amelyiken éppen vagy."
+      }
+    },
+    "calendar": {
+      "grid": {
+        "title": "A naplód dátum szerint",
+        "body": "A napok, amikor írtál, meg vannak jelölve. Válassz egyet, hogy újraolvasd, vagy hogy írj egy már elmúlt napra."
+      },
+      "view": {
+        "title": "Egy hónap, vagy egy egész év",
+        "body": "Válts a kettő között. Az éves nézetben válik láthatóvá egy szokás."
+      },
+      "kinds": {
+        "title": "oldalak, szikrák, vagy mindkettő",
+        "body": "Kétféle írás osztozik ezen a rácson, a jeleik színe különbözteti meg őket. Mutasd egyszerre az egyiket, amikor valami konkrétat keresel."
+      }
+    },
+    "sparks": {
+      "capture": {
+        "title": "Kapj el egy gondolatot",
+        "body": "A szikra egy pillanatban elkapott sor. Nincs cím, nincs oldal. Írd le, és nyomj Ctrl+Entert, vagy használd a gombot."
+      },
+      "archive": {
+        "title": "Minden szikra, amit megtartottál",
+        "body": "Itt találod a legutóbbiakat. Innen mindet megnyithatod, hónapról hónapra - és ott újat is írhatsz."
+      },
+      "recent": {
+        "title": "Mivé válhat egy szikra",
+        "body": "Mindegyik a saját oldalán nyílik meg, ahol szerkesztheted, törölheted, vagy rendes oldallá teheted, ha közben megnőtt."
+      }
+    },
+    "entry": {
+      "title": {
+        "title": "Adj neki nevet, vagy hagyd úgy, ahogy van",
+        "body": "A cím nem kötelező, és magától mentődik írás közben. Nyomj Entert, hogy egyenesen az alatta lévő oldalra ugorj."
+      },
+      "editor": {
+        "title": "Írj \"/\" jelet minden máshoz",
+        "body": "Írj ide úgy, ahogy papírra írnál. A \"/\" beírása megnyitja a menüt mindazzal, amit az oldal tartalmazhat: címsorok, listák, idézetek, képek, videók és fájlok. Jelölj ki szöveget a formázáshoz. Nincs mit menteni: írás közben íródik."
+      },
+      "actions": {
+        "title": "Az oldal parancsai",
+        "body": "Lépj az előző vagy a következő oldalra, zárold a véletlen módosítások ellen, exportáld HTML-ként, vagy töröld."
+      }
+    },
+    "settings": {
+      "appearance": {
+        "title": "Tedd a magadévá",
+        "body": "Téma, kiemelőszín, nyelv és oldalszélesség."
+      },
+      "data": {
+        "title": "A naplód a tiéd",
+        "body": "Ments róla másolatot, exportáld HTML-ként, vagy állítsd vissza egy mentésből. Minden ezen az eszközön marad."
+      },
+      "reset": {
+        "title": "Vissza",
+        "body": "Állítsd vissza a beállításokat az eredeti állapotukba, játszd le újra ezeket a bemutatókat, vagy kezdj teljesen új naplót."
+      },
+      "profile": {
+        "title": "A neved, és semmi más",
+        "body": "Ez köszönt a kezdőképernyőn, és soha nem hagyja el ezt az eszközt. A Wattle semmi mást nem kér tőled: se fiókot, se e-mailt, se bejelentkezést."
+      }
+    },
+    "letters": {
+      "what": {
+        "title": "Egy levél önmagadnak",
+        "body": "Ez nem oldal: a levél most íródik, és egy általad választott napig lezárva marad. Addig nem olvasható, nem szerkeszthető és nem bontható fel - még általad sem."
+      },
+      "write": {
+        "title": "Írj egyet",
+        "body": "Egyszerre egy piszkozat, itt őrizve, amíg le nem zárod. A lezárás megkérdezi a napot, amikor kinyílik, és onnan nincs visszaút."
+      },
+      "waiting": {
+        "title": "Amíg vár",
+        "body": "Egy lezárt levél csak azt mutatja, mikor nyílik ki, és milyen hosszú. Nincs visszaszámlálás, nincs előnézet: egyszerűen itt lesz, amikor eljön az ideje."
+      }
+    },
+    "letterCompose": {
+      "directions": {
+        "title": "Hol kezdd",
+        "body": "Válassz egy irányt, és kapsz egy kérdést, amely felé írhatsz. A kérdés nem mentődik, és soha nem lesz a levél része: csupán valami, amire ránézhetsz írás közben."
+      },
+      "seal": {
+        "title": "Mikor nyílik ki",
+        "body": "Válaszd ki, milyen messze van az a nap, aztán olvasd el még egyszer, utoljára. A lezárás végleges: attól a pillanattól a levél olvashatatlan a kiválasztott dátumig."
+      }
+    },
+    "letterRead": {
+      "opened": {
+        "title": "Megérkezett",
+        "body": "Eljött a nap, amit választottál, és a levél elolvasható!"
+      },
+      "keep": {
+        "title": "A tiéd, örökre",
+        "body": "Olvasd el annyiszor, ahányszor akarod. Lezárás után nem szerkeszthető, és törölni sem lehet."
+      }
+    }
+  },
+  "trash": "Kuka",
+  "trashAction": "Kuka megnyitása…",
+  "trashDescription": "A törölt oldalak itt várakoznak, mielőtt végleg eltűnnének.",
+  "trashEmptyAction": "Kuka ürítése",
+  "trashEmptyConfirm": "A kukában várakozó összes oldal véglegesen törlődik, a mellékletekkel együtt. A művelet nem vonható vissza.",
+  "trashEmptyTitle": "Kiüríted a kukát?",
+  "trashError": "A kukát nem sikerült beolvasni.",
+  "trashHint": "A visszaállított oldal a dátumával, a mellékleteivel és a naplóbeli helyével együtt tér vissza.",
+  "trashIntro": "Egy törölt oldal {{days}} napig vár itt, azután véglegesen eltűnik.",
+  "trashNothing": "Semmit sem töröltél.",
+  "trashPurge": "Végleges törlés",
+  "trashPurgeConfirm": "Ez az oldal és minden hozzá csatolt fájl véglegesen törlődik. A művelet nem vonható vissza.",
+  "trashRestore": "Visszaállítás",
+  "trashRow": "Írva: {{written}} · véglegesen törlődik: {{removed}}",
+  "underline": "Aláhúzott",
+  "unlockEntry": "Az oldal zárolásának feloldása",
+  "untitled": "Cím nélkül",
+  "writeOnThisDay": "Írj ezen a napon",
+  "writingSection": "Írás",
+  "writingSectionDescription": "Hogyan viselkedik egy oldal, amikor megnyitod.",
+  "year": "Év",
+  "yearsAgo_one": "Egy éve",
+  "yearsAgo_other": "{{count}} éve",
+  "memoryPrevious": "Előző emlék",
+  "memoryNext": "Következő emlék",
+  "letterAiUnavailableTitle": "Az AI-javaslatok nem érhetők el",
+  "letterAiUnavailableBody": "A fenti irányok mindig működnek. Ha kérdést is szeretnél, amiből elindulhatsz, kapcsold be az AI-asszisztenst és válassz modellt a beállításokban - ezen a gépen fut, és semmi nem hagyja el."
+}

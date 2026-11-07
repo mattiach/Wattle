@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../../../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2")
+    format("woff2");
+  font-weight: 100 900;
+}
+@font-face {
+  font-family: "Literata";
+  src: url("../../../node_modules/@fontsource-variable/literata/files/literata-latin-wght-normal.woff2")
+    format("woff2");
+  font-weight: 200 900;
+}
+
+/* Wattle light - the application's own tokens */
+:root {
+  --bg: oklch(0.967 0.005 85);
+  --fg: oklch(0.235 0.008 65);
+  --muted: oklch(0.522 0.012 68);
+  --accent: oklch(0.62 0.12 80);
+  --glow: oklch(0.68 0.13 82 / 0.16);
+  --edge: oklch(0.235 0.008 65 / 0.2);
+}
+.forest {
+  --bg: oklch(0.9109 0.0159 160.5971);
+  --fg: oklch(0.2198 0.0298 168.5546);
+  --muted: oklch(0.4317 0.0634 159.8314);
+  --accent: oklch(0.47245 0.07246 159.662);
+  --glow: oklch(0.47245 0.07246 159.662 / 0.16);
+  --edge: oklch(0.2198 0.0298 168.5546 / 0.22);
+}
+.dark {
+  --bg: oklch(0.19 0.008 160);
+  --fg: oklch(0.945 0.012 151.8892);
+  --muted: oklch(0.76 0.02 155);
+  --accent: oklch(0.72 0.09 158);
+  --glow: oklch(0.72 0.09 158 / 0.18);
+  --edge: oklch(0.945 0.012 151.8892 / 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+  overflow: hidden;
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--fg);
+  background:
+    radial-gradient(90% 55% at 78% 0%, var(--glow), transparent 62%),
+    color-mix(in oklch, var(--bg), var(--fg) 6%);
+}
+
+.copy {
+  padding: var(--pad) var(--pad) 0;
+}
+
+.mark {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: var(--mark-gap);
+}
+.mark img {
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--edge);
+  border-radius: 13px;
+}
+.mark span {
+  font-family: "Literata", serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  margin-bottom: 24px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.17em;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-family: "Literata", serif;
+  font-size: var(--h1);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.024em;
+}
+
+.sub {
+  max-width: var(--sub-w);
+  font-size: var(--sub);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* The screenshot, cropped of its Windows title bar and bled off the corner. */
+.shot {
+  position: absolute;
+  top: var(--shot-top);
+  right: 0;
+  bottom: 0;
+  left: var(--pad);
+  overflow: hidden;
+  border: 1px solid var(--edge);
+  border-right: none;
+  border-bottom: none;
+  border-radius: 22px 0 0 0;
+  box-shadow:
+    0 0 0 8px color-mix(in oklch, var(--fg) 6%, transparent),
+    0 -30px 80px -40px oklch(0 0 0 / 0.45);
+}
+.shot img {
+  display: block;
+}
+
+.foot {
+  position: absolute;
+  bottom: 34px;
+  left: var(--pad);
+  z-index: 2;
+  font-size: 16px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

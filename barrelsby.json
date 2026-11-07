@@ -1,0 +1,6 @@
+{
+  "directory": ["src/components/", "src/components/ui/", "src/redux"],
+  "delete": true,
+  "location": "all",
+  "exclude": ["node_modules", ".test.ts$", ".spec.ts$"]
+}

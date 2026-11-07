@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Wattle logo</title>
+    <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    .tile {
+      display: grid;
+      place-items: center;
+      width: 100vw;
+      height: 100vh;
+      background: oklch(0.967 0.005 85);
+    }
+    .tile img {
+      width: 74%;
+      height: 74%;
+      mix-blend-mode: multiply;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="tile">
+      <img alt="Wattle" src="../../src-tauri/icons/icon.png">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+[package]
+name = "wattle"
+version = "1.0.5"
+description = "A private journal that lives entirely on your computer."
+authors = ["Mattia (mattiach)"]
+license = "MIT"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "wattle_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["protocol-asset"] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.41", features = ["bundled"] }
+mime_guess = "2"
+tauri-plugin-dialog = "2"
+zip = "9"
+walkdir = "2"
+# Loopback HTTP to a local Ollama and nothing else, so every default feature -
+# TLS above all - is turned off. `stream` is what lets a multi-gigabyte pull
+# report progress instead of arriving all at once.
+reqwest = { version = "0.13", default-features = false, features = ["json", "stream"] }
+# Already in the tree under Tauri; declared because waiting for a freshly
+# started Ollama needs a sleep that does not block the executor.
+tokio = { version = "1", features = ["macros", "time"] }
+# One question only: how much memory this machine has, so the model catalogue
+# can say which rows will thrash. Every default feature is off - disks,
+# networks, processes, users and components are none of Wattle's business, and
+# a journal that reads the process table is not one anybody should trust.
+sysinfo = { version = "0.39", default-features = false, features = ["system"] }
+# The seal on a letter to your future self. An AEAD and not a hand-rolled
+# composition: the authentication tag is what binds the unlock date to the
+# ciphertext, so editing that date in the database file destroys the letter
+# rather than opening it. XChaCha20-Poly1305 for its 24-byte nonce, which can
+# be drawn at random with no birthday-bound concern - nonce reuse is the
+# mistake this codebase is least equipped to notice.
+chacha20poly1305 = "0.10"
+# The OS CSPRNG, for the one key and the one nonce a letter is sealed with.
+# Already in the lock file transitively; declared because guessing at randomness
+# is the other way to get this wrong.
+getrandom = "0.2"
+# Clears a decrypted letter out of memory when it goes out of scope. Best
+# effort, and said as such: a language with moving values cannot promise more.
+zeroize = "1"
+

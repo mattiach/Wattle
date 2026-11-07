@@ -1,0 +1,661 @@
+{
+  "ai": "AI-assistent",
+  "aiActionDescription": {
+    "fixGrammar": "Corrigeert spelling, grammatica en interpunctie zonder de betekenis te veranderen.",
+    "improveClarity": "Maakt de tekst helderder en makkelijker te lezen, en laat alle inhoud ongemoeid.",
+    "makeShorter": "Kort de tekst in met behoud van alle wezenlijke gedachten en informatie."
+  },
+  "aiActive": "Actief",
+  "aiActiveModel": "Actief model",
+  "aiDesc08b": "De lichtste optie. Draait op bescheiden hardware; ideaal voor snelle grammaticacorrecties, al is het niet altijd precies.",
+  "aiDesc27b": "Werkstationklasse. Vraagt veel schijfruimte en geheugen; ideaal voor nauwkeurigere suggesties.",
+  "aiDesc2b": "Klein en snel, met betere grammatica dan 0.8B.",
+  "aiDesc4b": "De beste balans tussen kwaliteit en benodigde middelen.",
+  "aiDesc9b": "Hogere kwaliteit; vraagt een krachtige machine.",
+  "aiDescription": "Uitgeschakeld. Maar niet van het apparaat verwijderd.",
+  "aiDiscard": "Verwerpen",
+  "aiError": {
+    "badSelection": "Deze selectie kan niet worden herschreven. Ze is misschien leeg, of langer dan één passage.",
+    "cancelled": "Onderbroken. Er is niets veranderd.",
+    "daemon": "Ollama kon de bewerking niet voltooien.",
+    "disabled": "De AI-assistent is uitgeschakeld. Je kunt hem inschakelen in de instellingen.",
+    "empty": "Het model heeft niets teruggegeven. Probeer het opnieuw en zorg dat er een model is gekozen.",
+    "modelGone": "Dat model is niet meer geïnstalleerd. Kies een ander in de instellingen.",
+    "noModel": "Je hebt nog geen model gekozen. Kies er een op de instellingenpagina.",
+    "noPassage": "Het model heeft geen herschreven passage teruggegeven.",
+    "reasoned": "Het model heeft het verzoek ontvangen maar geen tekst teruggegeven. Een kortere passage is meestal genoeg om deze fout op te lossen.",
+    "timeout": "Het model deed er te lang over en is gestopt. Een kortere passage is meestal genoeg om deze fout op te lossen.",
+    "tooLong": "Het model is gestopt, de inhoud is mogelijk te lang. Er is niets veranderd.",
+    "unknown": "Er is iets misgegaan.",
+    "unreachable": "Ollama reageert niet. Controleer of het op je computer draait voordat je het opnieuw probeert.",
+    "unreadable": "Het antwoord van het model lijkt niet leesbaar."
+  },
+  "aiHint": "De AI-modellen draaien lokaal op je computer via Ollama. Er worden geen gegevens buiten je apparaat verstuurd. Privacy is een van de grondbeginselen van Wattle en wat het onderscheidt: je gegevens blijven altijd op je eigen computer.",
+  "aiInsertBelow": "Hieronder invoegen",
+  "aiInstall": "Installeren",
+  "aiInstalling": "Downloaden… {{percent}} %",
+  "aiMayNotFit": "Op de grens van deze computer",
+  "aiMayNotFitHint": "Dit model vraagt meer geheugen dan deze machine beschikbaar heeft. Het kan traag zijn, of helemaal niet starten. Installeren kan alsnog, ook al is het niet aan te raden.",
+  "aiModels": "Modellen",
+  "aiModelsDescription": "Geïnstalleerde en beschikbare modellen. Er wordt niets gedownload tot je erom vraagt.",
+  "aiNoModel": "Geen model gekozen",
+  "aiNoModelChosenHint": "De AI-assistent is actief, maar nog geen enkel model. Kies er hierboven een om de AI-functies te gaan gebruiken.",
+  "aiNoModelsYet": "Er is nog geen model geïnstalleerd. Kies er hieronder een: er wordt niets gedownload totdat je erom vraagt.",
+  "aiOnDescription": "Een model dat op dit apparaat draait. Er wordt niets naar elders gestuurd, uit respect voor je privacy.",
+  "aiPreparing": "De assistent wordt op deze computer voorbereid…",
+  "aiRecommended": "Aanbevolen",
+  "aiRecommendedHint": "De beste keuze voor het geheugen van deze computer.",
+  "aiRemove": "Verwijderen",
+  "aiRemoveConfirm": "{{name}} wordt van deze computer verwijderd. Wil je doorgaan?",
+  "aiReplace": "Vervangen",
+  "aiRewrite": "Herschrijven met de AI-assistent",
+  "aiRewriting": "Aan het denken…",
+  "aiSection": "AI-instellingen",
+  "aiSectionDescription": "Optioneel, lokaal, en uit tot je het aanzet.",
+  "aiUnmanaged": "Buiten Wattle om",
+  "aiUnmanagedDescription": "Buiten Wattle geïnstalleerd. Je kunt het hier verwijderen, maar het wordt niet als actief model aangeboden.",
+  "aiUseTitle": "Deze gebruiken",
+  "alignCenter": "Centreren",
+  "alignLeft": "Links uitlijnen",
+  "alignRight": "Rechts uitlijnen",
+  "allEntries": "Alle pagina's",
+  "allSparks": "Alle vonken",
+  "allSparksIntro": "Elke vonk die je hebt opgevangen, te beginnen bij de meest recente. Ze blijven met opzet kort en zonder titel: een vonk is een notitie aan jezelf, een gedachte in het voorbijgaan, zonder andere regels dan die van jou.",
+  "appName": "Wattle",
+  "appearanceSection": "Weergave",
+  "aroundThisTime": "Rond deze tijd",
+  "backToComponents": "Componenten",
+  "backToTop": "Terug naar boven",
+  "backup": "Reservekopie",
+  "backupAction": "Exporteren…",
+  "backupDescription": "Bewaar een kopie van je pagina's, bijlagen en instellingen.",
+  "backupError": "De reservekopie is mislukt. Probeer het opnieuw.",
+  "backupFolderAction": "Kiezen…",
+  "backupFolderHint": "In deze map worden de .wattle-bestanden van de reservekopieën geschreven, met de bestandsnaam van die dag. Hier staat niet je dagboek. Eerdere kopieën komen nooit in een nieuwe terecht.",
+  "backupFolderUnset": "Nog niet ingesteld: het opslagvenster begint waar Windows het liet.",
+  "backupHint": "Wattle vraagt elke keer waar het bestand moet komen. Database, bijlagen en instellingen in één .wattle-bestand. Ollama-modellen zitten er niet in en zijn eenvoudig rechtstreeks vanuit Wattle te installeren.",
+  "backupSuccess": "Reservekopie opgeslagen.",
+  "bold": "Vet",
+  "calendar": "Kalender",
+  "calendarBoth": "Beide",
+  "calendarEntriesOnly": "Pagina's",
+  "calendarSparksOnly": "Vonken",
+  "calendarIntro": "Waar je schrijven door het jaar heen valt. Een vollere dag is een dag waarop je meer schreef; kies er een om hem terug te lezen.",
+  "cancel": "Annuleren",
+  "code": "Code",
+  "codeLanguage": "Taal van de code",
+  "codeLanguagePlain": "Platte tekst",
+  "components": {
+    "askConfirmation": "Om bevestiging vragen",
+    "cardBody": "Een eenvoudig vlak: dunne rand, kaartachtergrond, verder niets.",
+    "cardTitle": "Kaart",
+    "dialogBody": "Een dialoogvenster in een portal, met de achtergrond en de sluitknop die dit project levert.",
+    "dialogTitle": "Titel van het dialoogvenster",
+    "disabled": "Uitgeschakeld",
+    "hoverMe": "Ga hier overheen",
+    "openDialog": "Dialoogvenster openen",
+    "openPopover": "Popover openen",
+    "pageDescription": "Een of twee zinnen over waar het scherm voor is, onder de weg terug, de titel en wat het scherm rechts plaatst.",
+    "pageSubtitle": "Een ondertitel",
+    "pageTitle": "Een paginatitel",
+    "popoverBody": "Verankerd aan zijn aanleiding en door al het andere gesloten: hier openen zowel het datumveld als de termijn van een brief.",
+    "popoverTitle": "Een popover",
+    "sampleEntryBody": "Vroeg genoeg vertrokken om te lopen, en de mist hing nog boven het veld achter de huizen.",
+    "sampleEntryHit": "mist",
+    "sampleEntryOpening": "Vroeg genoeg vertrokken om te lopen, en de",
+    "sampleEntryTitle": "De lange weg naar het station",
+    "sampleSpark": "Wat het ook is, het heeft geen haast. Slaap er een nacht over.",
+    "sizes": "Formaten",
+    "startTour": "Rondleiding starten",
+    "states": "Toestanden",
+    "subtitle": "De onderdelen waaruit de interface bestaat, met hun varianten en toestanden. Eerst de bouwstenen; daarna de paar functionele componenten die op genoeg schermen voorkomen om apart getoond te worden. Alles hier werkt met voorbeeldgegevens.",
+    "title": "Componenten",
+    "tooltipBody": "Een toelichting, een stap achter het element waar ze bij hoort.",
+    "tourBody": "De pagina wordt donkerder, het uitgelichte element blijft verlicht, en de kaart volgt het. Elke rondleiding in Wattle is dit, stap voor stap.",
+    "tourTitle": "Dit is een stap van de rondleiding",
+    "variants": "Varianten",
+    "withIcon": "Met pictogram"
+  },
+  "continue": "Doorgaan",
+  "dailySparks": "Vonken",
+  "dark": "Donker",
+  "dataSection": "Gegevens",
+  "dataSectionDescription": "Je dagboek, binnen en buiten Wattle.",
+  "delete": "Verwijderen",
+  "deleteEntry": "Pagina verwijderen",
+  "deleteEntryConfirm": "Deze pagina gaat naar de prullenbak. Je kunt haar vanuit Instellingen herstellen totdat ze voorgoed wordt verwijderd.",
+  "deleteSpark": "Vonk verwijderen",
+  "deleteSparkConfirm": "Deze vonk gaat naar de prullenbak. Je kunt hem vanuit Instellingen herstellen totdat hij voorgoed wordt verwijderd.",
+  "dismiss": "Opzijleggen",
+  "downloadAttachment": "Een kopie bewaren…",
+  "downloadHtml": "HTML downloaden",
+  "edit": "Bewerken",
+  "editorScale": "Tekstgrootte",
+  "editorScaleDefault": "Standaard",
+  "editorScaleDescription": "Hoe groot je schrijven in de editor staat.",
+  "editorScaleHint": "Alleen het geschrevene verandert van grootte - de rest van de applicatie blijft zoals hij is.",
+  "editorScaleLarge": "Groot",
+  "editorScaleLargest": "Grootst",
+  "editorScaleSmall": "Klein",
+  "emptyBody": "Elke pagina blijft op dit apparaat. Begin vandaag, al is het met één regel.",
+  "emptySparksBody": "Een vonk is een regel die je in het moment opvangt. In het veld hierboven begint er een.",
+  "emptySparksTitle": "Nog niets opgevangen.",
+  "emptyTitle": "Je dagboek begint met een pagina.",
+  "entryContentPlaceholder": "Schrijf iets, of druk op / voor de opdrachten…",
+  "entryCount_one": "{{count}} pagina",
+  "entryCount_other": "{{count}} pagina's",
+  "entryDate": "Datum van de pagina",
+  "entryLock": "Pagina's alleen-lezen openen",
+  "entryLockDescription": "Een pagina waar al iets op staat, opent vergrendeld. Eén klik is genoeg om haar te ontgrendelen.",
+  "entryLockHint": "Een nieuwe pagina begint leeg en wordt nooit vergrendeld zolang je hem niet hebt afgerond. Deze optie geldt alleen voor dagboekpagina's die er al zijn.",
+  "entryNotFound": "Deze pagina bestaat niet meer.",
+  "entryTitlePlaceholder": "Zonder titel",
+  "export": "Export",
+  "exportAction": "Exporteren…",
+  "exportDescription": "Het hele dagboek als HTML-archief dat opent zonder netwerkverbinding.",
+  "exportEmpty": "Er valt nog niets te exporteren: het dagboek bevat geen pagina's.",
+  "exportEntry": "Pagina exporteren",
+  "exportError": "De export is mislukt. Je dagboek is niet gewijzigd.",
+  "exportSuccess": "Geëxporteerd naar {{path}}.",
+  "fixGrammar": "Grammatica corrigeren",
+  "greetingAfternoon": "Goedemiddag.",
+  "greetingAfternoonNamed": "Goedemiddag, {{name}}.",
+  "greetingEvening": "Goedenavond.",
+  "greetingEveningNamed": "Goedenavond, {{name}}.",
+  "greetingMorning": "Goedemorgen.",
+  "greetingMorningNamed": "Goedemorgen, {{name}}.",
+  "heading1": "Kop 1",
+  "heading2": "Kop 2",
+  "improveClarity": "Helderheid verbeteren",
+  "italic": "Cursief",
+  "journalFolder": "Map van het dagboek",
+  "journalFolderAction": "Verplaatsen…",
+  "journalFolderConfirm": "Kies een map en Wattle verplaatst je dagboek daarheen - de database en alle bijlagen samen. Wattle opent opnieuw zodra het klaar is. Lukt het niet, dan blijft je dagboek precies waar het is.",
+  "journalFolderError": "Het dagboek kon niet worden verplaatst. Het staat nog waar het stond en er is niets veranderd.",
+  "journalFolderHint": "Hier staat het dagboek zelf: wattle.db en je bijlagen. Dit is niet de map waarin .wattle-bestanden van reservekopieën worden opgeslagen.",
+  "language": "Taal",
+  "languageDescription": "Taal van de interface.",
+  "languageHint": "Verandert alleen de interface. Ze raakt geen woord aan van wat je hebt geschreven.",
+  "layoutWidth": "Breedte van de Wattle-pagina's",
+  "layoutWidthCompact": "Smal",
+  "layoutWidthDefault": "Evenwichtig",
+  "layoutWidthDescription": "Hoe breed alle pagina's van Wattle zijn.",
+  "layoutWidthHint": "Stel zelf de breedte van de pagina's van Wattle in. Elke computer en elk scherm kan anders zijn, dus laten we jou de ideale waarde kiezen.",
+  "layoutWidthWide": "Breed",
+  "letterArrivedHeading": "Aangekomen",
+  "letterArrivedTitle": "Er is een brief van je vroegere zelf aangekomen",
+  "letterComposeDescription": "Iets wat je pas kunt lezen op een dag die jij kiest. Eenmaal verzegeld kan hij niet meer worden geopend, bewerkt of verwijderd. Kies zorgvuldig.",
+  "letterComposeTitle": "Een brief aan jezelf",
+  "letterContentPlaceholder": "Bepaal wat je wilt schrijven voordat je je brief verzegelt.",
+  "letterContinueDraft": "Verder met de brief",
+  "letterDraftHeading": "Onderweg",
+  "letterDraftRow_one": "Een begonnen brief - tot nu toe {{count}} woord",
+  "letterDraftRow_other": "Een begonnen brief - tot nu toe {{count}} woorden",
+  "letterError": {
+    "badDate": "Dat is geen datum waarvoor deze brief verzegeld kan worden.",
+    "corrupt": "Deze brief kan niet worden geopend. Zijn zegel komt niet meer overeen met hoe hij is gesloten: dat gebeurt wanneer de openingsdatum, de versleutelde tekst of de sleutel na het verzegelen in het dagboekbestand worden gewijzigd.",
+    "empty": "Er staat nog niets geschreven om te verzegelen.",
+    "futureEnvelope": "Deze brief is verzegeld met een nieuwere versie van Wattle. Werk Wattle bij om hem te openen.",
+    "noKey": "De sleutel van deze brief is weg. De enige weg vooruit is een reservekopie terugzetten die van vóór het verdwijnen dateert.",
+    "notFound": "Deze brief bestaat niet.",
+    "notYet": "Deze brief is nog niet opengegaan. Kom later terug.",
+    "sealed": "Deze brief is verzegeld en zijn tijd is nog niet gekomen. Kom later terug.",
+    "tooFar": "Een brief kan hoogstens vijftig jaar wachten.",
+    "tooSoon": "Een brief moet minstens zeven dagen wachten.",
+    "unknown": "Er is iets misgegaan."
+  },
+  "letterExport": "Deze brief downloaden",
+  "letterFooterDates": "Geschreven op {{written}} · geopend op {{opened}}",
+  "letterFromYourself": "Van jou van toen",
+  "letterHasArrived": "Zijn dag is gekomen",
+  "letterIn10Years": "10 jaar",
+  "letterIn1Month": "1 maand",
+  "letterIn1Year": "1 jaar",
+  "letterIn2Years": "2 jaar",
+  "letterIn3Months": "3 maanden",
+  "letterIn3Years": "3 jaar",
+  "letterIn5Years": "5 jaar",
+  "letterIn6Months": "6 maanden",
+  "letterKeepEditing": "Blijven schrijven",
+  "letterLength": "Lengte",
+  "letterNoDateYet": "Kies wanneer hij opengaat.",
+  "letterOpenIt": "Openen",
+  "letterOpenedHeading": "Gelezen",
+  "letterOpenedOn": "Geopend op {{date}}",
+  "letterOpensOn": "Gaat open op",
+  "letterOpensOnDate": "Gaat open op {{date}}",
+  "letterPickDate": "Een datum kiezen…",
+  "letterPromptChapter": "Een nieuw hoofdstuk",
+  "letterPromptFree": "Niets in het bijzonder",
+  "letterPromptGoals": "Doelen",
+  "letterPromptHard": "Een moeilijke tijd",
+  "letterPromptOrdinary": "Een gewone dag",
+  "letterPromptPerson": "Iemand die telt",
+  "letterPromptRemember": "Niet te vergeten",
+  "letterResultLabel": "Brief",
+  "letterReviewAction": "Nog eens lezen…",
+  "letterReviewBody": "Lees hem een laatste keer. Na deze stap wordt hij weggelegd.",
+  "letterReviewTitle": "Lees hem een laatste keer",
+  "letterSealAction": "De brief verzegelen",
+  "letterSealBody": "Hij wordt versleuteld en weggelegd tot {{date}}.",
+  "letterSealFailed": "De brief is niet verzegeld. Er is niets veranderd.",
+  "letterSealHonesty": "Wattle versleutelt de brief en bewaart de sleutel in het dagboekbestand, zodat de brief niet verloren kan gaan. Het is een slot tegen jezelf, geen geheim voor wie toegang heeft tot je computer - en een reservekopie neemt beide helften mee.",
+  "letterSealTerms": "Tot {{date}} kun je hem niet openen, lezen, bewerken, verwijderen of van datum veranderen. Wattle ook niet. De enige manier om hem weg te krijgen is het hele dagboek leegmaken.",
+  "letterSealTitle": "Deze brief verzegelen?",
+  "letterSealing": "Bezig met verzegelen…",
+  "letterTypeDate": "Typ de datum om te bevestigen",
+  "letterWaitingHeading": "Wachtend",
+  "letterWaitingLine": "Een brief aan jezelf gaat open op {{date}}.",
+  "letterWhereToStart": "Waar te beginnen",
+  "letterWillOpen": "Hij gaat open op {{date}}.",
+  "letterWordCount_one": "{{count}} woord",
+  "letterWordCount_other": "{{count}} woorden",
+  "letterWrite": "Een brief schrijven",
+  "letterWriteBack": "Antwoorden",
+  "letterWritten": "Geschreven",
+  "letterWrittenAndLength_one": "Geschreven op {{date}} · {{count}} woord",
+  "letterWrittenAndLength_other": "Geschreven op {{date}} · {{count}} woorden",
+  "letterWrittenOn": "Geschreven op {{date}}",
+  "letters": "Brieven",
+  "lettersDescription": "Woorden die je toevertrouwt aan je toekomstige zelf. Kies een dag en laat daar achter wat je wilt onthouden, vertellen of herontdekken. Tot dan blijft de brief verzegeld en ontoegankelijk.",
+  "lettersEmptyBody": "Een brief is iets wat je nu schrijft en pas op een dag naar keuze weer kunt lezen.",
+  "lettersEmptyTitle": "Geen brieven",
+  "light": "Licht",
+  "link": "Koppeling",
+  "listErrorBody": "Je pagina's staan nog op dit apparaat: Wattle kon ze alleen niet lezen. Probeer het opnieuw en zet, als het probleem blijft, een reservekopie terug.",
+  "listErrorTitle": "Het dagboek kan niet worden geopend.",
+  "loadOlder": "Oudere laden",
+  "loading": "Bezig met laden…",
+  "lockEntry": "Deze pagina vergrendelen",
+  "makeShorter": "Inkorten",
+  "memoriesSection": "Herinneringen",
+  "memoriesSectionDescription": "Twee manieren waarop wat je hebt geschreven bij je terugkomt.",
+  "memoryAnother": "Een andere zoeken",
+  "memoryAsk": "Een herinnering zoeken die het herlezen waard is",
+  "memoryLooking": "Aan het zoeken…",
+  "memoryNoneAlike": "Niets anders van wat je hebt geschreven lijkt hier genoeg op om ernaast te zetten.",
+  "memoryNoneLeft": "Niets anders lijkt er genoeg op om te tonen.",
+  "memoryTooRecent": "Er ligt nog niets ver genoeg terug. Een herinnering moet minstens twee weken ouder zijn dan je meest recente schrijfsel, en zo ver reikt je dagboek nog niet terug.",
+  "memoryWorthRevisiting": "Een herinnering die het herlezen waard is",
+  "month": "Maand",
+  "name": "Naam",
+  "nameDescription": "Tussen {{min}} en {{max}} tekens.",
+  "nameHint": "Kies hoe je in Wattle genoemd wilt worden, met je echte naam of met een verzonnen naam. Je kunt hem wijzigen wanneer je wilt.",
+  "namePlaceholder": "Je naam",
+  "nameRequired": "De naam is verplicht: minstens {{min}} tekens.",
+  "nameTooShort": "Minstens {{min}} tekens.",
+  "navigation": "Navigatie",
+  "navigationBoth": "Beide",
+  "navigationBottom": "Onder",
+  "navigationDescription": "Waar de hoofdnavigatie zich bevindt.",
+  "navigationHeader": "Boven",
+  "navigationHint": "Zet de navigatie waar jij hem het liefst hebt.",
+  "newEntry": "Nieuwe pagina",
+  "newProfile": "Nieuw profiel",
+  "newProfileAction": "Afsluiten",
+  "newProfileBackingUp": "Bezig met de reservekopie…",
+  "newProfileBackupFolder": "Het opslagvenster opent in {{folder}}.",
+  "newProfileBackupNow": "Nu een kopie maken…",
+  "newProfileBackupSaved": "Reservekopie opgeslagen.",
+  "newProfileConfirmAction": "Alles verwijderen",
+  "newProfileConfirmBody": "Elke pagina, elke bijlage en je naam worden definitief verwijderd en het instellen begint opnieuw. Dit kan niet ongedaan worden gemaakt.",
+  "newProfileConfirmTitle": "Dit profiel leegmaken?",
+  "newProfileContinueAnyway": "Toch doorgaan",
+  "newProfileDescription": "Log uit, verwijder dit profiel en begin helemaal opnieuw. Elke pagina en elke bijlage wordt verwijderd. Je kunt dit profiel nog veiligstellen voordat je bevestigt.",
+  "newProfileError": "Opnieuw beginnen is niet gelukt. Je dagboek is niet gewijzigd.",
+  "newProfileHint": "Op dit apparaat staat maar één dagboek. Deze handeling maakt het leeg; ze voegt er geen tweede toe.",
+  "newProfileNoBackupBody": "Wattle weet van geen enkele reservekopie van dit dagboek. Alles wat erin staat staat op het punt verwijderd te worden en zonder kopie is er geen weg terug.",
+  "newProfileNoBackupTitle": "Geen map voor reservekopieën ingesteld",
+  "next": "Volgende",
+  "nextEntry": "volgende pagina",
+  "noResults": "Geen enkele pagina komt overeen met de zoekopdracht.",
+  "noSparkResults": "Geen enkele vonk komt overeen met de zoekopdracht.",
+  "nudgeAnother": "Vraag me iets anders",
+  "nudgeCue": "Een aanzet",
+  "nudgeDismiss": "Nu niet",
+  "nudgeOffer": "Weet je niet wat je moet schrijven?",
+  "nudgeThinking": "Ik denk erover na…",
+  "nudgeWrite": "Hierover schrijven",
+  "off": "Uit",
+  "ollamaInstallFailed": "Ollama kon niet worden geïnstalleerd. Wattle heeft niets op dit apparaat gewijzigd.",
+  "ollamaStartFailed": "Ollama is niet op tijd gestart. Misschien is het nog aan het opstarten: probeer het zo nog eens.",
+  "on": "Aan",
+  "onThisDay": "Op deze dag",
+  "onThisDayDescription": "De pagina's die je in voorgaande jaren op de datum van vandaag schreef, verschijnen op de hoofdpagina.",
+  "onThisDayHint": "Kies of je wilt terugzien wat je op deze datum in voorgaande jaren hebt geschreven. De herinnering verschijnt op de hoofdpagina.",
+  "onboarding": {
+    "language": {
+      "title": "Welkom bij Wattle.",
+      "body": "Selecteer eerst je taal."
+    },
+    "start": {
+      "title": "Heb je eerder een dagboek bijgehouden met Wattle?",
+      "body": "Als je een reservekopie hebt, keert alles wat erin zit terug op zijn plaats.",
+      "fresh": "Een nieuw dagboek beginnen",
+      "freshBody": "Een lege eerste pagina, en drie korte vragen voordat je hem opent.",
+      "returning": "Ik heb een Wattle-reservekopie",
+      "returningBody": "Teksten, bijlagen en instellingen, precies zoals je ze achterliet."
+    },
+    "returning": {
+      "eyebrow": "Welkom terug",
+      "title": "Laten we je dagboek zoeken.",
+      "body": "Kies het .wattle-bestand dat je hebt bewaard. Alles wat erin zit vervangt dit lege dagboek, en Wattle opent waar je gebleven was.",
+      "action": "Een reservekopie kiezen…",
+      "confirmTitle": "Een reservekopie terugzetten?",
+      "confirm": "Kies het .wattle-bestand dat je hebt bewaard en Wattle opent opnieuw met alles wat erin zit: teksten, bijlagen en instellingen. Dit lege dagboek wordt vervangen."
+    },
+    "name": {
+      "title": "Hoe moet Wattle je noemen?",
+      "body": "Wordt gebruikt voor de begroeting op het beginscherm. Twee tot twaalf tekens."
+    },
+    "backup": {
+      "title": "Waar moeten reservekopieën worden opgeslagen?",
+      "body": "Een map buiten het dagboek, zodat een kopie ergens anders staat wanneer je hem nodig hebt."
+    },
+    "theme": {
+      "title": "Licht of donker?",
+      "body": "Je kunt het wanneer je wilt wijzigen in de instellingen."
+    }
+  },
+  "onboardingFinish": "Beginnen met schrijven",
+  "onboardingStep": "Stap {{step}} van {{total}}",
+  "pageOf": "{{page}} van {{total}}",
+  "palette": "Thema",
+  "paletteDescription": "Bepaalt de kleuren, de letters en de visuele stijl van Wattle.",
+  "paletteHint": "Verandert het uiterlijk van de hele app: achtergrond, tekst, details van de interface, hoeken en letters. Het verandert niets aan wat je hebt geschreven.",
+  "paletteName": {
+    "clay": "Klei",
+    "crimson": "Karmijn",
+    "sage": "Salie",
+    "umber": "Omber",
+    "wattle": "Wattle",
+    "olive": "Olijf",
+    "forest": "Woud",
+    "candy": "Snoep"
+  },
+  "pastSparks": "Eerdere vonken",
+  "previous": "Vorige",
+  "previousEntry": "vorige pagina",
+  "primaryNav": "Hoofd",
+  "profileSection": "Profiel",
+  "removeAttachment": "Bijlage verwijderen",
+  "replayTours": "Rondleidingen",
+  "replayToursAction": "Terugzetten",
+  "replayToursDescription": "Toont alle welkomstrondleidingen opnieuw. Handig om alles wat Wattle kan opnieuw te ontdekken.",
+  "replayToursHint": "Markeert alle rondleidingen als ongezien en brengt je naar het beginscherm om je de eerste te tonen.",
+  "reset": "Voorkeuren terugzetten",
+  "resetAction": "Terugzetten",
+  "resetConfirm": "Weergave, paginabreedte, herinneringen en paginavergrendeling keren terug naar hun beginwaarden. Het dagboek, je naam en de instellingen van de AI-assistent blijven ongemoeid. Wil je doorgaan?",
+  "resetDescription": "Terug naar de beginwaarden. Je naam en de instellingen van de AI-assistent blijven zoals ze zijn.",
+  "resetHint": "Alleen de voorkeuren. Pagina's, vonken en brieven blijven precies waar ze zijn.",
+  "resetSection": "Terugzetten",
+  "resizeImage": "Afbeeldingsformaat wijzigen",
+  "resizeVideo": "Videoformaat wijzigen",
+  "restore": "Terugzetten",
+  "restoreAction": "Terugzetten…",
+  "restoreConfirm": "Elke pagina, bijlage en instelling op dit apparaat wordt vervangen door de reservekopie die je nu kiest. Dit kan niet ongedaan worden gemaakt.",
+  "restoreDescription": "Vervangt alles op dit apparaat door een reservekopie.",
+  "restoreError": "Het terugzetten is mislukt. Je gegevens zijn niet aangeraakt.",
+  "restoreHint": "Vervangt alles op dit apparaat door de reservekopie. Dit kan niet ongedaan worden gemaakt.",
+  "restoring": "Bezig met terugzetten…",
+  "retry": "Opnieuw proberen",
+  "save": "Opslaan",
+  "saveError": "Niet opgeslagen",
+  "saveThought": "Gedachte opslaan",
+  "saved": "Opgeslagen",
+  "saving": "Bezig met opslaan…",
+  "search": "Zoeken in de pagina's",
+  "searchDisabledHint": "Niets gevonden; voeg eerst iets toe voordat zoeken aangezet kan worden.",
+  "searchPlaceholder": "Zoeken in de pagina's…",
+  "searchResultCount_one": "{{count}} resultaat",
+  "searchResultCount_other": "{{count}} resultaten",
+  "searchSparks": "Zoeken in de vonken",
+  "searchSparksDisabledHint": "Er valt nog niets te zoeken: schrijf hierboven een vonk en zoeken wordt actief.",
+  "searchSparksPlaceholder": "Zoeken in de vonken…",
+  "settings": "Instellingen",
+  "settingsSubtitle": "Alles wat je hier vindt is op dit apparaat opgeslagen.",
+  "slash": {
+    "bulletList": {
+      "description": "Een eenvoudige opsomming",
+      "title": "Opsomming"
+    },
+    "code": {
+      "description": "Een stuk code invoegen",
+      "title": "Codeblok"
+    },
+    "divider": {
+      "description": "Secties zichtbaar scheiden",
+      "title": "Scheidingslijn"
+    },
+    "file": {
+      "description": "Een willekeurig bestand bijvoegen",
+      "title": "Bestand"
+    },
+    "heading1": {
+      "description": "Grote sectiekop",
+      "title": "Kop 1"
+    },
+    "heading2": {
+      "description": "Middelgrote sectiekop",
+      "title": "Kop 2"
+    },
+    "heading3": {
+      "description": "Kleine sectiekop",
+      "title": "Kop 3"
+    },
+    "image": {
+      "description": "Een afbeelding bijvoegen",
+      "title": "Afbeelding"
+    },
+    "orderedList": {
+      "description": "Een genummerde lijst",
+      "title": "Genummerde lijst"
+    },
+    "quote": {
+      "description": "Een passage uitlichten",
+      "title": "Citaat"
+    },
+    "taskList": {
+      "description": "Bijhouden wat er te doen staat",
+      "title": "Takenlijst"
+    },
+    "text": {
+      "description": "Platte tekst",
+      "title": "Tekst"
+    },
+    "video": {
+      "description": "Een video bijvoegen",
+      "title": "Video"
+    }
+  },
+  "slashCategory": {
+    "basic": "Basis",
+    "blocks": "Blokken",
+    "lists": "Lijsten",
+    "media": "Media"
+  },
+  "slashNoResults": "Geen resultaten.",
+  "sparkCharsLeft_one": "Nog {{count}} teken",
+  "sparkCharsLeft_other": "Nog {{count}} tekens",
+  "sparkCount_one": "{{count}} vonk",
+  "sparkCount_other": "{{count}} vonken",
+  "sparkDate": "Dag waaronder deze vonk is opgeborgen",
+  "sparkEchoDescription": "Een eerdere vonk komt vanzelf terug, hoogstens één per dag.",
+  "sparkEchoHint": "Een vonk van minstens 30 dagen geleden, de hele dag dezelfde, en morgen de volgende.",
+  "sparkEchoLead": "Deze gedachte had je voor jezelf achtergelaten",
+  "sparkEchoSetting": "Echo van de vonken",
+  "sparkEmpty": "Deze vonk is leeg.",
+  "sparkOpenAsEntry": "Openen als pagina",
+  "sparkPlaceholder": "Vang een voorbijgaande gedachte…",
+  "sparkResultLabel": "Vonk",
+  "sparkRichBadge": "Met opmaak geschreven",
+  "sparkRichBody": "Deze vonk bevat opmaak of bijlagen, van voordat vonken platte tekst werden. Er is niets veranderd: hij opent in de volledige editor, waar alles blijft werken.",
+  "sparkSaveHint": "Ctrl + Enter om op te slaan",
+  "sparkTruncated_one": "De meest recente wordt getoond.",
+  "sparkTruncated_other": "De {{count}} meest recente worden getoond.",
+  "sparksEyebrow": "Helderheid van het moment",
+  "sparksIntro": "Een regel of twee, opgevangen voordat ze ontsnappen. Hier heeft niets een titel nodig, en niets hoeft iets anders te worden.",
+  "strikethrough": "Doorhalen",
+  "suggestTitle": "Een titel voorstellen",
+  "theme": "Licht of donker",
+  "themeDescription": "Elk thema bestaat in allebei: dit is dat waarin je nu leest.",
+  "themeHint": "Het thema geldt voor de hele app en je keuze wordt onthouden tot de volgende keer dat je hem opent.",
+  "tourClose": "Rondleiding sluiten",
+  "tourDone": "Klaar",
+  "tourStep": "{{current}} van {{total}}",
+  "tours": {
+    "ai": {
+      "switch": {
+        "title": "Uit tot je hem aanzet",
+        "body": "De AI-assistent is optioneel en staat in het begin uit. Hij verbetert en personaliseert de ervaring binnen Wattle, altijd met respect voor je privacy. De gegevens worden op je eigen computer verwerkt en verlaten die nooit."
+      },
+      "runtime": {
+        "title": "Waar de modellen op draaien",
+        "body": "De modellen draaien via Ollama. Wattle kan het vanaf hier installeren en starten, als je dat toestaat."
+      },
+      "models": {
+        "title": "De modellen die je bewaart",
+        "body": "Download het model dat het beste bij je computer past. Probeer er één tegelijk, zodat je merkt welke het beste bij je hardware past."
+      }
+    },
+    "home": {
+      "write": {
+        "title": "Begin bij vandaag",
+        "body": "Zo begint een nieuwe pagina. Eén klik opent een lege pagina met de datum van vandaag: zelfs één regel verdient hier een plek."
+      },
+      "search": {
+        "title": "Vind wat je schreef",
+        "body": "Elk woord op elke pagina is doorzoekbaar, en het resultaat toont de passage die overeenkomt. Zoeken blijft uitgeschakeld zolang er niets te doorzoeken valt."
+      },
+      "timeline": {
+        "title": "Alles wat je hebt geschreven",
+        "body": "Je pagina's, te beginnen bij de meest recente en gegroepeerd per maand. Open er een om verder te gaan, of scroll om er meer te laden."
+      },
+      "nav": {
+        "title": "Al het andere",
+        "body": "De kalender, de vonken, de brieven aan jezelf en de instellingen wonen allemaal in deze balk. Ze volgt je van scherm naar scherm, en alleen het scherm waarop je bent draagt zijn eigen naam."
+      }
+    },
+    "calendar": {
+      "grid": {
+        "title": "Je dagboek op datum",
+        "body": "De dagen waarop je schreef zijn gemarkeerd. Kies er een om hem terug te lezen, of om te schrijven op een dag die al voorbij is."
+      },
+      "view": {
+        "title": "Een maand, of een heel jaar",
+        "body": "Wissel tussen de twee. Pas in het jaaroverzicht wordt een gewoonte zichtbaar."
+      },
+      "kinds": {
+        "title": "pagina's, vonken, of allebei",
+        "body": "Twee manieren van schrijven delen dit raster, te onderscheiden aan de kleur van hun tekens. Toon er een tegelijk wanneer je iets bepaalds zoekt."
+      }
+    },
+    "sparks": {
+      "capture": {
+        "title": "Vang een gedachte",
+        "body": "Een vonk is een regel die je in het moment opvangt. Geen titel, geen pagina. Schrijf hem en druk op Ctrl+Enter, of gebruik de knop."
+      },
+      "archive": {
+        "title": "Alle vonken die je hebt bewaard",
+        "body": "Hier vind je de laatste. Vanaf hier kun je ze allemaal openen, maand na maand - en er daar ook een nieuwe schrijven."
+      },
+      "recent": {
+        "title": "Wat een vonk kan worden",
+        "body": "Elke vonk opent op zijn eigen pagina, waar je hem kunt bewerken, verwijderen, of tot een volwaardige pagina maken als hij intussen gegroeid is."
+      }
+    },
+    "entry": {
+      "title": {
+        "title": "Geef haar een naam, of laat haar zoals ze is",
+        "body": "De titel is optioneel en slaat zichzelf op terwijl je schrijft. Druk op Enter om meteen naar de pagina eronder te gaan."
+      },
+      "editor": {
+        "title": "Typ \"/\" voor al het andere",
+        "body": "Schrijf hier zoals je op papier zou schrijven. Door \"/\" te typen opent het menu met alles wat de pagina kan bevatten: koppen, lijsten, citaten, afbeeldingen, video's en bestanden. Selecteer tekst om die op te maken. Er valt niets op te slaan: het staat geschreven terwijl je schrijft."
+      },
+      "actions": {
+        "title": "Opdrachten van de pagina",
+        "body": "Ga naar de vorige of volgende pagina, vergrendel haar tegen onbedoelde wijzigingen, exporteer haar als HTML, of verwijder haar."
+      }
+    },
+    "settings": {
+      "appearance": {
+        "title": "Maak het van jou",
+        "body": "Thema, accentkleur, taal en paginabreedte."
+      },
+      "data": {
+        "title": "Je dagboek is van jou",
+        "body": "Maak er een kopie van, exporteer het als HTML, of zet het terug uit een reservekopie. Alles blijft op dit apparaat."
+      },
+      "reset": {
+        "title": "Terug",
+        "body": "Zet de voorkeuren terug naar hun oorspronkelijke staat, speel deze rondleidingen opnieuw af, of begin een volledig nieuw dagboek."
+      },
+      "profile": {
+        "title": "Je naam, en verder niets",
+        "body": "Hij begroet je op het beginscherm en verlaat dit apparaat nooit. Wattle vraagt verder niets van je: geen account, geen e-mail, geen aanmelding."
+      }
+    },
+    "letters": {
+      "what": {
+        "title": "Een brief aan jezelf",
+        "body": "Het is geen pagina: een brief schrijf je nu en hij blijft verzegeld tot een dag die jij kiest. Tot dan kan hij niet worden gelezen, bewerkt of ontzegeld - zelfs niet door jou."
+      },
+      "write": {
+        "title": "Schrijf er een",
+        "body": "Eén concept tegelijk, hier bewaard tot je het verzegelt. Bij het verzegelen wordt gevraagd op welke dag hij opengaat, en daarna is er geen weg terug."
+      },
+      "waiting": {
+        "title": "Terwijl hij wacht",
+        "body": "Een verzegelde brief toont alleen de dag waarop hij opengaat en hoe lang hij is. Geen aftelling, geen voorproefje: hij is er gewoon wanneer het zover is."
+      }
+    },
+    "letterCompose": {
+      "directions": {
+        "title": "Waar te beginnen",
+        "body": "Kies een richting en je krijgt een vraag om naartoe te schrijven. De vraag wordt niet bewaard en wordt nooit deel van de brief: het is enkel iets om naar te kijken terwijl je schrijft."
+      },
+      "seal": {
+        "title": "Wanneer hij opengaat",
+        "body": "Kies hoe ver die dag weg is, en lees hem dan een laatste keer. Verzegelen is definitief: vanaf dat moment is de brief onleesbaar tot de gekozen datum."
+      }
+    },
+    "letterRead": {
+      "opened": {
+        "title": "Hij is aangekomen",
+        "body": "De dag die je koos is er en de brief kan gelezen worden!"
+      },
+      "keep": {
+        "title": "Van jou, voorgoed",
+        "body": "Lees hem zo vaak je wilt. Hij kan niet worden bewerkt zodra hij verzegeld is, en hij kan ook niet worden verwijderd."
+      }
+    }
+  },
+  "trash": "Prullenbak",
+  "trashAction": "Prullenbak openen…",
+  "trashDescription": "Pagina's die je verwijdert wachten hier voordat ze voorgoed weg zijn.",
+  "trashEmptyAction": "Prullenbak legen",
+  "trashEmptyConfirm": "Alle pagina's in de prullenbak worden definitief verwijderd, bijlagen inbegrepen. Dit kan niet ongedaan worden gemaakt.",
+  "trashEmptyTitle": "Prullenbak legen?",
+  "trashError": "De prullenbak kon niet worden gelezen.",
+  "trashHint": "Een herstelde pagina komt terug met haar datum, haar bijlagen en haar plek in het dagboek.",
+  "trashIntro": "Een verwijderde pagina wacht hier {{days}} dagen en wordt daarna voorgoed verwijderd.",
+  "trashNothing": "Er is niets verwijderd.",
+  "trashPurge": "Definitief verwijderen",
+  "trashPurgeConfirm": "Deze pagina en alles wat eraan vastzit worden definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
+  "trashRestore": "Herstellen",
+  "trashRow": "Geschreven op {{written}} · wordt verwijderd op {{removed}}",
+  "underline": "Onderstrepen",
+  "unlockEntry": "Deze pagina ontgrendelen",
+  "untitled": "Zonder titel",
+  "writeOnThisDay": "Op deze dag schrijven",
+  "writingSection": "Schrijven",
+  "writingSectionDescription": "Hoe een pagina zich gedraagt wanneer je haar opent.",
+  "year": "Jaar",
+  "yearsAgo_one": "Een jaar geleden",
+  "yearsAgo_other": "{{count}} jaar geleden",
+  "memoryPrevious": "Vorige herinnering",
+  "memoryNext": "Volgende herinnering",
+  "letterAiUnavailableTitle": "AI-suggesties zijn niet beschikbaar",
+  "letterAiUnavailableBody": "De richtingen hierboven werken altijd. Wil je ook een vraag om mee te beginnen, zet dan de AI-assistent aan en kies een model in de instellingen - die draait op deze computer, en er gaat niets weg."
+}

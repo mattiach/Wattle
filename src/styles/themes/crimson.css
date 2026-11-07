@@ -1,0 +1,155 @@
+/* Crimson - generated from crimson.css by scripts/generate-themes.js.
+   Regenerate rather than edit: the export is the source.
+
+   Two blocks, both complete. The dark one repeats every token the light one
+   declares, and it must: a token it left out would keep the light value.
+
+   Two selectors each, on purpose. The `:root` one is what dresses the
+   application: it has to outweigh the `:root` and `.dark` blocks in
+   `globals.css`, which a bare attribute would only do by coming later in the
+   file - and an `@import` may only sit at the top of one. The bare one is what
+   lets a swatch in Settings carry the attribute and paint itself with this very
+   rule instead of with a copy of the colour that can drift from it. */
+:root[data-wattle-palette="crimson"],
+[data-wattle-palette="crimson"] {
+  --background: oklch(0.955 0.003 8);
+  --foreground: oklch(0.2178 0 0);
+  --card: oklch(0.985 0.002 8);
+  --card-foreground: oklch(0.2178 0 0);
+  --popover: oklch(0.995 0.001 8);
+  --popover-foreground: oklch(0.2178 0 0);
+  --primary: oklch(0.5848 0.2288 7.8042);
+  --primary-foreground: oklch(0.994 0 0);
+  --secondary: oklch(0.9696 0.0026 106.4486);
+  --secondary-foreground: oklch(0.2178 0 0);
+  --muted: oklch(94.05% 0.02766 106.987);
+  --muted-foreground: oklch(0.464 0 0);
+  --accent: oklch(0.9696 0.0026 106.4486);
+  --accent-foreground: oklch(0.52 0.2288 7.8042);
+  --destructive: oklch(0.5737 0.2238 28.1631);
+  --destructive-foreground: oklch(0.994 0 0);
+  --border: oklch(0.836 0 0);
+  --input: oklch(0.836 0 0);
+  --ring: oklch(0.5848 0.2288 7.8042);
+  --chart-1: oklch(0.5848 0.2288 7.8042);
+  --chart-2: oklch(0.5109 0.0861 186.3914);
+  --chart-3: oklch(0.5553 0.1455 48.9975);
+  --chart-4: oklch(0.4907 0.2412 292.5809);
+  --chart-5: oklch(0.5081 0.1049 165.6121);
+  --sidebar: oklch(0.994 0 0);
+  --sidebar-foreground: oklch(0.464 0 0);
+  --sidebar-primary: oklch(0.5848 0.2288 7.8042);
+  --sidebar-primary-foreground: oklch(0.994 0 0);
+  --sidebar-accent: oklch(0.9696 0.0026 106.4486);
+  --sidebar-accent-foreground: oklch(0.52 0.2288 7.8042);
+  --sidebar-border: oklch(0.937 0 0);
+  --sidebar-ring: oklch(0.5848 0.2288 7.8042);
+  --sans: Manrope;
+  --serif: Instrument Serif;
+  --mono: JetBrains Mono;
+  --radius: 4px;
+  --shadow-x: 0px;
+  --shadow-y: 1px;
+  --shadow-blur: 2px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.01;
+  --shadow-color: 0 0 0;
+  --shadow-2xs: 0px 1px 2px 0px hsl(0 0 0 / 0.01);
+  --shadow-xs: 0px 1px 2px 0px hsl(0 0 0 / 0.01);
+  --shadow-sm:
+    0px 1px 2px 0px hsl(0 0 0 / 0.01), 0px 1px 2px -1px hsl(0 0 0 / 0.01);
+  --shadow:
+    0px 1px 2px 0px hsl(0 0 0 / 0.01), 0px 1px 2px -1px hsl(0 0 0 / 0.01);
+  --shadow-md:
+    0px 1px 2px 0px hsl(0 0 0 / 0.01), 0px 2px 4px -1px hsl(0 0 0 / 0.01);
+  --shadow-lg:
+    0px 1px 2px 0px hsl(0 0 0 / 0.01), 0px 4px 6px -1px hsl(0 0 0 / 0.01);
+  --shadow-xl:
+    0px 1px 2px 0px hsl(0 0 0 / 0.01), 0px 8px 10px -1px hsl(0 0 0 / 0.01);
+  --shadow-2xl: 0px 1px 2px 0px hsl(0 0 0 / 0.03);
+  --tracking-normal: 0em;
+
+  --wattle: var(--primary);
+  --assist: oklch(from var(--primary) l c calc(h + 150));
+  --memory: var(--muted-foreground);
+  --hairline: var(--border);
+  --memory-surface: var(--muted);
+
+  --select-hover: oklch(0.955 0.018 8);
+}
+
+:root[data-wattle-palette="crimson"].dark,
+.dark [data-wattle-palette="crimson"] {
+  --background: oklch(0.1944 0.0053 39.3602);
+  --foreground: oklch(0.9639 0.0076 61.4527);
+  --card: oklch(0.2346 0.0073 48.3926);
+  --card-foreground: oklch(0.9639 0.0076 61.4527);
+  --popover: oklch(0.2346 0.0073 48.3926);
+  --popover-foreground: oklch(0.9639 0.0076 61.4527);
+  --primary: oklch(0.658 0.2062 2.7269);
+  --primary-foreground: oklch(0.1944 0.0053 39.3602);
+  --secondary: oklch(0.2346 0.0073 48.3926);
+  --secondary-foreground: oklch(0.9639 0.0076 61.4527);
+  --muted: oklch(27.248% 0.01331 41.548);
+  --muted-foreground: oklch(0.7768 0.0135 48.544);
+  --accent: oklch(0.2702 0.0515 356.5191);
+  --accent-foreground: oklch(0.658 0.2062 2.7269);
+  --destructive: oklch(0.673 0.2146 25.0397);
+  --destructive-foreground: oklch(0.9639 0.0076 61.4527);
+  --border: oklch(0.3576 0.0157 43.0512);
+  --input: oklch(0.3215 0.0053 39.3602);
+  --ring: oklch(0.658 0.2062 2.7269);
+  --chart-1: oklch(0.658 0.2062 2.7269);
+  --chart-2: oklch(0.7038 0.123 182.5025);
+  --chart-3: oklch(0.7686 0.1647 70.0804);
+  --chart-4: oklch(0.709 0.1592 293.5412);
+  --chart-5: oklch(0.6959 0.1491 162.4796);
+  --sidebar: oklch(0.1944 0.0053 39.3602);
+  --sidebar-foreground: oklch(0.7768 0.0135 48.544);
+  --sidebar-primary: oklch(0.658 0.2062 2.7269);
+  --sidebar-primary-foreground: oklch(0.1944 0.0053 39.3602);
+  --sidebar-accent: oklch(0.2346 0.0073 48.3926);
+  --sidebar-accent-foreground: oklch(0.658 0.2062 2.7269);
+  --sidebar-border: oklch(0.3576 0.0157 43.0512);
+  --sidebar-ring: oklch(0.658 0.2062 2.7269);
+  --sans: Manrope;
+  --serif: Instrument Serif;
+  --mono: JetBrains Mono;
+  --radius: 4px;
+  --shadow-x: 0px;
+  --shadow-y: 2px;
+  --shadow-blur: 6px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.1;
+  --shadow-color: 0 0 0;
+  --shadow-2xs: 0px 2px 6px 0px hsl(0 0 0 / 0.05);
+  --shadow-xs: 0px 2px 6px 0px hsl(0 0 0 / 0.05);
+  --shadow-sm:
+    0px 2px 6px 0px hsl(0 0 0 / 0.1), 0px 1px 2px -1px hsl(0 0 0 / 0.1);
+  --shadow: 0px 2px 6px 0px hsl(0 0 0 / 0.1), 0px 1px 2px -1px hsl(0 0 0 / 0.1);
+  --shadow-md:
+    0px 2px 6px 0px hsl(0 0 0 / 0.1), 0px 2px 4px -1px hsl(0 0 0 / 0.1);
+  --shadow-lg:
+    0px 2px 6px 0px hsl(0 0 0 / 0.1), 0px 4px 6px -1px hsl(0 0 0 / 0.1);
+  --shadow-xl:
+    0px 2px 6px 0px hsl(0 0 0 / 0.1), 0px 8px 10px -1px hsl(0 0 0 / 0.1);
+  --shadow-2xl: 0px 2px 6px 0px hsl(0 0 0 / 0.25);
+
+  --wattle: var(--primary);
+  --assist: oklch(from var(--primary) l c calc(h + 150));
+  --memory: var(--muted-foreground);
+  --hairline: var(--border);
+  --memory-surface: var(--muted);
+
+  --select-hover: oklch(0.285 0.055 5);
+}
+
+/* One selector, unlike the variable blocks above. Those need the `:root` twin
+   to outweigh `globals.css`; this one sets a plain property, and the theme file
+   is imported unlayered, so it already beats the `dark:hover:bg-input/50`
+   utility sitting in `@layer utilities`. The `:root` twin was also a strict
+   subset of this selector, which is what made it a descending-specificity
+   pair. */
+[data-wattle-palette="crimson"] [data-slot="select-trigger"]:hover {
+  background-color: var(--select-hover);
+}
