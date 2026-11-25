@@ -1,6 +1,6 @@
 [package]
 name = "wattle"
-version = "1.0.5"
+version = "1.0.6"
 description = "A private journal that lives entirely on your computer."
 authors = ["Mattia (mattiach)"]
 license = "MIT"
