@@ -1,0 +1,652 @@
+{
+  "ai": "AI 도우미",
+  "aiActionDescription": {
+    "fixGrammar": "의미를 바꾸지 않고 맞춤법, 문법, 문장 부호를 고칩니다.",
+    "improveClarity": "내용은 그대로 두고 글을 더 명확하고 읽기 쉽게 만듭니다.",
+    "makeShorter": "핵심 개념과 정보를 모두 유지하면서 글을 줄입니다."
+  },
+  "aiActive": "사용 중",
+  "aiActiveModel": "사용 중인 모델",
+  "aiDesc08b": "가장 가벼운 선택지입니다. 평범한 하드웨어에서도 실행되며 빠른 문법 교정에 적합하지만, 항상 정확하지는 않습니다.",
+  "aiDesc27b": "워크스테이션급입니다. 상당한 디스크 공간과 메모리가 필요하며, 더 정확한 제안을 원할 때 적합합니다.",
+  "aiDesc2b": "작고 빠르며, 0.8B보다 문법이 더 좋습니다.",
+  "aiDesc4b": "품질과 필요한 자원 사이의 균형이 가장 좋습니다.",
+  "aiDesc9b": "뛰어난 품질. 성능 좋은 컴퓨터가 필요합니다.",
+  "aiDescription": "꺼져 있습니다. 하지만 기기에서 제거된 것은 아닙니다.",
+  "aiDiscard": "버리기",
+  "aiError": {
+    "badSelection": "이 선택 영역은 다시 쓸 수 없습니다. 비어 있거나 한 단락보다 길 수 있습니다.",
+    "cancelled": "중단되었습니다. 아무것도 변경되지 않았습니다.",
+    "daemon": "Ollama가 작업을 완료하지 못했습니다.",
+    "disabled": "AI 도우미가 꺼져 있습니다. 설정에서 켤 수 있습니다.",
+    "empty": "모델이 아무것도 반환하지 않았습니다. 모델이 선택되어 있는지 확인한 후 다시 시도하세요.",
+    "modelGone": "해당 모델은 더 이상 설치되어 있지 않습니다. 설정에서 다른 모델을 선택하세요.",
+    "noModel": "아직 모델을 선택하지 않았습니다. 설정 페이지에서 하나를 선택하세요.",
+    "noPassage": "모델이 다시 쓴 글을 반환하지 않았습니다.",
+    "reasoned": "모델이 요청을 받았지만 텍스트를 반환하지 않았습니다. 보통 더 짧은 글이면 이 오류가 해결됩니다.",
+    "timeout": "모델이 너무 오래 걸려 중지되었습니다. 보통 더 짧은 글이면 이 오류가 해결됩니다.",
+    "tooLong": "내용이 너무 길 수 있어 모델이 중지되었습니다. 아무것도 변경되지 않았습니다.",
+    "unknown": "문제가 발생했습니다.",
+    "unreachable": "Ollama가 응답하지 않습니다. 컴퓨터에서 실행 중인지 확인한 후 다시 시도하세요.",
+    "unreadable": "모델의 응답을 읽을 수 없는 것 같습니다."
+  },
+  "aiHint": "AI 모델은 Ollama를 통해 컴퓨터에서 로컬로 실행됩니다. 어떤 데이터도 기기 밖으로 전송되지 않습니다. 개인정보 보호는 Wattle의 기본 원칙 중 하나이자 Wattle을 특별하게 만드는 점입니다. 데이터는 항상 컴퓨터에 남아 있습니다.",
+  "aiInsertBelow": "아래에 삽입",
+  "aiInstall": "설치",
+  "aiInstalling": "다운로드 중… {{percent}}%",
+  "aiMayNotFit": "이 컴퓨터의 한계에 가까움",
+  "aiMayNotFitHint": "이 모델은 이 컴퓨터에서 사용할 수 있는 것보다 많은 메모리가 필요합니다. 느리거나 아예 시작되지 않을 수 있습니다. 권장하지는 않지만 설치는 할 수 있습니다.",
+  "aiModels": "모델",
+  "aiModelsDescription": "설치된 모델과 사용 가능한 모델입니다. 요청하기 전까지는 아무것도 다운로드되지 않습니다.",
+  "aiNoModel": "선택된 모델 없음",
+  "aiNoModelChosenHint": "AI 도우미가 켜져 있지만 아직 사용 중인 모델이 없습니다. AI 기능을 사용하려면 위에서 하나를 선택하세요.",
+  "aiNoModelsYet": "아직 설치된 모델이 없습니다. 아래에서 하나를 선택하세요. 요청하기 전까지는 아무것도 다운로드되지 않습니다.",
+  "aiOnDescription": "이 기기에서 실행되는 모델입니다. 개인정보를 존중하기 위해 아무것도 다른 곳으로 전송되지 않습니다.",
+  "aiPreparing": "이 컴퓨터에서 도우미를 준비하는 중…",
+  "aiRecommended": "추천",
+  "aiRecommendedHint": "이 컴퓨터의 메모리에 가장 잘 맞습니다.",
+  "aiRemove": "제거",
+  "aiRemoveConfirm": "{{name}}이(가) 이 컴퓨터에서 삭제됩니다. 계속하시겠습니까?",
+  "aiReplace": "바꾸기",
+  "aiRewrite": "AI 도우미로 다시 쓰기",
+  "aiRewriting": "생각 중…",
+  "aiSection": "AI 설정",
+  "aiSectionDescription": "선택 사항이며, 로컬에서 실행되고, 켜기 전까지는 꺼져 있습니다.",
+  "aiUnmanaged": "Wattle 외부",
+  "aiUnmanagedDescription": "Wattle 외부에서 설치되었습니다. 여기에서 제거할 수 있지만, 사용할 모델로는 제공되지 않습니다.",
+  "aiUseTitle": "이것 사용",
+  "alignCenter": "가운데 정렬",
+  "alignLeft": "왼쪽 정렬",
+  "alignRight": "오른쪽 정렬",
+  "allEntries": "모든 페이지",
+  "allSparks": "모든 스파크",
+  "allSparksIntro": "지금까지 기록한 모든 스파크를 최신순으로 보여 줍니다. 스파크는 일부러 짧고 제목이 없습니다. 나를 위한 메모이자 그 순간 붙잡은 생각이며, 규칙은 오직 나만의 것입니다.",
+  "appName": "Wattle",
+  "appearanceSection": "모양",
+  "aroundThisTime": "이맘때쯤",
+  "backToComponents": "컴포넌트",
+  "backToTop": "맨 위로",
+  "backup": "백업",
+  "backupAction": "내보내기…",
+  "backupDescription": "페이지, 첨부 파일, 설정의 사본을 저장합니다.",
+  "backupError": "백업에 실패했습니다. 다시 시도하세요.",
+  "backupFolderAction": "선택…",
+  "backupFolderHint": "백업 .wattle 파일이 그날의 파일 이름으로 기록되는 곳입니다. 일기가 보관되는 곳은 아닙니다. 이전 백업은 새 백업에 포함되지 않습니다.",
+  "backupFolderUnset": "아직 설정되지 않았습니다. 저장 대화 상자는 Windows가 마지막으로 열었던 위치에서 시작합니다.",
+  "backupHint": "Wattle은 매번 파일을 저장할 위치를 묻습니다. 데이터베이스, 첨부 파일, 설정이 하나의 .wattle 파일에 담깁니다. Ollama 모델은 포함되지 않지만 Wattle에서 바로 쉽게 설치할 수 있습니다.",
+  "backupSuccess": "백업을 저장했습니다.",
+  "bold": "굵게",
+  "calendar": "달력",
+  "calendarBoth": "모두",
+  "calendarEntriesOnly": "페이지",
+  "calendarIntro": "한 해 동안 언제 글을 썼는지 보여 줍니다. 색이 진한 날일수록 더 많이 쓴 날입니다. 날짜를 선택하면 다시 읽을 수 있습니다.",
+  "calendarSparksOnly": "스파크",
+  "cancel": "취소",
+  "code": "코드",
+  "codeLanguage": "코드 언어",
+  "codeLanguagePlain": "일반 텍스트",
+  "components": {
+    "askConfirmation": "확인 요청",
+    "cardBody": "단순한 표면입니다. 얇은 테두리와 카드 배경, 그 외에는 아무것도 없습니다.",
+    "cardTitle": "카드",
+    "dialogBody": "포털 안의 대화 상자로, 배경과 닫기 버튼은 이 프로젝트에서 제공합니다.",
+    "dialogTitle": "대화 상자 제목",
+    "disabled": "비활성화됨",
+    "hoverMe": "여기에 마우스를 올려 보세요",
+    "openDialog": "대화 상자 열기",
+    "openPopover": "팝오버 열기",
+    "pageDescription": "돌아가기 링크, 제목, 화면 오른쪽에 놓이는 요소 아래에, 이 화면의 용도를 한두 문장으로 설명합니다.",
+    "pageSubtitle": "부제목",
+    "pageTitle": "페이지 제목",
+    "popoverBody": "트리거에 고정되고 다른 동작으로 닫힙니다. 날짜 필드와 편지의 개봉일 모두 여기에서 열립니다.",
+    "popoverTitle": "팝오버",
+    "sampleEntryBody": "걸어갈 수 있을 만큼 일찍 나섰는데, 집들 뒤편 들판 위로 안개가 아직 걸려 있었다.",
+    "sampleEntryHit": "안개",
+    "sampleEntryOpening": "걸어갈 수 있을 만큼 일찍 나섰는데, 집들 뒤편 들판 위로",
+    "sampleEntryTitle": "역까지 돌아가는 길",
+    "sampleSpark": "그게 무엇이든 급한 일은 아니다. 하룻밤 자고 생각하자.",
+    "sizes": "크기",
+    "startTour": "둘러보기 시작",
+    "states": "상태",
+    "subtitle": "인터페이스를 이루는 부품과 그 변형 및 상태입니다. 먼저 기본 요소, 그다음 여러 화면에서 쓰여 따로 볼 가치가 있는 몇 가지 기능 컴포넌트입니다. 여기의 모든 것은 예시 데이터를 사용합니다.",
+    "title": "컴포넌트",
+    "tooltipBody": "설명으로, 해당 컨트롤 바로 뒤에 나타납니다.",
+    "tourBody": "페이지가 어두워지고, 강조된 요소만 밝게 남으며, 카드가 그 요소를 따라갑니다. Wattle의 모든 안내 둘러보기는 이렇게 한 단계씩 진행됩니다.",
+    "tourTitle": "둘러보기의 한 단계입니다",
+    "variants": "변형",
+    "withIcon": "아이콘 포함"
+  },
+  "continue": "계속",
+  "dailySparks": "스파크",
+  "dark": "어둡게",
+  "dataSection": "데이터",
+  "dataSectionDescription": "Wattle 안팎으로 옮기는 내 일기.",
+  "delete": "삭제",
+  "deleteEntry": "페이지 삭제",
+  "deleteEntryConfirm": "이 페이지는 휴지통으로 이동합니다. 완전히 삭제되기 전까지는 설정에서 복원할 수 있습니다.",
+  "deleteSpark": "스파크 삭제",
+  "deleteSparkConfirm": "이 스파크는 휴지통으로 이동합니다. 완전히 삭제되기 전까지는 설정에서 복원할 수 있습니다.",
+  "dismiss": "나중에",
+  "downloadAttachment": "사본 저장…",
+  "downloadHtml": "HTML 다운로드",
+  "edit": "편집",
+  "editorScale": "글자 크기",
+  "editorScaleDefault": "기본",
+  "editorScaleDescription": "편집기에서 글이 표시되는 크기입니다.",
+  "editorScaleHint": "글의 크기만 바뀌고, 앱의 나머지 부분은 그대로입니다.",
+  "editorScaleLarge": "크게",
+  "editorScaleLargest": "가장 크게",
+  "editorScaleSmall": "작게",
+  "emptyBody": "모든 페이지는 이 기기에 남습니다. 단 한 줄이라도 오늘 시작해 보세요.",
+  "emptySparksBody": "스파크는 그 순간 붙잡은 한 줄입니다. 위의 입력란에서 시작할 수 있습니다.",
+  "emptySparksTitle": "아직 기록한 것이 없습니다.",
+  "emptyTitle": "일기는 한 페이지에서 시작됩니다.",
+  "entryContentPlaceholder": "무언가 쓰거나 /를 눌러 명령을 확인하세요…",
+  "entryCount_other": "{{count}}페이지",
+  "entryDate": "페이지 날짜",
+  "entryLock": "페이지를 읽기 전용으로 열기",
+  "entryLockDescription": "이미 내용이 있는 페이지는 잠긴 상태로 열립니다. 한 번 클릭하면 잠금이 해제됩니다.",
+  "entryLockHint": "새 페이지는 빈 상태로 시작하며, 다 쓰기 전까지는 절대 잠기지 않습니다. 이 옵션은 이미 있는 일기 페이지에만 적용됩니다.",
+  "entryNotFound": "이 페이지는 더 이상 존재하지 않습니다.",
+  "entryTitlePlaceholder": "제목 없음",
+  "export": "내보내기",
+  "exportAction": "내보내기…",
+  "exportDescription": "일기 전체를 네트워크 연결 없이 열 수 있는 HTML 아카이브로 내보냅니다.",
+  "exportEmpty": "아직 내보낼 것이 없습니다. 일기에 페이지가 없습니다.",
+  "exportEntry": "페이지 내보내기",
+  "exportError": "내보내기에 실패했습니다. 일기는 변경되지 않았습니다.",
+  "exportSuccess": "{{path}}(으)로 내보냈습니다.",
+  "fixGrammar": "문법 고치기",
+  "greetingAfternoon": "좋은 오후예요.",
+  "greetingAfternoonNamed": "좋은 오후예요, {{name}} 님.",
+  "greetingEvening": "좋은 저녁이에요.",
+  "greetingEveningNamed": "좋은 저녁이에요, {{name}} 님.",
+  "greetingMorning": "좋은 아침이에요.",
+  "greetingMorningNamed": "좋은 아침이에요, {{name}} 님.",
+  "heading1": "제목 1",
+  "heading2": "제목 2",
+  "improveClarity": "명확하게 다듬기",
+  "italic": "기울임꼴",
+  "journalFolder": "일기 폴더",
+  "journalFolderAction": "이동…",
+  "journalFolderConfirm": "폴더를 선택하면 Wattle이 일기를 그곳으로 옮깁니다. 데이터베이스와 모든 첨부 파일을 함께 옮깁니다. 이동이 끝나면 Wattle이 다시 열립니다. 옮길 수 없는 경우 일기는 지금 위치에 그대로 남습니다.",
+  "journalFolderError": "일기를 옮길 수 없었습니다. 원래 위치에 그대로 있으며 아무것도 변경되지 않았습니다.",
+  "journalFolderHint": "일기 자체, 즉 wattle.db와 첨부 파일이 보관되는 곳입니다. 백업 .wattle 파일이 저장되는 곳은 아닙니다.",
+  "language": "언어",
+  "languageDescription": "인터페이스 언어.",
+  "languageHint": "인터페이스만 바뀝니다. 내가 쓴 글은 한 글자도 건드리지 않습니다.",
+  "layoutWidth": "Wattle 페이지 너비",
+  "layoutWidthCompact": "좁게",
+  "layoutWidthDefault": "균형",
+  "layoutWidthDescription": "Wattle의 모든 페이지 너비입니다.",
+  "layoutWidthHint": "Wattle의 페이지 너비를 직접 정하세요. 컴퓨터와 모니터는 저마다 다르기 때문에 가장 알맞은 값은 여러분에게 맡깁니다.",
+  "layoutWidthWide": "넓게",
+  "letterArrivedHeading": "도착함",
+  "letterArrivedTitle": "과거의 나에게서 편지가 도착했습니다",
+  "letterComposeDescription": "내가 고른 날까지 읽을 수 없는 글입니다. 한번 봉인하면 열거나 편집하거나 삭제할 수 없습니다. 신중하게 고르세요.",
+  "letterComposeTitle": "나에게 쓰는 편지",
+  "letterContentPlaceholder": "편지를 봉인하기 전에 무엇을 쓸지 정하세요.",
+  "letterContinueDraft": "편지 이어 쓰기",
+  "letterDraftHeading": "작성 중",
+  "letterDraftRow_other": "쓰기 시작한 편지 - 지금까지 {{count}}단어",
+  "letterError": {
+    "badDate": "이 편지를 봉인할 수 있는 날짜가 아닙니다.",
+    "corrupt": "이 편지를 열 수 없습니다. 봉인이 닫혔을 때의 상태와 더 이상 일치하지 않습니다. 봉인한 후 일기 파일에서 개봉일, 암호화된 텍스트 또는 키가 수정되면 이런 일이 발생합니다.",
+    "empty": "아직 봉인할 내용이 없습니다.",
+    "futureEnvelope": "이 편지는 더 새로운 버전의 Wattle로 봉인되었습니다. 열려면 Wattle을 업데이트하세요.",
+    "noKey": "이 편지의 키가 사라졌습니다. 유일한 방법은 키가 사라지기 전에 만든 백업을 복원하는 것입니다.",
+    "notFound": "이 편지는 존재하지 않습니다.",
+    "notYet": "이 편지는 아직 열리지 않았습니다. 나중에 다시 오세요.",
+    "sealed": "이 편지는 봉인되어 있으며 아직 열 때가 아닙니다. 나중에 다시 오세요.",
+    "tooFar": "편지는 최대 50년까지 기다릴 수 있습니다.",
+    "tooSoon": "편지는 최소 7일은 기다려야 합니다.",
+    "unknown": "문제가 발생했습니다."
+  },
+  "letterExport": "이 편지 다운로드",
+  "letterFooterDates": "{{written}}에 씀 · {{opened}}에 열림",
+  "letterFromYourself": "과거의 나에게서",
+  "letterHasArrived": "그날이 왔습니다",
+  "letterIn10Years": "10년",
+  "letterIn1Month": "1개월",
+  "letterIn1Year": "1년",
+  "letterIn2Years": "2년",
+  "letterIn3Months": "3개월",
+  "letterIn3Years": "3년",
+  "letterIn5Years": "5년",
+  "letterIn6Months": "6개월",
+  "letterKeepEditing": "계속 쓰기",
+  "letterLength": "길이",
+  "letterNoDateYet": "언제 열릴지 선택하세요.",
+  "letterOpenIt": "열기",
+  "letterOpenedHeading": "열림",
+  "letterOpenedOn": "{{date}}에 열림",
+  "letterOpensOn": "개봉일",
+  "letterOpensOnDate": "{{date}}에 열림",
+  "letterPickDate": "날짜 선택…",
+  "letterPromptChapter": "새로운 장",
+  "letterPromptFree": "특별한 것 없이",
+  "letterPromptGoals": "목표",
+  "letterPromptHard": "힘든 시기",
+  "letterPromptOrdinary": "평범한 하루",
+  "letterPromptPerson": "소중한 사람",
+  "letterPromptRemember": "잊지 말아야 할 것",
+  "letterResultLabel": "편지",
+  "letterReviewAction": "다시 읽기…",
+  "letterReviewBody": "마지막으로 한 번 더 읽어 보세요. 이 단계가 지나면 편지는 보관됩니다.",
+  "letterReviewTitle": "마지막으로 한 번 더 읽기",
+  "letterSealAction": "편지 봉인하기",
+  "letterSealBody": "암호화되어 {{date}}까지 보관됩니다.",
+  "letterSealFailed": "편지가 봉인되지 않았습니다. 아무것도 변경되지 않았습니다.",
+  "letterSealHonesty": "Wattle은 편지를 암호화하고 키를 일기 파일 안에 보관하므로 편지를 잃어버릴 일이 없습니다. 이것은 나 자신에 대한 잠금장치이지, 내 컴퓨터에 접근할 수 있는 사람에게서 숨기는 비밀이 아닙니다. 또한 백업에는 두 가지가 함께 담깁니다.",
+  "letterSealTerms": "{{date}}까지는 열거나 읽거나 편집하거나 삭제하거나 날짜를 바꿀 수 없습니다. Wattle도 마찬가지입니다. 없애는 유일한 방법은 일기 전체를 지우는 것입니다.",
+  "letterSealTitle": "이 편지를 봉인할까요?",
+  "letterSealing": "봉인하는 중…",
+  "letterTypeDate": "확인하려면 날짜를 입력하세요",
+  "letterWaitingHeading": "기다리는 중",
+  "letterWaitingLine": "나에게 쓴 편지가 {{date}}에 열립니다.",
+  "letterWhereToStart": "어디서부터 시작할까",
+  "letterWillOpen": "{{date}}에 열립니다.",
+  "letterWordCount_other": "{{count}}단어",
+  "letterWrite": "편지 쓰기",
+  "letterWriteBack": "답장하기",
+  "letterWritten": "작성일",
+  "letterWrittenAndLength_other": "{{date}}에 씀 · {{count}}단어",
+  "letterWrittenOn": "{{date}}에 씀",
+  "letters": "편지",
+  "lettersDescription": "미래의 나에게 맡기는 말. 날짜를 고르고, 기억하고 싶은 것, 전하고 싶은 것, 다시 발견하고 싶은 것을 그곳에 남기세요. 그날까지 편지는 봉인된 채 손이 닿지 않는 곳에 있습니다.",
+  "lettersEmptyBody": "편지는 지금 쓰고, 내가 고른 날까지 다시 읽을 수 없는 글입니다.",
+  "lettersEmptyTitle": "편지 없음",
+  "light": "밝게",
+  "link": "링크",
+  "listErrorBody": "페이지는 아직 이 기기에 있지만 Wattle이 읽지 못했습니다. 다시 시도하고, 문제가 계속되면 백업을 복원하세요.",
+  "listErrorTitle": "일기를 열 수 없습니다.",
+  "loadOlder": "이전 항목 불러오기",
+  "loading": "불러오는 중…",
+  "lockEntry": "이 페이지 잠그기",
+  "makeShorter": "짧게 줄이기",
+  "memoriesSection": "추억",
+  "memoriesSectionDescription": "내가 쓴 글이 다시 나에게 돌아오는 두 가지 방법.",
+  "memoryAnother": "다른 것 찾기",
+  "memoryAsk": "다시 읽을 만한 추억 찾기",
+  "memoryLooking": "찾는 중…",
+  "memoryNoneAlike": "이 글 옆에 둘 만큼 비슷한 글이 더는 없습니다.",
+  "memoryNoneLeft": "보여 줄 만큼 비슷한 것이 더는 없습니다.",
+  "memoryTooRecent": "아직 충분히 오래된 글이 없습니다. 추억은 가장 최근에 쓴 글보다 최소 2주 이상 오래된 것이어야 하는데, 일기가 아직 그만큼 거슬러 올라가지 않습니다.",
+  "memoryWorthRevisiting": "다시 읽을 만한 추억",
+  "month": "월",
+  "name": "이름",
+  "nameDescription": "{{min}}~{{max}}자.",
+  "nameHint": "Wattle에서 어떻게 불리고 싶은지 실제 이름이나 지어낸 이름으로 정하세요. 언제든지 바꿀 수 있습니다.",
+  "namePlaceholder": "이름",
+  "nameRequired": "이름은 필수입니다. 최소 {{min}}자 이상 입력하세요.",
+  "nameTooShort": "최소 {{min}}자.",
+  "navigation": "탐색",
+  "navigationBoth": "모두",
+  "navigationBottom": "아래",
+  "navigationDescription": "주 탐색 메뉴의 위치입니다.",
+  "navigationHeader": "위",
+  "navigationHint": "원하는 위치에 탐색 메뉴를 두세요.",
+  "newEntry": "새 페이지",
+  "newProfile": "새 프로필",
+  "newProfileAction": "나가기",
+  "newProfileBackingUp": "백업하는 중…",
+  "newProfileBackupFolder": "저장 대화 상자는 {{folder}}에서 열립니다.",
+  "newProfileBackupNow": "지금 백업…",
+  "newProfileBackupSaved": "백업을 저장했습니다.",
+  "newProfileConfirmAction": "모두 삭제",
+  "newProfileConfirmBody": "모든 페이지, 모든 첨부 파일, 그리고 이름이 영구적으로 삭제되고 설정이 처음부터 다시 시작됩니다. 이 작업은 되돌릴 수 없습니다.",
+  "newProfileConfirmTitle": "이 프로필을 지울까요?",
+  "newProfileContinueAnyway": "그래도 계속",
+  "newProfileDescription": "로그아웃하고 이 프로필을 삭제한 뒤 처음부터 시작합니다. 모든 페이지와 첨부 파일이 삭제됩니다. 확인하기 전에 이 프로필을 백업할 수 있습니다.",
+  "newProfileError": "처음부터 다시 시작할 수 없습니다. 일기는 변경되지 않았습니다.",
+  "newProfileHint": "이 기기에는 일기가 하나뿐입니다. 이 작업은 그 일기를 지우는 것이며, 두 번째 일기를 추가하는 것이 아닙니다.",
+  "newProfileNoBackupBody": "Wattle에는 이 일기의 백업 기록이 없습니다. 담긴 모든 내용이 곧 삭제되며, 백업이 없으면 복구할 방법이 없습니다.",
+  "newProfileNoBackupTitle": "백업 폴더가 설정되지 않음",
+  "next": "다음",
+  "nextEntry": "다음 페이지",
+  "noResults": "검색과 일치하는 페이지가 없습니다.",
+  "noSparkResults": "검색과 일치하는 스파크가 없습니다.",
+  "nudgeAnother": "다른 질문 해 줘",
+  "nudgeCue": "글감",
+  "nudgeDismiss": "지금은 말고",
+  "nudgeOffer": "무엇을 쓸지 모르겠나요?",
+  "nudgeThinking": "생각 중…",
+  "nudgeWrite": "이것에 대해 쓰기",
+  "off": "끔",
+  "ollamaInstallFailed": "Ollama를 설치할 수 없었습니다. Wattle은 이 기기에서 아무것도 변경하지 않았습니다.",
+  "ollamaStartFailed": "Ollama가 제시간에 시작되지 않았습니다. 아직 시작 중일 수 있으니 잠시 후 다시 시도하세요.",
+  "on": "켬",
+  "onThisDay": "이날의 기록",
+  "onThisDayDescription": "지난 해의 오늘 날짜에 쓴 페이지가 홈페이지에 표시됩니다.",
+  "onThisDayHint": "지난 해의 같은 날짜에 쓴 글을 다시 볼지 선택하세요. 알림은 홈페이지에 표시됩니다.",
+  "onboarding": {
+    "language": {
+      "title": "Wattle에 오신 것을 환영합니다.",
+      "body": "언어를 선택하세요."
+    },
+    "start": {
+      "title": "전에 Wattle로 일기를 쓴 적이 있나요?",
+      "body": "백업이 있다면 그 안의 모든 것이 제자리로 돌아옵니다.",
+      "fresh": "새 일기 시작하기",
+      "freshBody": "빈 첫 페이지와, 그것을 열기 전의 짧은 질문 세 가지.",
+      "returning": "Wattle 백업이 있어요",
+      "returningBody": "글, 첨부 파일, 설정이 남겨 둔 그대로 돌아옵니다."
+    },
+    "returning": {
+      "eyebrow": "다시 오신 것을 환영합니다",
+      "title": "일기를 찾아봅시다.",
+      "body": "저장해 둔 .wattle 백업 파일을 선택하세요. 그 안의 모든 것이 이 빈 일기를 대체하고, Wattle은 마지막으로 멈춘 곳에서 열립니다.",
+      "action": "백업 선택…",
+      "confirmTitle": "백업을 복원할까요?",
+      "confirm": "저장해 둔 .wattle 파일을 선택하면 Wattle이 그 안의 모든 것, 즉 글, 첨부 파일, 설정과 함께 다시 열립니다. 이 빈 일기는 대체됩니다."
+    },
+    "name": {
+      "title": "Wattle이 당신을 뭐라고 부를까요?",
+      "body": "홈 화면의 인사말에 사용됩니다. 2~12자."
+    },
+    "backup": {
+      "title": "백업을 어디에 저장할까요?",
+      "body": "일기 바깥에 있는 폴더입니다. 필요할 때 백업이 다른 곳에 있도록 하기 위해서입니다."
+    },
+    "theme": {
+      "title": "밝게, 아니면 어둡게?",
+      "body": "설정에서 언제든지 바꿀 수 있습니다."
+    }
+  },
+  "onboardingFinish": "쓰기 시작하기",
+  "onboardingStep": "{{total}}단계 중 {{step}}단계",
+  "pageOf": "{{page}} / {{total}}",
+  "palette": "테마",
+  "paletteDescription": "Wattle의 색상, 서체, 시각적 스타일을 정합니다.",
+  "paletteHint": "앱 전체의 모양을 바꿉니다. 배경, 글자, 인터페이스 세부 요소, 모서리, 서체. 내가 쓴 글은 아무것도 바뀌지 않습니다.",
+  "paletteName": {
+    "clay": "점토",
+    "crimson": "진홍",
+    "sage": "세이지",
+    "umber": "엄버",
+    "wattle": "Wattle",
+    "olive": "올리브",
+    "forest": "숲",
+    "candy": "캔디"
+  },
+  "pastSparks": "이전 스파크",
+  "previous": "이전",
+  "previousEntry": "이전 페이지",
+  "primaryNav": "주 메뉴",
+  "profileSection": "프로필",
+  "removeAttachment": "첨부 파일 제거",
+  "replayTours": "안내 둘러보기",
+  "replayToursAction": "초기화",
+  "replayToursDescription": "모든 환영 둘러보기를 다시 표시합니다. Wattle의 모든 기능을 다시 알아보는 데 유용합니다.",
+  "replayToursHint": "모든 둘러보기를 보지 않은 상태로 표시하고, 홈 화면으로 이동해 첫 번째 둘러보기를 보여 줍니다.",
+  "reset": "환경설정 초기화",
+  "resetAction": "초기화",
+  "resetConfirm": "모양, 페이지 너비, 추억, 페이지 잠금이 초기 설정으로 돌아갑니다. 일기, 이름, AI 도우미 설정은 건드리지 않습니다. 계속하시겠습니까?",
+  "resetDescription": "초기값으로 돌아갑니다. 이름과 AI 도우미 설정은 그대로 유지됩니다.",
+  "resetHint": "환경설정만 해당됩니다. 페이지, 스파크, 편지는 그대로 남습니다.",
+  "resetSection": "초기화",
+  "resizeImage": "이미지 크기 조정",
+  "resizeVideo": "동영상 크기 조정",
+  "restore": "복원",
+  "restoreAction": "복원…",
+  "restoreConfirm": "이 기기의 모든 페이지, 첨부 파일, 설정이 지금 선택하는 백업으로 대체됩니다. 이 작업은 되돌릴 수 없습니다.",
+  "restoreDescription": "이 기기의 모든 것을 백업으로 대체합니다.",
+  "restoreError": "복원에 실패했습니다. 데이터는 건드리지 않았습니다.",
+  "restoreHint": "이 기기의 모든 것을 백업으로 대체합니다. 되돌릴 수 없습니다.",
+  "restoring": "복원하는 중…",
+  "retry": "다시 시도",
+  "save": "저장",
+  "saveError": "저장되지 않음",
+  "saveThought": "생각 저장",
+  "saved": "저장됨",
+  "saving": "저장하는 중…",
+  "search": "페이지 검색",
+  "searchDisabledHint": "항목이 없습니다. 검색을 사용하려면 먼저 항목을 추가하세요.",
+  "searchPlaceholder": "페이지 검색…",
+  "searchResultCount_other": "결과 {{count}}개",
+  "searchSparks": "스파크 검색",
+  "searchSparksDisabledHint": "아직 검색할 것이 없습니다. 위에 스파크를 쓰면 검색이 활성화됩니다.",
+  "searchSparksPlaceholder": "스파크 검색…",
+  "settings": "설정",
+  "settingsSubtitle": "여기에 있는 모든 것은 이 기기에 저장됩니다.",
+  "slash": {
+    "bulletList": {
+      "description": "간단한 글머리 기호 목록",
+      "title": "글머리 기호 목록"
+    },
+    "code": {
+      "description": "코드 조각 삽입",
+      "title": "코드 블록"
+    },
+    "divider": {
+      "description": "섹션을 시각적으로 구분",
+      "title": "구분선"
+    },
+    "file": {
+      "description": "아무 파일이나 첨부",
+      "title": "파일"
+    },
+    "heading1": {
+      "description": "큰 섹션 제목",
+      "title": "제목 1"
+    },
+    "heading2": {
+      "description": "중간 섹션 제목",
+      "title": "제목 2"
+    },
+    "heading3": {
+      "description": "작은 섹션 제목",
+      "title": "제목 3"
+    },
+    "image": {
+      "description": "이미지 첨부",
+      "title": "이미지"
+    },
+    "orderedList": {
+      "description": "번호 매기기 목록",
+      "title": "번호 매기기 목록"
+    },
+    "quote": {
+      "description": "한 구절 강조하기",
+      "title": "인용"
+    },
+    "taskList": {
+      "description": "할 일 관리하기",
+      "title": "체크리스트"
+    },
+    "text": {
+      "description": "일반 텍스트",
+      "title": "텍스트"
+    },
+    "video": {
+      "description": "동영상 첨부",
+      "title": "동영상"
+    }
+  },
+  "slashCategory": {
+    "basic": "기본",
+    "blocks": "블록",
+    "lists": "목록",
+    "media": "미디어"
+  },
+  "slashNoResults": "결과가 없습니다.",
+  "sparkCharsLeft_other": "{{count}}자 남음",
+  "sparkCount_other": "스파크 {{count}}개",
+  "sparkDate": "이 스파크가 보관되는 날짜",
+  "sparkEchoDescription": "이전 스파크가 하루에 최대 하나씩 저절로 돌아옵니다.",
+  "sparkEchoHint": "30일 이상 지난 스파크가 하루 종일 같은 것으로 표시되고, 내일은 다음 것으로 바뀝니다.",
+  "sparkEchoLead": "내가 나에게 남긴 생각",
+  "sparkEchoSetting": "스파크 메아리",
+  "sparkEmpty": "이 스파크는 비어 있습니다.",
+  "sparkOpenAsEntry": "페이지로 열기",
+  "sparkPlaceholder": "스쳐 가는 생각을 붙잡아 보세요…",
+  "sparkResultLabel": "스파크",
+  "sparkRichBadge": "서식을 사용해 작성됨",
+  "sparkRichBody": "이 스파크에는 스파크가 일반 텍스트가 되기 이전의 서식이나 첨부 파일이 들어 있습니다. 아무것도 바뀌지 않았습니다. 모든 것이 계속 작동하는 전체 편집기에서 열립니다.",
+  "sparkSaveHint": "Ctrl + Enter로 저장",
+  "sparkTruncated_other": "최근 {{count}}개를 표시합니다.",
+  "sparksEyebrow": "순간의 선명함",
+  "sparksIntro": "달아나기 전에 붙잡은 한두 줄. 여기서는 제목이 필요 없고, 다른 무언가가 될 필요도 없습니다.",
+  "strikethrough": "취소선",
+  "suggestTitle": "제목 추천",
+  "theme": "밝게 또는 어둡게",
+  "themeDescription": "모든 테마에는 두 가지가 있습니다. 지금 읽고 있는 것이 이쪽입니다.",
+  "themeHint": "테마는 앱 전체에 적용되며, 다음에 열 때도 선택이 기억됩니다.",
+  "tourClose": "둘러보기 닫기",
+  "tourDone": "완료",
+  "tourStep": "{{current}} / {{total}}",
+  "tours": {
+    "ai": {
+      "switch": {
+        "title": "켜기 전까지는 꺼져 있음",
+        "body": "AI 도우미는 선택 사항이며 처음에는 꺼져 있습니다. 항상 개인정보를 존중하면서 Wattle에서의 경험을 개선하고 나에게 맞춥니다. 데이터는 내 컴퓨터에서 처리되며 절대 밖으로 나가지 않습니다."
+      },
+      "runtime": {
+        "title": "모델이 실행되는 곳",
+        "body": "모델은 Ollama를 통해 실행됩니다. 허락하면 Wattle이 여기에서 설치하고 시작할 수 있습니다."
+      },
+      "models": {
+        "title": "보관하는 모델",
+        "body": "내 컴퓨터에 가장 알맞은 모델을 다운로드하세요. 하나씩 시험해 보면 어떤 모델이 하드웨어에 가장 잘 맞는지 알 수 있습니다."
+      }
+    },
+    "home": {
+      "write": {
+        "title": "오늘부터 시작하기",
+        "body": "새 페이지는 여기서 시작됩니다. 한 번 클릭하면 오늘 날짜의 빈 페이지가 열립니다. 단 한 줄이라도 이곳에 자리할 자격이 있습니다."
+      },
+      "search": {
+        "title": "쓴 글 찾기",
+        "body": "모든 페이지의 모든 단어를 검색할 수 있으며, 결과에는 일치하는 구절이 표시됩니다. 검색할 것이 생기기 전까지는 비활성화되어 있습니다."
+      },
+      "timeline": {
+        "title": "지금까지 쓴 모든 것",
+        "body": "내 페이지를 최신순으로, 월별로 묶어 보여 줍니다. 이어 쓰려면 하나를 열고, 더 불러오려면 스크롤하세요."
+      },
+      "nav": {
+        "title": "그 밖의 모든 것",
+        "body": "달력, 스파크, 나에게 쓰는 편지, 설정이 모두 이 막대에 있습니다. 화면을 옮겨 다녀도 따라오며, 지금 있는 화면만 이름을 표시합니다."
+      }
+    },
+    "calendar": {
+      "grid": {
+        "title": "날짜별로 보는 일기",
+        "body": "글을 쓴 날에는 표시가 되어 있습니다. 날짜를 선택해 다시 읽거나, 이미 지나간 날에 글을 쓸 수 있습니다."
+      },
+      "view": {
+        "title": "한 달, 또는 한 해 전체",
+        "body": "둘 사이를 전환하세요. 습관이 눈에 보이게 되는 것은 연간 보기에서입니다."
+      },
+      "kinds": {
+        "title": "페이지, 스파크, 또는 둘 다",
+        "body": "두 종류의 글이 이 격자를 함께 쓰며, 표시 색으로 구분됩니다. 특정한 것을 찾을 때는 한 종류씩 표시하세요."
+      }
+    },
+    "sparks": {
+      "capture": {
+        "title": "생각 붙잡기",
+        "body": "스파크는 그 순간 붙잡은 한 줄입니다. 제목도, 페이지도 없습니다. 쓰고 Ctrl+Enter를 누르거나 버튼을 사용하세요."
+      },
+      "archive": {
+        "title": "간직해 온 모든 스파크",
+        "body": "여기에서 최신 스파크를 볼 수 있습니다. 여기서 모든 스파크를 월별로 열 수 있고, 그곳에서 새 스파크를 쓸 수도 있습니다."
+      },
+      "recent": {
+        "title": "스파크가 될 수 있는 것",
+        "body": "각 스파크는 자신만의 페이지에서 열리며, 그곳에서 편집하거나 삭제할 수 있고, 그사이 생각이 자랐다면 제대로 된 페이지로 바꿀 수도 있습니다."
+      }
+    },
+    "entry": {
+      "title": {
+        "title": "이름을 붙이거나, 그대로 두거나",
+        "body": "제목은 선택 사항이며, 쓰는 동안 자동으로 저장됩니다. Enter를 누르면 아래 페이지로 바로 이동합니다."
+      },
+      "editor": {
+        "title": "그 밖의 모든 것은 \"/\" 입력",
+        "body": "종이에 쓰듯 여기에 쓰세요. \"/\"를 입력하면 페이지에 넣을 수 있는 모든 것이 담긴 팝업 메뉴가 열립니다. 제목, 목록, 인용, 이미지, 동영상, 파일. 텍스트를 선택하면 서식을 지정할 수 있습니다. 저장할 필요가 없습니다. 쓰는 대로 기록됩니다."
+      },
+      "actions": {
+        "title": "페이지 명령",
+        "body": "이전 또는 다음 페이지로 이동하고, 실수로 편집하지 않도록 잠그고, HTML로 내보내거나 삭제할 수 있습니다."
+      }
+    },
+    "settings": {
+      "appearance": {
+        "title": "나만의 것으로",
+        "body": "테마, 강조 색, 언어, 페이지 너비."
+      },
+      "data": {
+        "title": "내 일기는 나의 것",
+        "body": "백업하거나, HTML로 내보내거나, 백업에서 복원할 수 있습니다. 모든 것이 이 기기에 남습니다."
+      },
+      "reset": {
+        "title": "되돌리기",
+        "body": "환경설정을 원래 상태로 되돌리거나, 이 둘러보기를 다시 보거나, 완전히 새로운 일기를 시작할 수 있습니다."
+      },
+      "profile": {
+        "title": "이름, 그것뿐",
+        "body": "홈 화면에서 나를 맞이하며, 이 기기를 절대 떠나지 않습니다. Wattle은 그 밖에 아무것도 요구하지 않습니다. 계정도, 이메일도, 로그인도 없습니다."
+      }
+    },
+    "letters": {
+      "what": {
+        "title": "나에게 쓰는 편지",
+        "body": "이것은 페이지가 아닙니다. 편지는 지금 쓰고, 내가 고른 날까지 봉인된 채로 남습니다. 그때까지는 읽거나 편집하거나 봉인을 풀 수 없습니다. 나 자신조차도요."
+      },
+      "write": {
+        "title": "한 통 쓰기",
+        "body": "초안은 한 번에 하나씩, 봉인할 때까지 여기에 보관됩니다. 봉인할 때 열릴 날짜를 묻고, 되돌릴 수 없습니다."
+      },
+      "waiting": {
+        "title": "기다리는 동안",
+        "body": "봉인된 편지에는 열리는 날짜와 길이만 표시됩니다. 카운트다운도 미리 보기도 없습니다. 때가 되면 그저 여기에 있을 것입니다."
+      }
+    },
+    "letterCompose": {
+      "directions": {
+        "title": "어디서부터 시작할까",
+        "body": "방향을 고르면 그쪽을 향해 쓸 수 있는 질문이 주어집니다. 질문은 저장되지 않으며 편지의 일부가 되지도 않습니다. 쓰는 동안 바라볼 무언가일 뿐입니다."
+      },
+      "seal": {
+        "title": "언제 열릴지",
+        "body": "그날이 얼마나 먼지 고른 다음, 마지막으로 한 번 더 읽어 보세요. 봉인은 되돌릴 수 없습니다. 그 순간부터 편지는 선택한 날짜까지 읽을 수 없습니다."
+      }
+    },
+    "letterRead": {
+      "opened": {
+        "title": "도착했습니다",
+        "body": "내가 고른 날이 왔고, 이제 편지를 읽을 수 있습니다!"
+      },
+      "keep": {
+        "title": "영원히 나의 것",
+        "body": "원하는 만큼 몇 번이든 읽으세요. 봉인된 편지는 편집할 수 없고, 삭제할 수도 없습니다."
+      }
+    }
+  },
+  "trash": "휴지통",
+  "trashAction": "휴지통 열기…",
+  "trashDescription": "삭제한 페이지는 완전히 사라지기 전에 여기에서 기다립니다.",
+  "trashEmptyAction": "휴지통 비우기",
+  "trashEmptyConfirm": "휴지통에 있는 모든 페이지가 첨부 파일을 포함해 영구적으로 삭제됩니다. 이 작업은 되돌릴 수 없습니다.",
+  "trashEmptyTitle": "휴지통을 비울까요?",
+  "trashError": "휴지통을 읽을 수 없었습니다.",
+  "trashHint": "복원된 페이지는 날짜, 첨부 파일, 일기 속 자리와 함께 돌아옵니다.",
+  "trashIntro": "삭제된 페이지는 여기에서 {{days}}일 동안 기다린 후 완전히 삭제됩니다.",
+  "trashNothing": "삭제된 것이 없습니다.",
+  "trashPurge": "영구 삭제",
+  "trashPurgeConfirm": "이 페이지와 여기에 첨부된 모든 것이 영구적으로 삭제됩니다. 이 작업은 되돌릴 수 없습니다.",
+  "trashRestore": "복원",
+  "trashRow": "{{written}}에 씀 · {{removed}}에 삭제 예정",
+  "underline": "밑줄",
+  "unlockEntry": "이 페이지 잠금 해제",
+  "untitled": "제목 없음",
+  "writeOnThisDay": "이날에 쓰기",
+  "writingSection": "쓰기",
+  "writingSectionDescription": "페이지를 열 때의 동작.",
+  "year": "연",
+  "yearsAgo_other": "{{count}}년 전",
+  "memoryPrevious": "이전 추억",
+  "memoryNext": "다음 추억",
+  "letterAiUnavailableTitle": "AI 제안을 사용할 수 없습니다",
+  "letterAiUnavailableBody": "위의 방향은 언제나 사용할 수 있습니다. 시작할 질문도 받으려면 설정에서 AI 도우미를 켜고 모델을 선택하세요. 이 컴퓨터에서 실행되며 아무것도 밖으로 나가지 않습니다."
+}

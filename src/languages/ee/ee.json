@@ -1,0 +1,661 @@
+{
+  "ai": "AI-assistent",
+  "aiActionDescription": {
+    "fixGrammar": "Parandab õigekirja, grammatika ja kirjavahemärgid tähendust muutmata.",
+    "improveClarity": "Muudab teksti selgemaks ja kergemini loetavaks, jättes kogu sisu muutmata.",
+    "makeShorter": "Lühendab teksti, säilitades kõik olulised mõisted ja teabe."
+  },
+  "aiActive": "Aktiivne",
+  "aiActiveModel": "Aktiivne mudel",
+  "aiDesc08b": "Kõige kergem valik. Töötab tagasihoidlikul riistvaral; sobib kiireteks grammatikaparandusteks, kuigi pole alati täpne.",
+  "aiDesc27b": "Tööjaama tasemel. Vajab palju kettaruumi ja mälu; sobib, kui soovid soovitustes suuremat täpsust.",
+  "aiDesc2b": "Väike ja kiire, parema grammatikaga kui 0.8B.",
+  "aiDesc4b": "Parim tasakaal kvaliteedi ja ressursivajaduse vahel.",
+  "aiDesc9b": "Kõrgem kvaliteet; vajab võimekat arvutit.",
+  "aiDescription": "Välja lülitatud. Seadmest pole seda siiski eemaldatud.",
+  "aiDiscard": "Loobu",
+  "aiError": {
+    "badSelection": "Seda valikut ei saa ümber kirjutada. See võib olla tühi või pikem kui üks lõik.",
+    "cancelled": "Katkestatud. Midagi ei muudetud.",
+    "daemon": "Ollama ei suutnud toimingut lõpule viia.",
+    "disabled": "AI-assistent on välja lülitatud. Saad selle seadetes sisse lülitada.",
+    "empty": "Mudel ei tagastanud midagi. Proovi uuesti ja veendu, et mudel on valitud.",
+    "modelGone": "See mudel pole enam paigaldatud. Vali seadetes mõni teine.",
+    "noModel": "Sa pole veel mudelit valinud. Vali see seadete lehel.",
+    "noPassage": "Mudel ei tagastanud ümberkirjutatud lõiku.",
+    "reasoned": "Mudel sai päringu kätte, kuid ei tagastanud teksti. Selle vea lahendamiseks piisab tavaliselt lühemast lõigust.",
+    "timeout": "Mudelil läks liiga kaua aega ja see peatati. Selle vea lahendamiseks piisab tavaliselt lühemast lõigust.",
+    "tooLong": "Mudel peatati, sest sisu võib olla liiga pikk. Midagi ei muudetud.",
+    "unknown": "Midagi läks valesti.",
+    "unreachable": "Ollama ei vasta. Enne uuesti proovimist veendu, et see töötab sinu arvutis.",
+    "unreadable": "Mudeli vastus ei tundu loetav."
+  },
+  "aiHint": "AI-mudelid töötavad Ollama kaudu kohapeal sinu arvutis. Andmeid ei saadeta kunagi sinu seadmest välja. Privaatsus on üks Wattle'i alusprintsiipe ja see, mis teda eristab: sinu andmed jäävad alati sinu arvutisse.",
+  "aiInsertBelow": "Lisa allapoole",
+  "aiInstall": "Paigalda",
+  "aiInstalling": "Allalaadimine… {{percent}}%",
+  "aiMayNotFit": "Selle arvuti piiril",
+  "aiMayNotFitHint": "See mudel vajab rohkem mälu, kui sellel arvutil on saadaval. See võib olla aeglane või üldse mitte käivituda. Paigaldada saab siiski, kuigi seda ei soovitata.",
+  "aiModels": "Mudelid",
+  "aiModelsDescription": "Paigaldatud ja saadaolevad mudelid. Midagi ei laadita alla enne, kui seda palud.",
+  "aiNoModel": "Mudelit pole valitud",
+  "aiNoModelChosenHint": "AI-assistent on sisse lülitatud, kuid ükski mudel pole veel aktiivne. AI-funktsioonide kasutamiseks vali ülalt üks.",
+  "aiNoModelsYet": "Ühtegi mudelit pole veel paigaldatud. Vali allpool üks: midagi ei laadita alla enne, kui seda palud.",
+  "aiOnDescription": "Selles seadmes töötav mudel. Sinu privaatsuse austamiseks ei saadeta midagi mujale.",
+  "aiPreparing": "Assistendi ettevalmistamine selles arvutis…",
+  "aiRecommended": "Soovitatav",
+  "aiRecommendedHint": "Sobib selle arvuti mäluga kõige paremini.",
+  "aiRemove": "Eemalda",
+  "aiRemoveConfirm": "{{name}} kustutatakse sellest arvutist. Kas soovid jätkata?",
+  "aiReplace": "Asenda",
+  "aiRewrite": "Kirjuta AI-assistendiga ümber",
+  "aiRewriting": "Mõtlen…",
+  "aiSection": "AI seaded",
+  "aiSectionDescription": "Valikuline, kohalik ja välja lülitatud, kuni selle sisse lülitad.",
+  "aiUnmanaged": "Väljaspool Wattle'it",
+  "aiUnmanagedDescription": "Paigaldatud väljaspool Wattle'it. Saad selle siit eemaldada, kuid seda ei pakuta aktiivse mudelina.",
+  "aiUseTitle": "Kasuta seda",
+  "alignCenter": "Joonda keskele",
+  "alignLeft": "Joonda vasakule",
+  "alignRight": "Joonda paremale",
+  "allEntries": "Kõik lehed",
+  "allSparks": "Kõik sädemed",
+  "allSparksIntro": "Iga sinu püütud säde, alates uusimast. Need on meelega lühikesed ja pealkirjata: säde on märkus iseendale, hetkes püütud mõte, ilma muude reegliteta peale sinu enda omade.",
+  "appName": "Wattle",
+  "appearanceSection": "Välimus",
+  "aroundThisTime": "Umbes sel ajal",
+  "backToComponents": "Komponendid",
+  "backToTop": "Tagasi üles",
+  "backup": "Varukoopia",
+  "backupAction": "Ekspordi…",
+  "backupDescription": "Salvesta koopia oma lehtedest, manustest ja seadetest.",
+  "backupError": "Varundamine ebaõnnestus. Proovi uuesti.",
+  "backupFolderAction": "Vali…",
+  "backupFolderHint": "Siia kirjutatakse .wattle-varukoopiafailid päeva nimega. See pole koht, kus sinu päevikut hoitakse. Varasemaid varukoopiaid ei lisata kunagi uude.",
+  "backupFolderUnset": "Pole veel määratud: salvestusdialoog avaneb seal, kuhu Windows selle viimati jättis.",
+  "backupHint": "Wattle küsib iga kord, kuhu fail salvestada. Andmebaas, manused ja seaded ühes .wattle-failis. Ollama mudeleid ei lisata ja neid saab hõlpsasti otse Wattle'ist paigaldada.",
+  "backupSuccess": "Varukoopia salvestatud.",
+  "bold": "Paks",
+  "calendar": "Kalender",
+  "calendarBoth": "Mõlemad",
+  "calendarEntriesOnly": "Lehed",
+  "calendarIntro": "Kuhu sinu kirjutamine aasta jooksul langeb. Täidlasem päev on päev, mil kirjutasid rohkem; vali see, et seda uuesti lugeda.",
+  "calendarSparksOnly": "Sädemed",
+  "cancel": "Tühista",
+  "code": "Kood",
+  "codeLanguage": "Koodi keel",
+  "codeLanguagePlain": "Lihttekst",
+  "components": {
+    "askConfirmation": "Küsi kinnitust",
+    "cardBody": "Lihtne pind: õhuke ääris, kaardi taust, mitte midagi muud.",
+    "cardTitle": "Kaart",
+    "dialogBody": "Dialoog portaalis, mille tausta ja sulgemisnupu pakub see projekt.",
+    "dialogTitle": "Dialoogi pealkiri",
+    "disabled": "Keelatud",
+    "hoverMe": "Hõlju minu kohal",
+    "openDialog": "Ava dialoog",
+    "openPopover": "Ava hüpikpaneel",
+    "pageDescription": "Üks või kaks lauset sellest, milleks ekraan on, tagasitee, pealkirja ja selle all, mida ekraan paremale paigutab.",
+    "pageSubtitle": "Alapealkiri",
+    "pageTitle": "Lehe pealkiri",
+    "popoverBody": "Kinnitatud oma käivitaja külge ja suletakse kõige muu poolt: siin avanevad nii kuupäevaväli kui ka kirja tähtaeg.",
+    "popoverTitle": "Hüpikpaneel",
+    "sampleEntryBody": "Lahkusin piisavalt vara, et jalgsi minna, ja udu rippus endiselt majade taga oleva põllu kohal.",
+    "sampleEntryHit": "udu",
+    "sampleEntryOpening": "Lahkusin piisavalt vara, et jalgsi minna, ja",
+    "sampleEntryTitle": "Pikk tee jaama",
+    "sampleSpark": "Mis see ka poleks, see pole kiire. Maga see üle.",
+    "sizes": "Suurused",
+    "startTour": "Alusta tutvustust",
+    "states": "Olekud",
+    "subtitle": "Osad, millest liides koosneb, koos nende variantide ja olekutega. Kõigepealt primitiivid; seejärel need vähesed funktsionaalsed komponendid, mida kasutatakse piisavalt paljudel ekraanidel, et neid eraldi vaadata. Kõik siin kasutab näidisandmeid.",
+    "title": "Komponendid",
+    "tooltipBody": "Selgitus, üks samm selle juhtelemendi taga, millele see kuulub.",
+    "tourBody": "Leht tumeneb, esiletõstetud element jääb valgustatuks ja kaart järgib seda. Iga Wattle'i juhendatud tutvustus on selline, üks samm korraga.",
+    "tourTitle": "See on tutvustuse samm",
+    "variants": "Variandid",
+    "withIcon": "Ikooniga"
+  },
+  "continue": "Jätka",
+  "dailySparks": "Sädemed",
+  "dark": "Tume",
+  "dataSection": "Andmed",
+  "dataSectionDescription": "Sinu päevik, Wattle'isse ja sealt välja.",
+  "delete": "Kustuta",
+  "deleteEntry": "Kustuta leht",
+  "deleteEntryConfirm": "See leht liigub prügikasti. Saad selle seadetest taastada, kuni see lõplikult eemaldatakse.",
+  "deleteSpark": "Kustuta säde",
+  "deleteSparkConfirm": "See säde liigub prügikasti. Saad selle seadetest taastada, kuni see lõplikult eemaldatakse.",
+  "dismiss": "Pane kõrvale",
+  "downloadAttachment": "Salvesta koopia…",
+  "downloadHtml": "Laadi HTML alla",
+  "edit": "Muuda",
+  "editorScale": "Teksti suurus",
+  "editorScaleDefault": "Vaikimisi",
+  "editorScaleDescription": "Kui suurelt sinu kirjutis redaktoris kuvatakse.",
+  "editorScaleHint": "Suurust muudab ainult kirjutis - ülejäänud rakendus jääb samaks.",
+  "editorScaleLarge": "Suur",
+  "editorScaleLargest": "Suurim",
+  "editorScaleSmall": "Väike",
+  "emptyBody": "Iga leht jääb sellesse seadmesse. Alusta täna, kasvõi ühe reaga.",
+  "emptySparksBody": "Säde on hetkes püütud rida. Ülal olev väli on koht, kust see algab.",
+  "emptySparksTitle": "Veel pole midagi püütud.",
+  "emptyTitle": "Sinu päevik algab lehega.",
+  "entryContentPlaceholder": "Kirjuta midagi või vajuta käskude jaoks /…",
+  "entryCount_one": "{{count}} leht",
+  "entryCount_other": "{{count}} lehte",
+  "entryDate": "Lehe kuupäev",
+  "entryLock": "Ava lehed kirjutuskaitstuna",
+  "entryLockDescription": "Leht, millel on juba sisu, avaneb lukustatuna. Selle avamiseks piisab ühest klõpsust.",
+  "entryLockHint": "Uus leht algab tühjana ja seda ei lukustata kunagi enne, kui oled selle lõpetanud. See valik kehtib ainult juba olemasolevatele päevikulehtedele.",
+  "entryNotFound": "Seda lehte pole enam olemas.",
+  "entryTitlePlaceholder": "Pealkirjata",
+  "export": "Eksport",
+  "exportAction": "Ekspordi…",
+  "exportDescription": "Kogu päevik HTML-arhiivina, mis avaneb ilma võrguühenduseta.",
+  "exportEmpty": "Veel pole midagi eksportida: päevikus pole lehti.",
+  "exportEntry": "Ekspordi leht",
+  "exportError": "Eksport ebaõnnestus. Sinu päevikut ei muudetud.",
+  "exportSuccess": "Eksporditud asukohta {{path}}.",
+  "fixGrammar": "Paranda grammatika",
+  "greetingAfternoon": "Tere päevast.",
+  "greetingAfternoonNamed": "Tere päevast, {{name}}.",
+  "greetingEvening": "Tere õhtust.",
+  "greetingEveningNamed": "Tere õhtust, {{name}}.",
+  "greetingMorning": "Tere hommikust.",
+  "greetingMorningNamed": "Tere hommikust, {{name}}.",
+  "heading1": "Pealkiri 1",
+  "heading2": "Pealkiri 2",
+  "improveClarity": "Muuda selgemaks",
+  "italic": "Kaldkiri",
+  "journalFolder": "Päeviku kaust",
+  "journalFolderAction": "Teisalda…",
+  "journalFolderConfirm": "Vali kaust ja Wattle teisaldab sinu päeviku sinna - andmebaasi ja kõik manused koos. Wattle avaneb uuesti, kui teisaldamine on lõpetatud. Kui seda ei saa teisaldada, jääb päevik täpselt sinna, kus see on.",
+  "journalFolderError": "Päevikut ei õnnestunud teisaldada. See on endiselt seal, kus oli, ja midagi ei muudetud.",
+  "journalFolderHint": "Siin hoitakse päevikut ennast: wattle.db ja sinu manuseid. See pole koht, kuhu .wattle-varukoopiafailid salvestatakse.",
+  "language": "Keel",
+  "languageDescription": "Liidese keel.",
+  "languageHint": "Muudab ainult liidest. See ei puuduta ühtegi sõna sellest, mida oled kirjutanud.",
+  "layoutWidth": "Wattle'i lehe laius",
+  "layoutWidthCompact": "Kitsas",
+  "layoutWidthDefault": "Tasakaalus",
+  "layoutWidthDescription": "Kui laiad on kõik Wattle'i lehed.",
+  "layoutWidthHint": "Määra Wattle'i lehtede laius ise. Iga arvuti ja iga monitor võib olla erinev, seega jätame ideaalse väärtuse sinu otsustada.",
+  "layoutWidthWide": "Lai",
+  "letterArrivedHeading": "Saabunud",
+  "letterArrivedTitle": "Saabus kiri sinu minevikuminalt",
+  "letterComposeDescription": "Midagi, mida sa ei saa lugeda enne sinu valitud päeva. Kui see on pitseeritud, ei saa seda avada, muuta ega kustutada. Vali hoolikalt.",
+  "letterComposeTitle": "Kiri iseendale",
+  "letterContentPlaceholder": "Vali, mida kirjutada, enne kui oma kirja pitseerid.",
+  "letterContinueDraft": "Jätka kirja",
+  "letterDraftHeading": "Pooleli",
+  "letterDraftRow_one": "Alustatud kiri - seni {{count}} sõna",
+  "letterDraftRow_other": "Alustatud kiri - seni {{count}} sõna",
+  "letterError": {
+    "badDate": "See pole kuupäev, milleni seda kirja saab pitseerida.",
+    "corrupt": "Seda kirja ei saa avada. Selle pitser ei vasta enam sellele, kuidas see suleti: see juhtub, kui avamiskuupäeva, krüpteeritud teksti või võtit muudetakse päevikufailis pärast pitseerimist.",
+    "empty": "Veel pole midagi kirjutatud, mida pitseerida.",
+    "futureEnvelope": "Selle kirja pitseeris Wattle'i uuem versioon. Selle avamiseks uuenda Wattle'it.",
+    "noKey": "Selle kirja võti on kadunud. Ainus võimalus on taastada varukoopia, mis tehti enne selle kadumist.",
+    "notFound": "Seda kirja pole olemas.",
+    "notYet": "See kiri pole veel avanenud. Tule hiljem tagasi.",
+    "sealed": "See kiri on pitseeritud ja selle avamise aeg pole veel käes. Tule hiljem tagasi.",
+    "tooFar": "Kiri võib oodata kõige rohkem viiskümmend aastat.",
+    "tooSoon": "Kiri peab ootama vähemalt seitse päeva.",
+    "unknown": "Midagi läks valesti."
+  },
+  "letterExport": "Laadi see kiri alla",
+  "letterFooterDates": "Kirjutatud {{written}} · avatud {{opened}}",
+  "letterFromYourself": "Sinu minevikuminalt",
+  "letterHasArrived": "Selle päev on käes",
+  "letterIn10Years": "10 aastat",
+  "letterIn1Month": "1 kuu",
+  "letterIn1Year": "1 aasta",
+  "letterIn2Years": "2 aastat",
+  "letterIn3Months": "3 kuud",
+  "letterIn3Years": "3 aastat",
+  "letterIn5Years": "5 aastat",
+  "letterIn6Months": "6 kuud",
+  "letterKeepEditing": "Kirjuta edasi",
+  "letterLength": "Pikkus",
+  "letterNoDateYet": "Vali, millal see avaneb.",
+  "letterOpenIt": "Ava see",
+  "letterOpenedHeading": "Avatud",
+  "letterOpenedOn": "Avatud {{date}}",
+  "letterOpensOn": "Avaneb",
+  "letterOpensOnDate": "Avaneb {{date}}",
+  "letterPickDate": "Vali kuupäev…",
+  "letterPromptChapter": "Uus peatükk",
+  "letterPromptFree": "Mitte midagi erilist",
+  "letterPromptGoals": "Eesmärgid",
+  "letterPromptHard": "Raske periood",
+  "letterPromptOrdinary": "Tavaline päev",
+  "letterPromptPerson": "Keegi, kes on oluline",
+  "letterPromptRemember": "Midagi, mida mitte unustada",
+  "letterResultLabel": "Kiri",
+  "letterReviewAction": "Loe uuesti…",
+  "letterReviewBody": "Loe see viimast korda läbi. Pärast seda sammu pannakse see ära.",
+  "letterReviewTitle": "Loe see viimast korda läbi",
+  "letterSealAction": "Pitseeri kiri",
+  "letterSealBody": "See krüpteeritakse ja pannakse ära kuni {{date}}.",
+  "letterSealFailed": "Kirja ei pitseeritud. Midagi ei muudetud.",
+  "letterSealHonesty": "Wattle krüpteerib kirja ja hoiab võtit päevikufailis, et kiri ei saaks kaduma minna. See on lukk iseenda vastu, mitte saladus kellegi eest, kellel on ligipääs sinu arvutile - ja varukoopia kannab mõlemat poolt endaga kaasas.",
+  "letterSealTerms": "Kuni {{date}} ei saa sa seda avada, lugeda, muuta, kustutada ega selle kuupäeva muuta. Ei saa ka Wattle. Ainus viis selle eemaldamiseks on kogu päevik tühjendada.",
+  "letterSealTitle": "Kas pitseerida see kiri?",
+  "letterSealing": "Pitseerimine…",
+  "letterTypeDate": "Kinnitamiseks sisesta kuupäev",
+  "letterWaitingHeading": "Ootel",
+  "letterWaitingLine": "Kiri iseendale avaneb {{date}}.",
+  "letterWhereToStart": "Kust alustada",
+  "letterWillOpen": "See avaneb {{date}}.",
+  "letterWordCount_one": "{{count}} sõna",
+  "letterWordCount_other": "{{count}} sõna",
+  "letterWrite": "Kirjuta kiri",
+  "letterWriteBack": "Vasta",
+  "letterWritten": "Kirjutatud",
+  "letterWrittenAndLength_one": "Kirjutatud {{date}} · {{count}} sõna",
+  "letterWrittenAndLength_other": "Kirjutatud {{date}} · {{count}} sõna",
+  "letterWrittenOn": "Kirjutatud {{date}}",
+  "letters": "Kirjad",
+  "lettersDescription": "Sõnad, mida usaldad oma tulevasele minale. Vali päev ja jäta sinna, mida tahad meenutada, rääkida või uuesti avastada. Seni jääb kiri pitseerituks ja kättesaamatuks.",
+  "lettersEmptyBody": "Kiri on midagi, mida kirjutad praegu ja ei saa uuesti lugeda enne sinu valitud päeva.",
+  "lettersEmptyTitle": "Kirju pole",
+  "light": "Hele",
+  "link": "Link",
+  "listErrorBody": "Sinu lehed on endiselt selles seadmes: Wattle ei suutnud neid lugeda. Proovi uuesti ja kui probleem püsib, taasta varukoopia.",
+  "listErrorTitle": "Päevikut ei saa avada.",
+  "loadOlder": "Laadi vanemad",
+  "loading": "Laadimine…",
+  "lockEntry": "Lukusta see leht",
+  "makeShorter": "Lühenda",
+  "memoriesSection": "Mälestused",
+  "memoriesSectionDescription": "Kaks viisi, kuidas kirjutatu sinu juurde tagasi tuleb.",
+  "memoryAnother": "Leia teine",
+  "memoryAsk": "Leia mälestus, mida tasub uuesti lugeda",
+  "memoryLooking": "Otsin…",
+  "memoryNoneAlike": "Miski muu, mida oled kirjutanud, pole sellega piisavalt sarnane, et seda selle kõrvale panna.",
+  "memoryNoneLeft": "Miski muu pole piisavalt sarnane, et seda näidata.",
+  "memoryTooRecent": "Veel pole midagi piisavalt kaugel minevikus. Mälestus peab olema vähemalt kaks nädalat vanem kui sinu viimane kirjutis ja sinu päevik ei ulatu veel nii kaugele tagasi.",
+  "memoryWorthRevisiting": "Mälestus, mida tasub uuesti lugeda",
+  "month": "Kuu",
+  "name": "Nimi",
+  "nameDescription": "{{min}} kuni {{max}} tähemärki.",
+  "nameHint": "Vali, kuidas soovid, et Wattle sind kutsuks, oma päris nime või väljamõeldud nimega. Saad seda muuta millal tahes.",
+  "namePlaceholder": "Sinu nimi",
+  "nameRequired": "Nimi on kohustuslik: vähemalt {{min}} tähemärki.",
+  "nameTooShort": "Vähemalt {{min}} tähemärki.",
+  "navigation": "Navigeerimine",
+  "navigationBoth": "Mõlemad",
+  "navigationBottom": "All",
+  "navigationDescription": "Kus asub peamine navigeerimine.",
+  "navigationHeader": "Üleval",
+  "navigationHint": "Paiguta navigeerimine sinna, kus see sulle meeldib.",
+  "newEntry": "Uus leht",
+  "newProfile": "Uus profiil",
+  "newProfileAction": "Välju",
+  "newProfileBackingUp": "Varundamine…",
+  "newProfileBackupFolder": "Salvestusdialoog avaneb kaustas {{folder}}.",
+  "newProfileBackupNow": "Varunda kohe…",
+  "newProfileBackupSaved": "Varukoopia salvestatud.",
+  "newProfileConfirmAction": "Kustuta kõik",
+  "newProfileConfirmBody": "Iga leht, iga manus ja sinu nimi kustutatakse jäädavalt ning seadistamine algab otsast peale. Seda toimingut ei saa tagasi võtta.",
+  "newProfileConfirmTitle": "Kas tühjendada see profiil?",
+  "newProfileContinueAnyway": "Jätka siiski",
+  "newProfileDescription": "Logi välja, kustuta see profiil ja alusta nullist. Iga leht ja iga manus kustutatakse. Enne kinnitamist saad selle profiili veel varundada.",
+  "newProfileError": "Otsast alustamine ei õnnestunud. Sinu päevikut ei muudetud.",
+  "newProfileHint": "Selles seadmes on ainult üks päevik. See toiming tühjendab selle; see ei lisa teist.",
+  "newProfileNoBackupBody": "Wattle'il pole selle päeviku varukoopia kohta kirjet. Kõik selles olev kustutatakse kohe ja ilma varukoopiata pole võimalik seda taastada.",
+  "newProfileNoBackupTitle": "Varukoopiate kausta pole määratud",
+  "next": "Edasi",
+  "nextEntry": "järgmine leht",
+  "noResults": "Otsingule ei vasta ükski leht.",
+  "noSparkResults": "Otsingule ei vasta ükski säde.",
+  "nudgeAnother": "Küsi minult midagi muud",
+  "nudgeCue": "Ajend",
+  "nudgeDismiss": "Mitte praegu",
+  "nudgeOffer": "Ei tea, mida kirjutada?",
+  "nudgeThinking": "Mõtlen…",
+  "nudgeWrite": "Kirjuta sellest",
+  "off": "Väljas",
+  "ollamaInstallFailed": "Ollamat ei õnnestunud paigaldada. Wattle ei muutnud selles seadmes midagi.",
+  "ollamaStartFailed": "Ollama ei käivitunud õigeks ajaks. See võib alles käivituda: proovi hetke pärast uuesti.",
+  "on": "Sees",
+  "onThisDay": "Sel päeval",
+  "onThisDayDescription": "Lehed, mille kirjutasid eelmistel aastatel tänasel kuupäeval, ilmuvad avalehele.",
+  "onThisDayHint": "Vali, kas soovid uuesti näha, mida kirjutasid samal kuupäeval eelmistel aastatel. Meeldetuletus ilmub avalehele.",
+  "onboarding": {
+    "language": {
+      "title": "Tere tulemast Wattle'isse.",
+      "body": "Vali oma keel."
+    },
+    "start": {
+      "title": "Kas oled varem Wattle'iga päevikut pidanud?",
+      "body": "Kui sul on varukoopia, naaseb kõik selles olev oma kohale.",
+      "fresh": "Alusta uut päevikut",
+      "freshBody": "Tühi esimene leht ja kolm lühikest küsimust enne selle avamist.",
+      "returning": "Mul on Wattle'i varukoopia",
+      "returningBody": "Tekstid, manused ja seaded, täpselt nii, nagu need jätsid."
+    },
+    "returning": {
+      "eyebrow": "Tere tulemast tagasi",
+      "title": "Leiame sinu päeviku.",
+      "body": "Vali salvestatud .wattle-varukoopiafail. Kõik selles olev asendab selle tühja päeviku ja Wattle avaneb sealt, kus pooleli jäid.",
+      "action": "Vali varukoopia…",
+      "confirmTitle": "Kas taastada varukoopia?",
+      "confirm": "Vali salvestatud .wattle-fail ja Wattle avaneb uuesti kõigega, mis selles on: tekstide, manuste ja seadetega. See tühi päevik asendatakse."
+    },
+    "name": {
+      "title": "Kuidas Wattle sind kutsuma peaks?",
+      "body": "Kasutatakse avaekraani tervituses. Kaks kuni kaksteist tähemärki."
+    },
+    "backup": {
+      "title": "Kuhu varukoopiad salvestada?",
+      "body": "Kaust väljaspool päevikut, et varukoopia oleks vajaduse korral kusagil mujal."
+    },
+    "theme": {
+      "title": "Hele või tume?",
+      "body": "Saad seda seadetes millal tahes muuta."
+    }
+  },
+  "onboardingFinish": "Alusta kirjutamist",
+  "onboardingStep": "Samm {{step}} / {{total}}",
+  "pageOf": "{{page}} / {{total}}",
+  "palette": "Teema",
+  "paletteDescription": "Määrab Wattle'i värvid, kirjatüübid ja visuaalse stiili.",
+  "paletteHint": "Muudab kogu rakenduse välimust: tausta, teksti, liidese detaile, nurki ja kirjatüüpe. See ei muuda midagi sellest, mida oled kirjutanud.",
+  "paletteName": {
+    "clay": "Savi",
+    "crimson": "Karmiin",
+    "sage": "Salvei",
+    "umber": "Umber",
+    "wattle": "Wattle",
+    "olive": "Oliiv",
+    "forest": "Mets",
+    "candy": "Komm"
+  },
+  "pastSparks": "Varasemad sädemed",
+  "previous": "Tagasi",
+  "previousEntry": "eelmine leht",
+  "primaryNav": "Peamine",
+  "profileSection": "Profiil",
+  "removeAttachment": "Eemalda manus",
+  "replayTours": "Juhendatud tutvustused",
+  "replayToursAction": "Lähtesta",
+  "replayToursDescription": "Näita kõiki tervitustutvustusi uuesti. Kasulik kõigi Wattle'i funktsioonide taasavastamiseks.",
+  "replayToursHint": "Märgib kõik tutvustused nägemata ja viib sind avaekraanile, et näidata esimest.",
+  "reset": "Lähtesta eelistused",
+  "resetAction": "Lähtesta",
+  "resetConfirm": "Välimus, lehe laius, mälestused ja lehtede lukustamine naasevad algseadetele. Päevikut, sinu nime ja AI-assistendi seadeid ei puudutata. Kas soovid jätkata?",
+  "resetDescription": "Naase algväärtuste juurde. Sinu nimi ja AI-assistendi seaded jäävad samaks.",
+  "resetHint": "Ainult eelistused. Lehed, sädemed ja kirjad jäävad täpselt sinna, kus need on.",
+  "resetSection": "Lähtestamine",
+  "resizeImage": "Muuda pildi suurust",
+  "resizeVideo": "Muuda video suurust",
+  "restore": "Taastamine",
+  "restoreAction": "Taasta…",
+  "restoreConfirm": "Iga leht, manus ja seade selles seadmes asendatakse varukoopiaga, mille praegu valid. Seda toimingut ei saa tagasi võtta.",
+  "restoreDescription": "Asendab kõik selles seadmes varukoopiaga.",
+  "restoreError": "Taastamine ebaõnnestus. Sinu andmeid ei puudutatud.",
+  "restoreHint": "Asendab kõik selles seadmes varukoopiaga. Seda ei saa tagasi võtta.",
+  "restoring": "Taastamine…",
+  "retry": "Proovi uuesti",
+  "save": "Salvesta",
+  "saveError": "Pole salvestatud",
+  "saveThought": "Salvesta mõte",
+  "saved": "Salvestatud",
+  "saving": "Salvestamine…",
+  "search": "Otsi lehtedelt",
+  "searchDisabledHint": "Üksusi ei leitud; otsingu lubamiseks lisa üksus.",
+  "searchPlaceholder": "Otsi lehtedelt…",
+  "searchResultCount_one": "{{count}} tulemus",
+  "searchResultCount_other": "{{count}} tulemust",
+  "searchSparks": "Otsi sädemetest",
+  "searchSparksDisabledHint": "Veel pole midagi otsida: kirjuta ülal säde ja otsing muutub aktiivseks.",
+  "searchSparksPlaceholder": "Otsi sädemetest…",
+  "settings": "Seaded",
+  "settingsSubtitle": "Kõik, mida siit leiad, salvestatakse sellesse seadmesse.",
+  "slash": {
+    "bulletList": {
+      "description": "Lihtne täpploend",
+      "title": "Täpploend"
+    },
+    "code": {
+      "description": "Lisa koodilõik",
+      "title": "Koodiplokk"
+    },
+    "divider": {
+      "description": "Eralda jaotised visuaalselt",
+      "title": "Eraldaja"
+    },
+    "file": {
+      "description": "Manusta mis tahes fail",
+      "title": "Fail"
+    },
+    "heading1": {
+      "description": "Suur jaotise pealkiri",
+      "title": "Pealkiri 1"
+    },
+    "heading2": {
+      "description": "Keskmine jaotise pealkiri",
+      "title": "Pealkiri 2"
+    },
+    "heading3": {
+      "description": "Väike jaotise pealkiri",
+      "title": "Pealkiri 3"
+    },
+    "image": {
+      "description": "Manusta pilt",
+      "title": "Pilt"
+    },
+    "orderedList": {
+      "description": "Nummerdatud loend",
+      "title": "Nummerdatud loend"
+    },
+    "quote": {
+      "description": "Tõsta lõik esile",
+      "title": "Tsitaat"
+    },
+    "taskList": {
+      "description": "Pea arvet tehtavate asjade üle",
+      "title": "Kontrollnimekiri"
+    },
+    "text": {
+      "description": "Lihttekst",
+      "title": "Tekst"
+    },
+    "video": {
+      "description": "Manusta video",
+      "title": "Video"
+    }
+  },
+  "slashCategory": {
+    "basic": "Põhilised",
+    "blocks": "Plokid",
+    "lists": "Loendid",
+    "media": "Meedia"
+  },
+  "slashNoResults": "Tulemusi pole.",
+  "sparkCharsLeft_one": "Jäänud {{count}} tähemärk",
+  "sparkCharsLeft_other": "Jäänud {{count}} tähemärki",
+  "sparkCount_one": "{{count}} säde",
+  "sparkCount_other": "{{count}} sädet",
+  "sparkDate": "Päev, mille alla see säde on arhiveeritud",
+  "sparkEchoDescription": "Varasem säde naaseb iseenesest, kõige rohkem üks päevas.",
+  "sparkEchoHint": "Vähemalt 30 päeva vanune säde, sama terve päeva, siis homme järgmine.",
+  "sparkEchoLead": "Jätsid endale selle mõtte",
+  "sparkEchoSetting": "Sädemete kaja",
+  "sparkEmpty": "See säde on tühi.",
+  "sparkOpenAsEntry": "Ava lehena",
+  "sparkPlaceholder": "Püüa mööduv mõte…",
+  "sparkResultLabel": "Säde",
+  "sparkRichBadge": "Kirjutatud vormindusega",
+  "sparkRichBody": "See säde sisaldab vormindust või manuseid ajast, mil sädemed polnud veel lihttekst. Midagi pole muudetud: see avaneb täisredaktoris, kus kõik töötab edasi.",
+  "sparkSaveHint": "Salvestamiseks Ctrl + Enter",
+  "sparkTruncated_one": "Näidatakse kõige uuemat.",
+  "sparkTruncated_other": "Näidatakse {{count}} kõige uuemat.",
+  "sparksEyebrow": "Hetke selgus",
+  "sparksIntro": "Rida või kaks, püütud enne, kui need põgenevad. Miski siin ei vaja pealkirja ega pea muutuma millekski muuks.",
+  "strikethrough": "Läbikriipsutus",
+  "suggestTitle": "Soovita pealkirja",
+  "theme": "Hele või tume",
+  "themeDescription": "Iga teema on olemas mõlemas; see on see, milles praegu loed.",
+  "themeHint": "Teema kehtib kogu rakendusele ja sinu valik jäetakse meelde järgmiseks korraks, kui selle avad.",
+  "tourClose": "Sulge tutvustus",
+  "tourDone": "Valmis",
+  "tourStep": "{{current}} / {{total}}",
+  "tours": {
+    "ai": {
+      "switch": {
+        "title": "Väljas, kuni selle sisse lülitad",
+        "body": "AI-assistent on valikuline ja alguses välja lülitatud. See parandab ja isikupärastab Wattle'i kasutuskogemust, austades alati sinu privaatsust. Andmeid töödeldakse sinu arvutis ja need ei lahku sealt kunagi."
+      },
+      "runtime": {
+        "title": "Millel mudelid töötavad",
+        "body": "Mudelid töötavad Ollama kaudu. Wattle saab selle siit paigaldada ja käivitada, kui sa lubad."
+      },
+      "models": {
+        "title": "Mudelid, mida hoiad",
+        "body": "Laadi alla mudel, mis sobib sinu arvutiga kõige paremini. Proovi ühte korraga, et näha, milline sobib sinu riistvaraga kõige paremini."
+      }
+    },
+    "home": {
+      "write": {
+        "title": "Alusta tänasest",
+        "body": "Nii algab uus leht. Üks klõps avab tühja lehe tänase kuupäevaga: isegi üks rida väärib siin kohta."
+      },
+      "search": {
+        "title": "Leia, mida kirjutasid",
+        "body": "Iga sõna igal lehel on otsitav ja tulemus näitab vastavat lõiku. Otsing on keelatud, kuni on midagi otsida."
+      },
+      "timeline": {
+        "title": "Kõik, mida oled kirjutanud",
+        "body": "Sinu lehed, alates uusimast ja kuude kaupa rühmitatud. Ava üks, et jätkata, või keri, et laadida rohkem."
+      },
+      "nav": {
+        "title": "Kõik muu",
+        "body": "Kalender, sädemed, kirjad iseendale ja seaded asuvad kõik sellel ribal. See järgneb sulle ekraanilt ekraanile ja ainult see, kus sa oled, kannab oma nime."
+      }
+    },
+    "calendar": {
+      "grid": {
+        "title": "Sinu päevik kuupäevade järgi",
+        "body": "Päevad, mil kirjutasid, on märgitud. Vali üks, et seda uuesti lugeda või kirjutada juba möödunud päevale."
+      },
+      "view": {
+        "title": "Kuu või terve aasta",
+        "body": "Lülitu nende vahel. Just aastavaates muutub harjumus nähtavaks."
+      },
+      "kinds": {
+        "title": "Lehed, sädemed või mõlemad",
+        "body": "Kaks kirjutise liiki jagavad seda ruudustikku ja neid eristab märkide värv. Näita ühte korraga, kui otsid midagi kindlat."
+      }
+    },
+    "sparks": {
+      "capture": {
+        "title": "Püüa mõte",
+        "body": "Säde on hetkes püütud rida. Ilma pealkirjata, ilma leheta. Kirjuta see ja vajuta Ctrl+Enter või kasuta nuppu."
+      },
+      "archive": {
+        "title": "Kõik sädemed, mida oled hoidnud",
+        "body": "Siit leiad uusimad. Siit saad avada need kõik, kuu kaupa - ja ka sealt uue kirjutada."
+      },
+      "recent": {
+        "title": "Milleks säde võib saada",
+        "body": "Iga säde avaneb omaette lehel, kus saad seda muuta, kustutada või teha sellest päris lehe, kui see on vahepeal kasvanud."
+      }
+    },
+    "entry": {
+      "title": {
+        "title": "Anna sellele nimi või jäta, nagu on",
+        "body": "Pealkiri on valikuline ja salvestub kirjutamise ajal automaatselt. Vajuta Enter, et liikuda otse alloleva lehe juurde."
+      },
+      "editor": {
+        "title": "Kõige muu jaoks sisesta \"/\"",
+        "body": "Kirjuta siia nagu paberile. \"/\" sisestamine avab hüpikmenüü kõigega, mida leht võib sisaldada: pealkirjad, loendid, tsitaadid, pildid, videod ja failid. Vormindamiseks vali tekst. Midagi pole vaja salvestada: see salvestub kirjutamise käigus."
+      },
+      "actions": {
+        "title": "Lehe käsud",
+        "body": "Mine eelmisele või järgmisele lehele, lukusta see juhuslike muudatuste eest, ekspordi HTML-ina või kustuta."
+      }
+    },
+    "settings": {
+      "appearance": {
+        "title": "Tee see enda omaks",
+        "body": "Teema, rõhuvärv, keel ja lehe laius."
+      },
+      "data": {
+        "title": "Sinu päevik on sinu oma",
+        "body": "Varunda see, ekspordi HTML-ina või taasta varukoopiast. Kõik jääb sellesse seadmesse."
+      },
+      "reset": {
+        "title": "Mine tagasi",
+        "body": "Taasta eelistuste algne olek, esita need tutvustused uuesti või alusta täiesti uut päevikut."
+      },
+      "profile": {
+        "title": "Sinu nimi ja mitte midagi muud",
+        "body": "See tervitab sind avaekraanil ega lahku kunagi sellest seadmest. Wattle ei küsi sinult midagi muud: ei kontot, ei e-posti, ei sisselogimist."
+      }
+    },
+    "letters": {
+      "what": {
+        "title": "Kiri iseendale",
+        "body": "See pole leht: kiri kirjutatakse praegu ja jääb pitseerituks kuni sinu valitud päevani. Seni ei saa seda lugeda, muuta ega avada - isegi mitte sina."
+      },
+      "write": {
+        "title": "Kirjuta üks",
+        "body": "Üks mustand korraga, mida hoitakse siin, kuni selle pitseerid. Pitseerimisel küsitakse avanemise päeva ja tagasiteed pole."
+      },
+      "waiting": {
+        "title": "Kuni see ootab",
+        "body": "Pitseeritud kiri näitab ainult avanemise päeva ja oma pikkust. Ei mingit loendust ega eelvaadet: see on lihtsalt siin, kui aeg on käes."
+      }
+    },
+    "letterCompose": {
+      "directions": {
+        "title": "Kust alustada",
+        "body": "Vali suund ja saad küsimuse, mille poole kirjutada. Küsimust ei salvestata ja see ei saa kunagi kirja osaks: see on lihtsalt midagi, mida kirjutamise ajal vaadata."
+      },
+      "seal": {
+        "title": "Millal see avaneb",
+        "body": "Vali, kui kaugel see päev on, ja loe kiri siis viimast korda läbi. Pitseerimine on lõplik: sellest hetkest alates on kiri kuni valitud kuupäevani loetamatu."
+      }
+    },
+    "letterRead": {
+      "opened": {
+        "title": "See on saabunud",
+        "body": "Sinu valitud päev on käes ja kirja saab lugeda!"
+      },
+      "keep": {
+        "title": "Sinu oma, igaveseks",
+        "body": "Loe seda nii mitu korda, kui soovid. Pärast pitseerimist ei saa seda muuta ega kustutada."
+      }
+    }
+  },
+  "trash": "Prügikast",
+  "trashAction": "Ava prügikast…",
+  "trashDescription": "Kustutatud lehed ootavad siin, enne kui need jäädavalt kaovad.",
+  "trashEmptyAction": "Tühjenda prügikast",
+  "trashEmptyConfirm": "Iga prügikastis ootav leht kustutatakse jäädavalt koos manustega. Seda toimingut ei saa tagasi võtta.",
+  "trashEmptyTitle": "Kas tühjendada prügikast?",
+  "trashError": "Prügikasti ei õnnestunud lugeda.",
+  "trashHint": "Taastatud leht naaseb oma kuupäeva, manuste ja kohaga päevikus.",
+  "trashIntro": "Kustutatud leht ootab siin {{days}} päeva ja eemaldatakse seejärel jäädavalt.",
+  "trashNothing": "Midagi pole kustutatud.",
+  "trashPurge": "Kustuta jäädavalt",
+  "trashPurgeConfirm": "See leht ja kõik sellele lisatu kustutatakse jäädavalt. Seda toimingut ei saa tagasi võtta.",
+  "trashRestore": "Taasta",
+  "trashRow": "Kirjutatud {{written}} · eemaldatakse {{removed}}",
+  "underline": "Allakriipsutus",
+  "unlockEntry": "Ava selle lehe lukk",
+  "untitled": "Pealkirjata",
+  "writeOnThisDay": "Kirjuta sellele päevale",
+  "writingSection": "Kirjutamine",
+  "writingSectionDescription": "Kuidas leht avamisel käitub.",
+  "year": "Aasta",
+  "yearsAgo_one": "Aasta tagasi",
+  "yearsAgo_other": "{{count}} aastat tagasi",
+  "memoryPrevious": "Eelmine mälestus",
+  "memoryNext": "Järgmine mälestus",
+  "letterAiUnavailableTitle": "AI-soovitused pole saadaval",
+  "letterAiUnavailableBody": "Ülal olevad suunad töötavad alati. Et saada ka küsimus, millest alustada, lülita AI-assistent sisse ja vali seadetes mudel - see töötab selles arvutis ja miski ei lahku sealt."
+}

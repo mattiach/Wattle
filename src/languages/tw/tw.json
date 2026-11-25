@@ -1,0 +1,652 @@
+{
+  "ai": "AI 助理",
+  "aiActionDescription": {
+    "fixGrammar": "在不改變意思的前提下，修正拼字、文法和標點。",
+    "improveClarity": "讓文字更清楚、更好讀，同時保持所有內容不變。",
+    "makeShorter": "縮短文字，同時保留所有關鍵概念與資訊。"
+  },
+  "aiActive": "使用中",
+  "aiActiveModel": "目前的模型",
+  "aiDesc08b": "最輕量的選擇。一般硬體即可執行；適合快速修正文法，但不一定每次都準確。",
+  "aiDesc27b": "工作站等級。需要大量磁碟空間與記憶體；適合追求更精準的建議。",
+  "aiDesc2b": "小巧快速，文法優於 0.8B。",
+  "aiDesc4b": "品質與資源需求之間的最佳平衡。",
+  "aiDesc9b": "品質更高；需要效能較好的電腦。",
+  "aiDescription": "已關閉。不過並未從裝置上解除安裝。",
+  "aiDiscard": "捨棄",
+  "aiError": {
+    "badSelection": "無法改寫所選內容。它可能是空的，或比一個段落還長。",
+    "cancelled": "已中斷。沒有任何變更。",
+    "daemon": "Ollama 無法完成此操作。",
+    "disabled": "AI 助理已關閉。你可以在設定中開啟。",
+    "empty": "模型沒有傳回任何內容。請確認已選擇模型後再試一次。",
+    "modelGone": "該模型已不再安裝。請在設定中選擇其他模型。",
+    "noModel": "你還沒有選擇模型。請在設定頁面中選擇一個。",
+    "noPassage": "模型沒有傳回改寫後的段落。",
+    "reasoned": "模型收到了請求，但沒有傳回文字。通常縮短段落就能解決這個錯誤。",
+    "timeout": "模型花費太多時間，已被停止。通常縮短段落就能解決這個錯誤。",
+    "tooLong": "由於內容可能過長，模型已被停止。沒有任何變更。",
+    "unknown": "發生了一些問題。",
+    "unreachable": "Ollama 沒有回應。請確認它正在你的電腦上執行，然後再試一次。",
+    "unreadable": "模型的回應似乎無法讀取。"
+  },
+  "aiHint": "AI 模型透過 Ollama 在你的電腦本機執行。任何資料都不會傳送到你的裝置之外。隱私是 Wattle 的創立原則之一，也是它與眾不同之處：你的資料永遠留在你的電腦上。",
+  "aiInsertBelow": "插入到下方",
+  "aiInstall": "安裝",
+  "aiInstalling": "正在下載… {{percent}}%",
+  "aiMayNotFit": "接近這台電腦的極限",
+  "aiMayNotFitHint": "這個模型需要的記憶體超過這台電腦可用的記憶體。它可能會很慢，甚至完全無法啟動。雖然不建議，但仍然可以安裝。",
+  "aiModels": "模型",
+  "aiModelsDescription": "已安裝和可用的模型。在你要求之前，不會下載任何內容。",
+  "aiNoModel": "未選擇模型",
+  "aiNoModelChosenHint": "AI 助理已開啟，但還沒有啟用任何模型。請在上方選擇一個，開始使用 AI 功能。",
+  "aiNoModelsYet": "尚未安裝任何模型。請在下方選擇一個：在你要求之前，不會下載任何內容。",
+  "aiOnDescription": "在這台裝置上執行的模型。為了尊重你的隱私，不會傳送任何內容到其他地方。",
+  "aiPreparing": "正在這台電腦上準備助理…",
+  "aiRecommended": "推薦",
+  "aiRecommendedHint": "最適合這台電腦的記憶體。",
+  "aiRemove": "移除",
+  "aiRemoveConfirm": "{{name}} 將從這台電腦上刪除。要繼續嗎？",
+  "aiReplace": "取代",
+  "aiRewrite": "用 AI 助理改寫",
+  "aiRewriting": "思考中…",
+  "aiSection": "AI 設定",
+  "aiSectionDescription": "選用、在本機執行，並在你開啟前保持關閉。",
+  "aiUnmanaged": "Wattle 外部",
+  "aiUnmanagedDescription": "在 Wattle 之外安裝。你可以在這裡移除它，但它不會被列為可用的模型。",
+  "aiUseTitle": "使用這個",
+  "alignCenter": "置中對齊",
+  "alignLeft": "靠左對齊",
+  "alignRight": "靠右對齊",
+  "allEntries": "所有頁面",
+  "allSparks": "所有火花",
+  "allSparksIntro": "你記下的每一個火花，由新到舊排列。它們刻意保持簡短、沒有標題：火花是寫給自己的筆記，是當下捕捉到的念頭，除了你自己的規則，沒有任何規則。",
+  "appName": "Wattle",
+  "appearanceSection": "外觀",
+  "aroundThisTime": "大約這個時候",
+  "backToComponents": "元件",
+  "backToTop": "回到頂端",
+  "backup": "備份",
+  "backupAction": "匯出…",
+  "backupDescription": "儲存頁面、附件和設定的副本。",
+  "backupError": "備份失敗。請再試一次。",
+  "backupFolderAction": "選擇…",
+  "backupFolderHint": "備份 .wattle 檔案會以當天的檔名寫入這裡。這裡不是存放日記的地方。先前的備份永遠不會被包含在新的備份中。",
+  "backupFolderUnset": "尚未設定：儲存對話框會從 Windows 上次開啟的位置開始。",
+  "backupHint": "Wattle 每次都會詢問檔案的儲存位置。資料庫、附件和設定都在同一個 .wattle 檔案中。不包含 Ollama 模型，但可以直接從 Wattle 輕鬆安裝。",
+  "backupSuccess": "備份已儲存。",
+  "bold": "粗體",
+  "calendar": "日曆",
+  "calendarBoth": "兩者",
+  "calendarEntriesOnly": "頁面",
+  "calendarIntro": "一年當中你在什麼時候寫作。顏色越深的日子，寫得越多；選擇某一天即可重讀。",
+  "calendarSparksOnly": "火花",
+  "cancel": "取消",
+  "code": "程式碼",
+  "codeLanguage": "程式語言",
+  "codeLanguagePlain": "純文字",
+  "components": {
+    "askConfirmation": "要求確認",
+    "cardBody": "簡單的表面：細邊框、卡片背景，僅此而已。",
+    "cardTitle": "卡片",
+    "dialogBody": "入口中的對話框，背景和關閉按鈕由本專案提供。",
+    "dialogTitle": "對話框標題",
+    "disabled": "已停用",
+    "hoverMe": "將游標移到這裡",
+    "openDialog": "開啟對話框",
+    "openPopover": "開啟彈出框",
+    "pageDescription": "在返回連結、標題以及畫面右側內容的下方，用一兩句話說明這個畫面的用途。",
+    "pageSubtitle": "副標題",
+    "pageTitle": "頁面標題",
+    "popoverBody": "固定在觸發元件上，點擊其他任何地方即關閉：日期欄位和信件的開啟日期都在這裡開啟。",
+    "popoverTitle": "彈出框",
+    "sampleEntryBody": "出門早到足以走路過去，房子後面的田野上還籠罩著霧。",
+    "sampleEntryHit": "霧",
+    "sampleEntryOpening": "出門早到足以走路過去，房子後面的田野上還籠罩著",
+    "sampleEntryTitle": "去車站的遠路",
+    "sampleSpark": "不管是什麼，都不急。睡一覺再說。",
+    "sizes": "尺寸",
+    "startTour": "開始導覽",
+    "states": "狀態",
+    "subtitle": "構成介面的各個部件，以及它們的變體與狀態。先是基本元素；接著是少數幾個在夠多畫面中使用、值得單獨檢視的功能元件。這裡的一切都使用範例資料。",
+    "title": "元件",
+    "tooltipBody": "說明文字，緊接在所屬的控制項之後。",
+    "tourBody": "頁面變暗，醒目標示的元素保持明亮，卡片隨之移動。Wattle 中的每個導覽都是這樣，一步一步來。",
+    "tourTitle": "這是導覽的一個步驟",
+    "variants": "變體",
+    "withIcon": "附圖示"
+  },
+  "continue": "繼續",
+  "dailySparks": "火花",
+  "dark": "深色",
+  "dataSection": "資料",
+  "dataSectionDescription": "你的日記，匯入與匯出 Wattle。",
+  "delete": "刪除",
+  "deleteEntry": "刪除頁面",
+  "deleteEntryConfirm": "這個頁面將移到垃圾桶。在永久刪除之前，你可以在設定中還原它。",
+  "deleteSpark": "刪除火花",
+  "deleteSparkConfirm": "這個火花將移到垃圾桶。在永久刪除之前，你可以在設定中還原它。",
+  "dismiss": "先放一邊",
+  "downloadAttachment": "儲存副本…",
+  "downloadHtml": "下載 HTML",
+  "edit": "編輯",
+  "editorScale": "文字大小",
+  "editorScaleDefault": "預設",
+  "editorScaleDescription": "你的文字在編輯器中顯示的大小。",
+  "editorScaleHint": "只有文字大小會改變，應用程式的其他部分維持原樣。",
+  "editorScaleLarge": "大",
+  "editorScaleLargest": "特大",
+  "editorScaleSmall": "小",
+  "emptyBody": "每一頁都保存在這台裝置上。今天就開始吧，哪怕只寫一行。",
+  "emptySparksBody": "火花是當下捕捉到的一行字。上方的輸入框就是它開始的地方。",
+  "emptySparksTitle": "還沒有記下任何內容。",
+  "emptyTitle": "你的日記從一頁開始。",
+  "entryContentPlaceholder": "寫點什麼，或按 / 查看指令…",
+  "entryCount_other": "{{count}} 頁",
+  "entryDate": "頁面日期",
+  "entryLock": "以唯讀方式開啟頁面",
+  "entryLockDescription": "已有內容的頁面會以鎖定狀態開啟。只要點一下即可解鎖。",
+  "entryLockHint": "新頁面從空白開始，在你寫完之前永遠不會被鎖定。這個選項只適用於已存在的日記頁面。",
+  "entryNotFound": "這個頁面已不存在。",
+  "entryTitlePlaceholder": "未命名",
+  "export": "匯出",
+  "exportAction": "匯出…",
+  "exportDescription": "將整本日記匯出為不需網路連線即可開啟的 HTML 封存檔。",
+  "exportEmpty": "還沒有可匯出的內容：日記中沒有頁面。",
+  "exportEntry": "匯出頁面",
+  "exportError": "匯出失敗。你的日記沒有被變更。",
+  "exportSuccess": "已匯出到 {{path}}。",
+  "fixGrammar": "修正文法",
+  "greetingAfternoon": "午安。",
+  "greetingAfternoonNamed": "午安，{{name}}。",
+  "greetingEvening": "晚安。",
+  "greetingEveningNamed": "晚安，{{name}}。",
+  "greetingMorning": "早安。",
+  "greetingMorningNamed": "早安，{{name}}。",
+  "heading1": "標題 1",
+  "heading2": "標題 2",
+  "improveClarity": "更清楚",
+  "italic": "斜體",
+  "journalFolder": "日記資料夾",
+  "journalFolderAction": "移動…",
+  "journalFolderConfirm": "選擇一個資料夾，Wattle 會把你的日記移到那裡，包括資料庫和所有附件。移動完成後，Wattle 會重新開啟。如果無法移動，你的日記會原封不動地留在原處。",
+  "journalFolderError": "無法移動日記。它仍在原來的位置，沒有任何變更。",
+  "journalFolderHint": "這裡存放的是日記本身：wattle.db 和你的附件。這裡不是儲存備份 .wattle 檔案的地方。",
+  "language": "語言",
+  "languageDescription": "介面語言。",
+  "languageHint": "只會改變介面，不會更動你寫下的任何一個字。",
+  "layoutWidth": "Wattle 頁面寬度",
+  "layoutWidthCompact": "窄",
+  "layoutWidthDefault": "均衡",
+  "layoutWidthDescription": "Wattle 所有頁面的寬度。",
+  "layoutWidthHint": "自行設定 Wattle 頁面的寬度。每台電腦和每台螢幕都可能不同，所以理想的數值由你決定。",
+  "layoutWidthWide": "寬",
+  "letterArrivedHeading": "已送達",
+  "letterArrivedTitle": "一封來自過去的你的信到了",
+  "letterComposeDescription": "在你選定的日子到來之前，你無法閱讀它。一旦封存，就無法開啟、編輯或刪除。請謹慎選擇。",
+  "letterComposeTitle": "寫給自己的信",
+  "letterContentPlaceholder": "在封存信件之前，想好要寫些什麼。",
+  "letterContinueDraft": "繼續寫信",
+  "letterDraftHeading": "進行中",
+  "letterDraftRow_other": "一封已開始的信 - 目前 {{count}} 個字詞",
+  "letterError": {
+    "badDate": "這個日期無法用來封存這封信。",
+    "corrupt": "無法開啟這封信。它的封印與封存時的狀態不再一致：如果在封存後修改了日記檔案中的開啟日期、加密文字或金鑰，就會發生這種情況。",
+    "empty": "還沒有寫下可以封存的內容。",
+    "futureEnvelope": "這封信是由較新版本的 Wattle 封存的。請更新 Wattle 以開啟它。",
+    "noKey": "這封信的金鑰不見了。唯一的方法是還原在金鑰消失之前建立的備份。",
+    "notFound": "這封信不存在。",
+    "notYet": "這封信還沒有開啟。請稍後再來。",
+    "sealed": "這封信已封存，還不到開啟的時候。請稍後再來。",
+    "tooFar": "一封信最多可以等待五十年。",
+    "tooSoon": "一封信至少要等待七天。",
+    "unknown": "發生了一些問題。"
+  },
+  "letterExport": "下載這封信",
+  "letterFooterDates": "寫於 {{written}} · 開啟於 {{opened}}",
+  "letterFromYourself": "來自過去的你",
+  "letterHasArrived": "它的日子到了",
+  "letterIn10Years": "10 年",
+  "letterIn1Month": "1 個月",
+  "letterIn1Year": "1 年",
+  "letterIn2Years": "2 年",
+  "letterIn3Months": "3 個月",
+  "letterIn3Years": "3 年",
+  "letterIn5Years": "5 年",
+  "letterIn6Months": "6 個月",
+  "letterKeepEditing": "繼續寫",
+  "letterLength": "長度",
+  "letterNoDateYet": "選擇它何時開啟。",
+  "letterOpenIt": "開啟它",
+  "letterOpenedHeading": "已開啟",
+  "letterOpenedOn": "開啟於 {{date}}",
+  "letterOpensOn": "開啟日期",
+  "letterOpensOnDate": "將於 {{date}} 開啟",
+  "letterPickDate": "選擇日期…",
+  "letterPromptChapter": "新的篇章",
+  "letterPromptFree": "沒什麼特別的",
+  "letterPromptGoals": "目標",
+  "letterPromptHard": "一段艱難的時期",
+  "letterPromptOrdinary": "平凡的一天",
+  "letterPromptPerson": "重要的人",
+  "letterPromptRemember": "不想忘記的事",
+  "letterResultLabel": "信件",
+  "letterReviewAction": "再讀一次…",
+  "letterReviewBody": "最後再讀一次。這一步之後，信就會被收起來。",
+  "letterReviewTitle": "最後再讀一次",
+  "letterSealAction": "封存這封信",
+  "letterSealBody": "它將被加密並收起，直到 {{date}}。",
+  "letterSealFailed": "這封信沒有被封存。沒有任何變更。",
+  "letterSealHonesty": "Wattle 會加密信件，並把金鑰保存在日記檔案中，因此信件不會遺失。這是一把防住你自己的鎖，而不是對能存取你電腦的人保密的秘密，而且備份會把兩者一起帶走。",
+  "letterSealTerms": "在 {{date}} 之前，你將無法開啟、閱讀、編輯、刪除它，也無法變更它的日期。Wattle 也做不到。移除它的唯一方法是清空整本日記。",
+  "letterSealTitle": "要封存這封信嗎？",
+  "letterSealing": "正在封存…",
+  "letterTypeDate": "輸入日期以確認",
+  "letterWaitingHeading": "等待中",
+  "letterWaitingLine": "一封寫給自己的信將於 {{date}} 開啟。",
+  "letterWhereToStart": "從哪裡開始",
+  "letterWillOpen": "它將於 {{date}} 開啟。",
+  "letterWordCount_other": "{{count}} 個字詞",
+  "letterWrite": "寫一封信",
+  "letterWriteBack": "回信",
+  "letterWritten": "寫於",
+  "letterWrittenAndLength_other": "寫於 {{date}} · {{count}} 個字詞",
+  "letterWrittenOn": "寫於 {{date}}",
+  "letters": "信件",
+  "lettersDescription": "託付給未來的自己的話語。選定一天，把你想記住、想訴說或想重新發現的事留在那裡。在那之前，信件會一直封存，無法觸及。",
+  "lettersEmptyBody": "信是你現在寫下、直到你選定的日子才能再次閱讀的東西。",
+  "lettersEmptyTitle": "沒有信件",
+  "light": "淺色",
+  "link": "連結",
+  "listErrorBody": "你的頁面仍在這台裝置上，只是 Wattle 無法讀取。請再試一次，如果問題持續發生，請還原備份。",
+  "listErrorTitle": "無法開啟日記。",
+  "loadOlder": "載入較舊的內容",
+  "loading": "正在載入…",
+  "lockEntry": "鎖定這個頁面",
+  "makeShorter": "縮短",
+  "memoriesSection": "回憶",
+  "memoriesSectionDescription": "讓你寫下的內容重新回到你身邊的兩種方式。",
+  "memoryAnother": "換一個",
+  "memoryAsk": "找一段值得重讀的回憶",
+  "memoryLooking": "正在尋找…",
+  "memoryNoneAlike": "你寫過的其他內容，都沒有與此相似到值得放在一起的程度。",
+  "memoryNoneLeft": "沒有其他夠相似、值得顯示的內容了。",
+  "memoryTooRecent": "還沒有夠久遠的內容。回憶必須比你最近的文字早至少兩週，而你的日記還沒有回溯到那麼遠。",
+  "memoryWorthRevisiting": "一段值得重讀的回憶",
+  "month": "月",
+  "name": "名字",
+  "nameDescription": "{{min}} 到 {{max}} 個字元。",
+  "nameHint": "選擇你希望 Wattle 怎麼稱呼你，真名或虛構的名字都可以。你可以隨時變更。",
+  "namePlaceholder": "你的名字",
+  "nameRequired": "名字為必填：至少 {{min}} 個字元。",
+  "nameTooShort": "至少 {{min}} 個字元。",
+  "navigation": "導覽列",
+  "navigationBoth": "兩者",
+  "navigationBottom": "底部",
+  "navigationDescription": "主導覽列所在的位置。",
+  "navigationHeader": "頂端",
+  "navigationHint": "把導覽列放在你喜歡的位置。",
+  "newEntry": "新頁面",
+  "newProfile": "新的個人檔案",
+  "newProfileAction": "結束",
+  "newProfileBackingUp": "正在備份…",
+  "newProfileBackupFolder": "儲存對話框將在 {{folder}} 中開啟。",
+  "newProfileBackupNow": "立即備份…",
+  "newProfileBackupSaved": "備份已儲存。",
+  "newProfileConfirmAction": "全部刪除",
+  "newProfileConfirmBody": "每一頁、每個附件以及你的名字都將被永久刪除，設定流程將重新開始。此動作無法復原。",
+  "newProfileConfirmTitle": "要清除這個個人檔案嗎？",
+  "newProfileContinueAnyway": "仍要繼續",
+  "newProfileDescription": "登出、刪除這個個人檔案並從頭開始。每一頁和每個附件都將被刪除。在確認之前，你仍可以備份這個個人檔案。",
+  "newProfileError": "無法重新開始。你的日記沒有被變更。",
+  "newProfileHint": "這台裝置上只有一本日記。此動作會清空它，而不是新增第二本。",
+  "newProfileNoBackupBody": "Wattle 沒有這本日記的備份紀錄。其中的所有內容即將被刪除，沒有備份就無法復原。",
+  "newProfileNoBackupTitle": "未設定備份資料夾",
+  "next": "下一步",
+  "nextEntry": "下一頁",
+  "noResults": "沒有符合搜尋的頁面。",
+  "noSparkResults": "沒有符合搜尋的火花。",
+  "nudgeAnother": "換個問題",
+  "nudgeCue": "寫作提示",
+  "nudgeDismiss": "以後再說",
+  "nudgeOffer": "不知道要寫什麼？",
+  "nudgeThinking": "思考中…",
+  "nudgeWrite": "寫寫這個",
+  "off": "關",
+  "ollamaInstallFailed": "無法安裝 Ollama。Wattle 沒有變更這台裝置上的任何內容。",
+  "ollamaStartFailed": "Ollama 沒有及時啟動。它可能仍在啟動中：請稍後再試。",
+  "on": "開",
+  "onThisDay": "歷史上的今天",
+  "onThisDayDescription": "往年在今天這個日期寫下的頁面，會顯示在首頁上。",
+  "onThisDayHint": "選擇是否要重溫往年同一日期寫下的內容。提醒會顯示在首頁上。",
+  "onboarding": {
+    "language": {
+      "title": "歡迎使用 Wattle。",
+      "body": "請選擇你的語言。"
+    },
+    "start": {
+      "title": "你以前用 Wattle 寫過日記嗎？",
+      "body": "如果你有備份，其中的一切都會回到原位。",
+      "fresh": "開始一本新日記",
+      "freshBody": "空白的第一頁，以及開啟它之前的三個簡短問題。",
+      "returning": "我有 Wattle 備份",
+      "returningBody": "文字、附件和設定，完全保持你離開時的樣子。"
+    },
+    "returning": {
+      "eyebrow": "歡迎回來",
+      "title": "讓我們找回你的日記。",
+      "body": "選擇你儲存的 .wattle 備份檔案。其中的所有內容將取代這本空白日記，Wattle 會從你上次停下的地方開啟。",
+      "action": "選擇備份…",
+      "confirmTitle": "要還原備份嗎？",
+      "confirm": "選擇你儲存的 .wattle 檔案，Wattle 將帶著其中的所有內容重新開啟：文字、附件和設定。這本空白日記將被取代。"
+    },
+    "name": {
+      "title": "Wattle 該怎麼稱呼你？",
+      "body": "用於主畫面上的問候語。2 到 12 個字元。"
+    },
+    "backup": {
+      "title": "備份要儲存在哪裡？",
+      "body": "日記之外的一個資料夾，這樣需要時備份會在別處。"
+    },
+    "theme": {
+      "title": "淺色還是深色？",
+      "body": "你可以隨時在設定中變更。"
+    }
+  },
+  "onboardingFinish": "開始寫作",
+  "onboardingStep": "第 {{step}} 步，共 {{total}} 步",
+  "pageOf": "第 {{page}} 頁，共 {{total}} 頁",
+  "palette": "主題",
+  "paletteDescription": "設定 Wattle 的顏色、字型和視覺風格。",
+  "paletteHint": "改變整個應用程式的外觀：背景、文字、介面細節、圓角和字型。不會改變你寫下的任何內容。",
+  "paletteName": {
+    "clay": "陶土",
+    "crimson": "緋紅",
+    "sage": "鼠尾草",
+    "umber": "赭褐",
+    "wattle": "Wattle",
+    "olive": "橄欖",
+    "forest": "森林",
+    "candy": "糖果"
+  },
+  "pastSparks": "先前的火花",
+  "previous": "上一步",
+  "previousEntry": "上一頁",
+  "primaryNav": "主選單",
+  "profileSection": "個人檔案",
+  "removeAttachment": "移除附件",
+  "replayTours": "導覽",
+  "replayToursAction": "重設",
+  "replayToursDescription": "再次顯示所有歡迎導覽。有助於重新認識 Wattle 的所有功能。",
+  "replayToursHint": "將所有導覽標記為未看過，並帶你前往主畫面顯示第一個導覽。",
+  "reset": "重設偏好設定",
+  "resetAction": "重設",
+  "resetConfirm": "外觀、頁面寬度、回憶和頁面鎖定將恢復為初始設定。日記、你的名字和 AI 助理設定不受影響。要繼續嗎？",
+  "resetDescription": "恢復為初始值。你的名字和 AI 助理設定維持不變。",
+  "resetHint": "僅限偏好設定。頁面、火花和信件都原封不動。",
+  "resetSection": "重設",
+  "resizeImage": "調整圖片大小",
+  "resizeVideo": "調整影片大小",
+  "restore": "還原",
+  "restoreAction": "還原…",
+  "restoreConfirm": "這台裝置上的每一頁、每個附件和每項設定都將被你現在選擇的備份取代。此動作無法復原。",
+  "restoreDescription": "用備份取代這台裝置上的所有內容。",
+  "restoreError": "還原失敗。你的資料沒有被更動。",
+  "restoreHint": "用備份取代這台裝置上的所有內容。此動作無法復原。",
+  "restoring": "正在還原…",
+  "retry": "再試一次",
+  "save": "儲存",
+  "saveError": "未儲存",
+  "saveThought": "儲存念頭",
+  "saved": "已儲存",
+  "saving": "正在儲存…",
+  "search": "搜尋頁面",
+  "searchDisabledHint": "找不到任何項目；新增項目後才能啟用搜尋。",
+  "searchPlaceholder": "搜尋頁面…",
+  "searchResultCount_other": "{{count}} 個結果",
+  "searchSparks": "搜尋火花",
+  "searchSparksDisabledHint": "還沒有可搜尋的內容：在上方寫一個火花，搜尋就會啟用。",
+  "searchSparksPlaceholder": "搜尋火花…",
+  "settings": "設定",
+  "settingsSubtitle": "你在這裡看到的一切都儲存在這台裝置上。",
+  "slash": {
+    "bulletList": {
+      "description": "簡單的項目符號清單",
+      "title": "項目符號清單"
+    },
+    "code": {
+      "description": "插入程式碼片段",
+      "title": "程式碼區塊"
+    },
+    "divider": {
+      "description": "在視覺上分隔各區段",
+      "title": "分隔線"
+    },
+    "file": {
+      "description": "附加任何檔案",
+      "title": "檔案"
+    },
+    "heading1": {
+      "description": "大型區段標題",
+      "title": "標題 1"
+    },
+    "heading2": {
+      "description": "中型區段標題",
+      "title": "標題 2"
+    },
+    "heading3": {
+      "description": "小型區段標題",
+      "title": "標題 3"
+    },
+    "image": {
+      "description": "附加圖片",
+      "title": "圖片"
+    },
+    "orderedList": {
+      "description": "編號清單",
+      "title": "編號清單"
+    },
+    "quote": {
+      "description": "醒目標示一段文字",
+      "title": "引言"
+    },
+    "taskList": {
+      "description": "記錄待辦事項",
+      "title": "核取清單"
+    },
+    "text": {
+      "description": "純文字",
+      "title": "文字"
+    },
+    "video": {
+      "description": "附加影片",
+      "title": "影片"
+    }
+  },
+  "slashCategory": {
+    "basic": "基本",
+    "blocks": "區塊",
+    "lists": "清單",
+    "media": "媒體"
+  },
+  "slashNoResults": "沒有結果。",
+  "sparkCharsLeft_other": "還剩 {{count}} 個字元",
+  "sparkCount_other": "{{count}} 個火花",
+  "sparkDate": "這個火花歸檔的日期",
+  "sparkEchoDescription": "先前的火花會自己回來，每天最多一個。",
+  "sparkEchoHint": "一個至少 30 天前的火花，一整天都是同一個，明天再換下一個。",
+  "sparkEchoLead": "你給自己留下了這個念頭",
+  "sparkEchoSetting": "火花回聲",
+  "sparkEmpty": "這個火花是空的。",
+  "sparkOpenAsEntry": "以頁面開啟",
+  "sparkPlaceholder": "捕捉一個轉瞬即逝的念頭…",
+  "sparkResultLabel": "火花",
+  "sparkRichBadge": "含格式的內容",
+  "sparkRichBody": "這個火花包含格式或附件，來自火花變成純文字之前。沒有任何變更：它會在完整編輯器中開啟，一切照常運作。",
+  "sparkSaveHint": "按 Ctrl + Enter 儲存",
+  "sparkTruncated_other": "顯示最近的 {{count}} 個。",
+  "sparksEyebrow": "當下的清晰",
+  "sparksIntro": "一兩行字，在它們溜走之前捕捉下來。這裡的一切都不需要標題，也不需要變成別的什麼。",
+  "strikethrough": "刪除線",
+  "suggestTitle": "建議標題",
+  "theme": "淺色或深色",
+  "themeDescription": "每個主題都有兩種模式；這是你正在閱讀的那一種。",
+  "themeHint": "主題會套用到整個應用程式，下次開啟時會記住你的選擇。",
+  "tourClose": "關閉導覽",
+  "tourDone": "完成",
+  "tourStep": "{{current}} / {{total}}",
+  "tours": {
+    "ai": {
+      "switch": {
+        "title": "在你開啟前保持關閉",
+        "body": "AI 助理是選用的，預設為關閉。它會改善並個人化你在 Wattle 中的體驗，始終尊重你的隱私。資料在你的電腦上處理，永遠不會離開它。"
+      },
+      "runtime": {
+        "title": "模型在什麼上執行",
+        "body": "模型透過 Ollama 執行。如果你允許，Wattle 可以在這裡安裝並啟動它。"
+      },
+      "models": {
+        "title": "你保留的模型",
+        "body": "下載最適合你電腦的模型。一次試一個，這樣你就能分辨哪個最適合你的硬體。"
+      }
+    },
+    "home": {
+      "write": {
+        "title": "從今天開始",
+        "body": "新頁面就是這樣開始的。點一下，就會開啟一張有今天日期的空白頁面：哪怕只有一行，也值得在這裡占有一席之地。"
+      },
+      "search": {
+        "title": "找到你寫過的內容",
+        "body": "每一頁上的每一個字詞都可以搜尋，結果會顯示符合的段落。在有內容可搜尋之前，搜尋會保持停用。"
+      },
+      "timeline": {
+        "title": "你寫下的一切",
+        "body": "你的頁面，從最新的開始，依月份分組。開啟一頁繼續寫，或捲動以載入更多。"
+      },
+      "nav": {
+        "title": "其他一切",
+        "body": "日曆、火花、寫給自己的信和設定都在這個列中。它會在各個畫面之間跟著你，只有你目前所在的那個會顯示名稱。"
+      }
+    },
+    "calendar": {
+      "grid": {
+        "title": "依日期檢視你的日記",
+        "body": "你寫過的日子都有標記。選擇一天來重讀，或在已經過去的日子裡寫作。"
+      },
+      "view": {
+        "title": "一個月，或一整年",
+        "body": "在兩者之間切換。習慣正是在年檢視中顯現出來的。"
+      },
+      "kinds": {
+        "title": "頁面、火花或兩者",
+        "body": "兩種寫作共用這個格狀檢視，以標記的顏色區分。在尋找特定內容時，一次只顯示一種。"
+      }
+    },
+    "sparks": {
+      "capture": {
+        "title": "捕捉一個念頭",
+        "body": "火花是當下捕捉到的一行字。沒有標題，沒有頁面。寫下它，然後按 Ctrl+Enter，或使用按鈕。"
+      },
+      "archive": {
+        "title": "你保存的所有火花",
+        "body": "在這裡可以看到最新的火花。從這裡你可以依月份開啟所有火花，也可以在那裡寫一個新的。"
+      },
+      "recent": {
+        "title": "火花可以變成什麼",
+        "body": "每個火花都會在自己的頁面中開啟，你可以在那裡編輯、刪除它，或者如果它在這段期間成長了，就把它變成正式的頁面。"
+      }
+    },
+    "entry": {
+      "title": {
+        "title": "幫它取個名字，或就這樣",
+        "body": "標題是選填的，會在你書寫時自動儲存。按 Enter 可直接跳到下方的頁面。"
+      },
+      "editor": {
+        "title": "輸入「/」取得其他一切",
+        "body": "像在紙上一樣在這裡書寫。輸入「/」會開啟彈出選單，列出頁面可以包含的一切：標題、清單、引言、圖片、影片和檔案。選取文字即可設定格式。不需要儲存：邊寫邊記錄。"
+      },
+      "actions": {
+        "title": "頁面指令",
+        "body": "前往上一頁或下一頁，鎖定頁面以防誤改，將它匯出為 HTML，或刪除它。"
+      }
+    },
+    "settings": {
+      "appearance": {
+        "title": "打造屬於你的樣子",
+        "body": "主題、強調色、語言和頁面寬度。"
+      },
+      "data": {
+        "title": "你的日記屬於你",
+        "body": "備份它、將它匯出為 HTML，或從備份還原。一切都留在這台裝置上。"
+      },
+      "reset": {
+        "title": "回到起點",
+        "body": "將偏好設定恢復到初始狀態，重新播放這些導覽，或開始一本全新的日記。"
+      },
+      "profile": {
+        "title": "你的名字，僅此而已",
+        "body": "它在主畫面上向你問候，永遠不會離開這台裝置。Wattle 不會向你要求其他任何東西：沒有帳號，沒有電子郵件，不需要登入。"
+      }
+    },
+    "letters": {
+      "what": {
+        "title": "寫給自己的信",
+        "body": "它不是頁面：信是現在寫下的，並會一直封存到你選定的那一天。在那之前，它無法被閱讀、編輯或拆封，就連你也不行。"
+      },
+      "write": {
+        "title": "寫一封",
+        "body": "一次只有一份草稿，保存在這裡直到你封存它。封存時會詢問開啟日期，而且沒有回頭路。"
+      },
+      "waiting": {
+        "title": "等待期間",
+        "body": "封存的信只會顯示開啟日期和長度。沒有倒數計時，沒有預覽：時候到了，它就會在這裡。"
+      }
+    },
+    "letterCompose": {
+      "directions": {
+        "title": "從哪裡開始",
+        "body": "選擇一個方向，你會得到一個可以圍繞著寫的問題。這個問題不會被儲存，也永遠不會成為信的一部分：它只是你寫作時可以看著的東西。"
+      },
+      "seal": {
+        "title": "它何時開啟",
+        "body": "選擇那一天有多遠，然後最後再讀一次。封存是不可逆的：從那一刻起，在選定的日期之前，這封信都無法閱讀。"
+      }
+    },
+    "letterRead": {
+      "opened": {
+        "title": "它到了",
+        "body": "你選定的日子到了，可以讀信了！"
+      },
+      "keep": {
+        "title": "永遠屬於你",
+        "body": "想讀幾次就讀幾次。信一經封存就無法編輯，也無法刪除。"
+      }
+    }
+  },
+  "trash": "垃圾桶",
+  "trashAction": "開啟垃圾桶…",
+  "trashDescription": "你刪除的頁面會在這裡等待，然後才會永久消失。",
+  "trashEmptyAction": "清空垃圾桶",
+  "trashEmptyConfirm": "垃圾桶中等待的每一頁都將被永久刪除，包括附件。此動作無法復原。",
+  "trashEmptyTitle": "要清空垃圾桶嗎？",
+  "trashError": "無法讀取垃圾桶。",
+  "trashHint": "還原的頁面會連同它的日期、附件以及在日記中的位置一起回來。",
+  "trashIntro": "刪除的頁面會在這裡等待 {{days}} 天，然後被永久移除。",
+  "trashNothing": "沒有刪除任何內容。",
+  "trashPurge": "永久刪除",
+  "trashPurgeConfirm": "這個頁面及其所有附件都將被永久刪除。此動作無法復原。",
+  "trashRestore": "還原",
+  "trashRow": "寫於 {{written}} · 將於 {{removed}} 移除",
+  "underline": "底線",
+  "unlockEntry": "解鎖這個頁面",
+  "untitled": "未命名",
+  "writeOnThisDay": "在這一天寫作",
+  "writingSection": "寫作",
+  "writingSectionDescription": "開啟頁面時它的行為方式。",
+  "year": "年",
+  "yearsAgo_other": "{{count}} 年前",
+  "memoryPrevious": "上一段回憶",
+  "memoryNext": "下一段回憶",
+  "letterAiUnavailableTitle": "AI 建議無法使用",
+  "letterAiUnavailableBody": "上方的方向隨時可用。如果還想得到一個用來開頭的問題，請在設定中開啟 AI 助理並選擇一個模型。它在這台電腦上執行，不會有任何內容離開。"
+}

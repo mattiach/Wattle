@@ -1,0 +1,661 @@
+{
+  "ai": "AI-assistent",
+  "aiActionDescription": {
+    "fixGrammar": "Retter stavning, grammatik og tegnsætning uden at ændre betydningen.",
+    "improveClarity": "Gør teksten tydeligere og lettere at læse, mens alt indhold forbliver uændret.",
+    "makeShorter": "Forkorter teksten og bevarer alle væsentlige begreber og oplysninger."
+  },
+  "aiActive": "Aktiv",
+  "aiActiveModel": "Aktiv model",
+  "aiDesc08b": "Den letteste mulighed. Kører på beskeden hardware; ideel til hurtige grammatikrettelser, men ikke altid præcis.",
+  "aiDesc27b": "Til arbejdsstationer. Kræver betydelig diskplads og hukommelse; ideel til større præcision i forslagene.",
+  "aiDesc2b": "Lille og hurtig, med bedre grammatik end 0.8B.",
+  "aiDesc4b": "Den bedste balance mellem kvalitet og ressourcekrav.",
+  "aiDesc9b": "Overlegen kvalitet; kræver en kraftig computer.",
+  "aiDescription": "Slået fra. Den er dog ikke afinstalleret fra enheden.",
+  "aiDiscard": "Kassér",
+  "aiError": {
+    "badSelection": "Denne markering kan ikke omskrives. Den er måske tom eller længere end et enkelt afsnit.",
+    "cancelled": "Afbrudt. Intet blev ændret.",
+    "daemon": "Ollama kunne ikke fuldføre handlingen.",
+    "disabled": "AI-assistenten er slået fra. Du kan slå den til i indstillingerne.",
+    "empty": "Modellen returnerede ingenting. Prøv igen, og sørg for, at en model er valgt.",
+    "modelGone": "Den model er ikke længere installeret. Vælg en anden i indstillingerne.",
+    "noModel": "Du har ikke valgt en model endnu. Vælg en på siden med indstillinger.",
+    "noPassage": "Modellen returnerede ikke et omskrevet afsnit.",
+    "reasoned": "Modellen modtog anmodningen, men returnerede ingen tekst. Et kortere afsnit er som regel nok til at løse denne fejl.",
+    "timeout": "Modellen var for længe om det og blev stoppet. Et kortere afsnit er som regel nok til at løse denne fejl.",
+    "tooLong": "Modellen blev stoppet, fordi indholdet måske er for langt. Intet blev ændret.",
+    "unknown": "Noget gik galt.",
+    "unreachable": "Ollama svarer ikke. Sørg for, at den kører på din computer, før du prøver igen.",
+    "unreadable": "Modellens svar ser ikke ud til at kunne læses."
+  },
+  "aiHint": "AI-modeller kører lokalt på din computer via Ollama. Ingen data sendes nogensinde uden for din enhed. Privatliv er et af Wattles grundprincipper og det, der gør det anderledes: dine data bliver altid på din computer.",
+  "aiInsertBelow": "Indsæt nedenfor",
+  "aiInstall": "Installér",
+  "aiInstalling": "Henter… {{percent}}%",
+  "aiMayNotFit": "På grænsen for denne computer",
+  "aiMayNotFitHint": "Denne model kræver mere hukommelse, end denne maskine har til rådighed. Den kan være langsom eller slet ikke starte. Installationen kan stadig gennemføres, selvom det ikke anbefales.",
+  "aiModels": "Modeller",
+  "aiModelsDescription": "Installerede og tilgængelige modeller. Intet hentes, før du beder om det.",
+  "aiNoModel": "Ingen model valgt",
+  "aiNoModelChosenHint": "AI-assistenten er slået til, men ingen model er aktiv endnu. Vælg en ovenfor for at begynde at bruge AI-funktionerne.",
+  "aiNoModelsYet": "Ingen model er installeret endnu. Vælg en nedenfor: intet hentes, før du beder om det.",
+  "aiOnDescription": "En model, der kører på denne enhed. Intet sendes andre steder hen, af hensyn til dit privatliv.",
+  "aiPreparing": "Gør assistenten klar på denne computer…",
+  "aiRecommended": "Anbefalet",
+  "aiRecommendedHint": "Passer bedst til denne computers hukommelse.",
+  "aiRemove": "Fjern",
+  "aiRemoveConfirm": "{{name}} bliver slettet fra denne computer. Vil du fortsætte?",
+  "aiReplace": "Erstat",
+  "aiRewrite": "Omskriv med AI-assistenten",
+  "aiRewriting": "Tænker…",
+  "aiSection": "AI-indstillinger",
+  "aiSectionDescription": "Valgfri, lokal og slået fra, indtil du slår den til.",
+  "aiUnmanaged": "Uden for Wattle",
+  "aiUnmanagedDescription": "Installeret uden for Wattle. Du kan fjerne den herfra, men den tilbydes ikke som aktiv model.",
+  "aiUseTitle": "Brug denne",
+  "alignCenter": "Centrér",
+  "alignLeft": "Venstrejustér",
+  "alignRight": "Højrejustér",
+  "allEntries": "Alle sider",
+  "allSparks": "Alle gnister",
+  "allSparksIntro": "Hver gnist, du har fanget, vist fra den nyeste. De er bevidst korte og uden titel: en gnist er en note til dig selv, en tanke fanget i øjeblikket, uden andre regler end dine egne.",
+  "appName": "Wattle",
+  "appearanceSection": "Udseende",
+  "aroundThisTime": "Omkring denne tid",
+  "backToComponents": "Komponenter",
+  "backToTop": "Tilbage til toppen",
+  "backup": "Sikkerhedskopi",
+  "backupAction": "Eksportér…",
+  "backupDescription": "Gem en kopi af dine sider, vedhæftede filer og indstillinger.",
+  "backupError": "Sikkerhedskopieringen mislykkedes. Prøv igen.",
+  "backupFolderAction": "Vælg…",
+  "backupFolderHint": "Det er her, sikkerhedskopierne i .wattle-format skrives, med dagens filnavn. Det er ikke her, din dagbog opbevares. Tidligere sikkerhedskopier medtages aldrig i en ny.",
+  "backupFolderUnset": "Ikke angivet endnu: gem-dialogen starter, hvor Windows sidst efterlod den.",
+  "backupHint": "Wattle spørger hver gang, hvor filen skal gemmes. Database, vedhæftede filer og indstillinger i én enkelt .wattle-fil. Ollama-modeller er ikke inkluderet og kan nemt installeres direkte fra Wattle.",
+  "backupSuccess": "Sikkerhedskopi gemt.",
+  "bold": "Fed",
+  "calendar": "Kalender",
+  "calendarBoth": "Begge",
+  "calendarEntriesOnly": "Sider",
+  "calendarIntro": "Hvor din skrivning falder i løbet af året. En fyldigere dag er en dag, hvor du skrev mere; vælg den for at læse den igen.",
+  "calendarSparksOnly": "Gnister",
+  "cancel": "Annullér",
+  "code": "Kode",
+  "codeLanguage": "Kodesprog",
+  "codeLanguagePlain": "Almindelig tekst",
+  "components": {
+    "askConfirmation": "Bed om bekræftelse",
+    "cardBody": "En enkel flade: tynd kant, kortbaggrund, intet andet.",
+    "cardTitle": "Kort",
+    "dialogBody": "En dialog i en portal, med baggrund og lukkeknap leveret af dette projekt.",
+    "dialogTitle": "Dialogtitel",
+    "disabled": "Deaktiveret",
+    "hoverMe": "Hold musen over mig",
+    "openDialog": "Åbn dialog",
+    "openPopover": "Åbn popover",
+    "pageDescription": "En eller to sætninger om, hvad skærmen er til, under vejen tilbage, titlen og det, skærmen placerer til højre.",
+    "pageSubtitle": "En undertitel",
+    "pageTitle": "En sidetitel",
+    "popoverBody": "Forankret til sin udløser og lukket af alt andet: det er her, både datofeltet og et brevs frist åbner.",
+    "popoverTitle": "En popover",
+    "sampleEntryBody": "Gik tidligt nok til at kunne gå derhen, og tågen hang stadig over marken bag husene.",
+    "sampleEntryHit": "tågen",
+    "sampleEntryOpening": "Gik tidligt nok til at kunne gå derhen, og",
+    "sampleEntryTitle": "Den lange vej til stationen",
+    "sampleSpark": "Hvad det end er, haster det ikke. Sov på det.",
+    "sizes": "Størrelser",
+    "startTour": "Start rundvisning",
+    "states": "Tilstande",
+    "subtitle": "De dele, brugerfladen består af, med deres varianter og tilstande. Primitiverne først; derefter de få funktionelle komponenter, der bruges på nok skærme til at være værd at se for sig selv. Alt her bruger testdata.",
+    "title": "Komponenter",
+    "tooltipBody": "En forklaring, ét skridt bag den kontrol, den hører til.",
+    "tourBody": "Siden mørknes, det fremhævede element forbliver oplyst, og kortet følger det. Hver rundvisning i Wattle er sådan, ét trin ad gangen.",
+    "tourTitle": "Dette er et trin i rundvisningen",
+    "variants": "Varianter",
+    "withIcon": "Med et ikon"
+  },
+  "continue": "Fortsæt",
+  "dailySparks": "Gnister",
+  "dark": "Mørk",
+  "dataSection": "Data",
+  "dataSectionDescription": "Din dagbog, ind i og ud af Wattle.",
+  "delete": "Slet",
+  "deleteEntry": "Slet side",
+  "deleteEntryConfirm": "Denne side flyttes til papirkurven. Du kan gendanne den fra Indstillinger, indtil den fjernes for altid.",
+  "deleteSpark": "Slet gnist",
+  "deleteSparkConfirm": "Denne gnist flyttes til papirkurven. Du kan gendanne den fra Indstillinger, indtil den fjernes for altid.",
+  "dismiss": "Læg til side",
+  "downloadAttachment": "Gem en kopi…",
+  "downloadHtml": "Hent HTML",
+  "edit": "Redigér",
+  "editorScale": "Tekststørrelse",
+  "editorScaleDefault": "Standard",
+  "editorScaleDescription": "Hvor stor din tekst vises i editoren.",
+  "editorScaleHint": "Kun teksten skifter størrelse - resten af programmet forbliver, som det er.",
+  "editorScaleLarge": "Stor",
+  "editorScaleLargest": "Størst",
+  "editorScaleSmall": "Lille",
+  "emptyBody": "Hver side bliver på denne enhed. Begynd i dag, selv med en enkelt linje.",
+  "emptySparksBody": "En gnist er en linje fanget i øjeblikket. Feltet ovenfor er der, hvor den begynder.",
+  "emptySparksTitle": "Intet fanget endnu.",
+  "emptyTitle": "Din dagbog begynder med en side.",
+  "entryContentPlaceholder": "Skriv noget, eller tryk / for kommandoer…",
+  "entryCount_one": "{{count}} side",
+  "entryCount_other": "{{count}} sider",
+  "entryDate": "Sidens dato",
+  "entryLock": "Åbn sider skrivebeskyttet",
+  "entryLockDescription": "En side, der allerede har indhold, åbner låst. Ét klik er alt, der skal til for at låse den op.",
+  "entryLockHint": "En ny side starter tom og bliver aldrig låst, før du er færdig med den. Denne indstilling gælder kun dagbogssider, der allerede findes.",
+  "entryNotFound": "Denne side findes ikke længere.",
+  "entryTitlePlaceholder": "Uden titel",
+  "export": "Eksport",
+  "exportAction": "Eksportér…",
+  "exportDescription": "Hele dagbogen som et HTML-arkiv, der kan åbnes uden netværksforbindelse.",
+  "exportEmpty": "Der er intet at eksportere endnu: dagbogen har ingen sider.",
+  "exportEntry": "Eksportér side",
+  "exportError": "Eksporten mislykkedes. Din dagbog blev ikke ændret.",
+  "exportSuccess": "Eksporteret til {{path}}.",
+  "fixGrammar": "Ret grammatik",
+  "greetingAfternoon": "God eftermiddag.",
+  "greetingAfternoonNamed": "God eftermiddag, {{name}}.",
+  "greetingEvening": "God aften.",
+  "greetingEveningNamed": "God aften, {{name}}.",
+  "greetingMorning": "Godmorgen.",
+  "greetingMorningNamed": "Godmorgen, {{name}}.",
+  "heading1": "Overskrift 1",
+  "heading2": "Overskrift 2",
+  "improveClarity": "Gør tydeligere",
+  "italic": "Kursiv",
+  "journalFolder": "Dagbogsmappe",
+  "journalFolderAction": "Flyt…",
+  "journalFolderConfirm": "Vælg en mappe, så flytter Wattle din dagbog derhen - databasen og alle vedhæftede filer samlet. Wattle åbner igen, når flytningen er færdig. Hvis den ikke kan flyttes, bliver din dagbog præcis, hvor den er.",
+  "journalFolderError": "Dagbogen kunne ikke flyttes. Den er stadig, hvor den var, og intet blev ændret.",
+  "journalFolderHint": "Det er her, selve dagbogen opbevares: wattle.db og dine vedhæftede filer. Det er ikke her, sikkerhedskopierne i .wattle-format gemmes.",
+  "language": "Sprog",
+  "languageDescription": "Brugerfladens sprog.",
+  "languageHint": "Ændrer kun brugerfladen. Det rører ikke et ord af det, du har skrevet.",
+  "layoutWidth": "Sidebredde i Wattle",
+  "layoutWidthCompact": "Smal",
+  "layoutWidthDefault": "Afbalanceret",
+  "layoutWidthDescription": "Hvor brede alle Wattles sider er.",
+  "layoutWidthHint": "Bestem selv bredden på Wattles sider. Hver computer og hver skærm kan være forskellig, så vi overlader den ideelle værdi til dig.",
+  "layoutWidthWide": "Bred",
+  "letterArrivedHeading": "Ankommet",
+  "letterArrivedTitle": "Et brev fra dit tidligere jeg er ankommet",
+  "letterComposeDescription": "Noget, du ikke kan læse før en dag, du selv vælger. Når det er forseglet, kan det ikke åbnes, redigeres eller slettes. Vælg med omhu.",
+  "letterComposeTitle": "Et brev til dig selv",
+  "letterContentPlaceholder": "Vælg, hvad du vil skrive, før du forsegler dit brev.",
+  "letterContinueDraft": "Fortsæt brevet",
+  "letterDraftHeading": "I gang",
+  "letterDraftRow_one": "Et påbegyndt brev - {{count}} ord indtil videre",
+  "letterDraftRow_other": "Et påbegyndt brev - {{count}} ord indtil videre",
+  "letterError": {
+    "badDate": "Det er ikke en dato, som dette brev kan forsegles til.",
+    "corrupt": "Dette brev kan ikke åbnes. Dets segl stemmer ikke længere med den måde, det blev lukket på: det sker, når åbningsdatoen, den krypterede tekst eller nøglen ændres i dagbogsfilen efter forseglingen.",
+    "empty": "Der er intet skrevet at forsegle endnu.",
+    "futureEnvelope": "Dette brev blev forseglet af en nyere version af Wattle. Opdatér Wattle for at åbne det.",
+    "noKey": "Nøglen til dette brev er væk. Den eneste vej frem er at gendanne en sikkerhedskopi, der blev lavet, før den forsvandt.",
+    "notFound": "Dette brev findes ikke.",
+    "notYet": "Dette brev er ikke åbnet endnu. Kom tilbage senere.",
+    "sealed": "Dette brev er forseglet, og det er ikke tid til at åbne det endnu. Kom tilbage senere.",
+    "tooFar": "Et brev kan højst vente halvtreds år.",
+    "tooSoon": "Et brev skal vente mindst syv dage.",
+    "unknown": "Noget gik galt."
+  },
+  "letterExport": "Hent dette brev",
+  "letterFooterDates": "Skrevet {{written}} · åbnet {{opened}}",
+  "letterFromYourself": "Fra dit tidligere jeg",
+  "letterHasArrived": "Dagen er kommet",
+  "letterIn10Years": "10 år",
+  "letterIn1Month": "1 måned",
+  "letterIn1Year": "1 år",
+  "letterIn2Years": "2 år",
+  "letterIn3Months": "3 måneder",
+  "letterIn3Years": "3 år",
+  "letterIn5Years": "5 år",
+  "letterIn6Months": "6 måneder",
+  "letterKeepEditing": "Skriv videre",
+  "letterLength": "Længde",
+  "letterNoDateYet": "Vælg, hvornår det skal åbnes.",
+  "letterOpenIt": "Åbn det",
+  "letterOpenedHeading": "Åbnet",
+  "letterOpenedOn": "Åbnet {{date}}",
+  "letterOpensOn": "Åbner",
+  "letterOpensOnDate": "Åbner {{date}}",
+  "letterPickDate": "Vælg en dato…",
+  "letterPromptChapter": "Et nyt kapitel",
+  "letterPromptFree": "Ikke noget bestemt",
+  "letterPromptGoals": "Mål",
+  "letterPromptHard": "En svær periode",
+  "letterPromptOrdinary": "En helt almindelig dag",
+  "letterPromptPerson": "En, der betyder noget",
+  "letterPromptRemember": "Noget, du ikke må glemme",
+  "letterResultLabel": "Brev",
+  "letterReviewAction": "Læs igen…",
+  "letterReviewBody": "Læs det en sidste gang. Efter dette trin bliver det lagt væk.",
+  "letterReviewTitle": "Læs det en sidste gang",
+  "letterSealAction": "Forsegl brevet",
+  "letterSealBody": "Det bliver krypteret og lagt væk indtil {{date}}.",
+  "letterSealFailed": "Brevet blev ikke forseglet. Intet blev ændret.",
+  "letterSealHonesty": "Wattle krypterer brevet og gemmer nøglen i dagbogsfilen, så brevet ikke kan gå tabt. Det er en lås mod dig selv, ikke en hemmelighed for den, der har adgang til din computer - og en sikkerhedskopi tager begge halvdele med sig.",
+  "letterSealTerms": "Indtil {{date}} kan du ikke åbne, læse, redigere, slette eller ændre datoen for det. Det kan Wattle heller ikke. Den eneste måde at fjerne det på er at rydde hele dagbogen.",
+  "letterSealTitle": "Forsegl dette brev?",
+  "letterSealing": "Forsegler…",
+  "letterTypeDate": "Skriv datoen for at bekræfte",
+  "letterWaitingHeading": "Venter",
+  "letterWaitingLine": "Et brev til dig selv åbner {{date}}.",
+  "letterWhereToStart": "Hvor skal du begynde",
+  "letterWillOpen": "Det åbner {{date}}.",
+  "letterWordCount_one": "{{count}} ord",
+  "letterWordCount_other": "{{count}} ord",
+  "letterWrite": "Skriv et brev",
+  "letterWriteBack": "Svar",
+  "letterWritten": "Skrevet",
+  "letterWrittenAndLength_one": "Skrevet {{date}} · {{count}} ord",
+  "letterWrittenAndLength_other": "Skrevet {{date}} · {{count}} ord",
+  "letterWrittenOn": "Skrevet {{date}}",
+  "letters": "Breve",
+  "lettersDescription": "Ord, du betror dit fremtidige jeg. Vælg en dag, og efterlad dér, hvad du vil huske, fortælle eller genopdage. Indtil da forbliver brevet forseglet og uden for rækkevidde.",
+  "lettersEmptyBody": "Et brev er noget, du skriver nu og ikke kan læse igen før en dag, du selv vælger.",
+  "lettersEmptyTitle": "Ingen breve",
+  "light": "Lys",
+  "link": "Link",
+  "listErrorBody": "Dine sider er stadig på denne enhed: Wattle kunne ikke læse dem. Prøv igen, og hvis problemet fortsætter, så gendan en sikkerhedskopi.",
+  "listErrorTitle": "Dagbogen kan ikke åbnes.",
+  "loadOlder": "Indlæs ældre",
+  "loading": "Indlæser…",
+  "lockEntry": "Lås denne side",
+  "makeShorter": "Gør kortere",
+  "memoriesSection": "Minder",
+  "memoriesSectionDescription": "To måder, hvorpå det, du har skrevet, kan vende tilbage til dig.",
+  "memoryAnother": "Find et andet",
+  "memoryAsk": "Find et minde, der er værd at læse igen",
+  "memoryLooking": "Leder…",
+  "memoryNoneAlike": "Intet andet, du har skrevet, ligner dette nok til at være værd at placere ved siden af det.",
+  "memoryNoneLeft": "Intet andet ligner nok til at være værd at vise.",
+  "memoryTooRecent": "Der er intet langt nok tilbage endnu. Et minde skal være mindst to uger ældre end din seneste tekst, og din dagbog går ikke langt nok tilbage endnu.",
+  "memoryWorthRevisiting": "Et minde, der er værd at læse igen",
+  "month": "Måned",
+  "name": "Navn",
+  "nameDescription": "Mellem {{min}} og {{max}} tegn.",
+  "nameHint": "Vælg, hvad du vil kaldes i Wattle, med dit rigtige navn eller et opfundet. Du kan ændre det, når du vil.",
+  "namePlaceholder": "Dit navn",
+  "nameRequired": "Navn er påkrævet: mindst {{min}} tegn.",
+  "nameTooShort": "Mindst {{min}} tegn.",
+  "navigation": "Navigation",
+  "navigationBoth": "Begge",
+  "navigationBottom": "Nederst",
+  "navigationDescription": "Hvor hovednavigationen er placeret.",
+  "navigationHeader": "Øverst",
+  "navigationHint": "Placér navigationen, hvor du foretrækker den.",
+  "newEntry": "Ny side",
+  "newProfile": "Ny profil",
+  "newProfileAction": "Afslut",
+  "newProfileBackingUp": "Sikkerhedskopierer…",
+  "newProfileBackupFolder": "Gem-dialogen åbner i {{folder}}.",
+  "newProfileBackupNow": "Sikkerhedskopiér nu…",
+  "newProfileBackupSaved": "Sikkerhedskopi gemt.",
+  "newProfileConfirmAction": "Slet alt",
+  "newProfileConfirmBody": "Hver side, hver vedhæftet fil og dit navn bliver slettet permanent, og opsætningen starter forfra. Denne handling kan ikke fortrydes.",
+  "newProfileConfirmTitle": "Ryd denne profil?",
+  "newProfileContinueAnyway": "Fortsæt alligevel",
+  "newProfileDescription": "Log ud, slet denne profil, og start helt forfra. Hver side og hver vedhæftet fil bliver slettet. Du kan stadig sikkerhedskopiere denne profil, før du bekræfter.",
+  "newProfileError": "Kunne ikke starte forfra. Din dagbog blev ikke ændret.",
+  "newProfileHint": "Der er kun én dagbog på denne enhed. Denne handling rydder den; den tilføjer ikke en ny.",
+  "newProfileNoBackupBody": "Wattle har ingen registrering af en sikkerhedskopi af denne dagbog. Alt, hvad den indeholder, er ved at blive slettet, og uden en sikkerhedskopi er der ingen måde at gendanne det på.",
+  "newProfileNoBackupTitle": "Ingen mappe til sikkerhedskopier angivet",
+  "next": "Næste",
+  "nextEntry": "næste side",
+  "noResults": "Ingen sider matcher søgningen.",
+  "noSparkResults": "Ingen gnister matcher søgningen.",
+  "nudgeAnother": "Spørg mig om noget andet",
+  "nudgeCue": "En opfordring",
+  "nudgeDismiss": "Ikke nu",
+  "nudgeOffer": "Ved du ikke, hvad du skal skrive?",
+  "nudgeThinking": "Tænker…",
+  "nudgeWrite": "Skriv om dette",
+  "off": "Fra",
+  "ollamaInstallFailed": "Ollama kunne ikke installeres. Wattle ændrede ikke noget på denne enhed.",
+  "ollamaStartFailed": "Ollama startede ikke i tide. Den er måske stadig ved at starte: prøv igen om et øjeblik.",
+  "on": "Til",
+  "onThisDay": "På denne dag",
+  "onThisDayDescription": "Siderne, du skrev på dagens dato i tidligere år, vises på startsiden.",
+  "onThisDayHint": "Vælg, om du vil se igen, hvad du skrev på samme dato i tidligere år. Påmindelsen vises på startsiden.",
+  "onboarding": {
+    "language": {
+      "title": "Velkommen til Wattle.",
+      "body": "Vælg dit sprog."
+    },
+    "start": {
+      "title": "Har du ført dagbog med Wattle før?",
+      "body": "Hvis du har en sikkerhedskopi, vender alt i den tilbage på sin plads.",
+      "fresh": "Start en ny dagbog",
+      "freshBody": "En blank første side og tre korte spørgsmål, før du åbner den.",
+      "returning": "Jeg har en sikkerhedskopi fra Wattle",
+      "returningBody": "Tekster, vedhæftede filer og indstillinger, præcis som du efterlod dem."
+    },
+    "returning": {
+      "eyebrow": "Velkommen tilbage",
+      "title": "Lad os finde din dagbog.",
+      "body": "Vælg den .wattle-sikkerhedskopi, du gemte. Alt, hvad den indeholder, erstatter denne tomme dagbog, og Wattle åbner, hvor du slap.",
+      "action": "Vælg en sikkerhedskopi…",
+      "confirmTitle": "Gendan en sikkerhedskopi?",
+      "confirm": "Vælg den .wattle-fil, du gemte, så åbner Wattle igen med alt, hvad den indeholder: tekster, vedhæftede filer og indstillinger. Denne tomme dagbog bliver erstattet."
+    },
+    "name": {
+      "title": "Hvad skal Wattle kalde dig?",
+      "body": "Bruges til hilsenen på startskærmen. To til tolv tegn."
+    },
+    "backup": {
+      "title": "Hvor skal sikkerhedskopier gemmes?",
+      "body": "En mappe uden for dagbogen, så en sikkerhedskopi ligger et andet sted, når du får brug for den."
+    },
+    "theme": {
+      "title": "Lys eller mørk?",
+      "body": "Du kan ændre det, når du vil, i indstillingerne."
+    }
+  },
+  "onboardingFinish": "Begynd at skrive",
+  "onboardingStep": "Trin {{step}} af {{total}}",
+  "pageOf": "{{page}} af {{total}}",
+  "palette": "Tema",
+  "paletteDescription": "Bestemmer farver, skrifttyper og visuel stil i Wattle.",
+  "paletteHint": "Ændrer udseendet af hele programmet: baggrund, tekst, detaljer i brugerfladen, hjørner og skrifttyper. Det ændrer intet af det, du har skrevet.",
+  "paletteName": {
+    "clay": "Ler",
+    "crimson": "Karmin",
+    "sage": "Salvie",
+    "umber": "Umbra",
+    "wattle": "Wattle",
+    "olive": "Oliven",
+    "forest": "Skov",
+    "candy": "Slik"
+  },
+  "pastSparks": "Tidligere gnister",
+  "previous": "Forrige",
+  "previousEntry": "forrige side",
+  "primaryNav": "Hoved",
+  "profileSection": "Profil",
+  "removeAttachment": "Fjern vedhæftet fil",
+  "replayTours": "Rundvisninger",
+  "replayToursAction": "Nulstil",
+  "replayToursDescription": "Vis alle velkomstrundvisninger igen. Nyttigt for at genopdage alle Wattles funktioner.",
+  "replayToursHint": "Markerer alle rundvisninger som usete og fører dig til startskærmen for at vise dig den første.",
+  "reset": "Nulstil præferencer",
+  "resetAction": "Nulstil",
+  "resetConfirm": "Udseende, sidebredde, minder og sidelåsning vender tilbage til deres oprindelige indstillinger. Dagbogen, dit navn og AI-assistentens indstillinger røres ikke. Vil du fortsætte?",
+  "resetDescription": "Vend tilbage til de oprindelige værdier. Dit navn og AI-assistentens indstillinger forbliver, som de er.",
+  "resetHint": "Kun præferencer. Sider, gnister og breve bliver præcis, hvor de er.",
+  "resetSection": "Nulstil",
+  "resizeImage": "Tilpas billedets størrelse",
+  "resizeVideo": "Tilpas videoens størrelse",
+  "restore": "Gendan",
+  "restoreAction": "Gendan…",
+  "restoreConfirm": "Hver side, vedhæftet fil og indstilling på denne enhed bliver erstattet af den sikkerhedskopi, du vælger nu. Denne handling kan ikke fortrydes.",
+  "restoreDescription": "Erstatter alt på denne enhed med en sikkerhedskopi.",
+  "restoreError": "Gendannelsen mislykkedes. Dine data blev ikke rørt.",
+  "restoreHint": "Erstatter alt på denne enhed med sikkerhedskopien. Det kan ikke fortrydes.",
+  "restoring": "Gendanner…",
+  "retry": "Prøv igen",
+  "save": "Gem",
+  "saveError": "Ikke gemt",
+  "saveThought": "Gem tanke",
+  "saved": "Gemt",
+  "saving": "Gemmer…",
+  "search": "Søg i sider",
+  "searchDisabledHint": "Ingen elementer fundet; tilføj et element, før du kan slå søgning til.",
+  "searchPlaceholder": "Søg i sider…",
+  "searchResultCount_one": "{{count}} resultat",
+  "searchResultCount_other": "{{count}} resultater",
+  "searchSparks": "Søg i gnister",
+  "searchSparksDisabledHint": "Der er intet at søge i endnu: skriv en gnist ovenfor, så bliver søgning aktiv.",
+  "searchSparksPlaceholder": "Søg i gnister…",
+  "settings": "Indstillinger",
+  "settingsSubtitle": "Alt, hvad du finder her, gemmes på denne enhed.",
+  "slash": {
+    "bulletList": {
+      "description": "En enkel punktopstilling",
+      "title": "Punktopstilling"
+    },
+    "code": {
+      "description": "Indsæt et kodestykke",
+      "title": "Kodeblok"
+    },
+    "divider": {
+      "description": "Adskil afsnit visuelt",
+      "title": "Skillelinje"
+    },
+    "file": {
+      "description": "Vedhæft en hvilken som helst fil",
+      "title": "Fil"
+    },
+    "heading1": {
+      "description": "Stor afsnitsoverskrift",
+      "title": "Overskrift 1"
+    },
+    "heading2": {
+      "description": "Mellemstor afsnitsoverskrift",
+      "title": "Overskrift 2"
+    },
+    "heading3": {
+      "description": "Lille afsnitsoverskrift",
+      "title": "Overskrift 3"
+    },
+    "image": {
+      "description": "Vedhæft et billede",
+      "title": "Billede"
+    },
+    "orderedList": {
+      "description": "En nummereret liste",
+      "title": "Nummereret liste"
+    },
+    "quote": {
+      "description": "Fremhæv et afsnit",
+      "title": "Citat"
+    },
+    "taskList": {
+      "description": "Hold styr på, hvad der skal gøres",
+      "title": "Tjekliste"
+    },
+    "text": {
+      "description": "Almindelig tekst",
+      "title": "Tekst"
+    },
+    "video": {
+      "description": "Vedhæft en video",
+      "title": "Video"
+    }
+  },
+  "slashCategory": {
+    "basic": "Grundlæggende",
+    "blocks": "Blokke",
+    "lists": "Lister",
+    "media": "Medier"
+  },
+  "slashNoResults": "Ingen resultater.",
+  "sparkCharsLeft_one": "{{count}} tegn tilbage",
+  "sparkCharsLeft_other": "{{count}} tegn tilbage",
+  "sparkCount_one": "{{count}} gnist",
+  "sparkCount_other": "{{count}} gnister",
+  "sparkDate": "Dag, denne gnist er arkiveret under",
+  "sparkEchoDescription": "En tidligere gnist vender tilbage af sig selv, højst én om dagen.",
+  "sparkEchoHint": "En gnist, der er mindst 30 dage gammel, den samme hele dagen, og så den næste i morgen.",
+  "sparkEchoLead": "Du efterlod dig selv denne tanke",
+  "sparkEchoSetting": "Gnistekko",
+  "sparkEmpty": "Denne gnist er tom.",
+  "sparkOpenAsEntry": "Åbn som side",
+  "sparkPlaceholder": "Fang en forbigående tanke…",
+  "sparkResultLabel": "Gnist",
+  "sparkRichBadge": "Skrevet med formatering",
+  "sparkRichBody": "Denne gnist indeholder formatering eller vedhæftede filer fra før, gnister blev til almindelig tekst. Intet er ændret: den åbner i den fulde editor, hvor alt fortsat virker.",
+  "sparkSaveHint": "Ctrl + Enter for at gemme",
+  "sparkTruncated_one": "Den nyeste vises.",
+  "sparkTruncated_other": "De {{count}} nyeste vises.",
+  "sparksEyebrow": "Øjeblikkets klarhed",
+  "sparksIntro": "En linje eller to, fanget før de slipper væk. Intet her behøver en titel, og intet behøver at blive til noget andet.",
+  "strikethrough": "Gennemstreget",
+  "suggestTitle": "Foreslå en titel",
+  "theme": "Lys eller mørk",
+  "themeDescription": "Hvert tema findes i begge; dette er det, du læser i.",
+  "themeHint": "Temaet gælder hele programmet, og dit valg huskes, næste gang du åbner det.",
+  "tourClose": "Luk rundvisning",
+  "tourDone": "Færdig",
+  "tourStep": "{{current}} af {{total}}",
+  "tours": {
+    "ai": {
+      "switch": {
+        "title": "Fra, indtil du slår den til",
+        "body": "AI-assistenten er valgfri og starter slået fra. Den forbedrer og tilpasser oplevelsen i Wattle, altid med respekt for dit privatliv. Dataene behandles på din computer og forlader den aldrig."
+      },
+      "runtime": {
+        "title": "Hvad modellerne kører på",
+        "body": "Modellerne kører via Ollama. Wattle kan installere og starte den herfra, hvis du tillader det."
+      },
+      "models": {
+        "title": "De modeller, du beholder",
+        "body": "Hent den model, der passer bedst til din computer. Prøv én ad gangen, så du kan se, hvilken der passer bedst til din hardware."
+      }
+    },
+    "home": {
+      "write": {
+        "title": "Begynd med i dag",
+        "body": "Sådan begynder en ny side. Ét klik åbner en blank side med dagens dato: selv en enkelt linje fortjener en plads her."
+      },
+      "search": {
+        "title": "Find det, du skrev",
+        "body": "Hvert ord på hver side er søgbart, og resultatet viser det matchende afsnit. Søgningen er slået fra, indtil der er noget at søge i."
+      },
+      "timeline": {
+        "title": "Alt, hvad du har skrevet",
+        "body": "Dine sider, fra den nyeste og grupperet efter måned. Åbn én for at fortsætte, eller rul for at indlæse flere."
+      },
+      "nav": {
+        "title": "Alt andet",
+        "body": "Kalenderen, gnister, breve til dig selv og indstillinger findes alle i denne bjælke. Den følger dig fra skærm til skærm, og den, du er på, er den eneste, der viser sit navn."
+      }
+    },
+    "calendar": {
+      "grid": {
+        "title": "Din dagbog efter dato",
+        "body": "De dage, du skrev, er markeret. Vælg én for at læse den igen eller for at skrive på en dag, der allerede er gået."
+      },
+      "view": {
+        "title": "En måned eller et helt år",
+        "body": "Skift mellem de to. Det er i årsvisningen, at en vane bliver synlig."
+      },
+      "kinds": {
+        "title": "Sider, gnister eller begge",
+        "body": "To slags skrivning deler dette gitter og kendes på farven af deres markeringer. Vis én ad gangen, når du leder efter noget bestemt."
+      }
+    },
+    "sparks": {
+      "capture": {
+        "title": "Fang en tanke",
+        "body": "En gnist er en linje fanget i øjeblikket. Ingen titel, ingen side. Skriv den, og tryk Ctrl+Enter, eller brug knappen."
+      },
+      "archive": {
+        "title": "Alle de gnister, du har gemt",
+        "body": "Her finder du de nyeste. Herfra kan du åbne dem alle, måned for måned - og også skrive en ny derfra."
+      },
+      "recent": {
+        "title": "Hvad en gnist kan blive til",
+        "body": "Hver af dem åbner på sin egen side, hvor du kan redigere den, slette den eller gøre den til en rigtig side, hvis den er vokset i mellemtiden."
+      }
+    },
+    "entry": {
+      "title": {
+        "title": "Giv den et navn, eller lad den være",
+        "body": "Titlen er valgfri og gemmes automatisk, mens du skriver. Tryk Enter for at gå direkte til siden nedenfor."
+      },
+      "editor": {
+        "title": "Skriv \"/\" for alt andet",
+        "body": "Skriv her, som du ville på papir. Når du skriver \"/\", åbner menuen med alt, hvad siden kan indeholde: overskrifter, lister, citater, billeder, videoer og filer. Markér tekst for at formatere den. Der er intet at gemme: det skrives, mens du skriver."
+      },
+      "actions": {
+        "title": "Sidekommandoer",
+        "body": "Gå til forrige eller næste side, lås den mod utilsigtede ændringer, eksportér den som HTML, eller slet den."
+      }
+    },
+    "settings": {
+      "appearance": {
+        "title": "Gør den til din",
+        "body": "Tema, accentfarve, sprog og sidebredde."
+      },
+      "data": {
+        "title": "Din dagbog er din",
+        "body": "Sikkerhedskopiér den, eksportér den som HTML, eller gendan den fra en sikkerhedskopi. Alt bliver på denne enhed."
+      },
+      "reset": {
+        "title": "Gå tilbage",
+        "body": "Sæt præferencerne tilbage til deres oprindelige tilstand, afspil disse rundvisninger igen, eller start en helt ny dagbog."
+      },
+      "profile": {
+        "title": "Dit navn og intet andet",
+        "body": "Det hilser på dig på startskærmen og forlader aldrig denne enhed. Wattle beder ikke om andet: ingen konto, ingen e-mail, intet login."
+      }
+    },
+    "letters": {
+      "what": {
+        "title": "Et brev til dig selv",
+        "body": "Det er ikke en side: et brev skrives nu og forbliver forseglet indtil en dag, du vælger. Indtil da kan det ikke læses, redigeres eller åbnes - ikke engang af dig."
+      },
+      "write": {
+        "title": "Skriv et",
+        "body": "Én kladde ad gangen, gemt her, indtil du forsegler den. Forseglingen spørger om dagen, den skal åbne, og der er ingen vej tilbage."
+      },
+      "waiting": {
+        "title": "Mens det venter",
+        "body": "Et forseglet brev viser kun den dag, det åbner, og hvor langt det er. Ingen nedtælling, ingen forhåndsvisning: det vil simpelthen være her, når tiden kommer."
+      }
+    },
+    "letterCompose": {
+      "directions": {
+        "title": "Hvor skal du begynde",
+        "body": "Vælg en retning, så får du et spørgsmål at skrive hen imod. Spørgsmålet gemmes ikke og bliver aldrig en del af brevet: det er blot noget at kigge på, mens du skriver."
+      },
+      "seal": {
+        "title": "Hvornår det åbner",
+        "body": "Vælg, hvor langt væk den dag er, og læs det så en sidste gang. Forseglingen er endelig: fra det øjeblik kan brevet ikke læses før den valgte dato."
+      }
+    },
+    "letterRead": {
+      "opened": {
+        "title": "Det er kommet",
+        "body": "Den dag, du valgte, er kommet, og brevet kan læses!"
+      },
+      "keep": {
+        "title": "Dit, for altid",
+        "body": "Læs det så mange gange, du vil. Det kan ikke redigeres, når det er forseglet, og det kan ikke slettes."
+      }
+    }
+  },
+  "trash": "Papirkurv",
+  "trashAction": "Åbn papirkurv…",
+  "trashDescription": "Sider, du sletter, venter her, før de forsvinder for altid.",
+  "trashEmptyAction": "Tøm papirkurven",
+  "trashEmptyConfirm": "Hver side, der venter i papirkurven, bliver slettet permanent, inklusive vedhæftede filer. Denne handling kan ikke fortrydes.",
+  "trashEmptyTitle": "Tøm papirkurven?",
+  "trashError": "Papirkurven kunne ikke læses.",
+  "trashHint": "En gendannet side kommer tilbage med sin dato, sine vedhæftede filer og sin plads i dagbogen.",
+  "trashIntro": "En slettet side venter her i {{days}} dage og fjernes derefter for altid.",
+  "trashNothing": "Intet er slettet.",
+  "trashPurge": "Slet for altid",
+  "trashPurgeConfirm": "Denne side og alt, der er knyttet til den, bliver slettet permanent. Denne handling kan ikke fortrydes.",
+  "trashRestore": "Gendan",
+  "trashRow": "Skrevet {{written}} · fjernes {{removed}}",
+  "underline": "Understreget",
+  "unlockEntry": "Lås denne side op",
+  "untitled": "Uden titel",
+  "writeOnThisDay": "Skriv på denne dag",
+  "writingSection": "Skrivning",
+  "writingSectionDescription": "Hvordan en side opfører sig, når du åbner den.",
+  "year": "År",
+  "yearsAgo_one": "For et år siden",
+  "yearsAgo_other": "For {{count}} år siden",
+  "memoryPrevious": "Forrige minde",
+  "memoryNext": "Næste minde",
+  "letterAiUnavailableTitle": "AI-forslag er ikke tilgængelige",
+  "letterAiUnavailableBody": "Retningerne ovenfor virker altid. For også at få et spørgsmål at begynde med skal du slå AI-assistenten til og vælge en model i Indstillinger - den kører på denne computer, og intet forlader den."
+}

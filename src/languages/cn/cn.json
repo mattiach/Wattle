@@ -1,0 +1,652 @@
+{
+  "ai": "AI 助手",
+  "aiActionDescription": {
+    "fixGrammar": "在不改变意思的前提下，修正拼写、语法和标点。",
+    "improveClarity": "让文字更清晰、更易读，同时保持全部内容不变。",
+    "makeShorter": "缩短文字，同时保留所有关键观点和信息。"
+  },
+  "aiActive": "使用中",
+  "aiActiveModel": "当前模型",
+  "aiDesc08b": "最轻量的选择。普通硬件即可运行；适合快速修正语法，但不一定总是准确。",
+  "aiDesc27b": "工作站级别。需要大量磁盘空间和内存；适合追求更精准的建议。",
+  "aiDesc2b": "小巧快速，语法优于 0.8B。",
+  "aiDesc4b": "质量与资源需求之间的最佳平衡。",
+  "aiDesc9b": "质量更高；需要性能较强的电脑。",
+  "aiDescription": "已关闭。不过并未从设备上卸载。",
+  "aiDiscard": "放弃",
+  "aiError": {
+    "badSelection": "无法改写所选内容。它可能为空，或长于一个段落。",
+    "cancelled": "已中断。没有任何更改。",
+    "daemon": "Ollama 无法完成此操作。",
+    "disabled": "AI 助手已关闭。你可以在设置中开启它。",
+    "empty": "模型没有返回任何内容。请确认已选择模型后重试。",
+    "modelGone": "该模型已不再安装。请在设置中选择其他模型。",
+    "noModel": "你还没有选择模型。请在设置页面中选择一个。",
+    "noPassage": "模型没有返回改写后的段落。",
+    "reasoned": "模型收到了请求，但没有返回文字。通常缩短段落即可解决此错误。",
+    "timeout": "模型耗时过长，已被停止。通常缩短段落即可解决此错误。",
+    "tooLong": "由于内容可能过长，模型已被停止。没有任何更改。",
+    "unknown": "出了点问题。",
+    "unreachable": "Ollama 没有响应。请确认它正在你的电脑上运行，然后重试。",
+    "unreadable": "模型的回复似乎无法读取。"
+  },
+  "aiHint": "AI 模型通过 Ollama 在你的电脑本地运行。任何数据都不会被发送到你的设备之外。隐私是 Wattle 的创立原则之一，也是它与众不同之处：你的数据始终留在你的电脑上。",
+  "aiInsertBelow": "插入到下方",
+  "aiInstall": "安装",
+  "aiInstalling": "正在下载… {{percent}}%",
+  "aiMayNotFit": "接近这台电脑的极限",
+  "aiMayNotFitHint": "此模型所需的内存超出了这台电脑的可用内存。它可能运行缓慢，甚至无法启动。虽然不建议，但仍然可以安装。",
+  "aiModels": "模型",
+  "aiModelsDescription": "已安装和可用的模型。在你要求之前，不会下载任何内容。",
+  "aiNoModel": "未选择模型",
+  "aiNoModelChosenHint": "AI 助手已开启，但还没有启用任何模型。请在上方选择一个，开始使用 AI 功能。",
+  "aiNoModelsYet": "尚未安装任何模型。请在下方选择一个：在你要求之前，不会下载任何内容。",
+  "aiOnDescription": "在这台设备上运行的模型。为尊重你的隐私，不会向任何地方发送内容。",
+  "aiPreparing": "正在这台电脑上准备助手…",
+  "aiRecommended": "推荐",
+  "aiRecommendedHint": "最适合这台电脑的内存。",
+  "aiRemove": "移除",
+  "aiRemoveConfirm": "{{name}} 将从这台电脑上删除。要继续吗？",
+  "aiReplace": "替换",
+  "aiRewrite": "用 AI 助手改写",
+  "aiRewriting": "思考中…",
+  "aiSection": "AI 设置",
+  "aiSectionDescription": "可选、本地运行，并在你开启前保持关闭。",
+  "aiUnmanaged": "Wattle 外部",
+  "aiUnmanagedDescription": "在 Wattle 之外安装。你可以在这里移除它，但它不会作为可用模型提供。",
+  "aiUseTitle": "使用此模型",
+  "alignCenter": "居中对齐",
+  "alignLeft": "左对齐",
+  "alignRight": "右对齐",
+  "allEntries": "所有页面",
+  "allSparks": "所有火花",
+  "allSparksIntro": "你记下的每一个火花，按从新到旧排列。它们刻意保持简短、没有标题：火花是写给自己的笔记，是当下捕捉到的念头，除了你自己的规则，没有任何规则。",
+  "appName": "Wattle",
+  "appearanceSection": "外观",
+  "aroundThisTime": "大约这个时候",
+  "backToComponents": "组件",
+  "backToTop": "返回顶部",
+  "backup": "备份",
+  "backupAction": "导出…",
+  "backupDescription": "保存页面、附件和设置的副本。",
+  "backupError": "备份失败。请重试。",
+  "backupFolderAction": "选择…",
+  "backupFolderHint": "备份 .wattle 文件会以当天的文件名写入这里。这里不是存放日记的地方。以前的备份永远不会被包含在新备份中。",
+  "backupFolderUnset": "尚未设置：保存对话框会从 Windows 上次打开的位置开始。",
+  "backupHint": "Wattle 每次都会询问文件保存位置。数据库、附件和设置都在同一个 .wattle 文件中。不包含 Ollama 模型，但可以直接从 Wattle 轻松安装。",
+  "backupSuccess": "备份已保存。",
+  "bold": "粗体",
+  "calendar": "日历",
+  "calendarBoth": "两者",
+  "calendarEntriesOnly": "页面",
+  "calendarIntro": "一年中你在什么时候写作。颜色越深的日子，写得越多；选择某一天即可重读。",
+  "calendarSparksOnly": "火花",
+  "cancel": "取消",
+  "code": "代码",
+  "codeLanguage": "代码语言",
+  "codeLanguagePlain": "纯文本",
+  "components": {
+    "askConfirmation": "请求确认",
+    "cardBody": "简单的表面：细边框、卡片背景，仅此而已。",
+    "cardTitle": "卡片",
+    "dialogBody": "门户中的对话框，背景和关闭按钮由本项目提供。",
+    "dialogTitle": "对话框标题",
+    "disabled": "已停用",
+    "hoverMe": "将鼠标悬停在这里",
+    "openDialog": "打开对话框",
+    "openPopover": "打开弹出框",
+    "pageDescription": "在返回链接、标题以及屏幕右侧内容的下方，用一两句话说明这个屏幕的用途。",
+    "pageSubtitle": "副标题",
+    "pageTitle": "页面标题",
+    "popoverBody": "锚定在触发器上，点击其他任何地方即关闭：日期字段和信件的开启日期都在这里打开。",
+    "popoverTitle": "弹出框",
+    "sampleEntryBody": "出门早得足够步行过去，房子后面的田野上还笼罩着雾。",
+    "sampleEntryHit": "雾",
+    "sampleEntryOpening": "出门早得足够步行过去，房子后面的田野上还笼罩着",
+    "sampleEntryTitle": "去车站的远路",
+    "sampleSpark": "不管是什么，都不急。睡一觉再说。",
+    "sizes": "尺寸",
+    "startTour": "开始导览",
+    "states": "状态",
+    "subtitle": "构成界面的各个部件，以及它们的变体和状态。先是基础元素；然后是少数几个在足够多屏幕中使用、值得单独查看的功能组件。这里的一切都使用示例数据。",
+    "title": "组件",
+    "tooltipBody": "说明文字，紧随其所属的控件之后。",
+    "tourBody": "页面变暗，突出显示的元素保持明亮，卡片随之移动。Wattle 中的每个引导导览都是这样，一步一步来。",
+    "tourTitle": "这是导览的一个步骤",
+    "variants": "变体",
+    "withIcon": "带图标"
+  },
+  "continue": "继续",
+  "dailySparks": "火花",
+  "dark": "深色",
+  "dataSection": "数据",
+  "dataSectionDescription": "你的日记，导入和导出 Wattle。",
+  "delete": "删除",
+  "deleteEntry": "删除页面",
+  "deleteEntryConfirm": "此页面将移至回收站。在被永久删除之前，你可以在设置中恢复它。",
+  "deleteSpark": "删除火花",
+  "deleteSparkConfirm": "此火花将移至回收站。在被永久删除之前，你可以在设置中恢复它。",
+  "dismiss": "先放一边",
+  "downloadAttachment": "保存副本…",
+  "downloadHtml": "下载 HTML",
+  "edit": "编辑",
+  "editorScale": "文字大小",
+  "editorScaleDefault": "默认",
+  "editorScaleDescription": "你的文字在编辑器中显示的大小。",
+  "editorScaleHint": "只有文字大小会改变，应用的其他部分保持不变。",
+  "editorScaleLarge": "大",
+  "editorScaleLargest": "特大",
+  "editorScaleSmall": "小",
+  "emptyBody": "每一页都保存在这台设备上。今天就开始吧，哪怕只写一行。",
+  "emptySparksBody": "火花是当下捕捉到的一行字。上方的输入框就是它开始的地方。",
+  "emptySparksTitle": "还没有记下任何内容。",
+  "emptyTitle": "你的日记从一页开始。",
+  "entryContentPlaceholder": "写点什么，或按 / 查看命令…",
+  "entryCount_other": "{{count}} 页",
+  "entryDate": "页面日期",
+  "entryLock": "以只读方式打开页面",
+  "entryLockDescription": "已有内容的页面会以锁定状态打开。只需点击一下即可解锁。",
+  "entryLockHint": "新页面从空白开始，在你写完之前永远不会被锁定。此选项仅适用于已存在的日记页面。",
+  "entryNotFound": "此页面已不存在。",
+  "entryTitlePlaceholder": "无标题",
+  "export": "导出",
+  "exportAction": "导出…",
+  "exportDescription": "将整本日记导出为无需联网即可打开的 HTML 归档。",
+  "exportEmpty": "还没有可导出的内容：日记中没有页面。",
+  "exportEntry": "导出页面",
+  "exportError": "导出失败。你的日记没有被更改。",
+  "exportSuccess": "已导出到 {{path}}。",
+  "fixGrammar": "修正语法",
+  "greetingAfternoon": "下午好。",
+  "greetingAfternoonNamed": "下午好，{{name}}。",
+  "greetingEvening": "晚上好。",
+  "greetingEveningNamed": "晚上好，{{name}}。",
+  "greetingMorning": "早上好。",
+  "greetingMorningNamed": "早上好，{{name}}。",
+  "heading1": "标题 1",
+  "heading2": "标题 2",
+  "improveClarity": "更清晰",
+  "italic": "斜体",
+  "journalFolder": "日记文件夹",
+  "journalFolderAction": "移动…",
+  "journalFolderConfirm": "选择一个文件夹，Wattle 会把你的日记移到那里，包括数据库和所有附件。移动完成后，Wattle 会重新打开。如果无法移动，你的日记会原封不动地留在原处。",
+  "journalFolderError": "无法移动日记。它仍在原来的位置，没有任何更改。",
+  "journalFolderHint": "这里存放的是日记本身：wattle.db 和你的附件。这里不是保存备份 .wattle 文件的地方。",
+  "language": "语言",
+  "languageDescription": "界面语言。",
+  "languageHint": "只会改变界面，不会改动你写下的任何一个字。",
+  "layoutWidth": "Wattle 页面宽度",
+  "layoutWidthCompact": "窄",
+  "layoutWidthDefault": "均衡",
+  "layoutWidthDescription": "Wattle 所有页面的宽度。",
+  "layoutWidthHint": "自行设置 Wattle 页面的宽度。每台电脑和每台显示器都可能不同，所以理想的数值由你决定。",
+  "layoutWidthWide": "宽",
+  "letterArrivedHeading": "已送达",
+  "letterArrivedTitle": "一封来自过去的你的信到了",
+  "letterComposeDescription": "在你选定的日子到来之前，你无法阅读它。一旦封存，就不能打开、编辑或删除。请慎重选择。",
+  "letterComposeTitle": "写给自己的信",
+  "letterContentPlaceholder": "在封存信件之前，想好要写些什么。",
+  "letterContinueDraft": "继续写信",
+  "letterDraftHeading": "进行中",
+  "letterDraftRow_other": "一封已开始的信 - 目前 {{count}} 个词",
+  "letterError": {
+    "badDate": "这个日期不能用来封存这封信。",
+    "corrupt": "无法打开这封信。它的封印与封存时的状态不再一致：如果在封存后修改了日记文件中的开启日期、加密文本或密钥，就会发生这种情况。",
+    "empty": "还没有写下可以封存的内容。",
+    "futureEnvelope": "这封信是由更新版本的 Wattle 封存的。请更新 Wattle 以打开它。",
+    "noKey": "这封信的密钥不见了。唯一的办法是恢复在密钥消失之前创建的备份。",
+    "notFound": "这封信不存在。",
+    "notYet": "这封信还没有开启。请稍后再来。",
+    "sealed": "这封信已封存，还没到开启的时候。请稍后再来。",
+    "tooFar": "一封信最多可以等待五十年。",
+    "tooSoon": "一封信至少要等待七天。",
+    "unknown": "出了点问题。"
+  },
+  "letterExport": "下载这封信",
+  "letterFooterDates": "写于 {{written}} · 开启于 {{opened}}",
+  "letterFromYourself": "来自过去的你",
+  "letterHasArrived": "它的日子到了",
+  "letterIn10Years": "10 年",
+  "letterIn1Month": "1 个月",
+  "letterIn1Year": "1 年",
+  "letterIn2Years": "2 年",
+  "letterIn3Months": "3 个月",
+  "letterIn3Years": "3 年",
+  "letterIn5Years": "5 年",
+  "letterIn6Months": "6 个月",
+  "letterKeepEditing": "继续写",
+  "letterLength": "长度",
+  "letterNoDateYet": "选择它何时开启。",
+  "letterOpenIt": "打开它",
+  "letterOpenedHeading": "已开启",
+  "letterOpenedOn": "开启于 {{date}}",
+  "letterOpensOn": "开启日期",
+  "letterOpensOnDate": "将于 {{date}} 开启",
+  "letterPickDate": "选择日期…",
+  "letterPromptChapter": "新的篇章",
+  "letterPromptFree": "没什么特别的",
+  "letterPromptGoals": "目标",
+  "letterPromptHard": "一段艰难时期",
+  "letterPromptOrdinary": "平凡的一天",
+  "letterPromptPerson": "重要的人",
+  "letterPromptRemember": "不想忘记的事",
+  "letterResultLabel": "信件",
+  "letterReviewAction": "再读一遍…",
+  "letterReviewBody": "最后再读一遍。这一步之后，信就会被收起来。",
+  "letterReviewTitle": "最后再读一遍",
+  "letterSealAction": "封存这封信",
+  "letterSealBody": "它将被加密并收起，直到 {{date}}。",
+  "letterSealFailed": "这封信没有被封存。没有任何更改。",
+  "letterSealHonesty": "Wattle 会加密信件，并把密钥保存在日记文件中，因此信件不会丢失。这是一把防住你自己的锁，而不是对能访问你电脑的人保密的秘密，而且备份会把两者一起带走。",
+  "letterSealTerms": "在 {{date}} 之前，你将无法打开、阅读、编辑、删除它，也无法更改它的日期。Wattle 也做不到。删除它的唯一方法是清空整本日记。",
+  "letterSealTitle": "要封存这封信吗？",
+  "letterSealing": "正在封存…",
+  "letterTypeDate": "输入日期以确认",
+  "letterWaitingHeading": "等待中",
+  "letterWaitingLine": "一封写给自己的信将于 {{date}} 开启。",
+  "letterWhereToStart": "从哪里开始",
+  "letterWillOpen": "它将于 {{date}} 开启。",
+  "letterWordCount_other": "{{count}} 个词",
+  "letterWrite": "写一封信",
+  "letterWriteBack": "回信",
+  "letterWritten": "写于",
+  "letterWrittenAndLength_other": "写于 {{date}} · {{count}} 个词",
+  "letterWrittenOn": "写于 {{date}}",
+  "letters": "信件",
+  "lettersDescription": "托付给未来的自己的话语。选定一天，把你想记住、想诉说或想重新发现的东西留在那里。在那之前，信件会一直封存，无法触及。",
+  "lettersEmptyBody": "信是你现在写下、直到你选定的日子才能再次阅读的东西。",
+  "lettersEmptyTitle": "没有信件",
+  "light": "浅色",
+  "link": "链接",
+  "listErrorBody": "你的页面仍在这台设备上，只是 Wattle 无法读取它们。请重试，如果问题仍然存在，请恢复备份。",
+  "listErrorTitle": "无法打开日记。",
+  "loadOlder": "加载更早的内容",
+  "loading": "正在加载…",
+  "lockEntry": "锁定此页面",
+  "makeShorter": "缩短",
+  "memoriesSection": "回忆",
+  "memoriesSectionDescription": "让你写下的内容重新回到你身边的两种方式。",
+  "memoryAnother": "换一个",
+  "memoryAsk": "找一段值得重读的回忆",
+  "memoryLooking": "正在寻找…",
+  "memoryNoneAlike": "你写过的其他内容，都没有与此相似到值得放在一起的程度。",
+  "memoryNoneLeft": "没有其他足够相似、值得展示的内容了。",
+  "memoryTooRecent": "还没有足够久远的内容。回忆必须比你最近的文字早至少两周，而你的日记还没有回溯到那么远。",
+  "memoryWorthRevisiting": "一段值得重读的回忆",
+  "month": "月",
+  "name": "名字",
+  "nameDescription": "{{min}} 到 {{max}} 个字符。",
+  "nameHint": "选择你希望 Wattle 怎么称呼你，真名或虚构的名字都可以。你可以随时更改。",
+  "namePlaceholder": "你的名字",
+  "nameRequired": "名字为必填项：至少 {{min}} 个字符。",
+  "nameTooShort": "至少 {{min}} 个字符。",
+  "navigation": "导航",
+  "navigationBoth": "两者",
+  "navigationBottom": "底部",
+  "navigationDescription": "主导航所在的位置。",
+  "navigationHeader": "顶部",
+  "navigationHint": "把导航放在你喜欢的位置。",
+  "newEntry": "新页面",
+  "newProfile": "新的个人资料",
+  "newProfileAction": "退出",
+  "newProfileBackingUp": "正在备份…",
+  "newProfileBackupFolder": "保存对话框将在 {{folder}} 中打开。",
+  "newProfileBackupNow": "立即备份…",
+  "newProfileBackupSaved": "备份已保存。",
+  "newProfileConfirmAction": "全部删除",
+  "newProfileConfirmBody": "每一页、每个附件以及你的名字都将被永久删除，设置流程将重新开始。此操作无法撤销。",
+  "newProfileConfirmTitle": "要清除此个人资料吗？",
+  "newProfileContinueAnyway": "仍然继续",
+  "newProfileDescription": "退出、删除此个人资料并从头开始。每一页和每个附件都将被删除。在确认之前，你仍然可以备份此个人资料。",
+  "newProfileError": "无法重新开始。你的日记没有被更改。",
+  "newProfileHint": "这台设备上只有一本日记。此操作会清空它，而不是新增第二本。",
+  "newProfileNoBackupBody": "Wattle 没有这本日记的备份记录。其中的所有内容即将被删除，没有备份就无法恢复。",
+  "newProfileNoBackupTitle": "未设置备份文件夹",
+  "next": "下一步",
+  "nextEntry": "下一页",
+  "noResults": "没有与搜索匹配的页面。",
+  "noSparkResults": "没有与搜索匹配的火花。",
+  "nudgeAnother": "换个问题",
+  "nudgeCue": "写作提示",
+  "nudgeDismiss": "以后再说",
+  "nudgeOffer": "不知道写什么？",
+  "nudgeThinking": "思考中…",
+  "nudgeWrite": "写写这个",
+  "off": "关",
+  "ollamaInstallFailed": "无法安装 Ollama。Wattle 没有更改这台设备上的任何内容。",
+  "ollamaStartFailed": "Ollama 没有及时启动。它可能仍在启动中：请稍后再试。",
+  "on": "开",
+  "onThisDay": "历史上的今天",
+  "onThisDayDescription": "往年在今天这个日期写下的页面，会显示在首页上。",
+  "onThisDayHint": "选择是否要重温往年同一日期写下的内容。提醒会显示在首页上。",
+  "onboarding": {
+    "language": {
+      "title": "欢迎使用 Wattle。",
+      "body": "请选择你的语言。"
+    },
+    "start": {
+      "title": "你以前用 Wattle 写过日记吗？",
+      "body": "如果你有备份，其中的一切都会回到原位。",
+      "fresh": "开始一本新日记",
+      "freshBody": "空白的第一页，以及打开它之前的三个简短问题。",
+      "returning": "我有 Wattle 备份",
+      "returningBody": "文字、附件和设置，完全保持你离开时的样子。"
+    },
+    "returning": {
+      "eyebrow": "欢迎回来",
+      "title": "让我们找回你的日记。",
+      "body": "选择你保存的 .wattle 备份文件。其中的所有内容将替换这本空日记，Wattle 会从你上次停下的地方打开。",
+      "action": "选择备份…",
+      "confirmTitle": "要恢复备份吗？",
+      "confirm": "选择你保存的 .wattle 文件，Wattle 将带着其中的所有内容重新打开：文字、附件和设置。这本空日记将被替换。"
+    },
+    "name": {
+      "title": "Wattle 该怎么称呼你？",
+      "body": "用于主屏幕上的问候语。2 到 12 个字符。"
+    },
+    "backup": {
+      "title": "备份要保存在哪里？",
+      "body": "日记之外的一个文件夹，这样在需要时备份会在别处。"
+    },
+    "theme": {
+      "title": "浅色还是深色？",
+      "body": "你可以随时在设置中更改。"
+    }
+  },
+  "onboardingFinish": "开始写作",
+  "onboardingStep": "第 {{step}} 步，共 {{total}} 步",
+  "pageOf": "第 {{page}} 页，共 {{total}} 页",
+  "palette": "主题",
+  "paletteDescription": "设置 Wattle 的颜色、字体和视觉风格。",
+  "paletteHint": "改变整个应用的外观：背景、文字、界面细节、圆角和字体。不会改变你写下的任何内容。",
+  "paletteName": {
+    "clay": "陶土",
+    "crimson": "绯红",
+    "sage": "鼠尾草",
+    "umber": "赭褐",
+    "wattle": "Wattle",
+    "olive": "橄榄",
+    "forest": "森林",
+    "candy": "糖果"
+  },
+  "pastSparks": "以前的火花",
+  "previous": "上一步",
+  "previousEntry": "上一页",
+  "primaryNav": "主菜单",
+  "profileSection": "个人资料",
+  "removeAttachment": "移除附件",
+  "replayTours": "引导导览",
+  "replayToursAction": "重置",
+  "replayToursDescription": "再次显示所有欢迎导览。有助于重新发现 Wattle 的全部功能。",
+  "replayToursHint": "将所有导览标记为未看过，并带你前往主屏幕显示第一个导览。",
+  "reset": "重置偏好设置",
+  "resetAction": "重置",
+  "resetConfirm": "外观、页面宽度、回忆和页面锁定将恢复为初始设置。日记、你的名字和 AI 助手设置不受影响。要继续吗？",
+  "resetDescription": "恢复为初始值。你的名字和 AI 助手设置保持不变。",
+  "resetHint": "仅限偏好设置。页面、火花和信件都原封不动。",
+  "resetSection": "重置",
+  "resizeImage": "调整图片大小",
+  "resizeVideo": "调整视频大小",
+  "restore": "恢复",
+  "restoreAction": "恢复…",
+  "restoreConfirm": "这台设备上的每一页、每个附件和每项设置都将被你现在选择的备份替换。此操作无法撤销。",
+  "restoreDescription": "用备份替换这台设备上的所有内容。",
+  "restoreError": "恢复失败。你的数据没有被改动。",
+  "restoreHint": "用备份替换这台设备上的所有内容。此操作无法撤销。",
+  "restoring": "正在恢复…",
+  "retry": "重试",
+  "save": "保存",
+  "saveError": "未保存",
+  "saveThought": "保存念头",
+  "saved": "已保存",
+  "saving": "正在保存…",
+  "search": "搜索页面",
+  "searchDisabledHint": "未找到任何项目；添加项目后才能启用搜索。",
+  "searchPlaceholder": "搜索页面…",
+  "searchResultCount_other": "{{count}} 个结果",
+  "searchSparks": "搜索火花",
+  "searchSparksDisabledHint": "还没有可搜索的内容：在上方写一个火花，搜索就会启用。",
+  "searchSparksPlaceholder": "搜索火花…",
+  "settings": "设置",
+  "settingsSubtitle": "你在这里看到的一切都保存在这台设备上。",
+  "slash": {
+    "bulletList": {
+      "description": "简单的项目符号列表",
+      "title": "项目符号列表"
+    },
+    "code": {
+      "description": "插入代码片段",
+      "title": "代码块"
+    },
+    "divider": {
+      "description": "在视觉上分隔各部分",
+      "title": "分隔线"
+    },
+    "file": {
+      "description": "附加任意文件",
+      "title": "文件"
+    },
+    "heading1": {
+      "description": "大号章节标题",
+      "title": "标题 1"
+    },
+    "heading2": {
+      "description": "中号章节标题",
+      "title": "标题 2"
+    },
+    "heading3": {
+      "description": "小号章节标题",
+      "title": "标题 3"
+    },
+    "image": {
+      "description": "附加图片",
+      "title": "图片"
+    },
+    "orderedList": {
+      "description": "编号列表",
+      "title": "编号列表"
+    },
+    "quote": {
+      "description": "突出显示一段文字",
+      "title": "引用"
+    },
+    "taskList": {
+      "description": "记录待办事项",
+      "title": "清单"
+    },
+    "text": {
+      "description": "纯文本",
+      "title": "文本"
+    },
+    "video": {
+      "description": "附加视频",
+      "title": "视频"
+    }
+  },
+  "slashCategory": {
+    "basic": "基础",
+    "blocks": "区块",
+    "lists": "列表",
+    "media": "媒体"
+  },
+  "slashNoResults": "没有结果。",
+  "sparkCharsLeft_other": "还剩 {{count}} 个字符",
+  "sparkCount_other": "{{count}} 个火花",
+  "sparkDate": "此火花归档的日期",
+  "sparkEchoDescription": "以前的火花会自己回来，每天最多一个。",
+  "sparkEchoHint": "一个至少 30 天前的火花，一整天都是同一个，明天再换下一个。",
+  "sparkEchoLead": "你给自己留下了这个念头",
+  "sparkEchoSetting": "火花回响",
+  "sparkEmpty": "这个火花是空的。",
+  "sparkOpenAsEntry": "作为页面打开",
+  "sparkPlaceholder": "捕捉一个转瞬即逝的念头…",
+  "sparkResultLabel": "火花",
+  "sparkRichBadge": "带格式书写",
+  "sparkRichBody": "这个火花包含格式或附件，来自火花变成纯文本之前。没有任何更改：它会在完整编辑器中打开，一切照常运作。",
+  "sparkSaveHint": "按 Ctrl + Enter 保存",
+  "sparkTruncated_other": "显示最近的 {{count}} 个。",
+  "sparksEyebrow": "当下的清晰",
+  "sparksIntro": "一两行字，在它们溜走之前捕捉下来。这里的一切都不需要标题，也不需要变成别的什么。",
+  "strikethrough": "删除线",
+  "suggestTitle": "建议标题",
+  "theme": "浅色或深色",
+  "themeDescription": "每个主题都有两种模式；这是你正在阅读的那一种。",
+  "themeHint": "主题适用于整个应用，下次打开时会记住你的选择。",
+  "tourClose": "关闭导览",
+  "tourDone": "完成",
+  "tourStep": "{{current}} / {{total}}",
+  "tours": {
+    "ai": {
+      "switch": {
+        "title": "在你开启前保持关闭",
+        "body": "AI 助手是可选的，默认关闭。它会改进并个性化你在 Wattle 中的体验，始终尊重你的隐私。数据在你的电脑上处理，永远不会离开它。"
+      },
+      "runtime": {
+        "title": "模型运行在什么之上",
+        "body": "模型通过 Ollama 运行。如果你允许，Wattle 可以在这里安装并启动它。"
+      },
+      "models": {
+        "title": "你保留的模型",
+        "body": "下载最适合你电脑的模型。一次试一个，这样你就能分辨哪个最适合你的硬件。"
+      }
+    },
+    "home": {
+      "write": {
+        "title": "从今天开始",
+        "body": "新页面就是这样开始的。点击一下，就会打开一张带有今天日期的空白页面：哪怕只有一行，也值得在这里占有一席之地。"
+      },
+      "search": {
+        "title": "找到你写过的内容",
+        "body": "每一页上的每一个词都可以搜索，结果会显示匹配的段落。在有内容可搜索之前，搜索保持停用。"
+      },
+      "timeline": {
+        "title": "你写下的一切",
+        "body": "你的页面，从最新的开始，按月分组。打开一页继续写，或滚动加载更多。"
+      },
+      "nav": {
+        "title": "其他一切",
+        "body": "日历、火花、写给自己的信和设置都在这个栏中。它会在各个屏幕间跟随你，只有你当前所在的那个会显示名称。"
+      }
+    },
+    "calendar": {
+      "grid": {
+        "title": "按日期查看你的日记",
+        "body": "你写过的日子都有标记。选择一天来重读，或在已经过去的日子里写作。"
+      },
+      "view": {
+        "title": "一个月，或一整年",
+        "body": "在两者之间切换。习惯正是在年视图中显现出来的。"
+      },
+      "kinds": {
+        "title": "页面、火花或两者",
+        "body": "两种写作共用这个网格，以标记的颜色区分。在寻找特定内容时，一次只显示一种。"
+      }
+    },
+    "sparks": {
+      "capture": {
+        "title": "捕捉一个念头",
+        "body": "火花是当下捕捉到的一行字。没有标题，没有页面。写下它，然后按 Ctrl+Enter，或使用按钮。"
+      },
+      "archive": {
+        "title": "你保存的所有火花",
+        "body": "在这里可以看到最新的火花。从这里你可以按月打开所有火花，也可以在那里写一个新的。"
+      },
+      "recent": {
+        "title": "火花可以变成什么",
+        "body": "每个火花都会在自己的页面中打开，你可以在那里编辑、删除它，或者如果它在此期间成长了，就把它变成一个正式的页面。"
+      }
+    },
+    "entry": {
+      "title": {
+        "title": "给它起个名字，或者就这样",
+        "body": "标题是可选的，会在你书写时自动保存。按 Enter 可直接跳到下方的页面。"
+      },
+      "editor": {
+        "title": "输入“/”获取其他一切",
+        "body": "像在纸上一样在这里书写。输入“/”会打开弹出菜单，列出页面可以包含的一切：标题、列表、引用、图片、视频和文件。选中文本即可设置格式。无需保存：边写边记录。"
+      },
+      "actions": {
+        "title": "页面命令",
+        "body": "前往上一页或下一页，锁定页面以防误改，将其导出为 HTML，或删除它。"
+      }
+    },
+    "settings": {
+      "appearance": {
+        "title": "打造属于你的样子",
+        "body": "主题、强调色、语言和页面宽度。"
+      },
+      "data": {
+        "title": "你的日记属于你",
+        "body": "备份它、将它导出为 HTML，或从备份中恢复。一切都留在这台设备上。"
+      },
+      "reset": {
+        "title": "回到起点",
+        "body": "将偏好设置恢复到初始状态，重新播放这些导览，或开始一本全新的日记。"
+      },
+      "profile": {
+        "title": "你的名字，仅此而已",
+        "body": "它在主屏幕上向你问候，永远不会离开这台设备。Wattle 不会向你索要其他任何东西：没有账户，没有电子邮件，无需登录。"
+      }
+    },
+    "letters": {
+      "what": {
+        "title": "写给自己的信",
+        "body": "它不是页面：信是现在写下的，并会一直封存到你选定的那一天。在那之前，它无法被阅读、编辑或拆封，就连你也不行。"
+      },
+      "write": {
+        "title": "写一封",
+        "body": "一次只有一份草稿，保存在这里直到你封存它。封存时会询问开启日期，而且没有回头路。"
+      },
+      "waiting": {
+        "title": "等待期间",
+        "body": "封存的信只显示开启日期和长度。没有倒计时，没有预览：时候到了，它就会在这里。"
+      }
+    },
+    "letterCompose": {
+      "directions": {
+        "title": "从哪里开始",
+        "body": "选择一个方向，你会得到一个可以围绕着写的问题。这个问题不会被保存，也永远不会成为信的一部分：它只是你写作时可以看着的东西。"
+      },
+      "seal": {
+        "title": "它何时开启",
+        "body": "选择那一天有多远，然后最后再读一遍。封存是不可逆的：从那一刻起，在选定日期之前，这封信都无法阅读。"
+      }
+    },
+    "letterRead": {
+      "opened": {
+        "title": "它到了",
+        "body": "你选定的日子到了，可以读信了！"
+      },
+      "keep": {
+        "title": "永远属于你",
+        "body": "想读多少遍就读多少遍。信一经封存就无法编辑，也无法删除。"
+      }
+    }
+  },
+  "trash": "回收站",
+  "trashAction": "打开回收站…",
+  "trashDescription": "你删除的页面会在这里等待，然后才会永久消失。",
+  "trashEmptyAction": "清空回收站",
+  "trashEmptyConfirm": "回收站中等待的每一页都将被永久删除，包括附件。此操作无法撤销。",
+  "trashEmptyTitle": "要清空回收站吗？",
+  "trashError": "无法读取回收站。",
+  "trashHint": "恢复的页面会连同其日期、附件以及在日记中的位置一起回来。",
+  "trashIntro": "删除的页面会在这里等待 {{days}} 天，然后被永久移除。",
+  "trashNothing": "没有删除任何内容。",
+  "trashPurge": "永久删除",
+  "trashPurgeConfirm": "此页面及其所有附件都将被永久删除。此操作无法撤销。",
+  "trashRestore": "恢复",
+  "trashRow": "写于 {{written}} · 将于 {{removed}} 移除",
+  "underline": "下划线",
+  "unlockEntry": "解锁此页面",
+  "untitled": "无标题",
+  "writeOnThisDay": "在这一天写作",
+  "writingSection": "写作",
+  "writingSectionDescription": "打开页面时它的行为方式。",
+  "year": "年",
+  "yearsAgo_other": "{{count}} 年前",
+  "memoryPrevious": "上一段回忆",
+  "memoryNext": "下一段回忆",
+  "letterAiUnavailableTitle": "AI 建议不可用",
+  "letterAiUnavailableBody": "上方的方向始终可用。如果还想得到一个用来开头的问题，请在设置中开启 AI 助手并选择一个模型。它在这台电脑上运行，不会有任何内容离开。"
+}

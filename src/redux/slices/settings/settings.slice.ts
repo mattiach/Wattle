@@ -5,6 +5,7 @@ import { invoke } from "@tauri-apps/api/core";
 import { defaultSettings } from "./settings.data";
 
 import type { Settings } from "./settings.types";
+import { LANGUAGES } from "@/languages/languages";
 import type { RootState } from "@/redux/store";
 
 export const saveSettingsThunk = createAsyncThunk<
@@ -31,9 +32,15 @@ const settingsSlice = createSlice({
       ...defaultSettings,
       aiPulling: state.aiPulling,
     }),
+    // The stored language is a plain string to Rust: a code this build does not
+    // offer (written by another build, or a restored backup) falls back to the
+    // default rather than reaching a picker that indexes `LANGUAGES` by it.
     hydrateSettings: (state, action: PayloadAction<Settings>) => ({
       ...action.payload,
       aiPulling: state.aiPulling,
+      language: Object.hasOwn(LANGUAGES, action.payload.language)
+        ? action.payload.language
+        : defaultSettings.language,
     }),
     markTourSeen: (state, action: PayloadAction<string>) => {
       if (!state.toursSeen.includes(action.payload)) {

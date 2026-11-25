@@ -1,0 +1,652 @@
+{
+  "ai": "AI アシスタント",
+  "aiActionDescription": {
+    "fixGrammar": "意味を変えずに、スペル、文法、句読点を修正します。",
+    "improveClarity": "内容はそのままに、文章をより明確で読みやすくします。",
+    "makeShorter": "重要な考えや情報をすべて残したまま、文章を短くします。"
+  },
+  "aiActive": "使用中",
+  "aiActiveModel": "使用中のモデル",
+  "aiDesc08b": "最も軽量な選択肢。控えめなハードウェアでも動作し、手早い文法チェックに最適ですが、常に正確とは限りません。",
+  "aiDesc27b": "ワークステーション向け。かなりのディスク容量とメモリが必要で、より精度の高い提案を求める場合に最適です。",
+  "aiDesc2b": "小さく高速で、0.8B より文法に優れています。",
+  "aiDesc4b": "品質と必要なリソースのバランスが最も優れています。",
+  "aiDesc9b": "高品質。高性能なパソコンが必要です。",
+  "aiDescription": "オフです。ただし、デバイスからアンインストールされてはいません。",
+  "aiDiscard": "破棄",
+  "aiError": {
+    "badSelection": "この選択範囲は書き直せません。空であるか、ひとつの段落より長い可能性があります。",
+    "cancelled": "中断しました。何も変更されていません。",
+    "daemon": "Ollama が処理を完了できませんでした。",
+    "disabled": "AI アシスタントはオフです。設定でオンにできます。",
+    "empty": "モデルから何も返されませんでした。モデルが選択されていることを確認して、もう一度お試しください。",
+    "modelGone": "そのモデルはもうインストールされていません。設定で別のモデルを選んでください。",
+    "noModel": "まだモデルを選んでいません。設定ページで選択してください。",
+    "noPassage": "モデルが書き直した文章を返しませんでした。",
+    "reasoned": "モデルはリクエストを受け取りましたが、テキストを返しませんでした。通常は文章を短くすればこのエラーは解消されます。",
+    "timeout": "モデルの処理に時間がかかりすぎたため、停止しました。通常は文章を短くすればこのエラーは解消されます。",
+    "tooLong": "内容が長すぎる可能性があるため、モデルを停止しました。何も変更されていません。",
+    "unknown": "問題が発生しました。",
+    "unreachable": "Ollama が応答しません。パソコンで実行中であることを確認してから、もう一度お試しください。",
+    "unreadable": "モデルの応答を読み取れないようです。"
+  },
+  "aiHint": "AI モデルは Ollama を通じて、お使いのパソコン上でローカルに動作します。データがデバイスの外に送信されることは一切ありません。プライバシーは Wattle の基本理念のひとつであり、Wattle を特徴づけるものです。あなたのデータは常にあなたのパソコンに残ります。",
+  "aiInsertBelow": "下に挿入",
+  "aiInstall": "インストール",
+  "aiInstalling": "ダウンロード中… {{percent}}%",
+  "aiMayNotFit": "このパソコンでは限界ぎりぎり",
+  "aiMayNotFitHint": "このモデルは、このパソコンで利用できる以上のメモリを必要とします。動作が遅くなったり、まったく起動しなかったりする可能性があります。推奨はしませんが、インストールすることはできます。",
+  "aiModels": "モデル",
+  "aiModelsDescription": "インストール済みのモデルと利用可能なモデル。あなたが求めるまで、何もダウンロードされません。",
+  "aiNoModel": "モデルが選択されていません",
+  "aiNoModelChosenHint": "AI アシスタントはオンですが、まだ使用中のモデルがありません。AI 機能を使い始めるには、上からひとつ選んでください。",
+  "aiNoModelsYet": "まだモデルがインストールされていません。下からひとつ選んでください。あなたが求めるまで、何もダウンロードされません。",
+  "aiOnDescription": "このデバイス上で動作するモデルです。プライバシーを守るため、どこにも何も送信されません。",
+  "aiPreparing": "このパソコンでアシスタントを準備しています…",
+  "aiRecommended": "おすすめ",
+  "aiRecommendedHint": "このパソコンのメモリに最も適しています。",
+  "aiRemove": "削除",
+  "aiRemoveConfirm": "{{name}} をこのパソコンから削除します。続けますか？",
+  "aiReplace": "置き換え",
+  "aiRewrite": "AI アシスタントで書き直す",
+  "aiRewriting": "考え中…",
+  "aiSection": "AI 設定",
+  "aiSectionDescription": "任意で、ローカルで動作し、オンにするまではオフのままです。",
+  "aiUnmanaged": "Wattle 外部",
+  "aiUnmanagedDescription": "Wattle の外でインストールされたものです。ここから削除できますが、使用するモデルとしては選べません。",
+  "aiUseTitle": "これを使う",
+  "alignCenter": "中央揃え",
+  "alignLeft": "左揃え",
+  "alignRight": "右揃え",
+  "allEntries": "すべてのページ",
+  "allSparks": "すべてのスパーク",
+  "allSparksIntro": "これまでに書き留めたすべてのスパークを、新しい順に表示します。スパークはあえて短く、タイトルもありません。自分のためのメモ、その瞬間にとらえた思いつきであり、ルールはあなた自身のものだけです。",
+  "appName": "Wattle",
+  "appearanceSection": "外観",
+  "aroundThisTime": "この時期のころ",
+  "backToComponents": "コンポーネント",
+  "backToTop": "トップに戻る",
+  "backup": "バックアップ",
+  "backupAction": "書き出す…",
+  "backupDescription": "ページ、添付ファイル、設定のコピーを保存します。",
+  "backupError": "バックアップに失敗しました。もう一度お試しください。",
+  "backupFolderAction": "選択…",
+  "backupFolderHint": "バックアップの .wattle ファイルが、その日の日付のファイル名で書き込まれる場所です。日記そのものが保管されている場所ではありません。以前のバックアップが新しいバックアップに含まれることはありません。",
+  "backupFolderUnset": "まだ設定されていません。保存ダイアログは Windows が最後に開いた場所から始まります。",
+  "backupHint": "Wattle は毎回ファイルの保存先を尋ねます。データベース、添付ファイル、設定がひとつの .wattle ファイルにまとめられます。Ollama のモデルは含まれませんが、Wattle から直接かんたんにインストールできます。",
+  "backupSuccess": "バックアップを保存しました。",
+  "bold": "太字",
+  "calendar": "カレンダー",
+  "calendarBoth": "両方",
+  "calendarEntriesOnly": "ページ",
+  "calendarIntro": "一年を通して、いつ書いていたかがわかります。色の濃い日ほど多く書いた日です。日を選ぶと読み返せます。",
+  "calendarSparksOnly": "スパーク",
+  "cancel": "キャンセル",
+  "code": "コード",
+  "codeLanguage": "コードの言語",
+  "codeLanguagePlain": "プレーンテキスト",
+  "components": {
+    "askConfirmation": "確認を求める",
+    "cardBody": "シンプルな面。細い枠線とカードの背景だけです。",
+    "cardTitle": "カード",
+    "dialogBody": "ポータル内のダイアログ。背景と閉じるボタンはこのプロジェクトが提供します。",
+    "dialogTitle": "ダイアログのタイトル",
+    "disabled": "無効",
+    "hoverMe": "ここにカーソルを合わせる",
+    "openDialog": "ダイアログを開く",
+    "openPopover": "ポップオーバーを開く",
+    "pageDescription": "戻るリンク、タイトル、画面の右側に置かれるものの下に、この画面の目的を一、二文で説明します。",
+    "pageSubtitle": "サブタイトル",
+    "pageTitle": "ページのタイトル",
+    "popoverBody": "トリガーに固定され、それ以外の操作で閉じます。日付フィールドも手紙の開封日も、ここで開きます。",
+    "popoverTitle": "ポップオーバー",
+    "sampleEntryBody": "歩いて行けるくらい早く家を出た。家々の裏の畑には、まだ霧がかかっていた。",
+    "sampleEntryHit": "霧",
+    "sampleEntryOpening": "歩いて行けるくらい早く家を出た。家々の裏の畑には、まだ",
+    "sampleEntryTitle": "駅までの遠回り",
+    "sampleSpark": "それが何であれ、急ぐことではない。一晩寝かせよう。",
+    "sizes": "サイズ",
+    "startTour": "ツアーを開始",
+    "states": "状態",
+    "subtitle": "インターフェースを構成する部品と、そのバリエーションや状態です。まずは基本要素、次に複数の画面で使われていて単独で見る価値のある、いくつかの機能的なコンポーネント。ここではすべてサンプルデータを使用しています。",
+    "title": "コンポーネント",
+    "tooltipBody": "説明文。対応するコントロールのすぐ後ろに表示されます。",
+    "tourBody": "ページが暗くなり、強調された要素だけが明るく残り、カードがそれに付いていきます。Wattle のガイドツアーはすべてこの形式で、一歩ずつ進みます。",
+    "tourTitle": "これはツアーのステップです",
+    "variants": "バリエーション",
+    "withIcon": "アイコン付き"
+  },
+  "continue": "続ける",
+  "dailySparks": "スパーク",
+  "dark": "ダーク",
+  "dataSection": "データ",
+  "dataSectionDescription": "日記を Wattle に取り込む、または Wattle から取り出す。",
+  "delete": "削除",
+  "deleteEntry": "ページを削除",
+  "deleteEntryConfirm": "このページはゴミ箱に移動します。完全に削除されるまでは、設定から復元できます。",
+  "deleteSpark": "スパークを削除",
+  "deleteSparkConfirm": "このスパークはゴミ箱に移動します。完全に削除されるまでは、設定から復元できます。",
+  "dismiss": "あとにする",
+  "downloadAttachment": "コピーを保存…",
+  "downloadHtml": "HTML をダウンロード",
+  "edit": "編集",
+  "editorScale": "文字サイズ",
+  "editorScaleDefault": "標準",
+  "editorScaleDescription": "エディタで表示される文章の大きさです。",
+  "editorScaleHint": "変わるのは文章の大きさだけで、アプリのほかの部分はそのままです。",
+  "editorScaleLarge": "大",
+  "editorScaleLargest": "特大",
+  "editorScaleSmall": "小",
+  "emptyBody": "すべてのページはこのデバイスに保存されます。たった一行でも、今日から始めましょう。",
+  "emptySparksBody": "スパークは、その瞬間にとらえた一行です。上の入力欄から始められます。",
+  "emptySparksTitle": "まだ何も書き留めていません。",
+  "emptyTitle": "日記は一枚のページから始まります。",
+  "entryContentPlaceholder": "何か書くか、/ を押してコマンドを表示…",
+  "entryCount_other": "{{count}} ページ",
+  "entryDate": "ページの日付",
+  "entryLock": "ページを読み取り専用で開く",
+  "entryLockDescription": "すでに内容のあるページはロックされた状態で開きます。クリックひとつでロックを解除できます。",
+  "entryLockHint": "新しいページは空の状態で始まり、書き終えるまでロックされることはありません。この設定は、すでにある日記のページにのみ適用されます。",
+  "entryNotFound": "このページはもう存在しません。",
+  "entryTitlePlaceholder": "無題",
+  "export": "書き出し",
+  "exportAction": "書き出す…",
+  "exportDescription": "日記全体を、ネットワーク接続なしで開ける HTML アーカイブとして書き出します。",
+  "exportEmpty": "まだ書き出すものがありません。日記にページがありません。",
+  "exportEntry": "ページを書き出す",
+  "exportError": "書き出しに失敗しました。日記は変更されていません。",
+  "exportSuccess": "{{path}} に書き出しました。",
+  "fixGrammar": "文法を修正",
+  "greetingAfternoon": "こんにちは。",
+  "greetingAfternoonNamed": "こんにちは、{{name}}さん。",
+  "greetingEvening": "こんばんは。",
+  "greetingEveningNamed": "こんばんは、{{name}}さん。",
+  "greetingMorning": "おはようございます。",
+  "greetingMorningNamed": "おはようございます、{{name}}さん。",
+  "heading1": "見出し 1",
+  "heading2": "見出し 2",
+  "improveClarity": "わかりやすくする",
+  "italic": "斜体",
+  "journalFolder": "日記フォルダ",
+  "journalFolderAction": "移動…",
+  "journalFolderConfirm": "フォルダを選ぶと、Wattle が日記をそこへ移動します。データベースとすべての添付ファイルをまとめて移動します。移動が終わると Wattle が再び開きます。移動できなかった場合、日記は今の場所にそのまま残ります。",
+  "journalFolderError": "日記を移動できませんでした。元の場所にそのまま残っており、何も変更されていません。",
+  "journalFolderHint": "日記そのもの、つまり wattle.db と添付ファイルが保管されている場所です。バックアップの .wattle ファイルが保存される場所ではありません。",
+  "language": "言語",
+  "languageDescription": "インターフェースの言語。",
+  "languageHint": "変わるのはインターフェースだけです。あなたが書いた文章には一切触れません。",
+  "layoutWidth": "Wattle のページ幅",
+  "layoutWidthCompact": "狭い",
+  "layoutWidthDefault": "標準",
+  "layoutWidthDescription": "Wattle のすべてのページの幅です。",
+  "layoutWidthHint": "Wattle のページ幅をご自身で設定してください。パソコンやモニターはそれぞれ異なるため、最適な値はあなたにお任せします。",
+  "layoutWidthWide": "広い",
+  "letterArrivedHeading": "届いた手紙",
+  "letterArrivedTitle": "過去のあなたから手紙が届きました",
+  "letterComposeDescription": "あなたが選んだ日まで読めないもの。一度封をすると、開くことも、編集することも、削除することもできません。慎重に選んでください。",
+  "letterComposeTitle": "自分への手紙",
+  "letterContentPlaceholder": "封をする前に、何を書くか決めましょう。",
+  "letterContinueDraft": "手紙の続きを書く",
+  "letterDraftHeading": "書きかけ",
+  "letterDraftRow_other": "書きかけの手紙 - 現在 {{count}} 語",
+  "letterError": {
+    "badDate": "その日付では、この手紙に封をすることはできません。",
+    "corrupt": "この手紙は開けません。封が閉じたときの状態と一致しなくなっています。封をした後に、日記ファイル内の開封日、暗号化されたテキスト、または鍵が変更されると、このようになります。",
+    "empty": "封をする内容がまだ何も書かれていません。",
+    "futureEnvelope": "この手紙は新しいバージョンの Wattle で封をされています。開くには Wattle を更新してください。",
+    "noKey": "この手紙の鍵がなくなっています。唯一の方法は、鍵がなくなる前に作成したバックアップを復元することです。",
+    "notFound": "この手紙は存在しません。",
+    "notYet": "この手紙はまだ開封できません。また後で来てください。",
+    "sealed": "この手紙は封をされていて、まだ開く時ではありません。また後で来てください。",
+    "tooFar": "手紙が待てるのは最長で五十年です。",
+    "tooSoon": "手紙は少なくとも七日間待つ必要があります。",
+    "unknown": "問題が発生しました。"
+  },
+  "letterExport": "この手紙をダウンロード",
+  "letterFooterDates": "{{written}} に書いた手紙 · {{opened}} に開封",
+  "letterFromYourself": "過去のあなたから",
+  "letterHasArrived": "その日が来ました",
+  "letterIn10Years": "10 年",
+  "letterIn1Month": "1 か月",
+  "letterIn1Year": "1 年",
+  "letterIn2Years": "2 年",
+  "letterIn3Months": "3 か月",
+  "letterIn3Years": "3 年",
+  "letterIn5Years": "5 年",
+  "letterIn6Months": "6 か月",
+  "letterKeepEditing": "書き続ける",
+  "letterLength": "長さ",
+  "letterNoDateYet": "いつ開封するか選んでください。",
+  "letterOpenIt": "開封する",
+  "letterOpenedHeading": "開封済み",
+  "letterOpenedOn": "{{date}} に開封",
+  "letterOpensOn": "開封日",
+  "letterOpensOnDate": "{{date}} に開封",
+  "letterPickDate": "日付を選ぶ…",
+  "letterPromptChapter": "新しい章",
+  "letterPromptFree": "特に何も",
+  "letterPromptGoals": "目標",
+  "letterPromptHard": "つらい時期",
+  "letterPromptOrdinary": "何気ない一日",
+  "letterPromptPerson": "大切な人",
+  "letterPromptRemember": "忘れたくないこと",
+  "letterResultLabel": "手紙",
+  "letterReviewAction": "読み返す…",
+  "letterReviewBody": "最後にもう一度読んでください。このステップの後、手紙はしまわれます。",
+  "letterReviewTitle": "最後にもう一度読む",
+  "letterSealAction": "手紙に封をする",
+  "letterSealBody": "暗号化され、{{date}} までしまわれます。",
+  "letterSealFailed": "手紙に封をできませんでした。何も変更されていません。",
+  "letterSealHonesty": "Wattle は手紙を暗号化し、鍵を日記ファイルの中に保管するので、手紙が失われることはありません。これは自分自身に対する鍵であって、あなたのパソコンにアクセスできる人から隠す秘密ではありません。また、バックアップには両方が一緒に含まれます。",
+  "letterSealTerms": "{{date}} までは、開くことも、読むことも、編集することも、削除することも、日付を変えることもできません。Wattle にもできません。取り除く唯一の方法は、日記全体を消去することです。",
+  "letterSealTitle": "この手紙に封をしますか？",
+  "letterSealing": "封をしています…",
+  "letterTypeDate": "確認のため日付を入力してください",
+  "letterWaitingHeading": "待機中",
+  "letterWaitingLine": "自分への手紙が {{date}} に開封されます。",
+  "letterWhereToStart": "書き出しのヒント",
+  "letterWillOpen": "{{date}} に開封されます。",
+  "letterWordCount_other": "{{count}} 語",
+  "letterWrite": "手紙を書く",
+  "letterWriteBack": "返事を書く",
+  "letterWritten": "作成日",
+  "letterWrittenAndLength_other": "{{date}} に作成 · {{count}} 語",
+  "letterWrittenOn": "{{date}} に作成",
+  "letters": "手紙",
+  "lettersDescription": "未来の自分に託す言葉。日を選び、覚えておきたいこと、伝えたいこと、再発見したいことを残しましょう。その日まで、手紙は封をされたまま手の届かないところにあります。",
+  "lettersEmptyBody": "手紙とは、今書いて、あなたが選んだ日まで読み返せないものです。",
+  "lettersEmptyTitle": "手紙はありません",
+  "light": "ライト",
+  "link": "リンク",
+  "listErrorBody": "ページはまだこのデバイスにありますが、Wattle が読み込めませんでした。もう一度お試しください。問題が続く場合は、バックアップを復元してください。",
+  "listErrorTitle": "日記を開けません。",
+  "loadOlder": "以前のものを読み込む",
+  "loading": "読み込み中…",
+  "lockEntry": "このページをロック",
+  "makeShorter": "短くする",
+  "memoriesSection": "思い出",
+  "memoriesSectionDescription": "書いたものがあなたのもとに戻ってくる、二つの方法。",
+  "memoryAnother": "別のものを探す",
+  "memoryAsk": "読み返す価値のある思い出を探す",
+  "memoryLooking": "探しています…",
+  "memoryNoneAlike": "これと並べて置く価値があるほど似ている文章は、ほかにありません。",
+  "memoryNoneLeft": "表示する価値があるほど似ているものは、ほかにありません。",
+  "memoryTooRecent": "まだ十分に昔のものがありません。思い出は最新の文章より少なくとも二週間前のものである必要がありますが、日記はまだそこまでさかのぼっていません。",
+  "memoryWorthRevisiting": "読み返す価値のある思い出",
+  "month": "月",
+  "name": "名前",
+  "nameDescription": "{{min}}〜{{max}} 文字。",
+  "nameHint": "Wattle でどう呼ばれたいかを、本名でもニックネームでも選んでください。いつでも変更できます。",
+  "namePlaceholder": "あなたの名前",
+  "nameRequired": "名前は必須です。{{min}} 文字以上入力してください。",
+  "nameTooShort": "{{min}} 文字以上。",
+  "navigation": "ナビゲーション",
+  "navigationBoth": "両方",
+  "navigationBottom": "下",
+  "navigationDescription": "メインナビゲーションの位置です。",
+  "navigationHeader": "上",
+  "navigationHint": "お好みの位置にナビゲーションを配置してください。",
+  "newEntry": "新しいページ",
+  "newProfile": "新しいプロフィール",
+  "newProfileAction": "終了",
+  "newProfileBackingUp": "バックアップ中…",
+  "newProfileBackupFolder": "保存ダイアログは {{folder}} で開きます。",
+  "newProfileBackupNow": "今すぐバックアップ…",
+  "newProfileBackupSaved": "バックアップを保存しました。",
+  "newProfileConfirmAction": "すべて削除",
+  "newProfileConfirmBody": "すべてのページ、すべての添付ファイル、そしてあなたの名前が完全に削除され、セットアップが最初からやり直しになります。この操作は元に戻せません。",
+  "newProfileConfirmTitle": "このプロフィールを消去しますか？",
+  "newProfileContinueAnyway": "このまま続ける",
+  "newProfileDescription": "サインアウトしてこのプロフィールを削除し、最初からやり直します。すべてのページと添付ファイルが削除されます。確定する前に、このプロフィールをバックアップすることもできます。",
+  "newProfileError": "やり直すことができませんでした。日記は変更されていません。",
+  "newProfileHint": "このデバイスにある日記はひとつだけです。この操作はそれを消去するもので、二つ目を追加するものではありません。",
+  "newProfileNoBackupBody": "Wattle には、この日記のバックアップの記録がありません。中身はすべて削除されようとしており、バックアップがなければ復元する方法はありません。",
+  "newProfileNoBackupTitle": "バックアップフォルダが設定されていません",
+  "next": "次へ",
+  "nextEntry": "次のページ",
+  "noResults": "検索に一致するページはありません。",
+  "noSparkResults": "検索に一致するスパークはありません。",
+  "nudgeAnother": "別の質問をして",
+  "nudgeCue": "書くきっかけ",
+  "nudgeDismiss": "今はやめておく",
+  "nudgeOffer": "何を書けばいいかわからない？",
+  "nudgeThinking": "考え中…",
+  "nudgeWrite": "これについて書く",
+  "off": "オフ",
+  "ollamaInstallFailed": "Ollama をインストールできませんでした。Wattle はこのデバイスで何も変更していません。",
+  "ollamaStartFailed": "Ollama が時間内に起動しませんでした。まだ起動中かもしれません。少し待ってから、もう一度お試しください。",
+  "on": "オン",
+  "onThisDay": "この日の出来事",
+  "onThisDayDescription": "過去の年の今日の日付に書いたページが、ホームページに表示されます。",
+  "onThisDayHint": "過去の年の同じ日付に書いたものを、もう一度見たいかどうかを選びます。お知らせはホームページに表示されます。",
+  "onboarding": {
+    "language": {
+      "title": "Wattle へようこそ。",
+      "body": "言語を選んでください。"
+    },
+    "start": {
+      "title": "以前に Wattle で日記をつけていましたか？",
+      "body": "バックアップがあれば、その中身がすべて元の場所に戻ります。",
+      "fresh": "新しい日記を始める",
+      "freshBody": "白紙の最初のページと、それを開く前の三つの短い質問。",
+      "returning": "Wattle のバックアップがある",
+      "returningBody": "文章、添付ファイル、設定が、残したときのそのままに戻ります。"
+    },
+    "returning": {
+      "eyebrow": "おかえりなさい",
+      "title": "日記を探しましょう。",
+      "body": "保存した .wattle バックアップファイルを選んでください。その中身がこの空の日記と置き換わり、Wattle は前回の続きから開きます。",
+      "action": "バックアップを選ぶ…",
+      "confirmTitle": "バックアップを復元しますか？",
+      "confirm": "保存した .wattle ファイルを選ぶと、Wattle はその中身すべて、つまり文章、添付ファイル、設定とともに再び開きます。この空の日記は置き換えられます。"
+    },
+    "name": {
+      "title": "Wattle はあなたを何と呼べばいいですか？",
+      "body": "ホーム画面のあいさつに使われます。2〜12 文字。"
+    },
+    "backup": {
+      "title": "バックアップをどこに保存しますか？",
+      "body": "日記の外にあるフォルダです。必要なときに、バックアップが別の場所にあるようにするためです。"
+    },
+    "theme": {
+      "title": "ライトとダーク、どちらにしますか？",
+      "body": "設定でいつでも変更できます。"
+    }
+  },
+  "onboardingFinish": "書き始める",
+  "onboardingStep": "ステップ {{step}} / {{total}}",
+  "pageOf": "{{page}} / {{total}}",
+  "palette": "テーマ",
+  "paletteDescription": "Wattle の色、書体、ビジュアルスタイルを設定します。",
+  "paletteHint": "アプリ全体の見た目を変更します。背景、文字、インターフェースの細部、角、書体。あなたが書いたものは何も変わりません。",
+  "paletteName": {
+    "clay": "クレイ",
+    "crimson": "クリムゾン",
+    "sage": "セージ",
+    "umber": "アンバー",
+    "wattle": "Wattle",
+    "olive": "オリーブ",
+    "forest": "フォレスト",
+    "candy": "キャンディ"
+  },
+  "pastSparks": "以前のスパーク",
+  "previous": "前へ",
+  "previousEntry": "前のページ",
+  "primaryNav": "メイン",
+  "profileSection": "プロフィール",
+  "removeAttachment": "添付ファイルを削除",
+  "replayTours": "ガイドツアー",
+  "replayToursAction": "リセット",
+  "replayToursDescription": "すべてのウェルカムツアーをもう一度表示します。Wattle の機能をあらためて知るのに役立ちます。",
+  "replayToursHint": "すべてのツアーを未表示に戻し、ホーム画面に移動して最初のツアーを表示します。",
+  "reset": "設定をリセット",
+  "resetAction": "リセット",
+  "resetConfirm": "外観、ページ幅、思い出、ページのロックが初期設定に戻ります。日記、あなたの名前、AI アシスタントの設定はそのままです。続けますか？",
+  "resetDescription": "初期値に戻します。あなたの名前と AI アシスタントの設定はそのまま残ります。",
+  "resetHint": "設定のみです。ページ、スパーク、手紙はそのまま残ります。",
+  "resetSection": "リセット",
+  "resizeImage": "画像のサイズを変更",
+  "resizeVideo": "動画のサイズを変更",
+  "restore": "復元",
+  "restoreAction": "復元…",
+  "restoreConfirm": "このデバイス上のすべてのページ、添付ファイル、設定が、これから選ぶバックアップに置き換えられます。この操作は元に戻せません。",
+  "restoreDescription": "このデバイス上のすべてをバックアップで置き換えます。",
+  "restoreError": "復元に失敗しました。データには触れていません。",
+  "restoreHint": "このデバイス上のすべてをバックアップで置き換えます。元に戻すことはできません。",
+  "restoring": "復元中…",
+  "retry": "もう一度試す",
+  "save": "保存",
+  "saveError": "保存されていません",
+  "saveThought": "思いつきを保存",
+  "saved": "保存しました",
+  "saving": "保存中…",
+  "search": "ページを検索",
+  "searchDisabledHint": "項目が見つかりません。検索を有効にするには、まず項目を追加してください。",
+  "searchPlaceholder": "ページを検索…",
+  "searchResultCount_other": "{{count}} 件の結果",
+  "searchSparks": "スパークを検索",
+  "searchSparksDisabledHint": "まだ検索するものがありません。上でスパークを書くと、検索が有効になります。",
+  "searchSparksPlaceholder": "スパークを検索…",
+  "settings": "設定",
+  "settingsSubtitle": "ここにあるものはすべて、このデバイスに保存されます。",
+  "slash": {
+    "bulletList": {
+      "description": "シンプルな箇条書き",
+      "title": "箇条書きリスト"
+    },
+    "code": {
+      "description": "コードスニペットを挿入",
+      "title": "コードブロック"
+    },
+    "divider": {
+      "description": "セクションを視覚的に区切る",
+      "title": "区切り線"
+    },
+    "file": {
+      "description": "任意のファイルを添付",
+      "title": "ファイル"
+    },
+    "heading1": {
+      "description": "大きなセクション見出し",
+      "title": "見出し 1"
+    },
+    "heading2": {
+      "description": "中くらいのセクション見出し",
+      "title": "見出し 2"
+    },
+    "heading3": {
+      "description": "小さなセクション見出し",
+      "title": "見出し 3"
+    },
+    "image": {
+      "description": "画像を添付",
+      "title": "画像"
+    },
+    "orderedList": {
+      "description": "番号付きリスト",
+      "title": "番号付きリスト"
+    },
+    "quote": {
+      "description": "一節を強調する",
+      "title": "引用"
+    },
+    "taskList": {
+      "description": "やることを管理する",
+      "title": "チェックリスト"
+    },
+    "text": {
+      "description": "プレーンテキスト",
+      "title": "テキスト"
+    },
+    "video": {
+      "description": "動画を添付",
+      "title": "動画"
+    }
+  },
+  "slashCategory": {
+    "basic": "基本",
+    "blocks": "ブロック",
+    "lists": "リスト",
+    "media": "メディア"
+  },
+  "slashNoResults": "結果がありません。",
+  "sparkCharsLeft_other": "残り {{count}} 文字",
+  "sparkCount_other": "{{count}} 件のスパーク",
+  "sparkDate": "このスパークが記録される日",
+  "sparkEchoDescription": "以前のスパークが、一日にひとつまで、ひとりでに戻ってきます。",
+  "sparkEchoHint": "30 日以上前のスパークが、一日中同じものとして表示され、翌日には次のものに変わります。",
+  "sparkEchoLead": "あなたが自分に残した思いつき",
+  "sparkEchoSetting": "スパークのこだま",
+  "sparkEmpty": "このスパークは空です。",
+  "sparkOpenAsEntry": "ページとして開く",
+  "sparkPlaceholder": "ふと浮かんだ考えを書き留める…",
+  "sparkResultLabel": "スパーク",
+  "sparkRichBadge": "書式付きで作成",
+  "sparkRichBody": "このスパークには、スパークがプレーンテキストになる前の書式や添付ファイルが含まれています。何も変更されていません。すべてが引き続き機能するフルエディタで開きます。",
+  "sparkSaveHint": "Ctrl + Enter で保存",
+  "sparkTruncated_other": "最新の {{count}} 件を表示しています。",
+  "sparksEyebrow": "その瞬間の明晰さ",
+  "sparksIntro": "逃げてしまう前にとらえた、一、二行。ここではタイトルも要らず、別の何かになる必要もありません。",
+  "strikethrough": "取り消し線",
+  "suggestTitle": "タイトルを提案",
+  "theme": "ライトまたはダーク",
+  "themeDescription": "どのテーマにも両方があります。今読んでいるのがこちらです。",
+  "themeHint": "テーマはアプリ全体に適用され、次に開いたときにも選択が記憶されています。",
+  "tourClose": "ツアーを閉じる",
+  "tourDone": "完了",
+  "tourStep": "{{current}} / {{total}}",
+  "tours": {
+    "ai": {
+      "switch": {
+        "title": "オンにするまではオフ",
+        "body": "AI アシスタントは任意で、最初はオフになっています。常にプライバシーを尊重しながら、Wattle での体験を向上させ、あなたに合わせて調整します。データはあなたのパソコン上で処理され、外に出ることはありません。"
+      },
+      "runtime": {
+        "title": "モデルを動かすもの",
+        "body": "モデルは Ollama を通じて動作します。許可すれば、Wattle がここからインストールして起動できます。"
+      },
+      "models": {
+        "title": "手元に置くモデル",
+        "body": "パソコンに最も適したモデルをダウンロードしてください。ひとつずつ試すと、どれがハードウェアに最も合うかがわかります。"
+      }
+    },
+    "home": {
+      "write": {
+        "title": "今日から始める",
+        "body": "新しいページはここから始まります。クリックひとつで今日の日付の白紙のページが開きます。たった一行でも、ここに居場所があります。"
+      },
+      "search": {
+        "title": "書いたものを見つける",
+        "body": "すべてのページのすべての言葉を検索でき、結果には一致した部分が表示されます。検索するものができるまでは無効のままです。"
+      },
+      "timeline": {
+        "title": "これまでに書いたすべて",
+        "body": "あなたのページを新しい順に、月ごとにまとめて表示します。続きを書くには開き、さらに読み込むにはスクロールしてください。"
+      },
+      "nav": {
+        "title": "その他すべて",
+        "body": "カレンダー、スパーク、自分への手紙、設定は、すべてこのバーにあります。画面から画面へと付いてきて、今いる画面だけが名前を表示します。"
+      }
+    },
+    "calendar": {
+      "grid": {
+        "title": "日付で見る日記",
+        "body": "書いた日には印が付いています。日を選んで読み返したり、すでに過ぎた日に書いたりできます。"
+      },
+      "view": {
+        "title": "ひと月、または一年全体",
+        "body": "二つを切り替えられます。習慣が目に見えるようになるのは、年の表示です。"
+      },
+      "kinds": {
+        "title": "ページ、スパーク、またはその両方",
+        "body": "二種類の文章がこのグリッドを共有し、印の色で区別されます。特定のものを探すときは、ひとつずつ表示しましょう。"
+      }
+    },
+    "sparks": {
+      "capture": {
+        "title": "思いつきを書き留める",
+        "body": "スパークは、その瞬間にとらえた一行です。タイトルもページもありません。書いて Ctrl+Enter を押すか、ボタンを使ってください。"
+      },
+      "archive": {
+        "title": "残してきたすべてのスパーク",
+        "body": "ここには最新のものが表示されます。ここからすべてを月ごとに開けます。そこから新しいスパークを書くこともできます。"
+      },
+      "recent": {
+        "title": "スパークがなれるもの",
+        "body": "それぞれが専用のページで開き、編集や削除ができます。その間に膨らんだなら、ちゃんとしたページにすることもできます。"
+      }
+    },
+    "entry": {
+      "title": {
+        "title": "名前を付けても、そのままでも",
+        "body": "タイトルは任意で、書いている間に自動で保存されます。Enter を押すと、下のページに直接移動します。"
+      },
+      "editor": {
+        "title": "それ以外は「/」を入力",
+        "body": "紙に書くように、ここに書いてください。「/」を入力すると、ページに入れられるものすべてのメニューが開きます。見出し、リスト、引用、画像、動画、ファイル。テキストを選択すると書式を設定できます。保存は不要です。書いたそばから記録されます。"
+      },
+      "actions": {
+        "title": "ページのコマンド",
+        "body": "前後のページに移動したり、うっかり編集しないようにロックしたり、HTML として書き出したり、削除したりできます。"
+      }
+    },
+    "settings": {
+      "appearance": {
+        "title": "自分好みに",
+        "body": "テーマ、アクセントカラー、言語、ページ幅。"
+      },
+      "data": {
+        "title": "あなたの日記はあなたのもの",
+        "body": "バックアップしたり、HTML として書き出したり、バックアップから復元したりできます。すべてこのデバイスに残ります。"
+      },
+      "reset": {
+        "title": "元に戻す",
+        "body": "設定を初期状態に戻したり、これらのツアーをもう一度見たり、まったく新しい日記を始めたりできます。"
+      },
+      "profile": {
+        "title": "あなたの名前、それだけ",
+        "body": "ホーム画面であなたにあいさつし、このデバイスから出ることはありません。Wattle はそれ以外何も求めません。アカウントも、メールアドレスも、サインインもありません。"
+      }
+    },
+    "letters": {
+      "what": {
+        "title": "自分への手紙",
+        "body": "これはページではありません。手紙は今書き、あなたが選んだ日まで封をされたままです。その日までは、読むことも、編集することも、封を開けることもできません。あなた自身でさえも。"
+      },
+      "write": {
+        "title": "一通書く",
+        "body": "下書きは一度にひとつ、封をするまでここに保管されます。封をするときに開封日を尋ねられ、後戻りはできません。"
+      },
+      "waiting": {
+        "title": "待っている間",
+        "body": "封をされた手紙には、開封日と長さだけが表示されます。カウントダウンもプレビューもありません。その時が来れば、ただここにあるだけです。"
+      }
+    },
+    "letterCompose": {
+      "directions": {
+        "title": "書き出しのヒント",
+        "body": "方向を選ぶと、それに向かって書くための質問が表示されます。質問は保存されず、手紙の一部になることもありません。書いている間に眺めるためのものです。"
+      },
+      "seal": {
+        "title": "いつ開封するか",
+        "body": "その日がどれくらい先かを選び、最後にもう一度読んでください。封は取り消せません。その瞬間から、選んだ日付まで手紙は読めなくなります。"
+      }
+    },
+    "letterRead": {
+      "opened": {
+        "title": "届きました",
+        "body": "あなたが選んだ日が来て、手紙を読めるようになりました！"
+      },
+      "keep": {
+        "title": "永遠にあなたのもの",
+        "body": "何度でも好きなだけ読んでください。封をした手紙は編集できず、削除もできません。"
+      }
+    }
+  },
+  "trash": "ゴミ箱",
+  "trashAction": "ゴミ箱を開く…",
+  "trashDescription": "削除したページは、完全に消える前にここで待機します。",
+  "trashEmptyAction": "ゴミ箱を空にする",
+  "trashEmptyConfirm": "ゴミ箱にあるすべてのページが、添付ファイルも含めて完全に削除されます。この操作は元に戻せません。",
+  "trashEmptyTitle": "ゴミ箱を空にしますか？",
+  "trashError": "ゴミ箱を読み込めませんでした。",
+  "trashHint": "復元したページは、日付、添付ファイル、日記の中での位置とともに戻ってきます。",
+  "trashIntro": "削除したページはここで {{days}} 日間待機し、その後完全に削除されます。",
+  "trashNothing": "削除されたものはありません。",
+  "trashPurge": "完全に削除",
+  "trashPurgeConfirm": "このページと、それに添付されたすべてのものが完全に削除されます。この操作は元に戻せません。",
+  "trashRestore": "復元",
+  "trashRow": "{{written}} に作成 · {{removed}} に削除予定",
+  "underline": "下線",
+  "unlockEntry": "このページのロックを解除",
+  "untitled": "無題",
+  "writeOnThisDay": "この日に書く",
+  "writingSection": "執筆",
+  "writingSectionDescription": "ページを開いたときの動作。",
+  "year": "年",
+  "yearsAgo_other": "{{count}} 年前",
+  "memoryPrevious": "前の思い出",
+  "memoryNext": "次の思い出",
+  "letterAiUnavailableTitle": "AI の提案は利用できません",
+  "letterAiUnavailableBody": "上の方向はいつでも使えます。書き始めるための質問も受け取るには、設定で AI アシスタントをオンにしてモデルを選んでください。このパソコン上で動作し、何も外に出ることはありません。"
+}
