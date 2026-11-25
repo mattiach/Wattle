@@ -1,18 +1,34 @@
+import bgFlag from "@/assets/bg.svg";
+import cnFlag from "@/assets/cn.svg";
 import czFlag from "@/assets/cz.svg";
 import deFlag from "@/assets/de.svg";
+import dkFlag from "@/assets/dk.svg";
+import eeFlag from "@/assets/ee.svg";
 import enFlag from "@/assets/en.svg";
 import esFlag from "@/assets/es.svg";
 import fiFlag from "@/assets/fi.svg";
 import frFlag from "@/assets/fr.svg";
 import grFlag from "@/assets/gr.svg";
+import hrFlag from "@/assets/hr.svg";
 import huFlag from "@/assets/hu.svg";
 import itFlag from "@/assets/it.svg";
+import jpFlag from "@/assets/jp.svg";
+import krFlag from "@/assets/kr.svg";
+import ltFlag from "@/assets/lt.svg";
+import lvFlag from "@/assets/lv.svg";
 import nlFlag from "@/assets/nl.svg";
+import noFlag from "@/assets/no.svg";
 import plFlag from "@/assets/pl.svg";
 import ptFlag from "@/assets/pt.svg";
+import roFlag from "@/assets/ro.svg";
+import rsFlag from "@/assets/rs.svg";
 import ruFlag from "@/assets/ru.svg";
 import seFlag from "@/assets/se.svg";
+import siFlag from "@/assets/si.svg";
+import skFlag from "@/assets/sk.svg";
+import thFlag from "@/assets/th.svg";
 import trFlag from "@/assets/tr.svg";
+import twFlag from "@/assets/tw.svg";
 import uaFlag from "@/assets/ua.svg";
 
 /**
@@ -35,22 +51,38 @@ import uaFlag from "@/assets/ua.svg";
  * the way they write it, not the way the current interface would render it.
  */
 export const LANGUAGES = {
+  bg: { flag: bgFlag, label: "Български" },
   cs: { flag: czFlag, label: "Čeština" },
+  da: { flag: dkFlag, label: "Dansk" },
   de: { flag: deFlag, label: "Deutsch" },
   el: { flag: grFlag, label: "Ελληνικά" },
   en: { flag: enFlag, label: "English" },
   es: { flag: esFlag, label: "Español" },
+  et: { flag: eeFlag, label: "Eesti" },
   fi: { flag: fiFlag, label: "Suomi" },
   fr: { flag: frFlag, label: "Français" },
+  hr: { flag: hrFlag, label: "Hrvatski" },
   hu: { flag: huFlag, label: "Magyar" },
   it: { flag: itFlag, label: "Italiano" },
+  ja: { flag: jpFlag, label: "日本語" },
+  ko: { flag: krFlag, label: "한국어" },
+  lt: { flag: ltFlag, label: "Lietuvių" },
+  lv: { flag: lvFlag, label: "Latviešu" },
   nl: { flag: nlFlag, label: "Nederlands" },
+  no: { flag: noFlag, label: "Norsk" },
   pl: { flag: plFlag, label: "Polski" },
   pt: { flag: ptFlag, label: "Português" },
+  ro: { flag: roFlag, label: "Română" },
   ru: { flag: ruFlag, label: "Русский" },
+  sk: { flag: skFlag, label: "Slovenčina" },
+  sl: { flag: siFlag, label: "Slovenščina" },
+  sr: { flag: rsFlag, label: "Srpski" },
   sv: { flag: seFlag, label: "Svenska" },
+  th: { flag: thFlag, label: "ไทย" },
   tr: { flag: trFlag, label: "Türkçe" },
   uk: { flag: uaFlag, label: "Українська" },
+  "zh-CN": { flag: cnFlag, label: "简体中文" },
+  "zh-TW": { flag: twFlag, label: "繁體中文" },
 } as const;
 
 export type LanguageCode = keyof typeof LANGUAGES;

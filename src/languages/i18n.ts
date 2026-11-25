@@ -20,22 +20,38 @@ let initialized = false;
  * other fifteen were three quarters of a megabyte the first frame waited on.
  */
 const CATALOGUES: Record<string, () => Promise<{ default: object }>> = {
+  bg: () => import("./bg/bg.json"),
   cs: () => import("./cz/cz.json"),
+  da: () => import("./dk/dk.json"),
   de: () => import("./de/de.json"),
   el: () => import("./gr/gr.json"),
   en: () => import("./en/en.json"),
   es: () => import("./es/es.json"),
+  et: () => import("./ee/ee.json"),
   fi: () => import("./fi/fi.json"),
   fr: () => import("./fr/fr.json"),
+  hr: () => import("./hr/hr.json"),
   hu: () => import("./hu/hu.json"),
   it: () => import("./it/it.json"),
+  ja: () => import("./jp/jp.json"),
+  ko: () => import("./kr/kr.json"),
+  lt: () => import("./lt/lt.json"),
+  lv: () => import("./lv/lv.json"),
   nl: () => import("./nl/nl.json"),
+  no: () => import("./no/no.json"),
   pl: () => import("./pl/pl.json"),
   pt: () => import("./pt/pt.json"),
+  ro: () => import("./ro/ro.json"),
   ru: () => import("./ru/ru.json"),
+  sk: () => import("./sk/sk.json"),
+  sl: () => import("./si/si.json"),
+  sr: () => import("./rs/rs.json"),
   sv: () => import("./se/se.json"),
+  th: () => import("./th/th.json"),
   tr: () => import("./tr/tr.json"),
   uk: () => import("./ua/ua.json"),
+  "zh-CN": () => import("./cn/cn.json"),
+  "zh-TW": () => import("./tw/tw.json"),
 };
 
 const loaded = new Set<string>();

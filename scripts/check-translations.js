@@ -9,17 +9,26 @@ const LANGUAGES_DIR = path.resolve(__dirname, "../src/languages");
 const DEFAULT_LANGUAGE = "en";
 
 /**
- * Folder name to language code, for the four that differ.
+ * Folder name to language code, for the ones that differ.
  *
- * A folder is named after the flag it carries (`cz`, `gr`, `se`, `ua`) while
- * the code is the language (`cs`, `el`, `sv`, `uk`). `languages.tsx` pairs the
+ * A folder is named after the flag it carries (`cz`, `jp`, `se`, `ua`) while
+ * the code is the language (`cs`, `ja`, `sv`, `uk`). `languages.tsx` pairs the
  * same two lists for the picker; the plural rules below need the code, not the
- * folder, or they fall back to English rules and wave the Slavic files through.
+ * folder, or they fall back to English rules - waving the Slavic files through
+ * and demanding a `_one` form Chinese, Japanese and Korean do not have.
  */
 const LANGUAGE_CODES = {
+  cn: "zh-CN",
   cz: "cs",
+  dk: "da",
+  ee: "et",
   gr: "el",
+  jp: "ja",
+  kr: "ko",
+  rs: "sr",
   se: "sv",
+  si: "sl",
+  tw: "zh-TW",
   ua: "uk",
 };
 
@@ -173,7 +182,7 @@ function printList(title, items, filePath) {
 const AI_COMMANDS = path.resolve(__dirname, "../src-tauri/src/commands/ai.rs");
 
 const RUST_LANGUAGES_TABLE = /const LANGUAGES:[^=]*=\s*\[([\s\S]*?)\];/;
-const RUST_LANGUAGE_CODE = /\("(\w+)",/g;
+const RUST_LANGUAGE_CODE = /\("([\w-]+)",/g;
 
 /**
  * The language codes the Rust side can name to a model.

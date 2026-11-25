@@ -255,23 +255,39 @@ const ACTIONS: [(&str, &str); 4] = [
 
 /// The languages Wattle's interface is written in, and their English names -
 /// which is how a model is told what to answer in.
-pub(super) const LANGUAGES: [(&str, &str); 16] = [
+pub(super) const LANGUAGES: [(&str, &str); 32] = [
+    ("bg", "Bulgarian"),
     ("cs", "Czech"),
+    ("da", "Danish"),
     ("de", "German"),
     ("el", "Greek"),
     ("en", "English"),
     ("es", "Spanish"),
+    ("et", "Estonian"),
     ("fi", "Finnish"),
     ("fr", "French"),
+    ("hr", "Croatian"),
     ("hu", "Hungarian"),
     ("it", "Italian"),
+    ("ja", "Japanese"),
+    ("ko", "Korean"),
+    ("lt", "Lithuanian"),
+    ("lv", "Latvian"),
     ("nl", "Dutch"),
+    ("no", "Norwegian"),
     ("pl", "Polish"),
     ("pt", "Portuguese"),
+    ("ro", "Romanian"),
     ("ru", "Russian"),
+    ("sk", "Slovak"),
+    ("sl", "Slovenian"),
+    ("sr", "Serbian"),
     ("sv", "Swedish"),
+    ("th", "Thai"),
     ("tr", "Turkish"),
     ("uk", "Ukrainian"),
+    ("zh-CN", "Simplified Chinese"),
+    ("zh-TW", "Traditional Chinese"),
 ];
 
 /// The language a suggestion comes back in.
@@ -282,12 +298,14 @@ pub(super) fn language_name(code: &str) -> &'static str {
         .map_or("English", |(_, name)| *name)
 }
 
+/// A language's name as it reads inside a field name: `simplified_chinese`.
+fn field_suffix(language: &str) -> String {
+    language_name(language).to_ascii_lowercase().replace(' ', "_")
+}
+
 /// The single field a rewrite is allowed to come back in.
 fn rewrite_field(language: &str) -> String {
-    format!(
-        "rewritten_in_{}",
-        language_name(language).to_ascii_lowercase()
-    )
+    format!("rewritten_in_{}", field_suffix(language))
 }
 
 /// A selection long enough to be a paragraph and no longer.
@@ -318,10 +336,7 @@ const MAX_NUDGE_THEME_CHARS: usize = 200;
 
 /// The single field a nudge is allowed to come back in.
 fn nudge_field(language: &str) -> String {
-    format!(
-        "invitation_in_{}",
-        language_name(language).to_ascii_lowercase()
-    )
+    format!("invitation_in_{}", field_suffix(language))
 }
 
 /// The whole prompt, or nothing when the theme will not do.
@@ -379,10 +394,7 @@ pub async fn ai_writing_nudge(
 
 /// The single field a letter's question is allowed to come back in.
 fn letter_prompt_field(language: &str) -> String {
-    format!(
-        "question_in_{}",
-        language_name(language).to_ascii_lowercase()
-    )
+    format!("question_in_{}", field_suffix(language))
 }
 
 /// The whole prompt for a letter's writing direction, or nothing.
@@ -759,7 +771,7 @@ mod tests {
                 )));
                 assert!(prompt.contains(&format!(
                     "Put only the rewritten passage in the \"rewritten_in_{}\" field.",
-                    name.to_ascii_lowercase()
+                    name.to_ascii_lowercase().replace(' ', "_")
                 )));
             }
         }
@@ -789,6 +801,9 @@ mod tests {
             ("sv", "Swedish"),
             ("tr", "Turkish"),
             ("uk", "Ukrainian"),
+            ("ja", "Japanese"),
+            ("zh-CN", "Simplified Chinese"),
+            ("zh-TW", "Traditional Chinese"),
         ] {
             assert_eq!(language_name(code), expected, "locale {code:?}");
             let prompt = build_prompt("fixGrammar", code, "Yesterday I walked.").unwrap();
@@ -1005,6 +1020,7 @@ mod tests {
         assert_eq!(nudge_field("sv"), "invitation_in_swedish");
         assert_eq!(nudge_field("uk"), "invitation_in_ukrainian");
         assert_eq!(nudge_field("zz"), "invitation_in_english");
+        assert_eq!(nudge_field("zh-TW"), "invitation_in_traditional_chinese");
     }
 
     #[test]
